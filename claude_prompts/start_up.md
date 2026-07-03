@@ -7,8 +7,9 @@ This repository will create the blog to be known as Climate Intelligence.  It wi
 ## Prompts
 
 1. Read this file.  Execute the 1st task under "Claude/CLAUDE.md file"
-2. Read this file.  Execute the 1st task under "Skills"
-3. Read this file.  Execute the 1st task under "Basic start up"
+2. Read this file.  Execute the 1st task under "Basic start up"
+3. Read this file.  Execute the 1st task under "Skills"
+4. Read this file.  Execute the 2nd task under "Skills"
 
 ## Claude
 
