@@ -1,0 +1,4 @@
+ut_time,tokens_used,model,co2_grams_estimate
+2026-07-03T11:25:20Z,16000,claude-fable-5,1.2
+2026-07-03T12:26:42Z,20000,claude-fable-5,1.5
+2026-07-03T12:30:01Z,340086,claude-opus-4-8,25.85
