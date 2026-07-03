@@ -10,6 +10,9 @@ This repository will create the blog to be known as Climate Intelligence.  It wi
 2. Read this file.  Execute the 1st task under "Basic start up"
 3. Read this file.  Execute the 1st task under "Skills"
 4. Read this file.  Execute the 2nd task under "Skills"
+5. Read this file.  Execute the 2nd task under "Claude/CLAUDE.md file"
+6. Read this file.  Execute the 3rd task under "Claude/CLAUDE.md file"
+
 
 ## Claude
 
@@ -19,6 +22,10 @@ This repository will create the blog to be known as Climate Intelligence.  It wi
 
     - I will perform git commands
     - We will have strict logging rules that will be specified in a logging.md file in Logs/ that I will create shortly.
+
+2. Add to the CLAUDE.md file:  If you do any calculation, generate it as a python script and write it to disk so that I can add it to the Repository.
+
+3. Add to the CLAUDE.md file:  If you need to run Python, use the "ocean14" conda environment.
 
 ### Skills
 

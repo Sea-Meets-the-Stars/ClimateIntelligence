@@ -57,6 +57,20 @@ Assumptions and refinements:
 - `energy_per_1k_tokens` is the least certain factor — update it as Anthropic or
   independent studies publish better numbers.
 
+
+## Coding
+
+Here are guidelines for coding: 
+
+- Use Python
+- Add inline comments to explain the effort
+- Reuse existing code when possible
+- Use methods, not classes
+- Use matplotlib, seaborn, or Bokeh for plotting
+- Place import statements at the top of the file.
+- Include a description of inputs/outputs in the doc string of all methods
+- Add "Created by JXP and Claude" to the top of the file and each doc string
+
 ## Prompts
 
 1. Read this file.  Start a discussion with me on Logging. Put your questions in the Discussion section below and I will answer them.  Log your work using the instructions in Basics section above.  
@@ -65,7 +79,38 @@ Assumptions and refinements:
 
 3. Add to CLAUDE.md file the instructions for logging and make sure Claude logs after every prompt related to this project.
 
+4. Generate code to create Bokeh plots of the token usage and CO2 emissions over time.   These will eventually be exposed on the blog. Put the script in climate_intelligence/plots/ and name the file token_usage_and_co2_emissions.py. If you have any questions about the code, please ask me in the Discussion section below.
+
+5. I have answered your questions.  Please review the Discussion section below and implement based on them.  If you have any additional questions, please ask me in the Discussion section below.  
+
+6. Have the token_usage_and_co2_emissions.html land in Logs/ whenever it is re-created.
+
 ## Discussion
+
+### Claude's questions — prompt 4 / Bokeh plots (2026-07-03)
+
+The script `climate_intelligence/plots/token_usage_and_co2_emissions.py` is written
+and working (reads `Logs/log_summary.csv`, writes a standalone HTML with two
+x-linked panels: tokens per prompt, and CO2 per prompt with a cumulative overlay).
+I chose sensible defaults but a few choices matter for the blog:
+
+1. **Blog embedding format.** Right now it writes a standalone HTML that loads
+   BokehJS from a CDN. For the blog, would you prefer (a) fully self-contained HTML
+   (inline BokehJS, larger file, no external dependency), or (b) Bokeh
+   `components()` output — a `<script>`+`<div>` pair to drop into a page template?
+   I defaulted to standalone HTML.
+>A. Let's use the standalone HTML for now, but we will eventually put the blog on GitHub Pages.
+2. **Granularity as data grows.** I plot one point per prompt. Once there are
+   hundreds/thousands of prompts this gets dense. Do you also want a daily-aggregate
+   view (tokens/CO2 summed per day)? I can add it as a third panel or a toggle.
+>A. Yes, add a daily-aggregate view as a toggle.
+3. **Colour by model.** Points are coloured by model (fable vs opus). Keep that, or
+   a single-series look?
+>A. Keep the colour by model.
+4. **Which CO2 to feature.** I show both per-prompt and cumulative CO2. For a
+   climate blog the cumulative total is arguably the headline — should it be the
+   primary/large panel?
+>A. Let's show the cumulative total as the primary/large panel.
 
 ### Claude's questions (2026-07-03)
 

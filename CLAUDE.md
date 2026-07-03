@@ -10,6 +10,20 @@ Climate Intelligence is a blog about the science of the climate, biodiversity, a
 
 - **The author performs all git commands.** Claude should not run `git add`, `git commit`, `git push`, or other git operations that modify repository state. Read-only commands (e.g. `git status`, `git log`, `git diff`) are fine when needed to understand the state of the repo.
 
+## Python environment
+
+- **If you need to run Python, use the `ocean14` conda environment**
+  (e.g. `conda run -n ocean14 python script.py`, or `conda run -n ocean14 pytest`).
+  Do not run the system `python3` for project work.
+
+## Calculations
+
+- **If you do any calculation, generate it as a Python script and write it to disk**
+  so the author can add it to the repository. Do not compute results only inline
+  (e.g. in your head, in a one-off shell one-liner, or in a scratch REPL) — commit
+  the logic to a reusable, reviewable `.py` file. This keeps every result
+  reproducible and version-controllable.
+
 ## Logging
 
 This project follows **strict logging rules**. The full spec, finalized conventions,

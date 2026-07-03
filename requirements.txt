@@ -10,5 +10,7 @@ scikit-learn
 tqdm
 IPython
 pytest
+# Plotting for the blog
+bokeh
 # Web access for data retrieval
 requests
