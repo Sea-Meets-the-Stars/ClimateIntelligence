@@ -1,0 +1,14 @@
+numpy
+scipy
+pandas
+matplotlib
+seaborn
+xarray
+h5netcdf
+cftime
+scikit-learn
+tqdm
+IPython
+pytest
+# Web access for data retrieval
+requests
