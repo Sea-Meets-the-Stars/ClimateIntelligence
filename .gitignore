@@ -1,3 +1,6 @@
+# Context files (large staged PDFs live on Google Drive, not in git)
+context/Reports/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
