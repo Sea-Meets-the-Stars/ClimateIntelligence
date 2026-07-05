@@ -12,7 +12,11 @@ This repository will create the blog "Climate Intelligence".  This file will hel
     - If you have any questions about the files, please ask me in the Discussion section below.
     - Log your work
 
-2. I have downloaded what is the first of what will be many books into the `context/Books/` directory.  Please read the book and all of the reports you downloaded.  Generate a "live" context document named `context.md` in the `context/` directory.  We will continue to update it ad infinitum.  Log your work.
+2.  I have downloaded what is the first of what will be many books into the `context/Books/` directory.  Please:
+    - Read the book and all of the reports you downloaded.  
+    - Push all of the Books to the ClimateIntelligence shared Google drive folder.
+    - Generate a "live" context document named `context.md` in the `context/` directory.  We will continue to update it ad infinitum.  
+    - Log your work.
 
 ## Discussion
 
