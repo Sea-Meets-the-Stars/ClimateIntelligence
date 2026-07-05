@@ -1,5 +1,6 @@
 # Context files (large staged PDFs live on Google Drive, not in git)
 context/Reports/
+context/Books/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
