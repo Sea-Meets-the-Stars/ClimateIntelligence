@@ -5,8 +5,13 @@
 > collected so posts can be grounded, cited, and internally consistent.
 >
 > **Status:** living document — updated ad infinitum as we add sources.
-> **Last updated:** 2026-07-05 (initial build from the Murphy textbook + the seven
-> IPCC AR6-cycle reports).
+> **Last updated:** 2026-07-08 (added §8 recent developments and the companion
+> source directory `references.md`; initial build 2026-07-05 from the Murphy
+> textbook + the seven IPCC AR6-cycle reports).
+>
+> **Companion file:** `context/references.md` — a curated directory of *where to
+> look* (assessment bodies, data feeds, journals, journalism, trackers). This
+> file distills *what the sources say*; that one catalogs the sources.
 >
 > **How to maintain:** when a new source is added to `context/Books/` or
 > `context/Reports/`, read it, add a "Source" subsection below with citation +
@@ -293,8 +298,47 @@ AMOC = Atlantic Meridional Overturning Circulation. GMSL = global mean sea level
 
 ---
 
-## 7. Changelog
+## 8. Recent developments (mid-2025 – mid-2026)
 
+> From web research on 2026-07-08 (details + sources in `references.md` §7).
+> Several items post-date the Jan-2026 knowledge cutoff and rest on web results —
+> **verify figures against the primary reports before publishing.** The IPCC
+> reports in §3 remain the settled-science backbone; this section is the moving
+> frontier on top of them.
+
+- **The 2020s are running hot.** 2024 was the warmest year on record (~1.6 °C) and
+  the first full calendar year above 1.5 °C; 2025 came in 2nd–3rd (~1.43–1.47 °C),
+  and **2023–2025 is the first 3-year stretch averaging above 1.5 °C.** This is a
+  multi-year run, *not yet* a formal breach of the Paris long-term (~20-yr) goal —
+  a crucial distinction for careful writing. UNEP now expects the long-term mean to
+  breach 1.5 °C, at least temporarily, within ~a decade.
+- **CO₂ passed 430 ppm** at the 2025 Mauna Loa peak (~431 ppm by mid-2026) — up from
+  the 410 ppm the AR6 reports cite for 2019, and ~280 ppm pre-industrial.
+- **Emissions still rising:** Global Carbon Budget 2025 put fossil CO₂ at a record
+  ~38.1 Gt. The remaining 1.5 °C budget is down to **~170 GtCO₂ — roughly four years**
+  at current rates (vs the ~500 GtCO₂ from-2020 figure in §2, now largely spent).
+- **The gap is narrowing slowly:** current policies point to ~2.6 °C (Climate Action
+  Tracker) and full NDC implementation to ~2.3–2.5 °C (UNEP 2025) — better than the
+  ~3.2 °C of a few years ago, still far from 1.5 °C.
+- **COP30 (Belém, Nov 2025)** delivered finance commitments (tripled adaptation
+  finance; $1.3 trn/yr roadmap; Tropical Forests Forever Fund) but **no agreed
+  fossil-fuel phase-out** in the formal text — a "stabilization," not an ambition,
+  outcome.
+- **The transition is visibly accelerating:** solar was the single largest source of
+  energy-demand growth for the first time (2025), and EV sales topped 20 million
+  (~1 in 4 new cars) — real-world confirmation of WGIII's cost-decline story.
+- **Frontier / contested (flag carefully):** the *Global Tipping Points Report 2025*
+  declared warm-water coral reefs the first crossed tipping point (expert assessment,
+  not undisputed observation); some 2025 modelling flags earlier AMOC-collapse risk
+  (single-study, highly uncertain). Present both as strong-but-debated, not settled.
+- **IPCC AR7** is underway (664 authors selected Aug 2025; reports ~2028–29) but
+  governments have failed to agree a timeline — called "unprecedented" in IPCC history.
+
+## 9. Changelog
+
+- **2026-07-08** — Added §8 (recent developments, mid-2025–mid-2026) from four
+  parallel web-research passes, and created the companion `context/references.md`
+  source directory. Refreshed the header and cross-references.
 - **2026-07-05** — Initial build. Read and distilled all 8 sources (Murphy + 7 IPCC
   AR6-cycle reports) via parallel reader agents working from `pdftotext` extractions;
   uploaded `Books/` and `Reports/` to the `ClimateIntelligence:` Drive. Established

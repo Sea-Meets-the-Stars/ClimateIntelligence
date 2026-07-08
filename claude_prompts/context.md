@@ -18,6 +18,12 @@ This repository will create the blog "Climate Intelligence".  This file will hel
     - Generate a "live" context document named `claudes_context.md` in the `context/` directory.  We will continue to update it ad infinitum.  
     - Log your work.
 
+3. Very good.  Now, scour the internet for any and all articles, blog posts, and other sources of information on climate change.  Please:
+    - Find the most recent and relevant articles, blog posts, and other sources of information on climate change.
+    - Generate a well-curated list of sources of information on climate change.  Place it in the `context/` directory and name it `references.md`.
+    - Add what you have learned to the `claudes_context.md` document.
+    - Log your work.
+
 ## Discussion
 
 ### Claude's questions — prompt 1 / IPCC reports (2026-07-04)
