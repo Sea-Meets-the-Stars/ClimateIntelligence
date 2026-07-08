@@ -24,6 +24,16 @@ This repository will create the blog "Climate Intelligence".  This file will hel
     - Add what you have learned to the `claudes_context.md` document.
     - Log your work.
 
+4. Search the internet for any publications by the following persons and add their works to your context.  Also add the resources to the `references.md` document.
+
+    - Dr Judith Curry
+    - Dr John Christy
+    - Dr Roy Spencer
+    - Dr Steven E Koonin
+    - Dr Roger Pielke
+    - Dr Williams Happer
+    - Dr Richard Lindzen
+
 ## Discussion
 
 ### Claude's questions — prompt 1 / IPCC reports (2026-07-04)
