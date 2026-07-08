@@ -161,8 +161,63 @@ is researched in depth.)*
 - **IPCC AR7 underway but timeline unresolved:** 664 authors selected (Aug 2025); reports expected ~2028–29; governments' repeated failure to agree a timeline called "unprecedented."
 - **Warming likely to breach 1.5 °C (long-term mean) within ~a decade** [UNEP, Nov 2025] — reframing 1.5 °C as a near-certain temporary overshoot.
 
-## 8. Changelog
+## 8. Heterodox & contrarian scientists — engage critically
 
+> Profiled 2026-07-08 at the author's request (context.md prompt 4). All seven
+> (eight, counting both Pielkes) have genuine mainstream scientific credentials;
+> the blog's job is to engage their *actual* arguments — the steel-man versions —
+> not strawmen. Distilled profiles with positions and mainstream reception live in
+> `claudes_context.md` §9. Entries below list who they are, their key works, and
+> where they publish now.
+
+**Dr. Judith Curry** — climatologist; former chair, Earth & Atmospheric Sciences, Georgia Tech; now president, CFAN.
+- Book: *Climate Uncertainty and Risk* (Anthem, 2023); *Thermodynamics of Atmospheres and Oceans* (1999).
+- Key papers: Webster/Holland/Curry/Chang 2005 (*Science*, hurricanes); Curry & Webster 2011 (*BAMS*, "uncertainty monster"); Lewis & Curry 2015/2018 (low-end ECS estimates).
+- Platforms: https://judithcurry.com (Climate Etc. — closed June 2026, archive online); https://judithcurry.substack.com (active); https://www.cfanclimate.net
+
+**Dr. Richard Lindzen** — atmospheric physicist, MIT emeritus; NAS member; first-rank dynamics work (atmospheric tides; QBO theory with Holton, 1968).
+- Books: *Atmospheric Tides* (with Chapman, 1970); *Dynamics in Atmospheric Physics* (CUP, 1990).
+- Key heterodox works: iris hypothesis (Lindzen, Chou & Hou 2001 *BAMS*); Lindzen & Choi 2009/2011; "Global Warming for the Two Cultures" (GWPF lecture, 2018).
+- Platforms: no blog; CO2 Coalition publications — https://co2coalition.org/publication_tag/richard-lindzen/
+
+**Dr. John Christy** — atmospheric scientist, UAH (retired July 1, 2026); Alabama State Climatologist 2000–Jan 2026; co-creator of the UAH satellite temperature record (NASA Medal 1991; AMS Special Award 1996; IPCC TAR lead author).
+- Key papers: Spencer & Christy 1990 (*Science*, the founding satellite-record paper); Spencer, Christy & Braswell 2017 (UAH v6 methodology); McKitrick & Christy 2018/2020 (model-observation discrepancy).
+- Signature testimony: House Science Committee, March 29, 2017 (models-vs-observations; "Red Team" proposal).
+
+**Dr. Roy Spencer** — meteorologist, UAH principal research scientist (retiring ~2026); co-creator of the UAH record; former NASA senior scientist and AMSR-E science team leader.
+- Books: *Climate Confusion* (2008); *The Great Global Warming Blunder* (2010) — both Encounter Books; several self-published titles.
+- Key heterodox works: Spencer & Braswell 2011 (*Remote Sensing* — triggered the editor's resignation); Spencer & Christy 2023 (ECS ≈ 1.9 °C); 2025 urban-heat-island paper (*JAMC*).
+- Platforms: https://www.drroyspencer.com (active; monthly UAH v6.1 updates); data: https://www.drroyspencer.com/latest-global-temperatures/
+
+**Dr. Steven E. Koonin** — theoretical physicist; NAS member; former Caltech provost, BP chief scientist, DOE Under Secretary (Obama); now Hoover Institution.
+- Book: *Unsettled* (BenBella, 2021; 2nd ed. 2024) — the most influential recent "consensus is overstated" book.
+- Key episodes: 2014 APS climate-statement workshop he chaired (full transcript: https://www.aps.org/policy/statements/upload/climate-seminar-transcript.pdf — the best on-the-record adversarial exchange); red-team proposals; 2025 DOE Climate Working Group co-author.
+- Platforms: https://www.hoover.org/profiles/steven-koonin ; rebuttals at https://steven-koonin.medium.com
+
+**Dr. William Happer** — atomic physicist, Princeton emeritus; NAS member; pioneer of optical pumping/spin-polarized gases and the sodium-guide-star concept; former DOE Office of Science director; NSC (2018–19).
+- Key climate works: "The Truth About Greenhouse Gases" (*First Things*, 2011); "In Defense of Carbon Dioxide" (WSJ, 2013); van Wijngaarden & Happer radiative-transfer preprints (arXiv:2006.03098 et seq. — note: preprints, not peer-reviewed).
+- Platform: co-founder & chair, CO2 Coalition — https://co2coalition.org
+
+**Dr. Roger Pielke Jr.** — policy scientist (Ph.D. political science), CU Boulder emeritus, now AEI senior fellow. *Accepts mainstream physical science and supports a carbon tax* — heterodox on extreme-event attribution claims and scenario use, not on the physics.
+- Books: *The Honest Broker* (CUP, 2007); *The Climate Fix* (Basic, 2010); *The Rightful Place of Science: Disasters and Climate Change* (2014/2018).
+- Key papers: Weinkle et al. 2018 (*Nature Sustainability*, normalized hurricane losses — no trend); RCP8.5-misuse critiques (with Ritchie & Burgess, *ERL* 2021/22). Counterpoint: Grinsted et al. 2019 (*PNAS*).
+- Platform: https://rogerpielkejr.substack.com ("The Honest Broker", active); https://www.aei.org/profile/roger-pielke-jr/
+
+**Dr. Roger Pielke Sr.** — meteorologist, Colorado State emeritus; RAMS mesoscale-model co-developer; land-use/climate pioneer. Argues CO2-centric framing underweights land-use and aerosol forcings; ocean heat content a better metric.
+- Books: *Mesoscale Meteorological Modeling* (3 eds.); *Human Impacts on Weather and Climate* (with Cotton).
+- Key paper: "Climate Change: The Need to Consider Human Forcings Besides Greenhouse Gases" (*EOS*, 2009).
+- Platforms: blog inactive since 2012 (https://pielkeclimatesci.wordpress.com); active on X as @RogerAPielkeSr; CIRES affiliation.
+
+**Cross-cutting resources:**
+- 2025 DOE Climate Working Group report (*A Critical Review of Impacts of Greenhouse Gas Emissions on the U.S. Climate*, July 2025 — authors Christy, Curry, Koonin, McKitrick, Spencer), the 85-scientist rebuttal (Sept 2025), the Jan 2026 FACA court ruling, and EPA's Feb 2026 statement that it is "not relying on" the report — the best-documented recent episode of contrarian science meeting institutional review.
+- Critical dossiers (advocacy-oriented; use for leads, cross-check claims): https://www.desmog.com ; https://www.sourcewatch.org
+- Published rebuttals hub: RealClimate (https://www.realclimate.org), Skeptical Science, Science Feedback.
+
+## 9. Changelog
+
+- **2026-07-08 (later)** — Added §8: profiles and works of seven heterodox
+  scientists (Curry, Lindzen, Christy, Spencer, Koonin, Happer, both Pielkes) from
+  four parallel research passes; URLs verified.
 - **2026-07-08** — Initial build. Four parallel web-research passes (data/monitoring,
   institutions & journals, recent developments; a journalism pass was halted and
   §5 seeded from prior knowledge). All URLs checked to resolve at compile time.

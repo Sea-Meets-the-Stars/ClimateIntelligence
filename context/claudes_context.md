@@ -334,8 +334,86 @@ AMOC = Atlantic Meridional Overturning Circulation. GMSL = global mean sea level
 - **IPCC AR7** is underway (664 authors selected Aug 2025; reports ~2028–29) but
   governments have failed to agree a timeline — called "unprecedented" in IPCC history.
 
-## 9. Changelog
+## 9. Heterodox voices — the strongest opposing arguments
 
+> Added 2026-07-08 at the author's request. Full works/platform lists in
+> `references.md` §8. Rule for the blog: engage the **steel-man** version of each
+> argument, credit genuine expertise plainly, and cite the published rebuttals —
+> never the strawman ("they deny the greenhouse effect"; none of them do).
+
+**Who they are, in one line each:**
+- **Judith Curry** (climatologist, ex-Georgia Tech chair): the *epistemic* critic —
+  "uncertainty monster," natural variability underweighted, climate is a "wicked
+  problem" better met with adaptation/resilience than emissions targets. Technical
+  anchor: Lewis & Curry energy-budget ECS estimates (~1.5–1.65 °C).
+- **Richard Lindzen** (MIT, NAS; first-rank dynamics theorist): the *physical*
+  critic — iris hypothesis: tropical cirrus contract with warming, a strong
+  negative feedback ⇒ low ECS (~0.5–1.5 °C).
+- **John Christy & Roy Spencer** (UAH; created the satellite temperature record):
+  the *observational* critics — tropical troposphere warms ~half as fast as
+  CMIP models simulate ⇒ model feedbacks too strong; surface records inflated by
+  urbanization; Spencer adds cloud-causality arguments (ECS ≈ 1.9 °C, 2023).
+- **Steven Koonin** (physicist, NAS; ex-Obama DOE Under Secretary): the *framing*
+  critic — *Unsettled* (2021/24) argues summaries and media overstate confidence
+  relative to the underlying reports; wants red-team review; prefers adaptation.
+- **William Happer** (Princeton atomic physicist, NAS): the *radiative* critic —
+  CO2 bands "saturated" so forcing grows only logarithmically; CO2 fertilization a
+  net benefit. (His own line-by-line forcing calculations match mainstream values;
+  the dispute is feedbacks and the benefits inference.)
+- **Roger Pielke Jr.** (policy scientist, AEI): the *attribution/policy* critic —
+  accepts the physics, supports a carbon tax; argues normalized disaster losses
+  show no trend, extreme-event claims are overstated, RCP8.5 is misused as
+  business-as-usual; "Iron Law": growth beats emissions cuts politically.
+- **Roger Pielke Sr.** (CSU meteorologist emeritus): land-use/aerosol forcings
+  underweighted vs CO2; ocean heat content the better metric. (Always disambiguate
+  Jr./Sr.)
+
+**How the mainstream answered (the short version):**
+- The **iris hypothesis** was tested and largely rejected (Hartmann & Michelsen
+  2002; Lin et al. 2002); a weak iris-like effect may exist (Mauritsen & Stevens
+  2015) but nowhere near Lindzen's sensitivity values.
+- The **UAH record's history** cuts both ways: two major errors (orbital decay
+  1998; diurnal-drift sign 2005) were found by *outside* groups and raised the
+  trend; but NOAA STAR v5 (2023) later moved toward UAH for mid-troposphere
+  trends, so satellite structural uncertainty is real. Current trends: UAH
+  +0.16 °C/decade vs RSS ~+0.21 and surface ~+0.20.
+- The **tropical-troposphere discrepancy** (McKitrick & Christy) is acknowledged
+  as real in AR6; Santer et al. 2017 shrink it (~1.7×, not 3×) and attribute much
+  to forcing errors and internal variability (Po-Chedley et al. 2021), not low ECS.
+- **Low energy-budget ECS** (Lewis & Curry) is taken seriously but judged biased
+  low by "pattern effects" — Sherwood et al. 2020 (ECS likely 2.6–3.9 °C)
+  effectively rules out the sub-2 °C values.
+- **Saturation** fails because forcing grows in band wings and at the cold upper
+  troposphere (Pierrehumbert/Weart, RealClimate 2007); Happer's own numbers agree
+  on forcing.
+- **Normalized-loss "no trend"** (Weinkle et al. 2018) vs Grinsted et al. 2019
+  (*PNAS*, "area of total destruction" shows a trend) is a live, legitimate
+  scientific exchange — the best current example of a genuinely open dispute.
+- **Koonin's *Unsettled*** drew detailed rebuttals (Scientific American 2021,
+  Yale Climate Connections, Science Feedback) charging outdated sourcing and
+  selective emphasis rather than fabrication.
+
+**The 2025–26 DOE episode (watch this):** Christy, Curry, Koonin, McKitrick and
+Spencer authored the July 2025 DOE *Critical Review* commissioned to support the
+EPA endangerment-finding repeal. An 85-scientist rebuttal followed (Sept 2025);
+the working group was disbanded; a federal court found FACA violations (Jan
+2026); EPA's final rule (Feb 2026) says it is "not relying on" the report. This
+is now the definitive case study of contrarian science meeting institutional and
+legal review — strong blog material with both sides fully on the record (see also
+the 2014 APS workshop transcript for the earlier equivalent).
+
+**Editorial guidance:** (1) credentials are real — say so; (2) each critic's
+*data* has generally fared better than the *inferences* built on it; (3) the
+sharpest engagements are Lindzen↔Dessler, Christy↔Santer, Pielke↔Grinsted,
+Koonin↔Oreskes — cite the exchanges, not just one side; (4) fact-check numbers
+against §2 and the primary datasets in `references.md` §3.
+
+## 10. Changelog
+
+- **2026-07-08 (later)** — Added §9 (heterodox voices): fair profiles, mainstream
+  rebuttals, and editorial guidance for Curry, Lindzen, Christy, Spencer, Koonin,
+  Happer, and both Pielkes, from four parallel research passes (context.md
+  prompt 4).
 - **2026-07-08** — Added §8 (recent developments, mid-2025–mid-2026) from four
   parallel web-research passes, and created the companion `context/references.md`
   source directory. Refreshed the header and cross-references.

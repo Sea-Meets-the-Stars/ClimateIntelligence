@@ -34,6 +34,9 @@ This repository will create the blog "Climate Intelligence".  This file will hel
     - Dr Williams Happer
     - Dr Richard Lindzen
 
+5. Download the July 2025 DOE Climate Working Group report and add it to the `context/Reports/` directory.  Include its rebuttal too.  Push to the Drive. Read it and update the `claudes_context.md` document accordingly.
+
+
 ## Discussion
 
 ### Claude's questions — prompt 1 / IPCC reports (2026-07-04)
