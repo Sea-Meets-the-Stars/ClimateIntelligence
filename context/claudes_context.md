@@ -35,6 +35,8 @@ mirrored to the `ClimateIntelligence:` shared Drive (`Books/`, `Reports/`).
 | SR1.5 | Global Warming of 1.5°C | 2018 | `context/Reports/IPCC_SR15_FullReport.pdf` |
 | SROCC | Ocean and Cryosphere in a Changing Climate | 2019 | `context/Reports/IPCC_SROCC_FullReport.pdf` |
 | SRCCL | Climate Change and Land | 2019 | `context/Reports/IPCC_SRCCL_FullReport.pdf` |
+| DOE CWG | A Critical Review of Impacts of GHG Emissions on the U.S. Climate (Christy, Curry, Koonin, McKitrick, Spencer) | 2025 | `context/Reports/DOE_CWG_Critical_Review_July2025.pdf` |
+| CWG Rebuttal | Climate Experts' Review of the DOE CWG Report (85+ authors; eds. Dessler & Kopp) | 2025 | `context/Reports/Climate_Experts_Review_of_DOE_CWG_Sept2025.pdf` |
 
 The seven IPCC reports constitute the **complete AR6 assessment cycle** (three
 Working Group reports + Synthesis Report + three Special Reports). AR7 has not yet
@@ -408,8 +410,77 @@ sharpest engagements are Lindzen↔Dessler, Christy↔Santer, Pielke↔Grinsted,
 Koonin↔Oreskes — cite the exchanges, not just one side; (4) fact-check numbers
 against §2 and the primary datasets in `references.md` §3.
 
+### 9.1 The DOE report ↔ expert rebuttal exchange (both read in full, 2026-07-08)
+
+Both documents are in our library (§1) and on the Drive. This is the richest
+single case study we have: the complete contrarian argument and the complete
+mainstream answer, section by section, both on the record.
+
+**The DOE report** (*A Critical Review…*, July 23, 2025; Christy lead, with
+Curry, Koonin, McKitrick, Spencer; commissioned by Energy Secretary Wright):
+- **Concedes more than its reputation suggests:** CO2 is a GHG and the largest
+  human influence on climate; warming is real; global sea-level rise is real;
+  hot extremes have increased since the 1950s; AR6's ECS upper-bound cut to
+  4.0 °C is "well justified."
+- **Its central claims:** CO2 fertilization/greening is a large understated
+  benefit; "acidification" is better termed "neutralization"; RCP8.5 misuse
+  inflates the impacts literature; UHI residually biases the land record;
+  data-driven ECS ≈ 2.2 °C (disputes AR6's 2.5 °C floor); models overpredict
+  tropospheric warming (McKitrick & Christy) and are "not fit for purpose"
+  regionally; most **U.S.** extreme-weather series show no trend (1930s anchor);
+  U.S. tide gauges show "no obvious acceleration" (subsidence dominates local
+  problems); attribution methods (optimal fingerprinting, WWA rapid studies) are
+  unreliable; warming is net-small-to-beneficial for U.S. agriculture and the
+  economy (SCC assumption-driven; Dayaratna/McKitrick ~\$19 or less); U.S. policy
+  has "undetectably small" climate effect (cars = "3% of global energy CO2").
+- **Framing signatures to notice:** US-only scope for "no trend" claims vs the
+  IPCC's global statements; early-20th-century baselines (1930s heat, 1886/1935
+  hurricanes); metric choices (rural summer Tmax; absolute vs relative sea
+  level; losses as %GDP); "detection before attribution" logic; heavy
+  self-citation (Ch. 3 and 5 exceed 25% self-citation vs IPCC's ~2.4% mean).
+
+**The rebuttal** (*Climate Experts' Review…*, Aug 30, 2025; eds. Dessler &
+Kopp; 85+ authors, 48 section-by-section comments, ~400 pp., submitted to DOE
+docket DOE-HQ-2025-0207):
+- **Strongest technical counters:** the "models vs data" ECS dichotomy is false
+  (Sherwood et al. synthesizes process + historical + paleo; <2 °C hard to
+  reconcile with any line) — and DOE's own favored ECS (~2.2 °C) sits *inside*
+  the range where, by DOE's own stated threshold, emission controls pass
+  cost-benefit; the tropical-troposphere "fatal test" is a strawman (the CO2
+  signal emerges first in the stratosphere; NOAA STAR v5 halved the claimed
+  discrepancy); the Corn Belt figure is "a textbook case of cherry picking"
+  (the single worst region in the NH; globally, models exceed observations over
+  48% of area — as expected); "no acceleration" in sea level is "a vibes-based
+  assessment" (satellite acceleration 0.084 ± 0.025 mm/yr²; CONUS aggregate
+  0.7 → 4.7 mm/yr since the 1970s); the record-highs/record-lows ratio ran
+  2–3× vs <0.5× chance in 2010–2019 and 2023 beat the 1930s for record-hot
+  days in homogenized data; global burned-area decline is a grassland/land-use
+  signal masking a doubling of boreal/western-US *forest* fire; the US vehicle
+  figure was simply wrong (~16.9% of global road-transport CO2, not 3%); and
+  the "US cuts don't matter" logic is the "fallacy of inconsequentialism" —
+  the US is the largest *cumulative* emitter (~21–24% since 1850).
+- **Process findings:** ≥22% of DOE citations inaccurate or misrepresentative
+  (some references don't exist); review by DOE employees only, despite Highly
+  Influential Scientific Assessment obligations; 30-day comment window.
+- **Notably fair:** concedes no-trend hurricane landfalls ("none were
+  expected"), real CO2 fertilization, cold deaths currently exceeding heat
+  deaths, genuinely open questions (albedo decline, prior-choice in ECS), and
+  its own possible errors given the rushed window.
+
+**Aftermath (from §8/§9):** working group disbanded Sept 2025; federal court
+found FACA violations Jan 30, 2026; EPA's final endangerment-finding repeal
+(Feb 2026) states it is "not relying on" the report.
+
+**How to use this pair:** quote claim-and-answer side by side; the DOE report's
+concessions (§5 of our summary) and the rebuttal's concessions (§6) are the
+honest common ground — start posts there, then show precisely where and why the
+documents diverge (scope, baselines, metrics, statistics).
+
 ## 10. Changelog
 
+- **2026-07-08 (later still)** — Downloaded, verified, uploaded to Drive, and
+  read in full the July 2025 DOE CWG report and its 85-author rebuttal; added
+  both to the source library (§1) and wrote §9.1 distilling the exchange.
 - **2026-07-08 (later)** — Added §9 (heterodox voices): fair profiles, mainstream
   rebuttals, and editorial guidance for Curry, Lindzen, Christy, Spencer, Koonin,
   Happer, and both Pielkes, from four parallel research passes (context.md
