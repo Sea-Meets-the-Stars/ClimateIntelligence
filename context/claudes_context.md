@@ -5,9 +5,10 @@
 > collected so posts can be grounded, cited, and internally consistent.
 >
 > **Status:** living document — updated ad infinitum as we add sources.
-> **Last updated:** 2026-07-08 (added §8 recent developments and the companion
-> source directory `references.md`; initial build 2026-07-05 from the Murphy
-> textbook + the seven IPCC AR6-cycle reports).
+> **Last updated:** 2026-07-09 (added §10 Biodiversity & the sixth mass
+> extinction; §9 heterodox voices + §9.1 DOE exchange and §8 recent developments
+> on 2026-07-08; initial build 2026-07-05 from the Murphy textbook + seven IPCC
+> AR6-cycle reports).
 >
 > **Companion file:** `context/references.md` — a curated directory of *where to
 > look* (assessment bodies, data feeds, journals, journalism, trackers). This
@@ -476,8 +477,113 @@ concessions (§5 of our summary) and the rebuttal's concessions (§6) are the
 honest common ground — start posts there, then show precisely where and why the
 documents diverge (scope, baselines, metrics, statistics).
 
-## 10. Changelog
+## 10. Biodiversity & the sixth mass extinction
 
+> Added 2026-07-09 from the reading list in `context/Murphy/` (Tom Murphy's
+> "Do the Math" posts + `Chap1_bibtex.txt` primary literature). Biodiversity is
+> squarely in the blog's purview and connects to Principle 3 — *all life on Earth
+> is relevant; human life need not be prioritized.* This is the biosphere half of
+> the story that §§2–8 tell for the physical climate.
+
+### 10.1 The scale: life on Earth is plants, and the animal sliver is now us
+
+The quantitative baseline (Bar-On, Phillips & Milo 2018, *PNAS*): total living
+biomass ≈ **550 Gt C**, of which **plants ≈450 Gt C (~80%)** and **all animals
+≈2 Gt C (~0.4%)**. Within that animal sliver, humans and livestock now dominate:
+humans ≈0.06 Gt C, livestock ≈0.1 Gt C, **wild mammals only ≈0.007 Gt C** —
+livestock outweighs all wild mammals ~14×. Greenspoon et al. (2023, *PNAS*) put
+current wild land mammals at ≈**20 Mt** wet weight (~3 kg per person) vs humans
+≈390 Mt and livestock ≈630 Mt — **>50 kg of humans + domesticated animals for
+every 1 kg of wild land mammal.** Since the dawn of civilization, human activity
+has **roughly halved plant biomass** and cut **wild land-mammal biomass ~7-fold**.
+
+Barnosky (2008, *PNAS*) supplies the mechanism: there is an **energetic ceiling**
+on how much large-animal (megafauna, >44 kg) biomass the biosphere can carry, set
+by net primary productivity. For ~50,000 years human expansion has drawn down that
+budget at the expense of wild megafauna; modern abundance *above* the natural
+ceiling is sustained only by the fossil-fuel energy subsidy — tying biodiversity
+directly to the energy-limits thesis of the Murphy textbook (§3.1).
+
+### 10.2 The sixth mass extinction: onset, not yet completion
+
+The honest framing (this matters for Principle 1 and 5): a **true** mass extinction
+means losing **>75% of species** in a geologically short interval — this has
+happened **5 times in ~540 Myr**. By that strict paleontological bar **we are NOT
+there yet** — documented losses so far are ~1–2% of species in well-studied groups
+(Barnosky et al. 2011, *Nature*), rising to a contested ~7.5–13% once
+under-assessed invertebrates are included (Cowie, Bouchet & Fontaine 2022, *Biol.
+Reviews*). What is *not* seriously disputed is the **rate**: current extinctions run
+~**100–1,000× the background rate** (≈114× for vertebrates under Ceballos et al.
+2015's deliberately conservative assumptions). At sustained current rates the 75%
+threshold arrives in ~3–22 centuries — i.e. we are plausibly at the **onset** of a
+sixth mass extinction, not in a completed one. Write it as trajectory, not
+accomplished fact.
+
+The sharper near-term signal is **population decline / defaunation**, not species
+counts: Ceballos, Ehrlich & Dirzo (2017) found **32%** of ~27,600 vertebrate
+species declining, and among 177 mammals studied *all* lost ≥30% of range and >40%
+lost >80%. Finn et al. (2023, *Biol. Reviews*) across ~71,000 species: **48%
+declining, 49% stable, 3% increasing** ("more losers than winners"), with a third
+of *non-threatened* species already declining. Ceballos et al. (2020) count 515
+land-vertebrate species with <1,000 individuals left.
+
+### 10.3 The scientific debate (present it fairly — Principle 2)
+
+- **Consensus:** rates far above background; overwhelmingly human-caused; rapid
+  population-level erosion. Essentially no credible biologist disputes this.
+- **Legitimate dispute:** whether the strict >75% definition is met (no, not yet);
+  reliance on IUCN data with taxonomic/geographic gaps; extrapolation from
+  island faunas (higher extinction) to continents; "possibly extinct" vs confirmed
+  ("Romeo error"); marine biota showing far lower extinction than terrestrial.
+  Data bias cuts both ways — Cowie turns the under-assessment of invertebrates into
+  an argument that the crisis is *worse* than the IUCN's 882-species (0.04%) count.
+  A rebuttal literature exists (e.g. "Questioning the sixth mass extinction," *TREE*
+  2025) — cite it for balance.
+
+### 10.4 Drivers: where climate fits
+
+Per IPBES (2019), the driver ranking is (1) land/sea-use change (habitat loss),
+(2) direct overexploitation (hunting/fishing), (3) **climate change**,
+(4) pollution, (5) invasive species. So the crisis was **set in motion mainly by
+land use, exploitation and invasives; climate change is currently a secondary but
+the fastest-accelerating driver**, projected toward co-dominant. The two crises are
+mutually reinforcing: habitat destruction releases carbon and removes sinks, while
+warming degrades the ecosystems that store it. IPBES's headline: ~**1 million
+species threatened with extinction.**
+
+### 10.5 The worldview frame (Murphy / Quinn) — flagged, used carefully
+
+Murphy's "Do the Math" ecological posts ("Ecological Cliff Edge," "Is the 6ME
+Hyperbole?") read the biomass collapse as the *biological invoice* for the same
+growth-and-overshoot the energy math predicts. He argues it is **not hyperbole** to
+speak in sixth-mass-extinction terms even though a formal 6ME hasn't occurred (his
+"two seconds into a fall off a skyscraper" analogy — trajectory over present
+status), backed by an asymmetric-risk/precautionary argument. He grounds the moral
+stance in Daniel Quinn's *Ishmael* trilogy — the **"Taker vs Leaver"** framing
+("the world was made for us" vs "humans belong to the world"), agriculture as the
+fatal turn, and "the world was not made for humans alone." This maps directly onto
+Principle 3. **Editorial caution:** Quinn's philosophy and Murphy's civilizational
+pessimism are *viewpoints*, not data — present them as framing to engage, keep them
+clearly distinct from the peer-reviewed biomass/extinction numbers, and honor
+Principle 4 (leave religion/politics out) by treating the animism as one lens, not
+doctrine.
+
+**Blog hooks:** (1) "For every kilogram of wild land mammal, there are more than
+fifty kilograms of humans and their livestock." (2) Life on Earth is ~80% plants;
+all animals are ~0.4% — and within that, we and our cattle are most of the
+mammals. (3) We are not *in* a sixth mass extinction by the 75%-of-species
+definition — but extinctions run 100–1,000× normal, which is how one *begins*.
+(4) Only ~3 kg of wild land mammal exists per person alive, down ~30-fold from
+1800. (5) Deep-time precedent (Smart et al. 2023): in the Late Devonian, land
+plants spreading triggered ocean anoxia and a marine mass extinction — life can
+disrupt the system that sustains it. (6) Kolbert's *The Sixth Extinction* (2014
+Pulitzer) mainstreamed the framing.
+
+## 11. Changelog
+
+- **2026-07-09** — Added §10 (Biodiversity & the sixth mass extinction) from the
+  `context/Murphy/` reading list (7 "Do the Math" posts + 17 papers), via three
+  parallel reader agents. Refreshed header; renumbered changelog to §11.
 - **2026-07-08 (later still)** — Downloaded, verified, uploaded to Drive, and
   read in full the July 2025 DOE CWG report and its 85-author rebuttal; added
   both to the source library (§1) and wrote §9.1 distilling the exchange.

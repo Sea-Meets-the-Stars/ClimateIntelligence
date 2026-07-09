@@ -1,0 +1,483 @@
+# The State of Earth's Climate: An Initial Report
+
+*Climate Intelligence — internal briefing for the blog's writers*
+*Prepared by Claude with J. X. Prochaska · 2026-07-09*
+
+---
+
+## 1. Purpose and method
+
+This report is a grounding document for the writers of *Climate Intelligence*.
+It summarizes what is known about the physical state of Earth's climate, how well
+it is known, and where honest disagreement remains. It is deliberately
+quantitative: where a number appears, its **uncertainty** and, where relevant, its
+**bias** (a systematic, directional error, as distinct from random scatter) appear
+with it.
+
+It follows the blog's guiding principles. In particular: *fact trumps opinion, but
+every human measurement carries uncertainty and bias* (Principle 1); *all
+viewpoints are welcome but not accepted equally* (Principle 2); *statistics are
+respected — a low-probability event is genuinely unlikely* (Principle 5); and
+*mathematics trumps all* (Principle 6). Where a scientific question is genuinely
+open, this report says so; where a contrarian claim has been tested and found
+wanting, it says that too. That is not imbalance — it is Principle 2 applied.
+
+**Sources.** The backbone is the IPCC Sixth Assessment Report (AR6: WGI 2021,
+WGII/WGIII 2022, Synthesis 2023) and three Special Reports (SR1.5, SROCC, SRCCL),
+supplemented by primary data archives (NOAA, NASA, CSIRO, the Global Carbon
+Project) and by the 2025 U.S. Department of Energy "Climate Working Group" report
+and its 85-author expert rebuttal, which together bracket the live debate. Full
+citations are in §7; data portals are catalogued in `context/references.md`.
+
+**On uncertainty.** Following IPCC calibrated language, *likely* denotes ≥66%
+probability and *very likely* ≥90%; quantitative ranges are 5–95% ("very likely")
+unless noted. Ranges here are not decoration — a projection without a range is not
+a scientific statement.
+
+---
+
+## 2. Historical context
+
+**Deep time.** CO₂ and temperature have varied enormously across geological time;
+atmospheric CO₂ was many times higher hundreds of millions of years ago. Contrarian
+writers correctly note this (the DOE report emphasizes it). The relevant point for
+today is not the *absolute* level but the *rate*: the current rise of ~2–3 ppm per
+year is roughly a hundred times faster than the fastest natural changes in the
+ice-core record, and ecosystems and coastlines respond to rates, not just levels.
+
+**The instrumental inflection.** Pre-industrial CO₂ was ≈ 280 ppm (stable for
+millennia). The Industrial Revolution began a rise that is now unmistakable:
+CO₂ passed 430 ppm at the 2025 Mauna Loa peak — higher than at any time in at least
+2 million years, on paleo-proxy evidence.
+
+**What the ice cores show.** Antarctic ice cores (EPICA Dome C) give a continuous
+CO₂ and temperature record back ~800,000 years. Across eight glacial cycles CO₂
+oscillated between ≈180 ppm (glacial) and ≈280 ppm (interglacial) — and *never*
+exceeded ~300 ppm. The fastest natural CO₂ rises in that record ran ~10–20 ppm per
+*thousand* years; the modern rise is ~2–3 ppm per *year*, roughly two orders of
+magnitude faster. That rate comparison, not any single absolute value, is the
+scientifically load-bearing point, and it is why appeals to a warm, high-CO₂
+Mesozoic are a category error: nothing with a modern coastline or a modern harvest
+calendar evolved under a change this fast.
+
+**The arc of the science.** The greenhouse effect is not new physics. Fourier
+(1820s) recognized the atmosphere retains heat; Tyndall (1859) measured the
+infrared absorption of CO₂ and water vapour in the laboratory; Arrhenius (1896)
+first estimated the warming from doubling CO₂ and got an answer — a few degrees —
+close to today's. Keeling began the continuous Mauna Loa CO₂ record in 1958
+(Figure 1). The 1979 U.S. National Academy "Charney Report" assessed the
+equilibrium warming from doubled CO₂ at **1.5–4.5 °C** — a range essentially
+unchanged for four decades, a fact that cuts both ways: it reflects deep, genuine
+difficulty in pinning down feedbacks, and it shows the central estimate has been
+robust to 45 years of scrutiny.
+
+![Figure 1](fig1_keeling_curve.png)
+
+**Figure 1.** The Keeling Curve: monthly atmospheric CO₂ at Mauna Loa (NOAA GML).
+The annual saw-tooth is the Northern Hemisphere biosphere inhaling each spring and
+exhaling each autumn; the relentless underlying rise is anthropogenic. The
+seasonally adjusted trend (red) removes the biological breathing to expose the
+secular increase.
+
+---
+
+## 3. The current state of the Earth
+
+Every subsection below pairs the central estimate with its uncertainty and its
+known biases. A recurring theme: the indicators differ enormously in how cleanly
+they can be measured, and honest reporting means saying which numbers are sharp and
+which are fuzzy.
+
+### 3.1 Temperature
+
+Global mean surface temperature in 2011–2020 was **1.09 °C [0.95–1.20]** above the
+1850–1900 baseline (AR6 WGI). Land warmed faster (≈1.6 °C) than ocean (≈0.9 °C), a
+robust and physically expected land–sea contrast.
+
+*Uncertainty and bias.* Four independent groups — NASA GISTEMP, NOAA, the UK's
+HadCRUT5, and Berkeley Earth — plus reanalyses (ERA5) compute the global anomaly.
+They **agree to within ~0.05 °C** on recent decadal trends, which is itself strong
+evidence: the warming is not an artifact of one team's choices. The known biases
+are real and corrected-for, not ignored: changing instruments (buckets → engine
+intakes → buoys for sea-surface temperature), station moves, time-of-observation
+changes, and — the contrarians' favourite — **urban heat islands (UHI)**. The DOE
+report argues residual UHI inflates land trends. The mainstream position, supported
+by studies comparing rural-only stations, is that UHI is corrected to within
+≈10% of the land trend and cannot explain ocean warming (71% of the surface) or the
+warming seen in reanalyses and satellites. This is a legitimate area to *quantify*,
+not a reason to doubt the trend's sign or rough magnitude.
+
+Figure 2 shows the GISTEMP record. Note the baseline: GISTEMP uses 1951–1980, so
+its recent ~+1.0 °C anomalies become ~+1.3 °C against a pre-industrial baseline.
+**Baseline choice is a common source of confusion and occasional rhetorical
+mischief — always state it.**
+
+![Figure 2](fig2_global_temperature.png)
+
+**Figure 2.** Global surface temperature anomaly, NASA GISTEMP v4 (baseline
+1951–1980). The 5-year mean (black) shows the mid-century plateau (aerosol cooling
+partly offsetting greenhouse warming) and the steep, sustained rise since ~1975.
+
+### 3.2 Sea level
+
+Global mean sea level (GMSL) rose ≈ **0.20 m over 1901–2018** (AR6). The rate is
+not constant — it is **accelerating**: ≈1.3 mm/yr (1901–1971) → 1.9 mm/yr
+(1971–2006) → **3.7 mm/yr (2006–2018)**. Figure 3, built from the century-long
+CSIRO tide-gauge reconstruction, shows the acceleration directly (early-century vs
+late-century linear fits).
+
+*Uncertainty and bias.* Two regimes: pre-1993 tide gauges (sparse, needing
+glacial-isostatic-adjustment and vertical-land-motion corrections) and post-1993
+satellite altimetry (near-global, ~0.3–0.4 mm/yr uncertainty on the rate). The DOE
+report correctly notes that *local relative* sea level at places like the Louisiana
+coast is dominated by **land subsidence** (groundwater/hydrocarbon extraction,
+sediment starvation), not ocean rise — at Grand Isle the relative rise is ~4× the
+absolute climate signal. This is true and important for adaptation planning, but it
+is a *local* modifier: it does not reduce the globally averaged, satellite-measured
+climate signal. Conflating the two is a scope error (§6).
+
+![Figure 3](fig3_sea_level.png)
+
+**Figure 3.** Global mean sea level, 1880–2013 (Church & White / CSIRO
+reconstruction), with 1σ envelope. The rate roughly triples from the early 20th
+century to the satellite era.
+
+### 3.3 Ocean acidification
+
+The surface ocean has absorbed 20–30% of anthropogenic CO₂, lowering surface pH by
+**≈0.017–0.027 units per decade**; the acidification signal has now emerged over
+>95% of the ocean surface (SROCC). Surface pH has fallen from ≈8.2 (pre-industrial)
+to ≈8.05 — a ~30% increase in hydrogen-ion concentration, because pH is
+logarithmic.
+
+*The honest framing.* Contrarians (the DOE report included) note the ocean remains
+alkaline (pH > 7) and prefer "neutralization." Chemically the water is indeed still
+basic — but that is a semantic point, not a rebuttal. Mathematics settles it
+(Principle 6): a 0.1-unit pH drop *is* a ~26% rise in [H⁺] by definition
+(10^0.1 ≈ 1.26). What matters biologically is the **rate**: the current
+decadal-scale change is orders of magnitude faster than the million-year natural
+buffering by ocean sediments, and rapid pH drops accompany every mass-extinction
+event for which we have reconstructions. The dispute is about consequences and
+framing, not about the direction or the arithmetic.
+
+### 3.4 Ocean warming
+
+The ocean has absorbed **>90% (≈91%)** of the excess heat trapped by the enhanced
+greenhouse effect (AR6 WGI; SROCC). This makes ocean heat content (OHC) the single
+most reliable indicator of planetary energy imbalance — it integrates over the
+noise that makes surface air temperature jump around year to year.
+
+*Uncertainty and bias.* OHC has the **smallest relative uncertainty** of the major
+indicators (deep, well-mixed water; the Argo float array since ~2005 gives dense,
+consistent sampling). Figure 4 shows the 0–2000 m record; the linear trend
+corresponds to a planetary imbalance of order **~0.5–0.8 W/m²** averaged over
+Earth's surface — the number that, more than any surface thermometer, says the
+system is accumulating energy. There is no credible account in which the ocean
+warms this steadily and the planet is not gaining heat.
+
+![Figure 4](fig4_ocean_heat_content.png)
+
+**Figure 4.** Global ocean heat content anomaly, 0–2000 m (NOAA NCEI), with 1σ
+error bars. Because water's heat capacity dominates the climate system, this curve
+is the cleanest fingerprint of the energy imbalance.
+
+### 3.5 CO₂ and other atmospheric gases
+
+The three principal long-lived greenhouse gases have all risen sharply and roughly
+synchronously (Figure 5):
+
+| Gas | Pre-industrial | 2019 (AR6) | Recent | Increase |
+|-----|---------------:|-----------:|-------:|---------:|
+| CO₂ | 280 ppm | 410 ppm | >430 ppm (2025) | +50% |
+| CH₄ | 722 ppb | 1866 ppb | ~1930 ppb | +160% |
+| N₂O | 270 ppb | 332 ppb | ~338 ppb | +25% |
+
+*Attribution of the rise itself is not in serious dispute*, even among most
+critics. The isotopic signature (falling ¹³C/¹²C ratio, the "Suess effect"), the
+declining atmospheric O₂, and the simple fact that humans emit roughly twice what
+accumulates (the ocean and land absorb the rest — the "airborne fraction" of ≈45%)
+together make the human origin of rising CO₂ about as settled as anything in the
+field.
+
+The **radiative forcing** from these gases is computed from line-by-line
+absorption spectra. Notably, even William Happer's own radiative-transfer
+calculations reproduce the mainstream instantaneous forcing for doubled CO₂
+(≈3.7 W/m²); his disagreement is about feedbacks and net harm, not the forcing.
+That is worth stating clearly, because it locates the real debate.
+
+![Figure 5](fig5_ghg_trio.png)
+
+**Figure 5.** CO₂, CH₄, and N₂O (NOAA GML), each on its own scale. Different
+sources — fossil fuels, agriculture and energy, fertilizer and industry — yet a
+common anthropogenic upswing.
+
+---
+
+## 4. Attribution: what is settled, what is open
+
+Honest reporting requires separating the two.
+
+**Settled (very high confidence).**
+- CO₂, CH₄, N₂O are greenhouse gases; their rise is human-caused. *(Undisputed even
+  by the credentialed critics.)*
+- Human influence is the dominant cause of observed warming since ~1850. AR6's best
+  estimate of human-caused warming (1850–1900 to 2010–2019) is **1.07 °C**, against
+  total observed warming of ~1.1 °C — i.e. essentially all of it. IPCC calls this
+  "unequivocal."
+- Warming is **near-linear in cumulative CO₂**: every 1000 GtCO₂ raises temperature
+  ≈ **0.45 °C [0.27–0.63]** (the Transient Climate Response to cumulative Emissions,
+  TCRE; Figure 6). This is why *net-zero CO₂* is a physical requirement for halting
+  warming, not a political slogan.
+
+**The fingerprints.** Attribution does not rest on the temperature curve alone; it
+rests on a pattern of signatures that a greenhouse cause predicts and alternatives
+(a brighter Sun, say) do not. The **stratosphere is cooling while the troposphere
+warms** — the hallmark of greenhouse trapping, and the opposite of what solar
+forcing would produce (a brighter Sun warms both layers). **Nights are warming
+faster than days**, and **winters faster than summers**, as expected when the
+limiting factor is outgoing infrared rather than incoming sunlight. The
+**tropopause has risen**, the upper atmosphere has contracted, and more infrared is
+measured returning to the surface at the specific wavelengths CO₂ absorbs. These
+independent fingerprints are why "it's the Sun" fails quantitatively: solar
+output has been flat-to-slightly-declining since the 1980s while warming
+accelerated, and the vertical structure of the change is wrong for a solar cause.
+
+![Figure 6](fig6_tcre.png)
+
+**Figure 6.** The near-linear TCRE relationship (IPCC AR6 central value and likely
+range), with the historical point (~2400 GtCO₂ emitted → ~1.07 °C) and the 1.5/2.0 °C
+lines. Humanity has spent roughly four-fifths of the 1.5 °C budget.
+
+**Genuinely open (the honest uncertainties).**
+- **Equilibrium climate sensitivity (ECS)** — warming per CO₂ doubling. AR6
+  assesses **3 °C [likely 2.5–4.0]**, narrowed from the Charney 1.5–4.5 by combining
+  process, historical, and paleoclimate evidence (Sherwood et al. 2020). The upper
+  tail is what drives worst-case risk and remains poorly constrained.
+- **Cloud feedbacks** — the largest single source of ECS spread. This is the real
+  scientific frontier, and it is where the strongest heterodox arguments live.
+- **Regional and extreme-event detection** — signal emerges later at smaller scales;
+  AR6 detects an anthropogenic signal with high confidence in only a subset of the
+  ~33 climate-impact-driver categories.
+
+**The strongest heterodox challenges, weighed (Principle 2).**
+- *Lindzen's "iris" hypothesis* (tropical cirrus contract with warming → strong
+  negative feedback → low ECS). Tested repeatedly (Hartmann & Michelsen 2002; Lin
+  et al. 2002) and not supported at the strength claimed; a weak version may exist
+  (Mauritsen & Stevens 2015) but not enough to yield low sensitivity.
+- *Christy & Spencer's tropical-troposphere gap* (models warm the tropical
+  troposphere ~2× faster than satellites/balloons show). This discrepancy is
+  **real and acknowledged in AR6** — the honest open question is its magnitude and
+  cause. Santer et al. (2017) shrink it to ~1.7× after accounting for stratospheric
+  contamination and dataset uncertainty; Po-Chedley et al. (2021) attribute much of
+  the remainder to internal variability rather than excess model sensitivity. The
+  UAH satellite record's own history — two major errors (orbital-decay 1998,
+  diurnal-drift sign 2005) found by outside groups, both of which had *masked*
+  warming — is a caution about treating any single dataset as ground truth.
+- *Lewis & Curry's low ECS* (energy-budget estimates, ~1.5–1.8 °C). Legitimate,
+  peer-reviewed, and taken seriously — but shown to be biased low by "pattern
+  effects" (the historical warming pattern differs from the equilibrium pattern);
+  Sherwood et al. (2020) find values below 2 °C hard to reconcile with any single
+  line of evidence, let alone all three.
+
+The pattern across these: the critics' **data** have generally survived scrutiny
+better than the **inferences** drawn from them. Their existence is healthy;
+Principle 2 means engaging them on the evidence, which is what the field has done.
+
+---
+
+## 5. Future projections
+
+Projections are scenario-conditional: they answer "if emissions follow path X,
+then…", and the range reflects both scenario spread and physical uncertainty.
+
+**Warming by 2081–2100 (vs 1850–1900), AR6 very likely ranges:**
+
+| Scenario | Description | Warming (°C) |
+|----------|-------------|-------------:|
+| SSP1-1.9 | aggressive mitigation | 1.4 [1.0–1.8] |
+| SSP1-2.6 | strong mitigation | 1.8 [1.3–2.4] |
+| SSP2-4.5 | "middle of the road" | 2.7 [2.1–3.5] |
+| SSP3-7.0 | high emissions | 3.6 [2.8–4.6] |
+| SSP5-8.5 | very high emissions | 4.4 [3.3–5.7] |
+
+**A caveat both camps now share.** The highest scenario, SSP5-8.5 (formerly
+RCP8.5), was widely and wrongly used as "business as usual" in the impacts
+literature. It is better read as a low-probability high-end, not a baseline. This
+is a point on which mainstream analysts (Hausfather & Peters 2020) and critics
+(Pielke & Ritchie) actually agree — and a good example of the blog correcting a
+genuine distortion without ceding the underlying science. Current policies point
+to roughly **2.6–3.2 °C**; current pledges (NDCs), to ~2.3–2.8 °C — better than a
+decade ago, still short of the Paris goals.
+
+**The carbon-budget arithmetic (Principle 6).** From the TCRE relation and ~2400
+GtCO₂ already emitted, the remaining budget for a 50% chance of holding 1.5 °C was
+~500 GtCO₂ as of 2020 and, after ~40 GtCO₂/yr since, is now of order ~150–200
+GtCO₂ — a few years at current rates. The math is unforgiving and does not depend
+on any contested feedback: it follows from the near-linear, well-observed part of
+the physics.
+
+**Irreversibility and tails.** Some changes (deep-ocean warming, ice-sheet loss,
+sea-level rise) are effectively irreversible on human timescales; committed sea-level
+rise is measured in metres over centuries even at 1.5 °C. Low-probability,
+high-impact outcomes (ice-sheet collapse, circulation changes) cannot be excluded
+and belong in risk assessment precisely *because* Principle 5 cuts both ways: a low
+probability is not zero, and a high-impact tail carries weight even when unlikely.
+
+---
+
+## 6. Biodiversity and the living planet
+
+Climate is only half the story. The blog's purview and its third guiding
+principle — *all life on Earth is relevant; human life need not be prioritized* —
+demand that a state-of-the-Earth report also account for the biosphere. The
+physical climate and the living world are two coupled crises, and the biodiversity
+side has its own hard numbers, its own uncertainties, and its own honest debate.
+
+**The scale, in biomass.** Measured as dry carbon, life on Earth totals ≈550 Gt C,
+and it is overwhelmingly vegetation: **plants ≈450 Gt C (~80%); all animals ≈2 Gt C
+(~0.4%)** (Bar-On, Phillips & Milo 2018). Within that thin animal layer, one species
+and its livestock now dominate. Wild land mammals amount to only ≈20 Mt (wet), about
+**3 kg per person alive**, against ≈390 Mt of humans and ≈630 Mt of livestock
+(Greenspoon et al. 2023) — **more than 50 kg of humans and domesticated animals for
+every 1 kg of wild land mammal.** Since the rise of civilization, human activity has
+roughly **halved** global plant biomass and cut wild land-mammal biomass **~7-fold**.
+Barnosky (2008) gives the mechanism: net primary productivity sets an energetic
+ceiling on large-animal biomass, and human expansion has spent that budget at wild
+megafauna's expense — today's overshoot of the natural ceiling is underwritten by
+the same fossil-energy subsidy that drives the carbon problem (§4).
+
+**A sixth mass extinction — onset, not completion.** Here the principles about
+statistics (5) and fact-with-uncertainty (1) matter most. A *true* mass extinction,
+in the paleontological sense, means losing **>75% of species** in a geologically
+brief interval; that has happened exactly **five times in ~540 million years**. By
+that strict bar we are **not there** — documented losses are ~1–2% of species in
+well-studied groups (Barnosky et al. 2011), rising to a contested ~7.5–13% once the
+barely-assessed invertebrates are included (Cowie et al. 2022, set against the IUCN
+Red List's formally documented 0.04%). What is *not* in serious dispute is the
+**rate**: modern extinctions run **~100–1,000× the geological background**, ≈114×
+for vertebrates under deliberately conservative assumptions (Ceballos et al. 2015).
+At sustained current rates the 75% threshold would arrive within roughly 3–22
+centuries. The honest statement is therefore: **we are plausibly at the onset of a
+sixth mass extinction, not in a completed one** — a trajectory, not yet an event.
+
+The nearer-term signal is population decline (defaunation) rather than final
+extinction: across ~71,000 species, **48% are declining, 49% stable, 3% increasing**,
+and about a third of species the IUCN classes as *non-threatened* are nonetheless
+shrinking (Finn et al. 2023). Losers outnumber winners roughly 16 to 1.
+
+**The debate, fairly stated (Principle 2).** Critics note that the dramatic
+multipliers rest on extrapolation, on IUCN data with taxonomic and geographic gaps,
+and on island faunas whose extinction rates exceed continents'; a rebuttal
+literature argues the framing outruns the hard data. But the same under-assessment
+cuts the other way — because invertebrates and plants are so poorly catalogued, the
+official counts likely *understate* losses. The disagreement is genuine but narrow:
+it is about whether the strict definition is *yet* met, not about whether
+human-caused biodiversity loss is severe and accelerating (it is).
+
+**Where climate fits.** Per the IPBES Global Assessment (2019), the drivers rank:
+(1) land- and sea-use change, (2) direct overexploitation, (3) **climate change**,
+(4) pollution, (5) invasive species. Climate change is currently a *secondary*
+driver but the fastest-accelerating one, and it compounds the others — warming
+degrades ecosystems that store carbon, while habitat destruction removes sinks.
+IPBES estimates ~**1 million species** threatened with extinction. For the blog,
+the accurate synthesis is that the biodiversity crisis was set in motion mainly by
+land use, hunting, and invasives, and that climate change is the rising tide that
+threatens to carry it from onset toward a true mass extinction.
+
+*(Some writers — e.g. the physicist Tom Murphy — read this biomass collapse as the
+biological expression of the same growth-beyond-limits that drives the energy and
+carbon problems, and frame it through Daniel Quinn's decentering of the human. That
+is a viewpoint to engage, not data; this report keeps the peer-reviewed numbers
+above distinct from any such framing, per Principles 2 and 4.)*
+
+---
+
+## 7. A note on scope and framing
+
+Several of the sharpest disagreements are not about physics but about **scope**, and
+recognizing this defuses much apparent contradiction:
+
+- *Global vs. U.S.* "No trend in U.S. landfalling hurricanes" (true) is not
+  "no trend in global hurricane intensity" (a different, global question).
+- *Absolute vs. relative* sea level: local subsidence is real but does not shrink
+  the global climate signal.
+- *Level vs. rate*: high CO₂ in deep time does not bear on the danger of a fast
+  modern rise.
+- *Detection vs. attribution*: "not yet detected at this scale" is not "shown to be
+  absent."
+
+Keeping these distinctions crisp is most of what it takes to write about climate
+accurately — and it is fully consistent with the purview's exclusion of politics:
+these are questions of measurement and logic, not ideology.
+
+---
+
+## 8. References
+
+*Primary assessments and data (full portals in `context/references.md`):*
+
+1. IPCC, 2021. *Climate Change 2021: The Physical Science Basis* (AR6 WGI).
+   Cambridge University Press.
+2. IPCC, 2022. *Impacts, Adaptation and Vulnerability* (AR6 WGII).
+3. IPCC, 2022. *Mitigation of Climate Change* (AR6 WGIII).
+4. IPCC, 2023. *Climate Change 2023: Synthesis Report* (AR6 SYR).
+5. IPCC, 2019. *Special Report on the Ocean and Cryosphere* (SROCC).
+6. NOAA Global Monitoring Laboratory. Trends in atmospheric CO₂, CH₄, N₂O.
+   https://gml.noaa.gov/ccgg/trends/ (data accessed 2026-07-09).
+7. NASA GISTEMP Team, 2026. *GISS Surface Temperature Analysis v4*.
+   https://data.giss.nasa.gov/gistemp/ (accessed 2026-07-09).
+8. Church, J.A. & White, N.J., 2011. Sea-level rise from the late 19th to early
+   21st century. *Surveys in Geophysics* 32:585–602 (CSIRO reconstruction; accessed
+   2026-07-09).
+9. NOAA NCEI. Global Ocean Heat Content, 0–2000 m (Levitus/WOA; accessed
+   2026-07-09).
+10. Sherwood, S. et al., 2020. An assessment of Earth's climate sensitivity using
+    multiple lines of evidence. *Reviews of Geophysics* 58, e2019RG000678.
+11. Hausfather, Z. & Peters, G., 2020. Emissions – the "business as usual" story is
+    misleading. *Nature* 577:618–620.
+12. Santer, B. et al., 2017. Comparing tropospheric warming in climate models and
+    satellite data. *Journal of Climate* 30:373–392.
+13. Lewis, N. & Curry, J., 2018. The impact of recent forcing and ocean heat uptake
+    data on estimates of climate sensitivity. *Journal of Climate* 31:6051–6071.
+14. U.S. Department of Energy Climate Working Group, 2025. *A Critical Review of
+    Impacts of Greenhouse Gas Emissions on the U.S. Climate.*
+15. Dessler, A. & Kopp, R. (eds.), 2025. *Climate Experts' Review of the DOE Climate
+    Working Group Report.* ESS Open Archive.
+
+*Biodiversity (§6):*
+
+16. Bar-On, Y., Phillips, R. & Milo, R., 2018. The biomass distribution on Earth.
+    *PNAS* 115(25):6506–6511.
+17. Greenspoon, L. et al., 2023. The global biomass of wild mammals. *PNAS*
+    120(10):e2204892120.
+18. Barnosky, A.D., 2008. Megafauna biomass tradeoff as a driver of Quaternary and
+    future extinctions. *PNAS* 105(Suppl. 1):11543–11548.
+19. Barnosky, A.D. et al., 2011. Has the Earth's sixth mass extinction already
+    arrived? *Nature* 471:51–57.
+20. Ceballos, G. et al., 2015. Accelerated modern human-induced species losses:
+    entering the sixth mass extinction. *Science Advances* 1(5):e1400253.
+21. Ceballos, G., Ehrlich, P. & Dirzo, R., 2017. Biological annihilation via the
+    ongoing sixth mass extinction. *PNAS* 114(30):E6089–E6096.
+22. Cowie, R., Bouchet, P. & Fontaine, B., 2022. The Sixth Mass Extinction: fact,
+    fiction or speculation? *Biological Reviews* 97(2):640–663.
+23. Finn, C., Grattarola, F. & Pincheira-Donoso, D., 2023. More losers than winners:
+    Anthropocene defaunation. *Biological Reviews* 98(5):1732–1748.
+24. Smart, M.S. et al., 2023. The expansion of land plants during the Late Devonian
+    contributed to the marine mass extinction. *Communications Earth & Environment*
+    4:449.
+25. IPBES, 2019. *Global Assessment Report on Biodiversity and Ecosystem Services.*
+26. Kolbert, E., 2014. *The Sixth Extinction: An Unnatural History.* Henry Holt.
+    (2015 Pulitzer Prize, General Nonfiction.)
+27. Murphy, T.W., "Do the Math" (dothemath.ucsd.edu): "Ecological Cliff Edge"
+    (2023) and "Is the 6ME Hyperbole?" (2025) — cited as viewpoint/framing.
+
+*Figures 1–6 are original, generated by `CI_Reports/make_figures.py` from the data
+in sources 6–9 plus the AR6 TCRE relation (source 1). Uncertainty ranges and
+baselines are annotated on each figure. Literature figures are cited inline to the
+assessments above rather than reproduced, pending permissions.*
+
+---
+
+*Prepared under the Climate Intelligence guiding principles. Numbers dated after
+January 2026 rest on web-accessed primary data and should be re-verified at
+publication. This is an internal briefing, not a published post.*
