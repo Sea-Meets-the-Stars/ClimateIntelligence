@@ -1,0 +1,6 @@
+id,label,unit,central,low,high,probability,confidence,note
+P1,Northeast semi-arid net climate out-migration,million (cumulative 2025-2050),4.0,1.5,8.0,0.6,moderate,"On top of baseline internal migration; Semiarido base pop ~28M"
+P2,Amazon/North net climate out-migration,million (cumulative 2025-2050),1.5,0.5,4.0,0.5,low,"Tipping point assumed triggered; deforestation-frontier dynamics"
+P3,Climate-attributable inflow to Southeast+South metros,million (cumulative 2025-2050),3.0,1.0,6.0,0.5,low,"Destination of most internal flows; compounding urban hazard"
+P4,Single disaster event displacing >500k (before 2050),count,2.0,1.0,4.0,0.8,moderate,"Porto Alegre 2024 (~580k) as template; >=1 per decade"
+P5,Additional dangerous heat-stress days/yr NE+N by 2050,days/year,45.0,25.0,70.0,0.7,moderate,"WBGT above extreme-caution; not lethal 35C wet-bulb"
