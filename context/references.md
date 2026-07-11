@@ -213,8 +213,111 @@ is researched in depth.)*
 - Critical dossiers (advocacy-oriented; use for leads, cross-check claims): https://www.desmog.com ; https://www.sourcewatch.org
 - Published rebuttals hub: RealClimate (https://www.realclimate.org), Skeptical Science, Science Feedback.
 
-## 9. Changelog
+## 9. Homelessness (sources for context §11 / report §7)
 
+*Added 2026-07-11. The blog's first "related topic" outside climate proper;
+sources below were used to build the homelessness sections.*
+
+**Primary sources (read in full):**
+- **Kimmelman, M. (reported with L. Tompkins), "How Houston Moved 25,000 People
+  From the Streets Into Homes of Their Own,"** *NYT* (Headway), 2022-06-14 —
+  https://www.nytimes.com/2022/06/14/headway/houston-homeless-people.html
+  *(nytimes.com blocks automated fetching; a full PDF is saved at
+  `context/NYT/`)*. The definitive narrative of Houston's Housing First
+  continuum-of-care.
+- **Urban Institute — Denver Supportive Housing Social Impact Bond Initiative**
+  — https://www.urban.org/policy-centers/metropolitan-housing-and-communities-policy-center/projects/denver-supportive-housing-social-impact-bond-initiative
+  Project hub for the 2016–2020 RCT (n=724). Final report read in full:
+  *Breaking the Homelessness-Jail Cycle with Housing First* (2021),
+  https://www.urban.org/sites/default/files/publication/104501/breaking-the-homelessness-jail-cycle-with-housing-first_1.pdf ;
+  companion cost study: *Costs and Offsets of Providing Supportive Housing to
+  Break the Homelessness-Jail Cycle* (2021).
+
+**Data & institutional:**
+- **Coalition for the Homeless of Houston/Harris County** — https://www.cfthhouston.org/
+  The Way Home lead agency; "One Year Later" retrospective
+  (https://www.cfthhouston.org/one-year-later-the-new-york-times-article),
+  annual PIT releases (https://www.cfthhouston.org/2025-pit-results), funding
+  pages.
+- **HUD — Annual Homeless Assessment Report (AHAR) / PIT counts** —
+  https://www.huduser.gov/portal/datasets/ahar.html — the authoritative
+  national counts (2024: 771,480, record; 2025: 745,652, first decline since
+  2016).
+- **National Alliance to End Homelessness — State of Homelessness** —
+  https://endhomelessness.org/state-of-homelessness/ — annual analysis layer
+  over HUD data.
+- **Housing First Europe Hub — Finland** — https://housingfirsteurope.eu/country/finland/
+  (with the Y-Foundation) — the national-scale Housing First case.
+
+**The debate (read both sides; Principle 2):**
+- **National Academies, 2018.** *Permanent Supportive Housing: Evaluating the
+  Evidence…* — https://nap.nationalacademies.org/catalog/25133 — the null
+  health-outcomes finding.
+- **Corinth, K., 2017.** "The impact of permanent supportive housing on
+  homeless populations," *J. Housing Economics* 35:69–84 (AEI profile:
+  https://www.aei.org/profile/kevin-corinth/) — ~10 PSH units per 1-person PIT
+  reduction; Utah statistics critique.
+- **Cicero Institute** — https://ciceroinstitute.org/research/why-americas-homelessness-strategy-failed-and-how-to-fix-it/
+  and **Manhattan Institute** — https://manhattan.institute/article/housing-first-and-homelessness-the-rhetoric-and-the-reality
+  — the treatment-first critique. *Advocacy-oriented; cross-check claims.*
+- **UCSF Benioff Homelessness and Housing Initiative** — https://homelessness.ucsf.edu/
+  ("Housing First is not Housing Only") — the research-side rebuttal.
+
+**Policy landscape 2024–2026:**
+- ***City of Grants Pass v. Johnson***, 603 U.S. ___ (2024) —
+  https://www.supremecourt.gov/opinions/23pdf/23-175_19m2.pdf
+- **Executive Order 14321,** "Ending Crime and Disorder on America's Streets"
+  (2025-07-24) — whitehouse.gov; Bipartisan Policy Center explainer:
+  https://bipartisanpolicy.org/article/president-trumps-executive-order-on-homelessness-a-shift-in-federal-policy/
+- **Stateline** homelessness coverage — https://stateline.org/ (Grants Pass
+  two-year tracking; Dec 2025 HUD funding-rule shift).
+
+**Climate × homelessness:**
+- **Maricopa County heat-related deaths reports** —
+  https://www.maricopa.gov/1858/Heat-Surveillance — unhoused ≈40–50% of heat
+  deaths; **Yale Climate Connections** (2023) on Phoenix:
+  https://yaleclimateconnections.org/2023/07/for-unhoused-people-in-americas-hottest-large-city-heat-waves-are-a-merciless-killer/
+- **Community Solutions — The Intersection of Climate Change and
+  Homelessness** — https://community.solutions/research-posts/learning-brief-the-intersection-of-climate-change-and-homelessness/
+- **Georgetown Environmental Law Review, "Dual Hazards of Homelessness and
+  Climate Change"** — https://www.law.georgetown.edu/environmental-law-review/blog/dual-hazards-of-homelessness-and-climate-change/
+
+## 10. Population & demographics (sources for context §12 / report §8)
+
+*Added 2026-07-11. Sources for the global-population sections and figures 7–9.*
+
+**Primary sources (read in full):**
+- **UN DESA Population Division — World Population Prospects 2024** —
+  https://population.un.org/wpp/ — the authoritative estimates/projections
+  (1950–2100, probabilistic). *Summary of Results* PDF (read in full):
+  https://population.un.org/wpp/assets/Files/WPP2024_Summary-of-Results.pdf
+- **Vollset, S.E. et al., 2020.** "Fertility, mortality, migration, and
+  population scenarios for 195 countries…," *The Lancet* 396:1285–1306 —
+  https://www.thelancet.com/article/S0140-6736(20)30677-2/fulltext — the
+  IHME/GBD alternative forecast (peak 2064 at 9.7 B; 8.8 B by 2100).
+
+**Data & tools:**
+- **Our World in Data — Population & Demography** —
+  https://ourworldindata.org/population-growth — long-run series (HYDE 3.3 +
+  Gapminder + UN) and grapher CSV downloads; the series behind figures 7–9 are
+  cached in `CI_Reports/data/` (graphers
+  `population-long-run-with-projections`, `fertility-rate-with-projections`).
+  2024-revision explainer: https://ourworldindata.org/un-population-2024-revision
+- **Wittgenstein Centre Human Capital Data Explorer** —
+  https://dataexplorer.wittgensteincentre.org/ — education-stratified
+  projections (the SSP demographic backbone; 9.9 B in 2100 per its 2023
+  revision).
+- **OWID — Kaya identity decomposition** —
+  https://ourworldindata.org/grapher/kaya-identity-co2 — population vs
+  affluence vs intensity drivers of CO₂, 1965–2022.
+- **UN Population Division data portal** — https://population.un.org/dataportal/
+  — API access to the full WPP indicator set.
+
+## 11. Changelog
+
+- **2026-07-11** — Added §9 (Homelessness) and §10 (Population & demographics):
+  the sources used for `claudes_context.md` §§11–12 and CI report §§7–8
+  (context.md, Population prompt 2). Changelog renumbered to §11.
 - **2026-07-08 (later)** — Added §8: profiles and works of seven heterodox
   scientists (Curry, Lindzen, Christy, Spencer, Koonin, Happer, both Pielkes) from
   four parallel research passes; URLs verified.

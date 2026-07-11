@@ -5,8 +5,9 @@
 > collected so posts can be grounded, cited, and internally consistent.
 >
 > **Status:** living document — updated ad infinitum as we add sources.
-> **Last updated:** 2026-07-11 (added §11 Homelessness from the NYT Houston
-> deep-read + Denver SIB RCT + web deep dive; §10 Biodiversity added 2026-07-09;
+> **Last updated:** 2026-07-11 (added §12 Global population from the UN WPP 2024
+> Summary of Results + web deep dive, with figures 7–9 in `CI_Reports/`; §11
+> Homelessness added earlier the same day; §10 Biodiversity added 2026-07-09;
 > §9 heterodox voices + §9.1 DOE exchange and §8 recent developments on
 > 2026-07-08; initial build 2026-07-05 from the Murphy textbook + seven IPCC
 > AR6-cycle reports).
@@ -758,8 +759,124 @@ record US homelessness (771,480) *and* the Supreme Court green-lights camping
 bans; 2025: the federal government exits housing first as its own RCT evidence
 stands. (6) Terri Harris: housed, but not yet home.
 
-## 12. Changelog
+## 12. Global population
 
+*Added 2026-07-11 from the UN World Population Prospects 2024 "Summary of
+Results" (read in full; cached extract in scratchpad, PDF freely available) plus
+OWID data downloads and a web deep dive. Figures 7–9 in `CI_Reports/` (generated
+by `CI_Reports/make_population_figures.py` from data cached in
+`CI_Reports/data/`) support this section. Population is the *P* in every
+emissions identity and the denominator of every per-capita number on the blog —
+and Murphy's growth-limits argument (§3.1) presumes its trajectory — so
+it needs to be known precisely.*
+
+### 12.1 The century behind us (1926 → 2026)
+
+- **The numbers:** ~2.0 billion around 1927 → **8.2 billion in 2024** — a
+  quadrupling in one long human lifetime. Milestones (computed from the
+  HYDE/Gapminder/UN series in Fig. 7): **2 B ≈ 1927, 4 B ≈ 1975, 8 B ≈ 2022.**
+  Each doubling took ~48 years; there will not be another.
+- **The rate is the story** (Fig. 8): global growth *peaked ~2.1%/yr around
+  1963–64* — sixty years ago — and has fallen by more than half since
+  (~0.85%/yr today). Net annual additions peaked at **~92 million/yr around
+  1988**; we now add ~70 M/yr and falling.
+- **The mechanism is the demographic transition:** mortality falls first
+  (global life expectancy ~32 yr in 1900 → 66.5 by 2000 → **73.3 in 2024**),
+  population surges, then fertility follows income, urbanization, education of
+  girls, and contraception downward. Global TFR: **~5 births/woman in the
+  early 1960s → 3.31 in 1990 → 2.25 in 2024** (Fig. 9), just above the
+  replacement level of 2.1. More than half of all countries are now *below*
+  replacement; ~one fifth (China, Italy, South Korea, Spain…) are "ultra-low"
+  (<1.4).
+- The population "explosion" was thus never exponential-forever; it was a
+  one-time transition spike. Ehrlich's 1968 *Population Bomb* famines did not
+  arrive; instead the Green Revolution fed the surge while birth rates fell on
+  every continent.
+
+### 12.2 Projections: the peak is now in sight
+
+- **UN WPP 2024 (medium):** 8.5 B in 2030 → 9.7 B in 2050 → **peak ≈ 10.3 B in
+  the mid-2080s** (medium series maximum: 10.29 B in 2084) → 10.2 B in 2100
+  (95% PI **9.0–11.4 B**). The UN now gives **80% probability the peak occurs
+  this century** — a decade ago it gave ~30%. Each recent revision has come
+  down: 2100 is now ~700 M (6%) lower than projected a decade ago, mainly on
+  faster-than-expected fertility falls in China and parts of sub-Saharan
+  Africa.
+- **The spread of serious forecasts** (all shown in Fig. 7): IHME/Lancet
+  (Vollset et al. 2020): **peak 9.7 B in 2064, 8.8 B by 2100** (95% 6.8–11.8;
+  assumes TFR → 1.66 via education/contraception scale-up); Wittgenstein
+  Centre (2023): 9.9 B in 2100. The *direction* is unanimous — growth ends
+  this century; the disagreement is fertility-floor timing, worth a
+  Principle-1 note whenever we quote a single 2100 number.
+- **Where the remaining growth is:** essentially all net growth to 2054 comes
+  from 126 still-growing countries (India, Indonesia, Nigeria, Pakistan, US);
+  **sub-Saharan Africa** goes 1.2 B (2024) → 2.2 B (2054) → **3.3 B [2.7–4.5]
+  by 2100**, rising toward ~40% of humanity. Nine countries (incl. DRC, Niger,
+  Somalia, Angola) likely *double* by 2054.
+- **One in four people already lives in a country past its peak** (63
+  countries, 28% of world population: China — peaked 2021, now shrinking;
+  Japan, Germany, Russia…). India passed China as most populous in 2023. For
+  24 ultra-low-fertility, already-peaked countries, the UN puts the odds of
+  returning to replacement within 30 years at **0.1%** — pro-natalist policy
+  pushes against momentum.
+- **Momentum, not babies, drives what's left:** 79% of the increase to 2054
+  (~1.4 B people) is embedded in today's youthful age structure — it happens
+  even at replacement fertility. Women of reproductive age peak ~2.2 B in the
+  late 2050s.
+- **Aging is the flip side:** by the late 2070s people **65+ (~2.2 B) will
+  outnumber children under 18**; by the mid-2030s the 80+ (265 M) outnumber
+  infants. Life expectancy 73.3 → ~77.4 by 2054. The "demographic dividend"
+  window has already closed for nearly every country that has peaked.
+
+### 12.3 Population × climate (the careful part)
+
+- **Kaya identity:** CO₂ = P × (GDP/P) × (E/GDP) × (CO₂/E). From 1965–2022:
+  population **+140%**, GDP/capita **+179%**, energy intensity **−50%**,
+  carbon intensity **−15%** → emissions **+230%**. Population growth matters,
+  but affluence has been the larger multiplier — and the two efficiency terms
+  are where mitigation lives (cf. Murphy §3.1 on why they can't
+  improve forever).
+- **The growth is where the emissions aren't.** Sub-Saharan Africa has the
+  fastest population growth and ~**2% of cumulative emissions** (~0.8
+  tCO₂/person/yr vs ~14 for the US). The next 2 billion people add far less
+  carbon than the last 2 billion did — unless/until incomes rise, which is the
+  development-vs-climate tension in one sentence (WGIII equity material).
+- **An earlier, lower peak helps:** the UN itself notes aggregate demand for
+  food, housing and infrastructure "will likely be smaller." SSP demographic
+  spreads translate to on the order of a degree of difference by 2100 between
+  low- and high-population pathways — real, but smaller than the energy-system
+  levers.
+- **Population aging cuts emissions** (China evidence: elderly households
+  consume less carbon), while shrinking workforces strain the economics of
+  rapid decarbonization — a two-sided story.
+- **Editorial caution (Principles 2 & 4):** population talk carries ugly
+  baggage (coercion, eco-austerity aimed at the poor). Anchor on the UN's own
+  line — *"a sustainable future for all hinges more on human behaviours than
+  on human numbers"* — and on the empowerment framing: the interventions that
+  lower fertility fastest (girls' education, voluntary family planning,
+  child survival) are development goods in their own right (Project Drawdown
+  ranks them among the largest climate solutions). Never "too many people";
+  always *which* people get to choose, and *what* each person consumes.
+
+**Blog hooks:** (1) Anyone born in 1950 has watched the human population more
+than triple (2.5 → 8.2 B) — and the growth *rate* halve. (2) The 2 B → 4 B →
+8 B doublings each took ~48 years; the UN gives 80% odds there is never a 16 B.
+(3) Peak *growth* was 1964; peak *additions* 1988; peak *people* ~2084 — the
+bomb has been defusing for 60 years. (4) One in four humans already lives in a
+shrinking country. (5) By ~2080, the world has more grandparents than children.
+(6) Kaya arithmetic: +140% people but +230% CO₂ — headcount was never the main
+lever. (7) 79% of the growth still coming is momentum — already born, already
+counted. (8) The whole 21st-century climate problem will be solved (or not) by
+a civilization that is *peaking*, not exploding — Murphy's finite-planet math
+and the UN's own curves finally agree on the shape.
+
+## 13. Changelog
+
+- **2026-07-11 (later)** — Added §12 (Global population): UN WPP 2024 Summary
+  of Results read in full; OWID population/fertility series cached to
+  `CI_Reports/data/`; figures 7–9 generated by new
+  `CI_Reports/make_population_figures.py`; CI report gained §8. Renumbered
+  changelog to §13.
 - **2026-07-11** — Added §11 (Homelessness): deep-read of the NYT Houston article
   (`context/NYT/`), Urban Institute Denver SIB RCT final report + cost study,
   CFTH follow-ups, national PIT data, the housing-first debate, the 2024–2026

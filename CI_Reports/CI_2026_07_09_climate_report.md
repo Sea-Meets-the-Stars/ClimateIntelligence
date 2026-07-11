@@ -27,7 +27,7 @@ WGII/WGIII 2022, Synthesis 2023) and three Special Reports (SR1.5, SROCC, SRCCL)
 supplemented by primary data archives (NOAA, NASA, CSIRO, the Global Carbon
 Project) and by the 2025 U.S. Department of Energy "Climate Working Group" report
 and its 85-author expert rebuttal, which together bracket the live debate. Full
-citations are in §9; data portals are catalogued in `context/references.md`.
+citations are in §10; data portals are catalogued in `context/references.md`.
 
 **On uncertainty.** Following IPCC calibrated language, *likely* denotes ≥66%
 probability and *very likely* ≥90%; quantitative ranges are 5–95% ("very likely")
@@ -468,7 +468,95 @@ and housing crises compete for — and destroy — the same scarce, cheap housin
 
 ---
 
-## 8. A note on scope and framing
+## 8. Global population: the *P* in every projection
+
+*(Added 2026-07-11. Population is a direct input to every emissions scenario —
+the first factor of the Kaya identity — and the denominator of every per-capita
+number this blog will ever quote. It is also the rare global projection with
+genuinely small near-term uncertainty: people who will be 30 in 2056 have
+already been born.)*
+
+**The century behind us.** World population stood near **2 billion in 1927**
+and reached **8 billion in 2022** — a quadrupling within one long human
+lifetime (Figure 7). The 2→4 billion and 4→8 billion doublings each took ~48
+years. The driver is the **demographic transition**: mortality falls first
+(global life expectancy ~32 years in 1900, 73.3 in 2024 [37]), population
+surges, then fertility follows education, urbanization, and contraception
+downward. The global total fertility rate has fallen from **~5 births per
+woman in the early 1960s to 2.25 in 2024** — just above the replacement level
+of 2.1 — and more than half of all countries are now below replacement
+(Figure 9). Crucially, the *rate* of growth peaked sixty years ago: **~2.1%/yr
+around 1964**, halved to ~0.85%/yr today; absolute additions peaked at ~92
+million/yr around 1988 (Figure 8). Growth has been decelerating for two full
+generations — the "population bomb" of 1968 vintage never detonated on
+schedule, defused by choices made mostly by educated women.
+
+![Figure 7](fig7_world_population.png)
+
+**Figure 7.** World population, 1900–2100: estimates (HYDE/Gapminder/UN),
+the UN WPP 2024 medium projection (dashed), billion-crossing milestones
+computed from the series, and the spread of end-of-century projections with
+95% intervals (UN 9.0–11.4 B; IHME 6.8–11.8 B; WIC median 9.9 B).
+
+![Figure 8](fig8_growth_rate.png)
+
+**Figure 8.** The growth *rate* (top) peaked around 1964 at ~2.1%/yr; net
+annual additions (bottom) peaked around 1988 at ~92 million/yr. Under the UN
+medium projection both cross zero in the mid-2080s.
+
+**Projections, with uncertainty stated (Principle 1).** The UN's *World
+Population Prospects 2024* medium scenario reaches 8.5 B in 2030, 9.7 B in
+2050, a **peak of ~10.3 B in the mid-2080s** (medium-series maximum 10.29 B in
+2084), then 10.2 B by 2100 with a 95% prediction interval of **9.0–11.4 B**
+[37]. The UN now assigns **80% probability that world population peaks within
+this century** — up from ~30% a decade ago; its 2100 estimate has come down
+~700 million (6%) in ten years, mainly on faster-than-expected fertility
+declines in China and parts of sub-Saharan Africa. Independent groups agree on
+the shape and differ on timing: IHME (Lancet, 2020) projects a **peak of 9.7 B
+in 2064 falling to 8.8 B [6.8–11.8] by 2100** [38]; the Wittgenstein Centre
+(2023) gives 9.9 B in 2100 [39]. A projection without its range is not a
+scientific statement, and Figure 7 plots all three ranges; but the qualitative
+conclusion — *human population growth ends this century* — is now the
+consensus of every major forecasting group.
+
+The composition shifts as much as the total. **One in four people already
+lives in a country whose population has peaked** (63 countries including
+China — peaked 2021 — Japan, Germany, Russia); India passed China in 2023.
+**79% of the growth remaining to 2054 is demographic momentum** — embedded in
+today's young age structure, arriving even at replacement fertility. Nearly
+all net growth concentrates in 126 still-growing countries; **sub-Saharan
+Africa rises from 1.2 B (2024) to 2.2 B by 2054 and ~3.3 B [2.7–4.5] by
+2100** [37]. And the world ages: by the late 2070s people 65 and older
+(~2.2 B) are projected to outnumber children under 18.
+
+![Figure 9](fig9_fertility.png)
+
+**Figure 9.** Total fertility rate by region, 1950–2100 (UN WPP 2024
+estimates + medium projection). Every region converges toward or below the
+replacement level of ~2.1; Africa is simply the latest to make the same
+transition.
+
+**Population and climate, decomposed (Principle 6).** The Kaya identity
+factorizes emissions: CO₂ = P × (GDP/P) × (energy/GDP) × (CO₂/energy). From
+1965 to 2022, population grew **+140%** while emissions grew **+230%**:
+affluence (+179% GDP per capita) outpaced headcount as a multiplier, and the
+two intensity terms (−50%, −15%) absorbed part of both [40]. Two corollaries
+keep the analysis honest. First, *the growth is where the emissions are not*:
+sub-Saharan Africa, with the fastest population growth, emits ~0.8 tCO₂ per
+person per year against ~14 for the United States — the next two billion
+people add far less carbon than the last two billion did, unless incomes rise,
+which is the development-equity tension of WGIII in a single sentence. Second,
+an earlier, lower peak modestly eases long-run pressure on food, housing, and
+energy demand — the UN's own summary notes as much — but scenario work puts
+the demographic lever well below the energy-system levers this report covers
+in §5. The UN's framing is the right editorial anchor: *"a sustainable future
+for all hinges more on human behaviours than on human numbers"* [37] — and the
+interventions that lower fertility fastest (girls' education, voluntary family
+planning, child survival) are development goods in their own right.
+
+---
+
+## 9. A note on scope and framing
 
 Several of the sharpest disagreements are not about physics but about **scope**, and
 recognizing this defuses much apparent contradiction:
@@ -488,7 +576,7 @@ these are questions of measurement and logic, not ideology.
 
 ---
 
-## 9. References
+## 10. References
 
 *Primary assessments and data (full portals in `context/references.md`):*
 
@@ -580,10 +668,28 @@ these are questions of measurement and logic, not ideology.
 36. Y-Foundation / Housing First Europe on Finland's national Housing First
     programme (2008–present).
 
+*Global population (§8):*
+
+37. United Nations, Department of Economic and Social Affairs, Population
+    Division, 2024. *World Population Prospects 2024: Summary of Results*
+    (UN DESA/POP/2024/TR/NO. 9). Read in full 2026-07-11.
+38. Vollset, S.E. et al., 2020. Fertility, mortality, migration, and population
+    scenarios for 195 countries and territories from 2017 to 2100. *The Lancet*
+    396:1285–1306 (IHME/GBD forecast).
+39. Wittgenstein Centre for Demography and Global Human Capital, 2023. Human
+    capital data explorer (population projections), as quoted in ref. 37.
+40. Our World in Data: "Population" and "Fertility rate" (HYDE 3.3, Gapminder,
+    UN WPP 2024 series; graphers `population-long-run-with-projections`,
+    `fertility-rate-with-projections`, data cached to `CI_Reports/data/`
+    2026-07-11); "Kaya identity: drivers of CO₂ emissions" (Global Carbon
+    Budget / Energy Institute decomposition, 1965–2022).
+
 *Figures 1–6 are original, generated by `CI_Reports/make_figures.py` from the data
-in sources 6–9 plus the AR6 TCRE relation (source 1). Uncertainty ranges and
-baselines are annotated on each figure. Literature figures are cited inline to the
-assessments above rather than reproduced, pending permissions.*
+in sources 6–9 plus the AR6 TCRE relation (source 1). Figures 7–9 are original,
+generated by `CI_Reports/make_population_figures.py` from the data in source 40
+with interval anchors from sources 37–38. Uncertainty ranges and baselines are
+annotated on each figure. Literature figures are cited inline to the assessments
+above rather than reproduced, pending permissions.*
 
 ---
 
