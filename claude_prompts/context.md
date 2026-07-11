@@ -43,8 +43,16 @@ This repository will create the blog "Climate Intelligence".  This file will hel
     - Update the `CI_Reports/CI_2026_07_09_climate_report.md` document with your understanding of the subject.
     - Log your work.
 
+### Homelessness
 
-## Discussion
+1. Please search the New York Times for an article I read a few years ago that described a homeless program.  It offered free housing to the unhoused and then studied the positive impacts on their lives.  It also provided the cost of the program.  If you need my credentials to access the NYT, please ask.  Log your work.
+
+2. Using the links below as a starting point, do a deep dive on the internet on the subject of homelessness.  Then add a new section to the `claudes_context.md` document and add your findings to it.  Then add to the `CI_Reports/CI_2026_07_09_climate_report.md` document as well.  Log your work.
+
+    - https://www.cfthhouston.org/one-year-later-the-new-york-times-article
+    - The article(s) in Projects/ClimateIntelligence/context/NYT
+    - https://www.urban.org/policy-centers/metropolitan-housing-and-communities-policy-center/projects/denver-supportive-housing-social-impact-bond-initiative
+
 ## Discussion
 
 ### Claude's questions — prompt 1 / IPCC reports (2026-07-04)

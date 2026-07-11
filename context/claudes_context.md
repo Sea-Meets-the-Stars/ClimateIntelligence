@@ -5,9 +5,10 @@
 > collected so posts can be grounded, cited, and internally consistent.
 >
 > **Status:** living document — updated ad infinitum as we add sources.
-> **Last updated:** 2026-07-09 (added §10 Biodiversity & the sixth mass
-> extinction; §9 heterodox voices + §9.1 DOE exchange and §8 recent developments
-> on 2026-07-08; initial build 2026-07-05 from the Murphy textbook + seven IPCC
+> **Last updated:** 2026-07-11 (added §11 Homelessness from the NYT Houston
+> deep-read + Denver SIB RCT + web deep dive; §10 Biodiversity added 2026-07-09;
+> §9 heterodox voices + §9.1 DOE exchange and §8 recent developments on
+> 2026-07-08; initial build 2026-07-05 from the Murphy textbook + seven IPCC
 > AR6-cycle reports).
 >
 > **Companion file:** `context/references.md` — a curated directory of *where to
@@ -38,6 +39,7 @@ mirrored to the `ClimateIntelligence:` shared Drive (`Books/`, `Reports/`).
 | SRCCL | Climate Change and Land | 2019 | `context/Reports/IPCC_SRCCL_FullReport.pdf` |
 | DOE CWG | A Critical Review of Impacts of GHG Emissions on the U.S. Climate (Christy, Curry, Koonin, McKitrick, Spencer) | 2025 | `context/Reports/DOE_CWG_Critical_Review_July2025.pdf` |
 | CWG Rebuttal | Climate Experts' Review of the DOE CWG Report (85+ authors; eds. Dessler & Kopp) | 2025 | `context/Reports/Climate_Experts_Review_of_DOE_CWG_Sept2025.pdf` |
+| NYT Houston | How Houston Moved 25,000 People From the Streets Into Homes of Their Own (Kimmelman & Tompkins, NYT Headway) | 2022 | `context/NYT/How Houston Moved 25,000 People From the Streets Into Homes of Their Own - The New York Times.pdf` |
 
 The seven IPCC reports constitute the **complete AR6 assessment cycle** (three
 Working Group reports + Synthesis Report + three Special Reports). AR7 has not yet
@@ -579,7 +581,190 @@ plants spreading triggered ocean anoxia and a marine mass extinction — life ca
 disrupt the system that sustains it. (6) Kolbert's *The Sixth Extinction* (2014
 Pulitzer) mainstreamed the framing.
 
-## 11. Changelog
+## 11. Homelessness
+
+*Added 2026-07-11 from a deep-read of the NYT Houston article (source library,
+§1), the Urban Institute's Denver SIB final evaluation, the Coalition for the
+Homeless of Houston's follow-ups, and a web deep dive. Homelessness sits in the
+blog's purview as a "related topic": the unhoused are the most climate-exposed
+people in America (§11.5), and the subject is a model case of evidence-based
+social policy — and of policy moving against evidence — which is exactly the
+terrain Principles 1, 2 and 5 are built for.*
+
+### 11.1 The two anchor cases: Houston and Denver
+
+**Houston (the NYT Headway story, Kimmelman & Tompkins, 2022-06-14).** During
+2012–2022 Houston, the fourth-largest US city, moved **>25,000 homeless people
+directly into apartments** (now **>36,000** per the Coalition), cutting its
+homeless count **~63% since 2011** — more than twice the national pace in the
+2010s. The overwhelming majority remained housed at two years (the continuum now
+reports **~90%** still housed or positively exited at two years). Veterans' wait
+from street to housing fell from **720 days and 76 bureaucratic steps to 32
+days**. The mechanics, not the money, were the story:
+
+- **"Housing first"** — the most vulnerable go straight from streets into
+  apartments, *without* preconditions (sobriety, treatment, employment, religion).
+  Kimmelman's summary of the logic: when someone is drowning, you don't insist
+  they learn to swim before pulling them ashore.
+- **One continuum, one lead agency.** The 2009 HEARTH Act tied federal funds to
+  cities organizing providers into "continuums of care." Houston's (The Way Home,
+  led by the Coalition for the Homeless, >100 organizations) actually embraced it:
+  shared real-time data, coordinated roles, housing authority reserving 250
+  voucher slots/yr for the continuum. Cities that only "met the letter of the law"
+  (San Diego: −19%) did far worse; Atlanta copied Houston's model and cut
+  homelessness ~40%.
+- **Triage, honestly described.** Most of the ~50,000/yr who sought help were
+  *diverted* (rental assistance, benefits sign-up), not housed. Highest
+  vulnerability scores → **permanent supportive housing** (subsidy + case
+  manager, open-ended); next tier → **rapid rehousing** (~4,233 people in 2021):
+  one year's rent (the story's example: **$886/month**) plus a case manager, then
+  you're on your own — in Houston ~**three-quarters** remain housed afterward.
+- **Cost, as the article gives it:** economists' estimates of taxpayer *savings*
+  from supportive housing range **$4,800–$60,000+ per person per year** (against
+  the jails/ERs/shelters it displaces); advocates add that "does it save money"
+  is the wrong test given how heavily housing subsidies already tilt to
+  homeowners. In Jan 2022 Houston/Harris County announced a **$100M**
+  federal/state/county/city plan to halve the remaining count by 2025.
+- **The human hook:** Terri Harris — five years on the streets, rapid-rehoused
+  from an underpass encampment into her first-ever apartment, reunited with her
+  daughter, weeping on the carpet — and, at story's end, two months from her
+  lease expiring, needing $886/month she didn't have. Housed, "but she isn't
+  home yet." The article is honest that housing first is a triage system atop an
+  affordable-housing shortage, not a solution to poverty.
+
+**Denver (the gold-standard experiment).** The Denver Supportive Housing Social
+Impact Bond Initiative (2016–2020; $8.6M from eight private investors, repaid
+with return only on measured success) targeted people with chronic homelessness
+*and* frequent police/jail/ER contact. The Urban Institute ran a true
+**randomized controlled trial, n = 724** (363 offered supportive housing, 361
+usual care) — among the most rigorous homelessness evaluations ever done
+("Breaking the Homelessness-Jail Cycle with Housing First," 2021). Results at
+three years, treatment vs control:
+
+- **79%** of those offered housing were located, engaged, and housed — from
+  streets, with no preconditions. Housing retention among the living: **86% at
+  1 yr, 81% at 2 yr, 77% at 3 yr.**
+- **−34%** police contacts (8 fewer per person), **−40%** arrests (4 fewer),
+  **−30%** jail stays, **−27%** jail days (38 fewer), **−40%** shelter visits
+  (127 fewer), **−65%** city-funded detox visits. Emergency medical use: no
+  significant difference.
+- **Cost:** ~**$22,300–$35,800** per person-year depending on provider (housing
+  assistance ~$11,000 + intensive services). Participants incurred ~**$7,000/yr
+  less** in emergency-service costs — i.e. **roughly half the program's cost was
+  offset** by avoided jail, court, shelter, and detox use. Not free; cheaper than
+  it looks, and it *works*.
+
+Urban's verdict: the results "disrupt the false narratives that homelessness is
+an unsolvable problem and that people who experience chronic homelessness choose
+to live on the street."
+
+### 11.2 The national picture (numbers to reach for)
+
+- **2024 PIT count: 771,480** people homeless on a single January night — a
+  record, **+18%** over 2023, driven by housing costs, the end of pandemic-era
+  aid, and migration (family homelessness **+39%**). Veterans, the one group
+  with sustained targeted investment, hit a record *low* (32,882, −8%).
+- **2025 PIT count: 745,652 (−3.4%)** — first national decline since 2016
+  (released May 2026).
+- Five states (CA, NY, FL, WA, TX) hold **57%** of the homeless population;
+  the crisis concentrates where rents outrun incomes. ~**1 in 14** Americans
+  experiences homelessness at some point; most spells are **≤6 weeks**, and
+  ~40% of people experiencing homelessness have jobs. "Chronic" homelessness
+  (>1 yr, or repeated, plus a disability) is the narrow, visible slice the
+  housing-first machinery targets.
+- Structural driver on the housing side: the affordable-housing shortage
+  (Houston illustration: 220,000 people qualified for 20,000 vouchers in 2010;
+  600,000 for 40,000 by 2022; 95% occupancy, rents +17%/yr, landlords defecting).
+- **Finland** is the national-scale proof: Housing First as state policy since
+  2008 (shelters converted to apartments, Y-Foundation stock), long-term
+  homelessness cut by more than two-thirds, ~3,400 single homeless people by
+  2023 (small uptick 2024), with estimated public savings of **€9,600–15,000
+  per person per year** — the only EU country with a sustained large-scale
+  reduction.
+
+### 11.3 The honest debate (Principle 2)
+
+What the evidence *does* show: housing-first reliably **houses people and keeps
+them housed** (Denver 77% at 3 yr; Houston ~90% at 2 yr; meta-analyses ~88%
+retention vs ~47% for treatment-first) and reliably **cuts jail, shelter, and
+detox churn**. What it does *not* clearly show: improved **health, sobriety, or
+mortality**. The National Academies (2018) found no substantial published
+evidence that permanent supportive housing improves health outcomes; Denver's
+EMS effect was null.
+
+The serious critics build on that gap. **Kevin Corinth** (AEI) estimates ~10 PSH
+units are needed to reduce the PIT count by one person (because units also serve
+people who would have exited anyway), and showed Utah's famous "91% drop in
+chronic homelessness" was largely definitional/methodological artifact. The
+**Manhattan Institute** and **Cicero Institute** argue housing-first became a
+funding monopoly ("housing only"), crowding out treatment and recovery programs,
+and note homelessness *rose* nationally after the 2013 federal pivot to housing
+first. Defenders (UCSF Benioff Initiative and others) reply that housing first
+was never a health treatment — its endpoint is *housing* — that fidelity and
+funding, not the model, failed, and that the counterfactual decade (rents,
+opioids, COVID) explains the rise. **Editorial line:** state each side's
+strongest numbers; don't let "housing first doesn't cure addiction" masquerade
+as "housing first doesn't house people" (it demonstrably does), and don't let
+"it houses people" masquerade as "it heals them" (unproven).
+
+### 11.4 The policy reversal, 2024–2026
+
+- **Grants Pass v. Johnson** (SCOTUS 6–3, 2024-06-28): enforcing public-camping
+  bans against people with nowhere to go is not "cruel and unusual punishment."
+  Since then **14 states and 350+ cities** have adopted tougher
+  camping/encampment laws.
+- **Executive Order 14321,** "Ending Crime and Disorder on America's Streets"
+  (2025-07-24): federal pivot away from housing first toward mandated treatment,
+  transitional housing, and easier civil commitment; HUD rules (late 2025) cap
+  permanent-housing uses at **30%** of ~$3B in federal homelessness grants.
+  **20 states + DC are suing**; providers warn of mass displacement from
+  currently funded PSH units.
+- **Houston under stress:** COVID funds exhausted; unsheltered count **+16% in
+  2025** (chronic share 29%→44%); the coalition says ~$50M/yr above HUD funds is
+  needed just to hold ground; Mayor Whitmire's $70M drive to "end street
+  homelessness by end-2026" raised ~$31M in year one. A natural experiment in
+  whether a proven system survives its funding cliff — watch the 2026 PIT count.
+
+### 11.5 Where climate fits (why this belongs on the blog)
+
+- **Heat kills the unhoused first.** Maricopa County (Phoenix): unsheltered
+  people are roughly **40–50% of heat deaths** in recent years (339 total heat
+  deaths in 2021; 425 in 2024 and 430 in 2025 per county reports) despite being
+  <1% of the population — order-of-magnitude ~100× elevated risk. Heat is the
+  deadliest US weather hazard, and the unhoused cannot follow "stay indoors"
+  guidance.
+- **Disasters manufacture homelessness.** The 2018 Camp Fire destroyed ~15,000
+  homes and displaced ~50,000 people (~10% back after a year); Maui 2023 and the
+  January 2025 LA fires each destroyed thousands of housing units in already
+  tight markets. Each event tightens the same low-rent housing stock the
+  continuums depend on — climate change and homelessness compete for the same
+  scarce units.
+- **Displacement is the through-line.** Climate is now the second-largest driver
+  of global displacement after conflict. Domestically, disaster survivors,
+  rent-burdened households, and the chronically homeless are segments of one
+  housing-precarity pipeline (the NYT piece's "one broken transmission away").
+- **Blog angle:** vulnerability compounds — the same populations least
+  responsible for emissions absorb the sharpest climate impacts (echoes AR6 WGII
+  on exposure/vulnerability). A Houston-style continuum is, functionally, climate
+  adaptation infrastructure.
+
+**Blog hooks:** (1) A true RCT — rare in social policy — showed housing chronically
+homeless people cut arrests 40% and detox use 65%, with half the cost paid back in
+avoided emergency services. (2) 720 days → 32 days: what fixing *coordination*,
+not compassion, did for Houston's veterans. (3) The unhoused are <1% of Phoenix
+but ~half its heat deaths — climate policy and housing policy are the same story.
+(4) Finland, the control experiment America declined to run on itself. (5) 2024:
+record US homelessness (771,480) *and* the Supreme Court green-lights camping
+bans; 2025: the federal government exits housing first as its own RCT evidence
+stands. (6) Terri Harris: housed, but not yet home.
+
+## 12. Changelog
+
+- **2026-07-11** — Added §11 (Homelessness): deep-read of the NYT Houston article
+  (`context/NYT/`), Urban Institute Denver SIB RCT final report + cost study,
+  CFTH follow-ups, national PIT data, the housing-first debate, the 2024–2026
+  policy reversal, and climate links. Added the NYT article to §1; renumbered
+  changelog to §12.
 
 - **2026-07-09** — Added §10 (Biodiversity & the sixth mass extinction) from the
   `context/Murphy/` reading list (7 "Do the Math" posts + 17 papers), via three

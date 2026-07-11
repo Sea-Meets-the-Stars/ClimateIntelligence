@@ -27,7 +27,7 @@ WGII/WGIII 2022, Synthesis 2023) and three Special Reports (SR1.5, SROCC, SRCCL)
 supplemented by primary data archives (NOAA, NASA, CSIRO, the Global Carbon
 Project) and by the 2025 U.S. Department of Energy "Climate Working Group" report
 and its 85-author expert rebuttal, which together bracket the live debate. Full
-citations are in §7; data portals are catalogued in `context/references.md`.
+citations are in §9; data portals are catalogued in `context/references.md`.
 
 **On uncertainty.** Following IPCC calibrated language, *likely* denotes ≥66%
 probability and *very likely* ≥90%; quantitative ranges are 5–95% ("very likely")
@@ -392,7 +392,83 @@ above distinct from any such framing, per Principles 2 and 4.)*
 
 ---
 
-## 7. A note on scope and framing
+## 7. Homelessness: evidence, policy, and the climate connection
+
+*(Added 2026-07-11. Homelessness enters this report as one of the blog's
+"related topics," and it earns the place twice over: the unhoused are the most
+climate-exposed people in the country, and the subject is a rare social-policy
+question where a genuine randomized controlled trial exists — terrain where
+Principles 1, 2 and 5 apply exactly as they do to climate data.)*
+
+**What the strongest evidence shows.** The Denver Supportive Housing Social
+Impact Bond Initiative (2016–2020) is the closest thing American homelessness
+policy has to a laboratory experiment: **724 chronically homeless people** with
+frequent police and jail contact were randomly assigned to an offer of permanent
+supportive housing — an apartment plus intensive services, with *no*
+preconditions of sobriety or treatment ("housing first") — or to usual care
+(Urban Institute RCT). Of those offered housing, **79% were successfully housed
+from the streets**, and among the living, **86% remained housed at one year, 81%
+at two, 77% at three**. Relative to control, participants logged **34% fewer
+police contacts, 40% fewer arrests, 27% fewer jail days, 40% fewer shelter
+visits, and 65% fewer detox visits**; emergency medical use showed no
+statistically significant difference. The program cost roughly **$22,000–36,000
+per person-year**, of which **about half was offset** by avoided jail, court,
+shelter, and detox costs (~$7,000/yr less in emergency services per person).
+
+At city scale, Houston is the observational counterpart (NYT, Kimmelman &
+Tompkins 2022): one lead agency coordinating >100 providers with shared
+real-time data moved **>25,000 people (now >36,000) directly into housing from
+2012**, cut the regional count **~63% from 2011**, and cut veterans'
+street-to-housing time from **720 days to 32**; roughly **90% remain housed or
+positively exited at two years**. Nationally, Finland — the one country to adopt
+housing first as state policy (2008) — cut long-term homelessness by more than
+two-thirds, with estimated public savings of €9,600–15,000 per person-year.
+
+**What the evidence does *not* show, stated fairly (Principle 2).** Housing
+first demonstrably *houses* people; it has not been shown to *heal* them. The
+National Academies (2018) found no substantial published evidence that
+permanent supportive housing improves health outcomes, and Denver's null EMS
+result is consistent with that. Critics add real quantitative points: Corinth
+(AEI) estimates ~10 supportive-housing units reduce point-in-time homelessness
+by ~1 person, and showed Utah's celebrated "91% reduction" was largely a
+definitional artifact; the Cicero and Manhattan Institutes argue the model
+became a federal funding monopoly that crowded out treatment. Defenders reply
+that housing first's endpoint is housing stability, not sobriety, and that the
+2013–2024 national rise tracks rents, opioids, and a pandemic, not the model.
+Both of these can be true. The disciplined statement is: **housing first wins
+decisively on housing retention and public-system churn; its health effects are
+unproven; and no housing policy can outrun a shortage of affordable housing.**
+
+**The scale of the problem, and the policy reversal.** The January 2024
+point-in-time count found a record **771,480** people homeless on one night
+(+18% yr/yr — housing costs, expiring pandemic aid, migration); January 2025
+counted **745,652 (−3.4%)**, the first decline since 2016. Meanwhile policy
+moved sharply against the evidence base described above: *Grants Pass v.
+Johnson* (June 2024) allowed enforcement of camping bans regardless of shelter
+availability (14 states and 350+ cities have since toughened laws), and
+Executive Order 14321 (July 2025) pivoted federal funding from permanent
+housing toward mandated treatment and transitional programs, capping
+permanent-housing uses at 30% of ~$3B in HUD grants (20 states + DC are suing).
+Houston itself, its COVID funds spent, saw unsheltered homelessness rise 16% in
+2025 — a live natural experiment in whether a proven system survives its
+funding cliff.
+
+**Where climate enters.** (1) *Exposure:* the unhoused are <1% of Maricopa
+County's population but roughly **40–50% of its heat deaths** (339 heat deaths
+in 2021; ~430 in 2025) — heat, the deadliest U.S. weather hazard (§3.1's warming
+trend made tangible), kills the unsheltered at ~100× the general rate. (2)
+*Supply destruction:* disasters delete exactly the low-cost housing stock that
+homelessness systems depend on — the 2018 Camp Fire alone destroyed ~15,000
+homes and displaced ~50,000 people (only ~10% returned within a year); Maui
+2023 and the January 2025 Los Angeles fires repeated the pattern in tighter
+markets. (3) *Displacement:* climate is now the second-largest driver of
+displacement globally, after conflict. The synthesis for the blog: a
+housing-first continuum is climate-adaptation infrastructure, and the climate
+and housing crises compete for — and destroy — the same scarce, cheap housing.
+
+---
+
+## 8. A note on scope and framing
 
 Several of the sharpest disagreements are not about physics but about **scope**, and
 recognizing this defuses much apparent contradiction:
@@ -412,7 +488,7 @@ these are questions of measurement and logic, not ideology.
 
 ---
 
-## 8. References
+## 9. References
 
 *Primary assessments and data (full portals in `context/references.md`):*
 
@@ -470,6 +546,39 @@ these are questions of measurement and logic, not ideology.
     (2015 Pulitzer Prize, General Nonfiction.)
 27. Murphy, T.W., "Do the Math" (dothemath.ucsd.edu): "Ecological Cliff Edge"
     (2023) and "Is the 6ME Hyperbole?" (2025) — cited as viewpoint/framing.
+
+*Homelessness (§7):*
+
+28. Kimmelman, M. (reported with L. Tompkins), 2022. How Houston Moved 25,000
+    People From the Streets Into Homes of Their Own. *The New York Times*
+    (Headway), June 14, 2022. Local copy: `context/NYT/`.
+29. Gillespie, S., Hanson, D., et al., 2021. *Breaking the Homelessness-Jail
+    Cycle with Housing First: Results from the Denver Supportive Housing Social
+    Impact Bond Initiative.* Urban Institute (RCT final report), and companion
+    cost study *Costs and Offsets of Providing Supportive Housing to Break the
+    Homelessness-Jail Cycle* (2021).
+30. Coalition for the Homeless of Houston/Harris County: "One Year Later — The
+    New York Times Article" (2023) and 2025 point-in-time count release
+    (cfthhouston.org).
+31. HUD, 2024 & 2025. *Annual Homeless Assessment Report (AHAR), Part 1* —
+    point-in-time estimates (771,480 in Jan 2024; 745,652 in Jan 2025).
+32. National Academies of Sciences, Engineering, and Medicine, 2018. *Permanent
+    Supportive Housing: Evaluating the Evidence for Improving Health Outcomes
+    Among People Experiencing Chronic Homelessness.*
+33. Corinth, K., 2017. The impact of permanent supportive housing on homeless
+    populations. *Journal of Housing Economics* 35:69–84; and Corinth, K., 2015,
+    AEI analysis of Utah's chronic-homelessness statistics. (Critique side; see
+    also Cicero Institute, *Rejecting Housing First*, 2024, and Manhattan
+    Institute, *Housing First and Homelessness: The Rhetoric and the Reality*,
+    2020.)
+34. *City of Grants Pass v. Johnson*, 603 U.S. ___ (2024), No. 23-175 (decided
+    June 28, 2024); Executive Order 14321, "Ending Crime and Disorder on
+    America's Streets," July 24, 2025.
+35. Maricopa County Department of Public Health, *Heat-Related Deaths Reports*
+    (2021–2025 editions); Yale Climate Connections, 2023, on unhoused heat
+    mortality in Phoenix.
+36. Y-Foundation / Housing First Europe on Finland's national Housing First
+    programme (2008–present).
 
 *Figures 1–6 are original, generated by `CI_Reports/make_figures.py` from the data
 in sources 6–9 plus the AR6 TCRE relation (source 1). Uncertainty ranges and
