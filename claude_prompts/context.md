@@ -57,6 +57,12 @@ This repository will create the blog "Climate Intelligence".  This file will hel
 
 4. Can you add to the Report an assessment of how other developed nations, especially Canada and Europe, are handling homelessness?  Include specifics on the programs and their costs and outcomes. Be sure to add your references to the `references.md` document. Log your work.
 
+5. Please generate a few figures and charts to support your findings.  Add them to the `CI_Reports/CI_2026_07_09_climate_report.md` document.  Log your work.  Include:
+
+    - A chart showing the number of homeless people in the United States by year.
+    - A figure showing the incidence of homelessness by state.
+    - A figure showing the incidence of homelessness by country
+
 ### Population
 
 1. Do a deep dive on the internet on the subject of global human population and its evolution over the past 100 years and projections for the future.  Then add a new section to the `claudes_context.md` document and add your findings to it.  Then add to the `CI_Reports/CI_2026_07_09_climate_report.md` document as well.  Be sure to include figures and charts to support your findings. Log your work.
