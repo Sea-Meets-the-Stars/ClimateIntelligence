@@ -53,6 +53,8 @@ This repository will create the blog "Climate Intelligence".  This file will hel
     - The article(s) in Projects/ClimateIntelligence/context/NYT
     - https://www.urban.org/policy-centers/metropolitan-housing-and-communities-policy-center/projects/denver-supportive-housing-social-impact-bond-initiative
 
+3. Please add to the Report an estimate of the cost per year to house all of the homeless people in the United States based on the data you have gathered.  Log your work.
+
 ### Population
 
 1. Do a deep dive on the internet on the subject of global human population and its evolution over the past 100 years and projections for the future.  Then add a new section to the `claudes_context.md` document and add your findings to it.  Then add to the `CI_Reports/CI_2026_07_09_climate_report.md` document as well.  Be sure to include figures and charts to support your findings. Log your work.
