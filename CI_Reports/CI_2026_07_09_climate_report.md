@@ -466,6 +466,36 @@ displacement globally, after conflict. The synthesis for the blog: a
 housing-first continuum is climate-adaptation infrastructure, and the climate
 and housing crises compete for — and destroy — the same scarce, cheap housing.
 
+**What would it cost to house everyone? (a back-of-envelope, done honestly).**
+The evidence above supports a rough national estimate, and the number is
+smaller than most readers expect. Split the point-in-time homeless population
+(**771,480** in Jan 2024, HUD's record count) into the two groups the evidence
+says need two different interventions: the **152,585 chronically homeless**
+individuals need **permanent supportive housing** (subsidy + intensive
+services, the model the Denver RCT tested), and the remaining ~619,000 need the
+cheaper, time-limited **rapid re-housing**. Costing each at documented rates —
+PSH at \$20,000–36,000 per person-year (central \$25,000), RRH at
+\$8,500–17,000 (central \$12,000) — gives a **gross ≈ \$8–16 billion per year
+(central ≈ \$11 billion)**. Because supportive housing offsets roughly half its
+cost through avoided jail, emergency-room, shelter, and detox use (Denver:
+~\$7,000/person-year), the **net is ≈ \$6.5–14 billion per year, central ≈ \$9
+billion** — the calculation is reproducible in
+`CI_Reports/cost_to_house_homeless.py`. This lands almost exactly on the
+National Alliance to End Homelessness's independent \$9.6 billion estimate
+(sheltered households only), a reassuring cross-check.
+
+To put ≈\$9 billion/year in proportion: about **\$27 per U.S. resident per
+year**, **~0.14%** of federal outlays, the same order of magnitude as the
+homeowner mortgage-interest deduction, and roughly **twice** current HUD
+Homeless Assistance Grants (~\$4.05 billion). Three caveats keep this honest
+(Principle 1): it is an **operating-subsidy** figure — it does *not* fund
+*building* housing where supply is the binding constraint, which in high-cost
+metros is the real bill; the point-in-time count understates the **~2–3× larger**
+number who experience homelessness across a full year; and the dollar figures
+mix 2022–2025 vintages. The headline is deliberately a **range, not a point** —
+but even its top end is a small line item against the scale of the problem, and
+that, not false precision, is the finding.
+
 ---
 
 ## 8. Global population: the *P* in every projection
@@ -480,7 +510,7 @@ already been born.)*
 and reached **8 billion in 2022** — a quadrupling within one long human
 lifetime (Figure 7). The 2→4 billion and 4→8 billion doublings each took ~48
 years. The driver is the **demographic transition**: mortality falls first
-(global life expectancy ~32 years in 1900, 73.3 in 2024 [37]), population
+(global life expectancy ~32 years in 1900, 73.3 in 2024 [38]), population
 surges, then fertility follows education, urbanization, and contraception
 downward. The global total fertility rate has fallen from **~5 births per
 woman in the early 1960s to 2.25 in 2024** — just above the replacement level
@@ -508,13 +538,13 @@ medium projection both cross zero in the mid-2080s.
 Population Prospects 2024* medium scenario reaches 8.5 B in 2030, 9.7 B in
 2050, a **peak of ~10.3 B in the mid-2080s** (medium-series maximum 10.29 B in
 2084), then 10.2 B by 2100 with a 95% prediction interval of **9.0–11.4 B**
-[37]. The UN now assigns **80% probability that world population peaks within
+[38]. The UN now assigns **80% probability that world population peaks within
 this century** — up from ~30% a decade ago; its 2100 estimate has come down
 ~700 million (6%) in ten years, mainly on faster-than-expected fertility
 declines in China and parts of sub-Saharan Africa. Independent groups agree on
 the shape and differ on timing: IHME (Lancet, 2020) projects a **peak of 9.7 B
-in 2064 falling to 8.8 B [6.8–11.8] by 2100** [38]; the Wittgenstein Centre
-(2023) gives 9.9 B in 2100 [39]. A projection without its range is not a
+in 2064 falling to 8.8 B [6.8–11.8] by 2100** [39]; the Wittgenstein Centre
+(2023) gives 9.9 B in 2100 [40]. A projection without its range is not a
 scientific statement, and Figure 7 plots all three ranges; but the qualitative
 conclusion — *human population growth ends this century* — is now the
 consensus of every major forecasting group.
@@ -526,7 +556,7 @@ China — peaked 2021 — Japan, Germany, Russia); India passed China in 2023.
 today's young age structure, arriving even at replacement fertility. Nearly
 all net growth concentrates in 126 still-growing countries; **sub-Saharan
 Africa rises from 1.2 B (2024) to 2.2 B by 2054 and ~3.3 B [2.7–4.5] by
-2100** [37]. And the world ages: by the late 2070s people 65 and older
+2100** [38]. And the world ages: by the late 2070s people 65 and older
 (~2.2 B) are projected to outnumber children under 18.
 
 ![Figure 9](fig9_fertility.png)
@@ -540,7 +570,7 @@ transition.
 factorizes emissions: CO₂ = P × (GDP/P) × (energy/GDP) × (CO₂/energy). From
 1965 to 2022, population grew **+140%** while emissions grew **+230%**:
 affluence (+179% GDP per capita) outpaced headcount as a multiplier, and the
-two intensity terms (−50%, −15%) absorbed part of both [40]. Two corollaries
+two intensity terms (−50%, −15%) absorbed part of both [41]. Two corollaries
 keep the analysis honest. First, *the growth is where the emissions are not*:
 sub-Saharan Africa, with the fastest population growth, emits ~0.8 tCO₂ per
 person per year against ~14 for the United States — the next two billion
@@ -550,7 +580,7 @@ an earlier, lower peak modestly eases long-run pressure on food, housing, and
 energy demand — the UN's own summary notes as much — but scenario work puts
 the demographic lever well below the energy-system levers this report covers
 in §5. The UN's framing is the right editorial anchor: *"a sustainable future
-for all hinges more on human behaviours than on human numbers"* [37] — and the
+for all hinges more on human behaviours than on human numbers"* [38] — and the
 interventions that lower fertility fastest (girls' education, voluntary family
 planning, child survival) are development goods in their own right.
 
@@ -667,18 +697,24 @@ these are questions of measurement and logic, not ideology.
     mortality in Phoenix.
 36. Y-Foundation / Housing First Europe on Finland's national Housing First
     programme (2008–present).
+37. National Alliance to End Homelessness, 2025. *How Much Would It Cost to
+    Provide Housing First to All Households Staying in Homeless Shelters?*
+    (~$9.6B/yr, sheltered households; per-household PSH ≈ $20,115 and RRH ≈
+    $8,486 in 2022$). HUD AHAR Part 1 (2024 PIT 771,480; chronic 152,585;
+    2025 PIT 745,652). The Climate Intelligence national cost estimate is
+    computed in `CI_Reports/cost_to_house_homeless.py`.
 
 *Global population (§8):*
 
-37. United Nations, Department of Economic and Social Affairs, Population
+38. United Nations, Department of Economic and Social Affairs, Population
     Division, 2024. *World Population Prospects 2024: Summary of Results*
     (UN DESA/POP/2024/TR/NO. 9). Read in full 2026-07-11.
-38. Vollset, S.E. et al., 2020. Fertility, mortality, migration, and population
+39. Vollset, S.E. et al., 2020. Fertility, mortality, migration, and population
     scenarios for 195 countries and territories from 2017 to 2100. *The Lancet*
     396:1285–1306 (IHME/GBD forecast).
-39. Wittgenstein Centre for Demography and Global Human Capital, 2023. Human
-    capital data explorer (population projections), as quoted in ref. 37.
-40. Our World in Data: "Population" and "Fertility rate" (HYDE 3.3, Gapminder,
+40. Wittgenstein Centre for Demography and Global Human Capital, 2023. Human
+    capital data explorer (population projections), as quoted in ref. 38.
+41. Our World in Data: "Population" and "Fertility rate" (HYDE 3.3, Gapminder,
     UN WPP 2024 series; graphers `population-long-run-with-projections`,
     `fertility-rate-with-projections`, data cached to `CI_Reports/data/`
     2026-07-11); "Kaya identity: drivers of CO₂ emissions" (Global Carbon
@@ -686,8 +722,8 @@ these are questions of measurement and logic, not ideology.
 
 *Figures 1–6 are original, generated by `CI_Reports/make_figures.py` from the data
 in sources 6–9 plus the AR6 TCRE relation (source 1). Figures 7–9 are original,
-generated by `CI_Reports/make_population_figures.py` from the data in source 40
-with interval anchors from sources 37–38. Uncertainty ranges and baselines are
+generated by `CI_Reports/make_population_figures.py` from the data in source 41
+with interval anchors from sources 38–39. Uncertainty ranges and baselines are
 annotated on each figure. Literature figures are cited inline to the assessments
 above rather than reproduced, pending permissions.*
 
