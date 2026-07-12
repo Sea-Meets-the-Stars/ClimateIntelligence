@@ -249,6 +249,41 @@ sources below were used to build the homelessness sections.*
 - **Housing First Europe Hub — Finland** — https://housingfirsteurope.eu/country/finland/
   (with the Y-Foundation) — the national-scale Housing First case.
 
+**U.S. cost-to-house estimate (report §7):**
+- **National Alliance to End Homelessness, 2025.** *How Much Would It Cost to
+  Provide Housing First to All Households Staying in Homeless Shelters?* —
+  https://endhomelessness.org/resources/research-and-analysis/how-much-would-it-cost-to-provide-housing-first-to-all-households-staying-in-homeless-shelters/
+  (~$9.6B/yr, sheltered households; per-household PSH ≈ $20,115, RRH ≈ $8,486 in
+  2022$). Basis for the Climate Intelligence estimate in
+  `CI_Reports/cost_to_house_homeless.py`.
+
+**International comparison — Canada & Europe (report §7):**
+- **Canada — At Home/Chez Soi** (Mental Health Commission of Canada; MAP Centre
+  for Urban Health Solutions) — https://maphealth.ca/at-home-chez-soi/ — the
+  2009–13 RCT (>2,000 participants). Cost-effectiveness: Latimer et al., 2020,
+  *Psychiatric Services* — https://psychiatryonline.org/doi/10.1176/appi.ps.202000029
+  (high-needs offset ~69%). Canada's national strategy: **Reaching Home** —
+  https://www.infrastructure.gc.ca/homelessness-sans-abri/index-eng.html
+- **Finland — Y-Foundation (Y-Säätiö)** — https://ysaatio.fi/en/housing-first/
+  — Housing First as national policy since 2007–08; ~€15,000/person/yr savings;
+  long-term homelessness down ~75% since the late 1980s.
+- **France — "Un Chez-Soi d'Abord"** RCT (Housing First Europe country page:
+  https://housingfirsteurope.eu/country/france/; 4-year follow-up, Tinland et
+  al., 2022, PubMed https://pubmed.ncbi.nlm.nih.gov/35125129/) — ~85% housed at
+  2 yrs, costs fully offset; national *"Logement d'abord"* plan.
+- **Norway & Denmark** country pages — https://housingfirsteurope.eu/country/denmark/
+  — Norway halved homelessness since 2012; Denmark's national Housing First
+  (2009) with good individual outcomes but rising totals (esp. youth).
+- **Germany — BAGW** (Bundesarbeitsgemeinschaft Wohnungslosenhilfe) —
+  https://www.bagw.de/ — ~1,029,000 without housing in 2024 (first time >1M);
+  Berlin Housing First pilot (>90% retention): https://housingfirsteurope.eu/country/germany/
+- **FEANTSA & Fondation Abbé Pierre — Overview of Housing Exclusion in Europe**
+  (9th, 2024; 10th, 2025) — https://www.feantsa.org/resources/9th-overview-of-housing-exclusion-in-europe-2024
+  — the pan-European scorecard (~900k homeless/night in the EU; France & Germany
+  roughly doubled in a decade).
+- **Lisbon Declaration / European Platform on Combatting Homelessness** (2021;
+  pledge to end homelessness by 2030) — https://ec.europa.eu/social/main.jsp?catId=1497
+
 **The debate (read both sides; Principle 2):**
 - **National Academies, 2018.** *Permanent Supportive Housing: Evaluating the
   Evidence…* — https://nap.nationalacademies.org/catalog/25133 — the null
@@ -315,6 +350,11 @@ sources below were used to build the homelessness sections.*
 
 ## 11. Changelog
 
+- **2026-07-12** — Extended §9 (Homelessness) with the U.S. cost-to-house
+  estimate source (NAEH 2025) and an international-comparison block (Canada
+  At Home/Chez Soi; Finland Y-Foundation; France Un Chez-Soi d'Abord; Norway;
+  Denmark; Germany BAGW; FEANTSA; Lisbon Declaration) for CI report §7's cost
+  and other-nations additions (context.md Homelessness prompts 3–4).
 - **2026-07-11** — Added §9 (Homelessness) and §10 (Population & demographics):
   the sources used for `claudes_context.md` §§11–12 and CI report §§7–8
   (context.md, Population prompt 2). Changelog renumbered to §11.

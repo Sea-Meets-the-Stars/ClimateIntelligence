@@ -496,6 +496,61 @@ mix 2022–2025 vintages. The headline is deliberately a **range, not a point** 
 but even its top end is a small line item against the scale of the problem, and
 that, not false precision, is the finding.
 
+**How other developed nations respond.** The United States is not running this
+experiment alone, and the international record sharpens the lesson: the
+*intervention* (Housing First) has now been validated by randomized trials on
+three continents, but *outcomes at national scale* depend on pairing it with
+housing supply and sustained funding — which most countries have not done.
+
+- **Finland — the standout.** Alone among developed nations, Finland has
+  *ended* street homelessness and driven long-term homelessness down by roughly
+  **75% since the late 1980s**, and it is the only EU country where homelessness
+  is still falling. The mechanism is Housing First as *national policy* since
+  2007–08: shelters converted to permanent apartments, the state-backed
+  Y-Foundation acquiring scattered-site housing, and — decisively — actual
+  housing supply. The Y-Foundation estimates each person housed saves social,
+  health, justice, and emergency services about **€15,000 per year**, the same
+  offset logic the Denver and Houston numbers show.
+- **Canada — the RCT that mirrors Denver.** The **At Home/Chez Soi** trial
+  (2009–13, >2,000 participants with mental illness across five cities) was, at
+  the time, the largest randomized controlled trial of Housing First ever run.
+  It found the same result as Denver: for high-needs participants, savings in
+  shelters, hospitals, and jails offset about **69%** of the program cost
+  (roughly CAD $20,000 → net ~$6,300 per person-year), against a societal cost
+  of leaving someone homeless-and-mentally-ill of ~CAD $75,000/year. Canada
+  built the evidence into its national **"Reaching Home"** strategy.
+- **France — cost fully offset.** The **"Un Chez-Soi d'Abord"** randomized trial
+  reported **~85% still stably housed at two years**, with program costs
+  **fully offset** by reduced hospitalization and shelter use; France scaled it
+  from four pilot cities to 40+ cities (3,000+ places) under a national
+  *"Logement d'abord"* plan.
+- **Norway** halved homelessness after 2012 through a sustained, coordinated
+  housing-and-services strategy — a second national success story alongside
+  Finland.
+
+The counter-cases are as instructive as the successes. **Denmark** adopted
+Housing First nationally in 2009 and gets good *individual* outcomes, yet total
+homelessness *rose* — especially youth homelessness — because the affordable-
+housing supply did not keep pace. **Germany** crossed **~1,029,000 people
+without housing in 2024** (the first time above a million, per the BAGW), with
+excellent but tiny Housing First pilots (Berlin reports >90% retention across a
+few hundred people) swamped by a national shortage. Across the continent,
+**FEANTSA's 2024 overview counts on the order of ~900,000 people homeless on a
+given night in the EU** (over 1.2 million including temporary accommodation in
+Europe), with homelessness having **roughly doubled in France and Germany over
+a decade**. All EU states signed the 2021 **Lisbon Declaration** pledging to end
+homelessness by 2030; on current trends only Finland is on track.
+
+The synthesis for the blog: the Denver/Houston finding generalizes — Housing
+First reliably houses people and pays back much of its cost in avoided
+emergency services, confirmed by RCTs in Canada and France. But it is *not*
+self-executing. Where a country adds housing supply and funds the model at
+scale (Finland, Norway), homelessness falls; where it runs Housing First as a
+pilot atop a housing shortage (Denmark, Germany, much of the US), the
+individual program works while the national numbers rise. The binding
+constraint is housing, not the model — the same lesson the U.S. cost estimate
+flagged.
+
 ---
 
 ## 8. Global population: the *P* in every projection
