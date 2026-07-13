@@ -31,6 +31,7 @@ Before beginning, please review the `principles.md` document and the `context.md
 
 2. I have answered your questions below and also edited the 1st prompt.  Please review these and see if you have any further questions.  If you do, please ask.  If you don't, please proceed with the report.
 
+3. Can you replace the current figure in the Report on Temperature increase as a function of CO2 increase with the one from this website: `https://www.environmentalgraphiti.org/all-series/emissions-levels-determine-temperature-rise`.  Log your work.
 
 ### Claude's plan & questions — initial report (2026-07-09)
 

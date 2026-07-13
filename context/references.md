@@ -213,6 +213,12 @@ is researched in depth.)*
 - Critical dossiers (advocacy-oriented; use for leads, cross-check claims): https://www.desmog.com ; https://www.sourcewatch.org
 - Published rebuttals hub: RealClimate (https://www.realclimate.org), Skeptical Science, Science Feedback.
 
+**The opposite tail — credible high-sensitivity / high-alarm voice** (added 2026-07-13; profiled in `claudes_context.md` §13):
+- **Dr. James Hansen** — former director, NASA GISS; now Climate Science, Awareness and Solutions (CSAS), Columbia Earth Institute. The most prominent "the mainstream is *under*-alarmed" scientist — the mirror image of the §8 critics, and the reason §13 exists as a paired counterweight.
+- Key recent works: *Global Warming in the Pipeline* (Oxford Open Climate Change, 2023); Hansen et al. 2025, "Global warming has accelerated: are the United Nations and the public well-informed?"; *Ice Melt, Sea Level Rise and Superstorms* (2016). Claims ECS ~4–5 °C, >50% post-2010 acceleration, ship-aerosol unmasking, "2 °C is dead," AMOC shutdown within 20–30 yr.
+- Platforms: https://www.climatescienceawarenesssolutions.org/communications ; Substack https://jimehansen.substack.com ; publications https://www.columbia.edu/~jeh1/publications.shtml
+- Rebuttal to cite for balance: Judith Curry's critique of the *Pipeline* paper (judithcurry.com, 2023) — the two tails arguing directly.
+
 ## 9. Homelessness (sources for context §11 / report §7)
 
 *Added 2026-07-11. The blog's first "related topic" outside climate proper;
@@ -350,6 +356,9 @@ sources below were used to build the homelessness sections.*
 
 ## 11. Changelog
 
+- **2026-07-13** — Added Dr. James Hansen to §8 as the credible high-sensitivity
+  counterweight (paired with `claudes_context.md` §13); CSAS site, Substack, and
+  key papers.
 - **2026-07-12** — Extended §9 (Homelessness) with the U.S. cost-to-house
   estimate source (NAEH 2025) and an international-comparison block (Canada
   At Home/Chez Soi; Finland Y-Foundation; France Un Chez-Soi d'Abord; Norway;

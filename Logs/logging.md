@@ -85,6 +85,8 @@ Here are guidelines for coding:
 
 6. Have the token_usage_and_co2_emissions.html land in Logs/ whenever it is re-created.
 
+7.  Can you modify the token_usage_and_co2_emissions.html top panel to also show a conversion of CO2 to miles driven by a car.  The conversion is 0.36 kg (about 0.8 lb) of CO₂ per mile.  
+
 ## Discussion
 
 ### Claude's questions — prompt 4 / Bokeh plots (2026-07-03)

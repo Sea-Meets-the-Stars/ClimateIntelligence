@@ -36,6 +36,11 @@ This repository will create the blog "Climate Intelligence".  This file will hel
 
 5. Download the July 2025 DOE Climate Working Group report and add it to the `context/Reports/` directory.  Include its rebuttal too.  Push to the Drive. Read it and update the `claudes_context.md` document accordingly.
 
+### James Hansen
+
+1. Review the Climate Science Awareness Solutions website and blog posts maintained by Dr. James Hansen.  Update the `claudes_context.md` document with your findings.  Log your work.  Here is the main URL:
+`https://www.climatescienceawarenesssolutions.org/communications`
+
 ### Biodiversity
 
 1. In `context/Murphy/`, I have put a file named `murphy_biodiversity.txt` that contains URLs of blogs and DOIs of articles on biodiversity.  There is also a file named `Chap1_bibtex.txt` with additional references. Please read all of these to gain a better understanding of the subject.  When you are done, please:

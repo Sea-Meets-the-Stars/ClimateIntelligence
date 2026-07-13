@@ -5,9 +5,10 @@
 > collected so posts can be grounded, cited, and internally consistent.
 >
 > **Status:** living document — updated ad infinitum as we add sources.
-> **Last updated:** 2026-07-11 (added §12 Global population from the UN WPP 2024
-> Summary of Results + web deep dive, with figures 7–9 in `CI_Reports/`; §11
-> Homelessness added earlier the same day; §10 Biodiversity added 2026-07-09;
+> **Last updated:** 2026-07-13 (added §13 James Hansen — the high-sensitivity
+> counterweight to §9 — from a review of his CSAS site/blog; §12 Global
+> population added 2026-07-11 with figures 7–9 in `CI_Reports/`; §11
+> Homelessness added the same day; §10 Biodiversity added 2026-07-09;
 > §9 heterodox voices + §9.1 DOE exchange and §8 recent developments on
 > 2026-07-08; initial build 2026-07-05 from the Murphy textbook + seven IPCC
 > AR6-cycle reports).
@@ -870,8 +871,94 @@ counted. (8) The whole 21st-century climate problem will be solved (or not) by
 a civilization that is *peaking*, not exploding — Murphy's finite-planet math
 and the UN's own curves finally agree on the shape.
 
-## 13. Changelog
+## 13. James Hansen — the high-sensitivity end of the credible spectrum
 
+*Added 2026-07-13 from a review of Dr. James Hansen's Climate Science, Awareness
+and Solutions (CSAS) site and blog (climatescienceawarenesssolutions.org;
+Substack jimehansen.substack.com; publications at columbia.edu/~jeh1). Editorial
+placement: this is the deliberate counterweight to §9. Where the §9 heterodox
+voices sit at the **low-sensitivity, warming-is-milder** tail, Hansen sits at the
+**high-sensitivity, warming-is-faster-and-worse** tail — and, like them, he is a
+credentialed expert making testable claims that run ahead of the IPCC central
+estimate. Principle 2 cuts both ways: steel-man both tails, cite the rebuttals,
+and keep the IPCC consensus as the anchor between them.*
+
+**Who he is.** The former director of NASA GISS; the scientist whose 1988
+Congressional testimony put global warming on the public agenda; now runs CSAS
+at Columbia's Earth Institute. Long the most prominent "the mainstream is
+*under*-alarmed" voice — the mirror image of the §9 critics. Recent output is a
+mix of monthly temperature updates, the *Global warming has accelerated* line of
+papers, and chapters of *Sophie's Planet* (his climate book framed as letters to
+his granddaughter).
+
+**His three headline scientific claims (all above IPCC's central estimate):**
+1. **High climate sensitivity: ~4–5 °C per CO₂ doubling**, vs the IPCC best
+   estimate of 3 °C (§2). He argues from four independent lines (notably
+   paleoclimate: the ~6–7 °C Last Glacial Maximum cooling implies a strong
+   response) that IPCC's aerosol cooling — and therefore sensitivity — is
+   *understated*. This is the linchpin: if true, more warming is "in the
+   pipeline" than official projections show (*Global Warming in the Pipeline*,
+   Oxford Open Climate Change, 2023).
+2. **Warming has accelerated.** Post-2010 the rate rose >50% above the
+   1970–2010 trend of ~0.18 °C/decade; global temperature "leaped" >0.4 °C in
+   2023–24, peaking at ~+1.6 °C (12-month, vs 1880–1920) in 2024; Earth's energy
+   imbalance in 2015–2024 ran roughly double the 2000–2014 mean, ~1.5–1.6 W/m²
+   recently (*Hansen et al. 2025, "Global warming has accelerated: are the UN
+   and the public well-informed?"*). He projects ~1.7 °C by 2030 and ~2 °C by
+   ~2040 — years ahead of IPCC timing (§2's "early-to-mid 2030s" for 1.5 °C).
+3. **A large aerosol-unmasking kick, especially from ships.** He attributes much
+   of the recent jump to the 2020 IMO low-sulfur ship-fuel rule cutting sulfate
+   aerosols over N. Hemisphere shipping lanes, brightening less and letting more
+   sunlight through. He puts the ship effect at "several tenths" of a W/m²
+   against Forster/Hausfather's ~0.08 W/m² — a genuine, quantified disagreement.
+
+**His alarming corollaries:** the **2 °C target is "dead"** (unavoidable on
+current trajectory); **AMOC shutdown is "likely within 20–30 years"** absent
+drastic action, which he says would lock in multi-meter sea-level rise
+(extending *Ice Melt, Sea Level Rise and Superstorms*, 2016). These are the
+strongest-form versions of the tipping-point concerns; they are **more
+aggressive than the AR6 assessment**, which rates an AMOC collapse this century
+as *unlikely* (medium confidence) (§7 scope discipline applies — do not present
+Hansen's timeline as the consensus).
+
+**His solutions (long-standing, and notably heterodox on the left):**
+- **Carbon fee-and-dividend** — a rising fee on carbon at the source, 100%
+  returned to the public — as the essential price signal. His central policy.
+- **Nuclear power** (incl. next-gen) as a necessary complement to renewables; he
+  is a sharp critic of "renewables-only" plans he considers physically
+  inadequate — which puts him at odds with much of the environmental movement
+  even as groups like Just Stop Oil cite his urgency.
+- Support for youth climate litigation and honest communication of the "bad
+  news" he feels institutions soft-pedal.
+
+**How to use him on the blog (Principle 2 & 1).** Hansen is the credible
+upper-tail bracket on sensitivity and impacts, exactly as Curry/Lewis
+(~1.5–1.65 °C ECS) are the credible lower-tail bracket (§9). Present them as the
+**two tails around the IPCC 3 °C / "likely 2.5–4 °C" center**, not as equivalent
+to it. His acceleration and aerosol arguments are live, testable, and being
+actively debated (mainstream reactions range from "plausible and concerning" to
+Schmidt/Hausfather's "the jump is within variability + known forcings"); the
+AMOC-in-20–30-years and sensitivity-4–5 °C claims are **minority positions that
+run ahead of AR6** and should be flagged as such. The honest framing: *the same
+uncertainty the §9 critics invoke to argue "maybe milder" also admits Hansen's
+"maybe faster and worse" — and Hansen has been more right than his critics on
+the direction of surprises over 35 years.* Rebuttal anchor to cite for balance:
+Judith Curry's critique of the *Pipeline* paper (judithcurry.com, 2023) — a neat
+illustration of the two tails arguing directly.
+
+**Blog hooks:** (1) The man who sounded the 1988 alarm now says the *official*
+science is still too cautious — the opposite complaint from the §9 skeptics,
+from the opposite end. (2) A 2020 rule that cleaned up ship smoke may have
+nudged the planet warmer by unmasking cooling pollution — climate's cruelest
+irony. (3) "2 °C is dead" vs the Paris Agreement's 2 °C goal — the gap between
+what's pledged and what a leading physicist thinks is still reachable. (4)
+Fee-and-dividend + nuclear: a climate hawk whose solutions split his own side.
+
+## 14. Changelog
+
+- **2026-07-13** — Added §13 (James Hansen): review of the CSAS site/blog and his
+  recent papers; framed as the credible high-sensitivity tail counterweight to
+  §9's low-sensitivity heterodox voices. Renumbered changelog to §14.
 - **2026-07-11 (later)** — Added §12 (Global population): UN WPP 2024 Summary
   of Results read in full; OWID population/fertility series cached to
   `CI_Reports/data/`; figures 7–9 generated by new
