@@ -490,34 +490,64 @@ housing-first continuum is climate-adaptation infrastructure, and the climate
 and housing crises compete for — and destroy — the same scarce, cheap housing.
 
 **What would it cost to house everyone? (a back-of-envelope, done honestly).**
-The evidence above supports a rough national estimate, and the number is
-smaller than most readers expect. Split the point-in-time homeless population
-(**771,480** in Jan 2024, HUD's record count) into the two groups the evidence
-says need two different interventions: the **152,585 chronically homeless**
-individuals need **permanent supportive housing** (subsidy + intensive
-services, the model the Denver RCT tested), and the remaining ~619,000 need the
-cheaper, time-limited **rapid re-housing**. Costing each at documented rates —
-PSH at \$20,000–36,000 per person-year (central \$25,000), RRH at
-\$8,500–17,000 (central \$12,000) — gives a **gross ≈ \$8–16 billion per year
-(central ≈ \$11 billion)**. Because supportive housing offsets roughly half its
-cost through avoided jail, emergency-room, shelter, and detox use (Denver:
-~\$7,000/person-year), the **net is ≈ \$6.5–14 billion per year, central ≈ \$9
-billion** — the calculation is reproducible in
-`CI_Reports/cost_to_house_homeless.py`. This lands almost exactly on the
-National Alliance to End Homelessness's independent \$9.6 billion estimate
-(sheltered households only), a reassuring cross-check.
+*(Estimate revised 2026-07-13 after a quantitative critique — see below.)* The
+evidence supports a rough national estimate, and the number is smaller than most
+readers expect — but it splits into two genuinely different questions. Take the
+point-in-time homeless population (**771,480** in Jan 2024, HUD's record),
+divided into the **152,585 chronically homeless** (who need **permanent
+supportive housing** — rent subsidy *plus* intensive services, the model the
+Denver and Canadian RCTs tested) and the remaining ~619,000 (who need the
+cheaper, time-limited **rapid re-housing**).
 
-To put ≈\$9 billion/year in proportion: about **\$27 per U.S. resident per
-year**, **~0.14%** of federal outlays, the same order of magnitude as the
-homeowner mortgage-interest deduction, and roughly **twice** current HUD
-Homeless Assistance Grants (~\$4.05 billion). Three caveats keep this honest
-(Principle 1): it is an **operating-subsidy** figure — it does *not* fund
-*building* housing where supply is the binding constraint, which in high-cost
-metros is the real bill; the point-in-time count understates the **~2–3× larger**
-number who experience homelessness across a full year; and the dollar figures
-mix 2022–2025 vintages. The headline is deliberately a **range, not a point** —
-but even its top end is a small line item against the scale of the problem, and
-that, not false precision, is the finding.
+- *"Put a roof over everyone" (housing subsidy only).* A rent voucher runs
+  ~\$11,000/person-year (Denver's housing payment was ~\$10,950; RRH is already
+  mostly rent at ~\$8,500). This narrow question costs **≈ \$7–16 billion/year
+  (central ≈ \$10 billion)**.
+- *Housing **plus** services (what buys retention and the offsets).* Adding
+  intensive services for the chronic group (PSH all-in \$20,000–36,000) gives a
+  gross of ≈ \$8–22 billion; because supportive housing offsets ~40–60% of its
+  cost through avoided jail, ER, shelter, and detox use (Denver ~\$7,000/person-
+  year), the **net is ≈ \$6.5–19 billion/year (central ≈ \$11 billion)**.
+
+Both land near the National Alliance to End Homelessness's independent
+\$9.6 billion estimate — a reassuring cross-check. To put ≈\$11 billion/year in
+proportion, against three honest denominators: about **\$32 per U.S. resident**,
+**\$54 per working-age adult**, or **\$93 per federal income-tax payer** per
+year — still, at the taxpayer level, roughly a tank of gas.
+
+Four caveats are load-bearing, not decorative (Principle 1), and the last two
+can *raise* the bill materially:
+1. **This is an operating subsidy, not construction.** Vouchers do not create
+   apartments, and the U.S. has a housing *shortage* — so in tight markets you
+   cannot house people without **building units**. Development runs
+   ~\$200k/unit (lower-cost markets) to ~\$550k/unit (California). Building even
+   the 152,585 chronic units would be a **one-time ~\$30–84 billion** (≈\$1–3
+   billion/year amortized over 30 years); building for the whole PIT population
+   would be **~\$150–420 billion** one-time (≈\$5–14 billion/year amortized).
+   Much of the population can be housed in *existing* units via vouchers, so the
+   true build need is a fraction of that — but where supply is the binding
+   constraint (California, coastal metros) this capital cost, not the voucher,
+   is the real bill.
+2. **The population is not fixed.** The single-night count understates the
+   **~1.25 million** who use shelter across a full year (HUD AHAR Part 2), and a
+   standing offer of housing plausibly induces some additional take-up. Costing
+   the annual-flow population instead pushes the services-inclusive net to
+   **≈\$17 billion/year**. Targeting via vulnerability indices, and the stigma
+   and "trapped-population" evidence, bound how large that induced demand can
+   be — but it is a real upward risk.
+3. **Marginal costs rise with scale.** These are costs *at current average
+   rates*, from pilots of a few hundred people; scaling to hundreds of thousands
+   in supply-constrained markets bids up rents and reaches harder-to-house
+   cases. The model applies a 1.0–1.35× marginal-cost multiplier, but the true
+   curve is unknown — treat the figures as a **floor**.
+4. Dollar figures mix 2022–2025 vintages and are not inflation-harmonized.
+
+The headline is deliberately a **range, not a point**, and the honest
+bottom line survives the caveats: the recurring *operating* cost of housing the
+homeless is a small federal line item (single-digit-to-low-double-digit
+billions, tens of dollars per taxpayer), while the *capital* cost of the missing
+housing is the larger and more uncertain number — which is exactly why "the
+binding constraint is housing, not the model" recurs throughout this section.
 
 **How other developed nations respond.** The United States is not running this
 experiment alone, and the international record sharpens the lesson: the
