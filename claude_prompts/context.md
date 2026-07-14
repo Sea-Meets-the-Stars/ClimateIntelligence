@@ -42,7 +42,7 @@ This repository will create the blog "Climate Intelligence".  This file will hel
 
 1. Please search for and download the reports on AI electricity and water usage by the US Department of Energy.  Add them to the `context/Reports/` directory.  Push to the Drive. Read them and update the `claudes_context.md` document accordingly.  Add a new section to the `CI_Reports/CI_2026_07_09_climate_report.md` document with your findings. If you have any questions, please ask me in the Q&A section below. Use Fable if you can. Log your work.
 
-2.  Add figures to 
+2.  Add figures to the `CI_Reports/CI_2026_07_09_climate_report.md` document related to AI.  Use your judgment on the figures to use.  Use Fable if you can. Log your work.
 
 #### Q&A
 
@@ -54,6 +54,7 @@ This repository will create the blog "Climate Intelligence".  This file will hel
    under any of them). You chose to push to **`GDrive:ClimateIntelligence/Reports/`**;
    done and byte-verified. If you restore a dedicated shared/team-drive remote
    later, tell me and I'll re-sync there.
+>A. ok
 2. **Scope interpretation.** I read "the reports on AI electricity and water
    usage by the DOE" as DOE's congressionally-mandated measurement series — the
    **LBNL 2024** *Data Center Energy Usage Report* (electricity **and** water) and
