@@ -36,6 +36,12 @@ This repository will create the blog "Climate Intelligence".  This file will hel
 
 5. Download the July 2025 DOE Climate Working Group report and add it to the `context/Reports/` directory.  Include its rebuttal too.  Push to the Drive. Read it and update the `claudes_context.md` document accordingly.
 
+### Websites
+
+1. Please review the websites below and update the `claudes_context.md` document with your findings.  Log your work.
+
+    - https://livingplanetindex.org/latest_results
+
 ### James Hansen
 
 1. Review the Climate Science Awareness Solutions website and blog posts maintained by Dr. James Hansen.  Update the `claudes_context.md` document with your findings.  Log your work.  Here is the main URL:

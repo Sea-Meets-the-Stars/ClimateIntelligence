@@ -5,8 +5,8 @@
 > collected so posts can be grounded, cited, and internally consistent.
 >
 > **Status:** living document — updated ad infinitum as we add sources.
-> **Last updated:** 2026-07-13 (added §13 James Hansen — the high-sensitivity
-> counterweight to §9 — from a review of his CSAS site/blog; §12 Global
+> **Last updated:** 2026-07-14 (added §10.6 Living Planet Index (WWF/ZSL 2024)
+> with its interpretation caveat; §13 James Hansen added 2026-07-13; §12 Global
 > population added 2026-07-11 with figures 7–9 in `CI_Reports/`; §11
 > Homelessness added the same day; §10 Biodiversity added 2026-07-09;
 > §9 heterodox voices + §9.1 DOE exchange and §8 recent developments on
@@ -583,6 +583,66 @@ plants spreading triggered ocean anoxia and a marine mass extinction — life ca
 disrupt the system that sustains it. (6) Kolbert's *The Sixth Extinction* (2014
 Pulitzer) mainstreamed the framing.
 
+### 10.6 The Living Planet Index (WWF/ZSL 2024) — a headline to handle with care
+
+*Added 2026-07-13 from livingplanetindex.org and the Living Planet Report 2024,
+with the Our World in Data explainer and the Leung et al. critique for balance.
+This is the single most-cited biodiversity statistic in the press, and also the
+most misread — so it is a Principle-1/Principle-5 teaching case as much as a
+data point.*
+
+**The headline number.** The 2024 LPI reports an **average 73% decline in
+monitored wildlife populations over 1970–2020**, from **34,836 populations of
+5,495 vertebrate species** (mammals, birds, fish, reptiles, amphibians), compiled
+by ZSL for WWF.
+- **By realm:** freshwater **−85%** (steepest), terrestrial **−69%**, marine
+  **−56%**.
+- **By region:** Latin America & Caribbean **−95%**, Africa **−76%**,
+  Asia-Pacific **−60%**, North America **−39%**, Europe & Central Asia **−35%**.
+  (The low European/N. American figures partly reflect that much of their
+  wildlife loss predates 1970 — a baseline effect, not health.)
+- WWF frames the results around **tipping points** where nature loss and climate
+  change compound (Amazon, coral reefs) — consistent with §10.2 and the report §6.
+
+**What it does NOT mean — say this every time the number is used.** The LPI is
+**not** "73% of animals gone," "73% of species extinct," or "73% of populations
+declining." It is the **geometric mean of *relative* population-size changes**
+across the monitored set — an index of average *trend*, not a headcount. In the
+actual dataset, roughly **50% of populations were declining, 43% increasing, and
+7% stable** (OWID) — so "half the monitored populations are shrinking" is the
+honest plain-language gloss, not "three-quarters of wildlife is gone."
+
+**The methodological critique, fairly stated (Principle 2).** Because it is a
+geometric mean of ratios, the index is **highly sensitive to a small number of
+extreme declines**. Leung et al. (2020, *Nature*, "Clustered versus catastrophic
+global vertebrate declines") showed that the strong global signal is driven by
+**less than ~3% of populations** with catastrophic declines; with those
+extreme clusters separated out, the remaining ~97% showed **no strong net global
+trend**, though specific systems (e.g. Indo-Pacific, and freshwater) remained
+genuinely negative. The rebuttal from ZSL/others: extreme declines are real
+biology, not artefacts; the index is not claimed to be a population census; and
+the clustering itself locates *where* collapse is concentrated. The honest
+takeaway mirrors §10.3: **the direction is not in dispute (many populations,
+especially freshwater and tropical, are in serious decline), but the single
+73% figure oversimplifies a heterogeneous picture and should never be quoted
+without its definition.**
+
+**Relation to our other numbers.** The LPI's 50/43/7 split echoes Finn et al.
+(2023, §10.2): ~48% declining / 49% stable / 3% increasing across ~71,000
+species — different dataset, same "more losers than winners, but not universal
+collapse" shape. Both are trend measures, distinct from the *extinction-rate*
+evidence (Ceballos, Cowie; §10.2) and the *biomass* evidence (Bar-On, Greenspoon;
+§10.1). Keep the three lines of evidence — trends, extinction rates, biomass —
+separate; they support the same conclusion by different routes, which is exactly
+why the conclusion is robust even as any one metric (like the LPI) is contested.
+
+**Blog hooks (LPI-specific):** (7) The "73% decline" everyone quotes does *not*
+mean 73% of animals are gone — half the monitored populations are actually
+shrinking, and that is alarming enough without the exaggeration. (8) Freshwater
+life has fared worst (−85%): rivers and wetlands are the biodiversity crisis's
+front line. (9) A statistic so easy to misread is a perfect lesson in reading
+any index by its *definition* first (Principle 1).
+
 ## 11. Homelessness
 
 *Added 2026-07-11 from a deep-read of the NYT Houston article (source library,
@@ -956,6 +1016,11 @@ Fee-and-dividend + nuclear: a climate hawk whose solutions split his own side.
 
 ## 14. Changelog
 
+- **2026-07-14** — Added §10.6 (Living Planet Index, WWF/ZSL 2024) from
+  livingplanetindex.org + the Living Planet Report 2024, OWID explainer, and the
+  Leung et al. 2020 critique: the −73% headline with realm/region breakdowns and
+  a prominent "what it does not mean" interpretation caveat (context.md Websites
+  prompt 1).
 - **2026-07-13** — Added §13 (James Hansen): review of the CSAS site/blog and his
   recent papers; framed as the credible high-sensitivity tail counterweight to
   §9's low-sensitivity heterodox voices. Renumbered changelog to §14.
