@@ -6,6 +6,8 @@ This repository will create the blog "Climate Intelligence".  This file will hel
 
 ## Prompts
 
+### Initial
+
 1. Please grab every major report on climate change from the IPCC and put them my ClimateIntelligence shared Google drive folder. Keep in mind:
     - You can stage a local copy of the files in the context/Reports directory.
     - Use `rclone` to copy the files to the shared folder.
@@ -35,6 +37,34 @@ This repository will create the blog "Climate Intelligence".  This file will hel
     - Dr Richard Lindzen
 
 5. Download the July 2025 DOE Climate Working Group report and add it to the `context/Reports/` directory.  Include its rebuttal too.  Push to the Drive. Read it and update the `claudes_context.md` document accordingly.
+
+### AI
+
+1. Please search for and download the reports on AI electricity and water usage by the US Department of Energy.  Add them to the `context/Reports/` directory.  Push to the Drive. Read them and update the `claudes_context.md` document accordingly.  Add a new section to the `CI_Reports/CI_2026_07_09_climate_report.md` document with your findings. If you have any questions, please ask me in the Q&A section below. Use Fable if you can. Log your work.
+
+2.  Add figures to 
+
+#### Q&A
+
+##### Claude's notes — AI prompt 1 / DOE AI energy & water reports (2026-07-14)
+
+1. **Drive remote (asked & answered).** The `ClimateIntelligence:` rclone remote
+   used for every prior push no longer exists (current remotes: `GDrive:`,
+   `AIOcean:`, `nautilus_s3:`, and no `ClimateIntelligence` folder was findable
+   under any of them). You chose to push to **`GDrive:ClimateIntelligence/Reports/`**;
+   done and byte-verified. If you restore a dedicated shared/team-drive remote
+   later, tell me and I'll re-sync there.
+2. **Scope interpretation.** I read "the reports on AI electricity and water
+   usage by the DOE" as DOE's congressionally-mandated measurement series — the
+   **LBNL 2024** *Data Center Energy Usage Report* (electricity **and** water) and
+   its **2025 Update** (electricity to 2030) — plus two supporting DOE policy
+   reports on *powering* the surge (**SEAB** July 2024; the **EO-14262 grid
+   report** July 2025). There is **no separate DOE water report**: water lives
+   only inside LBNL 2024. Four PDFs total. Say if you want the scope narrowed to
+   the two LBNL reports or widened (e.g. EPA/IEA companions).
+3. **"Use Fable."** I ran the research and all three PDF reads on Fable-5 reader
+   agents; the top-level orchestration/writing is Opus (I can't switch the main
+   session's model mid-conversation, but the substantive reading was Fable).
 
 ### Websites
 

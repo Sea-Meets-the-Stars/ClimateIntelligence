@@ -5,12 +5,14 @@
 > collected so posts can be grounded, cited, and internally consistent.
 >
 > **Status:** living document — updated ad infinitum as we add sources.
-> **Last updated:** 2026-07-14 (added §10.6 Living Planet Index (WWF/ZSL 2024)
-> with its interpretation caveat; §13 James Hansen added 2026-07-13; §12 Global
-> population added 2026-07-11 with figures 7–9 in `CI_Reports/`; §11
-> Homelessness added the same day; §10 Biodiversity added 2026-07-09;
-> §9 heterodox voices + §9.1 DOE exchange and §8 recent developments on
-> 2026-07-08; initial build 2026-07-05 from the Murphy textbook + seven IPCC
+> **Last updated:** 2026-07-14 (added §14 AI's energy & water footprint from four
+> DOE/LBNL reports — the 2024 & 2025 Data Center Energy Usage reports, the SEAB
+> *Powering AI* recommendations, and the DOE grid-reliability report; added §10.6
+> Living Planet Index (WWF/ZSL 2024) with its interpretation caveat; §13 James
+> Hansen added 2026-07-13; §12 Global population added 2026-07-11 with figures 7–9
+> in `CI_Reports/`; §11 Homelessness added the same day; §10 Biodiversity added
+> 2026-07-09; §9 heterodox voices + §9.1 DOE exchange and §8 recent developments
+> on 2026-07-08; initial build 2026-07-05 from the Murphy textbook + seven IPCC
 > AR6-cycle reports).
 >
 > **Companion file:** `context/references.md` — a curated directory of *where to
@@ -1014,8 +1016,166 @@ irony. (3) "2 °C is dead" vs the Paris Agreement's 2 °C goal — the gap betwe
 what's pledged and what a leading physicist thinks is still reachable. (4)
 Fee-and-dividend + nuclear: a climate hawk whose solutions split his own side.
 
-## 14. Changelog
+## 14. AI's energy and water footprint (the data-center surge)
 
+*Added 2026-07-14 from four U.S. Department of Energy / DOE-lab reports, all
+staged in `context/Reports/` and on the Drive: the **2024** and **2025 Update**
+editions of LBNL's congressionally-mandated* United States Data Center Energy
+Usage Report*, the DOE Secretary of Energy Advisory Board's* Powering AI and Data
+Center Infrastructure *recommendations (July 2024), and DOE's* Report on
+Evaluating U.S. Grid Reliability and Security *(the EO-14262 resource-adequacy
+report, July 2025). Both LBNL reports were read in full by reader agents; unit
+conversions are in `bin/lbnl2024_unit_conversions.py`. AI is a first-class blog
+topic in its own right, and its physical footprint — electricity, water, and the
+strain on the grid — is where AI meets the climate story. The through-line for
+the blog (Principle 1): **the numbers are real and rising fast, but the
+projections carry uncertainty ranges that the headlines routinely drop.***
+
+### 14.1 The source library, in one line each
+
+| Short name | Full title | Author/date | Report no. |
+|---|---|---|---|
+| LBNL 2024 | *2024 United States Data Center Energy Usage Report* | Shehabi et al., Dec 2024 | LBNL-2001637 |
+| LBNL 2025 | *United States Data Center Energy Usage Report: 2025 Update* | Smith et al., Jun 2026 | LBNL-2001758 |
+| SEAB 2024 | *Recommendations on Powering AI and Data Center Infrastructure* | DOE SEAB, Jul 2024 | — |
+| DOE 2025 grid | *Report on Evaluating U.S. Grid Reliability and Security* (EO 14262) | DOE/PNNL/NREL, Jul 2025 | — |
+
+The two LBNL reports are the **measurement/projection** backbone (Congress
+mandated them under the Energy Act of 2020); SEAB and the grid report are
+**policy** documents about *powering* the surge. **Water lives only in LBNL
+2024** — the 2025 Update and both policy reports contain no water figures, so
+cite LBNL 2024 for anything on water.
+
+### 14.2 Electricity: the flat decade ended in 2017
+
+- **The inflection.** Efficiency (cloud consolidation, better cooling, higher
+  utilization) held U.S. data centers at **~60 TWh from ~2010–2016** even as
+  compute exploded. Around **2017** AI/accelerated servers ended that era; energy
+  use then **roughly tripled 2014→2023**. (LBNL 2024, pp. 5–6.)
+- **Where we are.** LBNL 2024 put **2023 at 176 TWh = 4.4% of U.S. electricity**
+  (up from ~76 TWh / 1.9% in 2018). The 2025 Update revised the last historical
+  year, **2024, to 192 TWh = 4.7%** — landing at the *low* end of the 2024
+  report's range, mainly because reported GPU shipments for 2023–24 came in below
+  forecast. (LBNL 2024 p. 52; LBNL 2025 p. 8.)
+- **Where it's going.** LBNL 2024: **325–580 TWh (6.7–12.0%) by 2028.** LBNL 2025
+  extends to 2030: **Reference Case 649 TWh = 11.8%**, with a compounded-
+  uncertainty "stress test" of **521–843 TWh (9.5–15.3%)**. Data centers would be
+  **~one-third of all U.S. electricity-load growth from 2024–2030**, needing
+  ~148 GW of grid interconnection by 2030 (+17 GW/yr). (LBNL 2025 pp. 5, 8–10.)
+- **AI is the driver.** AI-server electricity went from **<2 TWh (2017) to >40 TWh
+  (2023)**; by 2030 AI servers are projected to be **~55% of all data-center
+  electricity and 84% of server electricity** (and ~40% of the installed server
+  base). A flagship 8-GPU AI server's rated power roughly **doubled in one year**,
+  from ~7 kW to >13 kW, with NVIDIA's Blackwell generation (per-node classes:
+  A100 ~6.5 kW, H100 ~10.2 kW, B100 ~12.2 kW; a measured 8×H100 node in training
+  draws ~7.9 kW). (LBNL 2024 pp. 20, 49; LBNL 2025 pp. 18–19, 25.)
+- **Efficiency keeps improving — and gets reinvested.** Average PUE fell 1.6
+  (2014) → ~1.45 (2024) → ~1.36 (2030 proj.); AI-specialized facilities are the
+  *most* energy-efficient buildings in the sector (PUE ~1.14). But LBNL states the
+  Jevons dynamic plainly: efficiency gains "will typically be reinvested in larger
+  models rather than reducing absolute power demand." (LBNL 2024 p. 22; LBNL 2025
+  pp. 24–25.)
+
+### 14.3 Water: the footprint the headlines miss twice over
+
+All figures from **LBNL 2024** (§5).
+- **Direct (on-site cooling) water, 2023: ~66 billion liters (~17.4 billion
+  gallons)** — a ~3.1× rise since 2014 — with **84% at hyperscale + colocation**
+  facilities. Projected direct water for hyperscale alone reaches **60–124 billion
+  L by 2028**. (pp. 55–56.)
+- **The bigger number is indirect.** Water evaporated at the *power plants*
+  supplying the electricity was **~800 billion L in 2023 — roughly 12× the direct
+  on-site use.** So the honest water story is dominated by how the electricity is
+  generated, not by cooling towers. (p. 57.)
+- **The efficiency trade-off (the key teaching point).** Water Usage Effectiveness
+  (WUE) is *rising* even as PUE falls: national site WUE ~0.36 L/kWh (2023) →
+  0.45–0.48 (2028). The most energy-efficient AI facilities are among the
+  *thirstiest* per unit of compute (AI-specialized site WUE ~0.61 L/kWh vs ~0.32
+  hyperscale) — evaporative cooling saves electricity but consumes water; air
+  cooling saves water but burns more electricity. **You cannot minimize both at
+  once.** (pp. 45, 47–48.)
+
+### 14.4 Carbon and the grid
+
+- **Carbon.** LBNL 2024 attributes **61 million metric tons CO₂-e to U.S.
+  data-center electricity in 2023** (grid-mix intensity ~0.34 kg/kWh, ~US
+  average). This *excludes* power-purchase agreements and behind-the-meter
+  generation, which the authors say "could significantly affect" the figure.
+  (p. 57.) For scale, that is on the order of ~1% of U.S. energy-sector CO₂ today —
+  material and growing, but not yet a top-tier national emissions driver.
+- **Grid stress (DOE 2025).** DOE's resource-adequacy model adopts a **~50 GW**
+  new-data-center-load midpoint by 2030 (from a surveyed 35–108 GW range), making
+  data centers **over half of the projected 115 GW (774→889 GW) rise in U.S. peak
+  load**. Its alarming headline — annual loss-of-load hours rising **~100×**
+  (8→818 hr/yr) by 2030 — depends on assuming *all announced* coal/gas retirements
+  (104 GW) proceed while *only* mature-pipeline projects are built; even with
+  *zero* retirements it finds a 34× rise from load growth alone. Deterministic, not
+  probabilistic; DOE itself flags it needs regional engineering follow-up. (DOE
+  2025 pp. 1, 5–9, 16–17.)
+- **Powering it (SEAB 2024).** The advisory board's signature theme is **demand
+  flexibility**: utilities can typically serve a data center ~350 of 365 days —
+  the problem is the ~15 peak days — yet SEAB "identified no examples of grid-aware
+  flexible operation at data centers today" beyond Google's carbon-aware load
+  shifting. It backs clean-firm power (nuclear relicensing/uprates, delayed
+  retirements, new gas as a managed bridge) and recommends data centers "share or
+  pay in full" for the grid upgrades they trigger, to protect other ratepayers.
+  (SEAB pp. 2, 6–7.)
+
+### 14.5 Editorial guidance (how to use this on the blog)
+
+- **Quote the range, not the point.** "12% of U.S. electricity by 2028/2030" is
+  the *upper* end; the reference/central figure is lower and the honest statement
+  is a range (6.7–12% for 2028; 9.5–15.3% for 2030). LBNL stresses that
+  bottom-up forecasts degrade beyond a few years and that utility demand forecasts
+  "consistently overestimate" — a Principle-1/Principle-5 caution. The 2024→2025
+  *downward* revision of the historical figure is itself the lesson.
+- **The single biggest unknown is how AI *inference* runs.** LBNL 2025's largest
+  swing factor is idle power and utilization of user-facing inference fleets
+  (the High-Inference scenario alone adds ~133 TWh/+21% by 2030), and there is
+  "little-to-no measured data" on it. Chip lifetime is the next-biggest unknown
+  (5→4 years erases ~59 TWh). Genuine uncertainty, not spin.
+- **Water: correct two common errors.** (1) The dominant water cost is *indirect*
+  (power generation, ~12× on-site), so it tracks the generation mix. (2) Energy
+  efficiency and water efficiency trade off — "green because low-PUE" can mean
+  "thirsty." Always give both, and localize (the strain is where water is scarce).
+- **Keep the politics descriptive, per Principle 4.** There is a visible posture
+  shift between the DOE documents — SEAB (2024) foregrounds emissions limits and
+  demand flexibility; the EO-14262 report (2025) drops emissions framing entirely,
+  treats retirements as the threat, models data-center load as *inflexible*, and
+  frames reliability as winning an "AI arms race." Note the shift as a *fact about
+  the documents*; do not adjudicate the politics.
+- **Put it in proportion.** Data centers are one of several coming demand surges
+  (EVs, electrification, re-industrialization) — LBNL explicitly frames the AI
+  build-out as a chance to modernize the grid for all of them. At ~4–5% of
+  electricity today, AI is not the main climate lever, but its *growth rate* and
+  its *local* grid/water strain make it a legitimate, concrete climate story.
+
+**Blog hooks:** (1) A decade of flat data-center power ended in 2017 — AI restarted
+the meter, and U.S. data-center electricity roughly tripled by 2023. (2) By 2030,
+AI servers alone could eat more than half of all U.S. data-center electricity —
+and data centers a third of the *entire country's* electricity growth. (3) A
+single 8-GPU AI server's power draw doubled in one year. (4) The water in an AI
+data center's *electricity* is ~12× the water in its cooling towers — the thirst
+is mostly upstream, at the power plant. (5) The greenest AI buildings (PUE ~1.14)
+are among the thirstiest (WUE ~0.61) — you can't minimize energy and water at
+once. (6) DOE's own board couldn't find a single U.S. data center running
+grid-flexibly in 2024 — the flexibility everyone says is possible isn't happening
+yet. (7) The scariest grid number (a 100× jump in blackout hours) is a
+*conditional* projection — assume every retirement happens and nothing new but
+today's pipeline gets built — worth quoting *with* its assumptions, not without.
+(8) The biggest uncertainty in AI's 2030 energy bill is something nobody measures
+well: how hard chatbots idle between your questions.
+
+## 15. Changelog
+
+- **2026-07-14 (later)** — Added §14 (AI's energy & water footprint) from four
+  DOE/LBNL reports downloaded to `context/Reports/` and pushed to
+  `GDrive:ClimateIntelligence/Reports/` (the prior `ClimateIntelligence:` rclone
+  remote was gone; author chose the GDrive location): the 2024 & 2025 LBNL *Data
+  Center Energy Usage* reports (read in full by Fable reader agents), the SEAB
+  *Powering AI* recommendations, and the DOE EO-14262 grid-reliability report.
+  Unit conversions in `bin/lbnl2024_unit_conversions.py`. CI report gained §9;
+  changelog renumbered to §15 (context.md AI prompt 1).
 - **2026-07-14** — Added §10.6 (Living Planet Index, WWF/ZSL 2024) from
   livingplanetindex.org + the Living Planet Report 2024, OWID explainer, and the
   Leung et al. 2020 critique: the −73% headline with realm/region breakdowns and

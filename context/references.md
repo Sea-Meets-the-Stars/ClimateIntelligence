@@ -354,8 +354,47 @@ sources below were used to build the homelessness sections.*
 - **UN Population Division data portal** — https://population.un.org/dataportal/
   — API access to the full WPP indicator set.
 
-## 11. Changelog
+## 11. AI energy, water & the grid (sources for context §14 / report §9)
 
+*Added 2026-07-14. The four DOE/DOE-lab reports behind the AI-footprint sections.
+PDFs staged in `context/Reports/` and on `GDrive:ClimateIntelligence/Reports/`.*
+
+**Primary sources (LBNL reports read in full):**
+- **Shehabi, A. et al., 2024. *2024 United States Data Center Energy Usage
+  Report* (LBNL-2001637).** — landing:
+  https://eta-publications.lbl.gov/publications/2024-lbnl-data-center-energy-usage-report
+  · eScholarship: https://escholarship.org/uc/item/32d6m0d1 · DOI 10.71468/P1WC7Q.
+  Congressionally mandated (Energy Act of 2020). **The DOE source for water** —
+  direct vs indirect water, WUE, PUE, 2023 = 176 TWh (4.4%), 2028 = 325–580 TWh.
+- **Smith, S.J. et al., 2026. *United States Data Center Energy Usage Report:
+  2025 Update* (LBNL-2001758).** — landing:
+  https://eta.lbl.gov/publications/united-states-data-center-energy-2025 ·
+  eScholarship: https://escholarship.org/uc/item/33m6w3x0 · DOI 10.71468/P1RP4F.
+  Extends projections to 2030 (reference 649 TWh / 11.8%; range 9.5–15.3%).
+  Electricity only — no water chapter.
+
+**DOE policy documents on powering AI:**
+- **DOE Secretary of Energy Advisory Board, 2024. *Recommendations on Powering
+  Artificial Intelligence and Data Center Infrastructure*** (July 2024) —
+  https://www.energy.gov/sites/default/files/2024-08/Powering%20AI%20and%20Data%20Center%20Infrastructure%20Recommendations%20July%202024.pdf
+  — 18 recommendations across efficiency, demand flexibility, and clean-firm
+  generation; advisory, not a measurement study.
+- **DOE, 2025. *Report on Evaluating U.S. Grid Reliability and Security*** (EO
+  14262 resource-adequacy report, with PNNL/NREL, July 2025) —
+  https://www.energy.gov/sites/default/files/2025-07/DOE%20Final%20EO%20Report%20(FINAL%20JULY%207).pdf
+  — ~50 GW new data-center load by 2030; conditional ~100× loss-of-load-hours
+  result. No water content; national-security framing.
+
+**Context / secondary:**
+- **Berkeley Lab News Center**, "How researchers are driving advances for data
+  centers" — https://newscenter.lbl.gov/2025/12/16/how-researchers-are-driving-advances-for-data-centers/
+  (plain-language summary of the water figures).
+
+## 12. Changelog
+
+- **2026-07-14** — Added §11 (AI energy, water & the grid): the four DOE/LBNL
+  reports behind `claudes_context.md` §14 and CI report §9. All URLs verified to
+  resolve. Changelog renumbered to §12.
 - **2026-07-13** — Added Dr. James Hansen to §8 as the credible high-sensitivity
   counterweight (paired with `claudes_context.md` §13); CSAS site, Substack, and
   key papers.

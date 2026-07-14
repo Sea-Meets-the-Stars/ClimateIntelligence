@@ -719,7 +719,88 @@ planning, child survival) are development goods in their own right.
 
 ---
 
-## 9. A note on scope and framing
+## 9. Artificial intelligence: the data-center energy and water surge
+
+Artificial intelligence is a topic of the blog in its own right, and its physical
+footprint is where it meets this report. The U.S. Department of Energy is the
+authoritative domestic source here: Congress mandated (Energy Act of 2020) a pair
+of Lawrence Berkeley National Laboratory studies — the *2024 United States Data
+Center Energy Usage Report* [42] and its *2025 Update* [43] — supplemented by two
+DOE policy documents on *powering* the surge [44, 45]. The load-bearing message,
+consistent with §1's method, is that the numbers are real and rising fast **but
+carry uncertainty ranges the headlines routinely drop**.
+
+**Electricity.** A decade of nearly flat demand — U.S. data centers held near
+60 TWh from about 2010 to 2016 as efficiency offset growth — ended around 2017,
+when AI accelerators broke the trend; consumption then roughly tripled by 2023
+[42]. LBNL's 2024 report put 2023 use at **176 TWh, 4.4% of U.S. electricity**;
+the 2025 Update revised the latest historical year (2024) to **192 TWh (4.7%)** —
+notably at the *low* end of the earlier projection, because reported GPU shipments
+came in below forecast, a useful reminder that these estimates move [42, 43].
+Looking forward, the 2024 report projected **325–580 TWh (6.7–12.0%) by 2028**;
+the 2025 Update extends the horizon to 2030 with a **reference case of 649 TWh
+(11.8%)** inside a stress-tested range of **521–843 TWh (9.5–15.3%)** [43]. On
+that path data centers would account for roughly **a third of all U.S.
+electricity-demand growth this decade** and require on the order of 148 GW of new
+grid interconnection by 2030 [43]. The driver is unambiguously AI: AI-server
+electricity rose from under 2 TWh in 2017 to over 40 TWh in 2023, and is projected
+to reach ~55% of all data-center electricity by 2030 [42, 43]; a single flagship
+eight-GPU server's rated power roughly doubled in one year (~7 to over 13 kW) with
+NVIDIA's Blackwell generation [43]. Two honest caveats dominate the projection's
+spread — how hard user-facing *inference* fleets idle (the single largest swing
+factor, and one with "little-to-no measured data"), and how long AI chips stay in
+service (a one-year change in assumed lifetime moves the 2030 estimate by ~59 TWh)
+[43]. Efficiency, meanwhile, keeps improving — average power-usage effectiveness
+fell from ~1.6 (2014) toward ~1.36 (2030), with AI-specialized facilities the most
+efficient buildings in the sector — but LBNL notes the Jevons dynamic explicitly:
+those gains "will typically be reinvested in larger models rather than reducing
+absolute power demand" [42].
+
+**Water.** Water appears only in the 2024 report [42], and it corrects two common
+misreadings. First, *direct* on-site cooling water — **about 66 billion liters
+(~17 billion gallons) in 2023**, 84% of it at hyperscale and colocation
+facilities — is dwarfed by the **~800 billion liters consumed *indirectly* at the
+power plants supplying the electricity, roughly twelve times more** [42]. The
+water story is therefore mostly upstream and tracks the generation mix, not the
+cooling tower. Second, energy efficiency and water efficiency trade off against
+each other: water-usage effectiveness is *rising* (≈0.36 L/kWh in 2023 toward
+0.45–0.48 by 2028) even as PUE falls, because evaporative cooling saves
+electricity at the cost of water while air cooling does the reverse. The most
+energy-efficient AI facilities are among the thirstiest per unit of computing
+(~0.61 vs ~0.32 L/kWh for hyperscale) — one cannot minimize both at once [42].
+
+**Carbon and the grid.** LBNL attributes **61 million tonnes of CO₂-equivalent**
+to U.S. data-center electricity in 2023 (grid-average carbon intensity), excluding
+power-purchase agreements and on-site generation that "could significantly affect"
+the figure [42] — of order one percent of U.S. energy-sector CO₂ today: material
+and growing, but not yet a leading national driver. The grid strain is more
+immediate than the emissions. DOE's 2025 resource-adequacy report adopts a ~50 GW
+midpoint for new data-center load by 2030 (from a surveyed 35–108 GW range),
+making data centers **more than half of the projected 115 GW rise in U.S. peak
+demand** [45]. Its headline — a roughly hundred-fold increase in annual
+loss-of-load hours by 2030 — is a *conditional* result that assumes every
+announced coal and gas retirement (104 GW) proceeds while only today's mature
+project pipeline is built; even assuming *zero* retirements it finds a large
+(≈34-fold) rise from load growth alone [45]. It is a deterministic model that DOE
+itself says needs regional engineering follow-up, and it should be quoted with its
+assumptions attached. On the supply side, DOE's advisory board [44] emphasized
+**demand flexibility** — utilities can typically serve a data center on ~350 of
+365 days, so the binding constraint is the ~15 peak days — yet found "no examples
+of grid-aware flexible operation at data centers today" as of mid-2024 beyond
+one company's carbon-aware load shifting, and recommended that data centers "share
+or pay in full" for the grid upgrades they trigger so other ratepayers are not
+charged for them. Consistent with this report's purview, the shift in *framing*
+between the two DOE documents — the 2024 board foregrounds emissions and
+flexibility; the 2025 report drops emissions language, treats retirements as the
+threat, models data-center load as inflexible, and frames reliability as an "AI
+arms race" — is noted as a fact about the documents, not adjudicated here.
+
+*Full details and blog hooks are distilled in `context/claudes_context.md` §14;
+the reports are staged in `context/Reports/` and on the shared Drive.*
+
+---
+
+## 10. A note on scope and framing
 
 Several of the sharpest disagreements are not about physics but about **scope**, and
 recognizing this defuses much apparent contradiction:
@@ -739,7 +820,7 @@ these are questions of measurement and logic, not ideology.
 
 ---
 
-## 10. References
+## 11. References
 
 *Primary assessments and data (full portals in `context/references.md`):*
 
@@ -852,6 +933,22 @@ these are questions of measurement and logic, not ideology.
     `fertility-rate-with-projections`, data cached to `CI_Reports/data/`
     2026-07-11); "Kaya identity: drivers of CO₂ emissions" (Global Carbon
     Budget / Energy Institute decomposition, 1965–2022).
+
+*AI energy & water (§9):*
+
+42. Shehabi, A. et al., 2024. *2024 United States Data Center Energy Usage
+    Report.* Lawrence Berkeley National Laboratory, LBNL-2001637 (DOI
+    10.71468/P1WC7Q), December 2024. Congressionally mandated (Energy Act of
+    2020) for the U.S. Department of Energy. Local copy: `context/Reports/`.
+43. Smith, S.J. et al., 2026. *United States Data Center Energy Usage Report:
+    2025 Update.* Lawrence Berkeley National Laboratory, LBNL-2001758 (DOI
+    10.71468/P1RP4F), June 2026. Local copy: `context/Reports/`.
+44. U.S. DOE Secretary of Energy Advisory Board, 2024. *Recommendations on
+    Powering Artificial Intelligence and Data Center Infrastructure* (July 2024).
+    Local copy: `context/Reports/`.
+45. U.S. Department of Energy, 2025. *Report on Evaluating U.S. Grid Reliability
+    and Security* (resource-adequacy report under Executive Order 14262; with
+    PNNL and NREL), July 2025. Local copy: `context/Reports/`.
 
 *Figures 1–5 are original, generated by `CI_Reports/make_figures.py` from the data
 in sources 6–9. Figure 6 is reproduced from IPCC AR6 WG1 Figure SPM.10 (source 1),
