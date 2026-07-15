@@ -83,6 +83,28 @@ def load_trace_gas(fname):
     return date[good], val[good]
 
 
+def load_trace_gas_trend(fname):
+    """Created by JXP and Claude.
+
+    Load NOAA's deseasonalized "trend" column for a trace-gas file.
+
+    Inputs
+    ------
+    fname : str
+        File name under data/ (e.g. 'ch4_mm_gl.txt').
+
+    Outputs
+    -------
+    (np.ndarray, np.ndarray)
+        decimal_date, deseasonalized trend mole fraction (missing removed).
+    """
+    # Columns: year month decimal average average_unc trend trend_unc
+    rows = np.genfromtxt(DATA / fname, comments="#")
+    date, trend = rows[:, 2], rows[:, 5]
+    good = trend > 0  # NOAA uses -9.99 for months without a trend value
+    return date[good], trend[good]
+
+
 def load_gistemp():
     """Created by JXP and Claude.
 
@@ -316,18 +338,34 @@ def fig_ghg_trio(outpath):
     co2_d, co2_v, _ = load_co2()
     ch4_d, ch4_v = load_trace_gas("ch4_mm_gl.txt")
     n2o_d, n2o_v = load_trace_gas("n2o_mm_gl.txt")
+    # NOAA's own deseasonalized "trend" columns (col index 5), so the recent
+    # slope is read from the trend, not the seasonal wiggle at the record's
+    # end (addresses the R. review point on the CH4 slope, 2026-07-14).
+    ch4_td, ch4_tv = load_trace_gas_trend("ch4_mm_gl.txt")
 
     fig, axes = plt.subplots(3, 1, figsize=(8, 7), sharex=True)
     axes[0].plot(co2_d, co2_v, color="#c0392b")
     axes[0].set_ylabel("CO$_2$ (ppm)")
     axes[0].set_title("The three principal long-lived greenhouse gases")
-    axes[1].plot(ch4_d, ch4_v, color="#8e44ad")
+    # CH4: faint monthly mean + bold deseasonalized trend, so the recent
+    # re-acceleration is visible rather than hidden by the seasonal cycle.
+    axes[1].plot(ch4_d, ch4_v, color="#8e44ad", lw=0.8, alpha=0.35)
+    axes[1].plot(ch4_td, ch4_tv, color="#8e44ad", lw=1.8,
+                 label="deseasonalized trend")
     axes[1].set_ylabel("CH$_4$ (ppb)")
+    axes[1].legend(loc="upper left", frameon=False, fontsize=8)
+    # Decade-average growth (from methane_growth_rate.py) makes the point the
+    # eye can miss: the 2020s are the fastest-growing decade in the record.
+    axes[1].annotate("2000s plateau\n~2 ppb/yr", (2003, 1790), fontsize=7.5,
+                     color="#5b3b7a", ha="center")
+    axes[1].annotate("2020s ~11 ppb/yr\n(fastest in record;\n2021–22 peak ~17)",
+                     (2019.5, 1830), fontsize=7.5, color="#5b3b7a", ha="center")
     axes[2].plot(n2o_d, n2o_v, color="#16a085")
     axes[2].set_ylabel("N$_2$O (ppb)")
     axes[2].set_xlabel("Year")
     axes[2].text(0.99, 0.04,
-                 "Data: NOAA GML (CO$_2$ Mauna Loa; CH$_4$/N$_2$O global).",
+                 "Data: NOAA GML (CO$_2$ Mauna Loa; CH$_4$/N$_2$O global). "
+                 "CH$_4$ bold line = NOAA deseasonalized trend.",
                  transform=axes[2].transAxes, ha="right", va="bottom",
                  fontsize=8, color="#555")
     fig.tight_layout()

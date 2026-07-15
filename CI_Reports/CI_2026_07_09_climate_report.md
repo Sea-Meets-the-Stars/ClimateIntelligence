@@ -29,6 +29,23 @@ Project) and by the 2025 U.S. Department of Energy "Climate Working Group" repor
 and its 85-author expert rebuttal, which together bracket the live debate. Full
 citations are in §10; data portals are catalogued in `context/references.md`.
 
+**On the IPCC's authority — used, not worshipped.** The IPCC is an *assessment* of
+the published literature, not an oracle, and treating it as the final word would
+violate Principle 1. Two honest caveats follow. First, by construction it is a
+consensus process with a multi-year lag: it smooths toward the middle of the
+literature and can trail fast-moving observations. Second — and this cuts against
+the common charge that it is alarmist — on several metrics the IPCC has
+*under*-predicted observed change: Arctic sea-ice loss, ice-sheet mass loss, and
+sea-level rise all ran at or above the upper edge of older projections, and its
+treatment of carbon-cycle feedbacks and tipping elements is arguably still
+cautious (see §5). It has been closer to the mark, and occasionally high, on
+global-mean surface temperature. The fair summary is that IPCC-central is a
+considered, conservative midpoint — not ground truth — and this report treats it
+as one authoritative input among several, gives the credible low-sensitivity
+*and* high-sensitivity tails their due (§4, and the high-sensitivity case in
+`claudes_context.md` §13), and privileges *direct measurements* over any
+assessment body's synthesis wherever the two can be compared.
+
 **On uncertainty.** Following IPCC calibrated language, *likely* denotes ≥66%
 probability and *very likely* ≥90%; quantitative ranges are 5–95% ("very likely")
 unless noted. Ranges here are not decoration — a projection without a range is not
@@ -199,6 +216,44 @@ accumulates (the ocean and land absorb the rest — the "airborne fraction" of �
 together make the human origin of rising CO₂ about as settled as anything in the
 field.
 
+**The airborne fraction is an average, not a guarantee — and the sinks can
+falter.** That ≈45% is a *historical* mean, and it hides a live uncertainty: the
+land and ocean sinks are themselves climate-sensitive, so atmospheric CO₂ can rise
+faster than emissions do when the sinks weaken. 2023 is the cautionary case. The
+Mauna Loa CO₂ growth rate hit a record **3.37 ± 0.11 ppm/yr — about 86% above
+2022 — while global fossil-fuel emissions rose only ~0.6%**; the gap is explained
+by an **unprecedented weakening of the natural sinks**, with the net land sink the
+weakest since 2003, driven mostly by El Niño heat and drought suppressing tropical
+vegetation [46, 47]. The provisional Global Carbon Budget 2024 shows the land sink
+rebounding as El Niño receded [47], so 2023 reads as a shock rather than a new
+baseline — but it is a concrete demonstration that a reviewer's point is right:
+*"emissions" to the atmosphere are not only direct human output; they include the
+failure of natural systems to absorb what they used to.* One proposed mechanism,
+a **decline in the CO₂-fertilization effect** (rising CO₂ buying less extra plant
+growth as nitrogen and phosphorus become limiting), was reported by Wang et al.
+(2020) but is **contested** — a published comment argues the satellite trend is
+largely an artifact of sensor calibration [48, 49], so per Principle 2 we flag the
+hypothesis as important and unsettled, not established. The robust, model-free
+statement is the one the instruments make directly: **the measured atmospheric
+concentration already integrates every source and every sink**, which is exactly
+why the Keeling curve — a direct physical measurement — is a firmer foundation
+than bottom-up national emission inventories, whose uncertainties and reporting
+gaps are real. The atmosphere is the ground truth; the inventories are the
+estimate.
+
+The three trace gases are not on the same trajectory, and the differences matter.
+**Methane in particular has re-accelerated.** After a near-flat plateau in the
+2000s (~2 ppb/yr), CH₄ growth resumed and the **2020s are now the fastest-growing
+decade in the NOAA record — averaging ~11 ppb/yr, with a record 2021–2022 surge of
+~16–17 ppb/yr** that has since eased to ~6–8 ppb/yr in 2024–2025 (Figure 5;
+`methane_growth_rate.py`). The recent easing is real, but it sits atop a decade of
+the fastest sustained growth ever measured, and much of the surge is attributed to
+**wetland emissions responding to a warmer, wetter tropics — a carbon-cycle
+feedback, not a direct human emission** — alongside fossil sources and a possible
+slowdown in the atmospheric OH sink that destroys methane (the balance among these
+is actively debated). We therefore plot NOAA's deseasonalized trend, not the raw
+seasonal wiggle, so the acceleration is not visually masked at the record's end.
+
 The **radiative forcing** from these gases is computed from line-by-line
 absorption spectra. Notably, even William Happer's own radiative-transfer
 calculations reproduce the mainstream instantaneous forcing for doubled CO₂
@@ -209,7 +264,9 @@ That is worth stating clearly, because it locates the real debate.
 
 **Figure 5.** CO₂, CH₄, and N₂O (NOAA GML), each on its own scale. Different
 sources — fossil fuels, agriculture and energy, fertilizer and industry — yet a
-common anthropogenic upswing.
+common anthropogenic upswing. The CH₄ panel shows the raw monthly mean (faint)
+and NOAA's deseasonalized trend (bold): after the 2000s plateau, methane growth
+re-accelerated, and the 2020s are the fastest-growing decade in the record.
 
 ---
 
@@ -320,6 +377,25 @@ GtCO₂ already emitted, the remaining budget for a 50% chance of holding 1.5 °
 GtCO₂ — a few years at current rates. The math is unforgiving and does not depend
 on any contested feedback: it follows from the near-linear, well-observed part of
 the physics.
+
+**A structural caveat about the scenarios themselves.** SSP/RCP pathways are
+defined by *emissions*; converting them to atmospheric concentrations, and thence
+to warming, runs through carbon-cycle models that must predict how much the land
+and ocean keep absorbing. That step is not a constant. If the sinks weaken
+persistently — the 2023 land-sink collapse above is a one-year preview — or if
+carbon-cycle feedbacks fire (permafrost thaw releasing CO₂ and CH₄, wetland
+methane rising with tropical warmth, forest dieback turning a sink into a source),
+then *the same human-emission path delivers a higher concentration and more
+warming.* AR6 does include these feedbacks in its assessed ranges, but the tails
+are acknowledged to be under-sampled: the core scenario set does not fully span
+abrupt permafrost loss or tipping-element cascades, which recent work argues could
+be triggered within the Paris range (Armstrong McKay et al. 2022) [50]. This is
+the strongest version of a reviewer's point, and it is correct: the near-linear
+TCRE relation (Figure 6) is robust for the *directly human* part of the problem,
+but the carbon cycle's own response sits on top of it as an asymmetric upside risk.
+It also reframes what to watch — the *measured atmospheric concentration and its
+growth rate* capture sink behavior in real time, whereas an emissions inventory,
+by construction, cannot.
 
 **Irreversibility and tails.** Some changes (deep-ocean warming, ice-sheet loss,
 sea-level rise) are effectively irreversible on human timescales; committed sea-level
@@ -973,8 +1049,25 @@ these are questions of measurement and logic, not ideology.
     and Security* (resource-adequacy report under Executive Order 14262; with
     PNNL and NREL), July 2025. Local copy: `context/Reports/`.
 
+*Carbon cycle, sinks & feedbacks (§3.5, §5):*
+
+46. Ke, P. et al., 2024. Low-latency carbon budget analysis reveals a large
+    decline of the land carbon sink in 2023. *National Science Review*
+    11(12):nwae367.
+47. Friedlingstein, P. et al., 2025. Global Carbon Budget 2024. *Earth System
+    Science Data* (and the 2024 provisional release; land-sink rebound as El
+    Niño receded).
+48. Wang, S. et al., 2020. Recent global decline of CO₂ fertilization effects on
+    vegetation photosynthesis. *Science* 370(6522):1295–1300.
+49. Zhu, Z. et al., 2021. Comment on "Recent global decline of CO₂ fertilization
+    effects on vegetation photosynthesis." *Science* 373(6562):eabg2947
+    (argues the reported decline is largely a satellite-data artifact).
+50. Armstrong McKay, D.I. et al., 2022. Exceeding 1.5 °C global warming could
+    trigger multiple climate tipping points. *Science* 377(6611):eabn7950.
+
 *Figures 1–5 are original, generated by `CI_Reports/make_figures.py` from the data
-in sources 6–9. Figure 6 is reproduced from IPCC AR6 WG1 Figure SPM.10 (source 1),
+in sources 6–9 (Figure 5's CH₄ growth-rate context is computed in
+`CI_Reports/methane_growth_rate.py`). Figure 6 is reproduced from IPCC AR6 WG1 Figure SPM.10 (source 1),
 via the Environmental Graphiti page "Emissions Levels Determine Temperature Rise"
 (https://www.environmentalgraphiti.org/all-series/emissions-levels-determine-temperature-rise,
 retrieved 2026-07-13); an earlier original version of this figure remains available

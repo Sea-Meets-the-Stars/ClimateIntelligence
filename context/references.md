@@ -390,8 +390,49 @@ PDFs staged in `context/Reports/` and on `GDrive:ClimateIntelligence/Reports/`.*
   centers" — https://newscenter.lbl.gov/2025/12/16/how-researchers-are-driving-advances-for-data-centers/
   (plain-language summary of the water figures).
 
-## 12. Changelog
+## 12. Carbon cycle, sinks & feedbacks (sources for report §3.5 / §5)
 
+*Added 2026-07-15 in response to R.'s review comments on natural-sink failure,
+the CO₂-fertilization effect, and tipping points not captured by emission-driven
+scenarios.*
+
+- **Ke, P. et al., 2024. "Low-latency carbon budget analysis reveals a large
+  decline of the land carbon sink in 2023." *National Science Review*
+  11(12):nwae367.** — https://academic.oup.com/nsr/article/11/12/nwae367/7831648
+  (preprint: https://arxiv.org/abs/2407.12447). Record 2023 CO₂ growth
+  (3.37 ppm at Mauna Loa, ~86% above 2022) against ~0.6% fossil-emission growth
+  ⇒ the weakest land sink since 2003; ≥78% of the decline is tropical
+  (El Niño heat/drought). The empirical core of R.'s "natural systems failing to
+  absorb" point.
+- **Friedlingstein, P. et al. Global Carbon Budget 2024/2025.** *Earth System
+  Science Data* — https://essd.copernicus.org/articles/17/965/2025/ ·
+  https://globalcarbonproject.org/carbonbudget/ . Airborne fraction, land/ocean
+  sink partitioning, and the projected 2024 land-sink rebound as El Niño receded.
+- **Wang, S. et al., 2020. "Recent global decline of CO₂ fertilization effects on
+  vegetation photosynthesis." *Science* 370(6522):1295–1300.** —
+  https://www.science.org/doi/10.1126/science.abb7772 . The declining-CFE
+  hypothesis (nutrient limitation) R. cites.
+- **Zhu, Z. et al., 2021. Comment on the above. *Science* 373(6562):eabg2947.** —
+  https://www.science.org/doi/10.1126/science.abg2947 . Argues the reported
+  decline is largely an AVHRR satellite-calibration artifact — the reason we
+  present CFE decline as unsettled (Principle 2), not established.
+- **Armstrong McKay, D.I. et al., 2022. "Exceeding 1.5 °C global warming could
+  trigger multiple climate tipping points." *Science* 377(6611):eabn7950.** —
+  https://www.science.org/doi/10.1126/science.abn7950 . Tipping-element
+  thresholds, several within the Paris range; support for the §5 caveat that the
+  core scenario set under-samples carbon-cycle/tipping tails.
+- **NOAA GML CH₄ trends** (already in report source 6) —
+  https://gml.noaa.gov/ccgg/trends_ch4/ . The globally averaged CH₄ series
+  differenced in `CI_Reports/methane_growth_rate.py`: 2020s ≈ 11 ppb/yr
+  (fastest decade in the record), 2021–22 peak ≈ 16–17 ppb/yr.
+
+## 13. Changelog
+
+- **2026-07-15** — Added §12 (Carbon cycle, sinks & feedbacks) in response to
+  R.'s review of the initial report (`claude_init_report.md` prompt 4): the 2023
+  land-sink decline (Ke et al.; GCB), the contested CO₂-fertilization decline
+  (Wang et al.; Zhu et al. comment), tipping points (Armstrong McKay et al.), and
+  the NOAA CH₄ growth-rate series. Changelog renumbered to §13.
 - **2026-07-14** — Added §11 (AI energy, water & the grid): the four DOE/LBNL
   reports behind `claudes_context.md` §14 and CI report §9. All URLs verified to
   resolve. Changelog renumbered to §12.
