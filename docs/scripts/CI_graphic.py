@@ -2,25 +2,28 @@
 CI_graphic.py
 =============
 
-Generate the Climate Intelligence project banner: a wide, light-background
-"summary graphic" for the GitHub README (and reuse in talks / slides).
+Generate the Climate Intelligence project "summary graphic" in two formats from
+a single set of drawing helpers + a per-format layout config:
 
-Design concept (v2, revised after author review in claude_prompts/website.md):
-  A clean, professional, light-theme banner. The hero visual fuses the two
-  themes the author wants front-and-center -- **Artificial Intelligence** and
-  the **climate crisis** -- in one *intuitive* picture: a chart of noisy annual
-  temperature OBSERVATIONS that an AI fits into a clear RISING TREND, then
-  extends as a dashed PROJECTION. It reads instantly as "the climate is warming"
-  and as "AI extracts the signal and predicts from noisy data" -- a fresher AI
-  cue than a generic neural-network mesh (dropped in v2), and more intuitive
-  than the abstract warming-stripes ribbon (also dropped in v2).
+  * "banner"  -> docs/CI_graphic.png                (figsize 16x6, wide README banner)
+  * "slides"  -> docs/CI_graphic_google_slides.png  (figsize 16x9, Google Slides 16:9)
 
-  Left side: the "Climate Intelligence" wordmark plus three well-sourced climate
-  numbers. Bottom: the four topic areas, each a small hand-drawn vector icon in
-  a soft colored circle. No robot, human figure, burning globe, or polar bear.
+Design (light theme, muted professional palette):
+  Elements are the same across both formats -- only their positions/sizes/font
+  scales differ (see LAYOUTS). Elements:
+    - "Climate Intelligence" wordmark (top-left)
+    - two-line tagline "Where climate science meets / artificial intelligence."
+      (upper-right, right of the wordmark and above the chart)
+    - three small muted-terracotta climate stat callouts (left column)
+    - an OBSERVED-warming chart (scatter of annual anomalies + smooth trend +
+      modest uncertainty band; NO forecast/projection, NO "AI" analysis --
+      simply the climate evidence)
+    - five topic icons along the bottom, each a hand-drawn vector glyph in a
+      soft colored circle: Climate Physics, Biodiversity, Population, Unhoused,
+      Artificial Intelligence (a violet microchip). No robot/human/globe/bear.
 
-Output:
-  docs/CI_graphic.png  (dpi=200, figsize 16x6 => wide ~2.7:1 banner)
+  AI's presence lives in the wordmark, tagline, and the AI topic icon -- NOT in
+  the chart, which never implies AI is computing or forecasting the warming.
 
 Run:
   conda run -n ocean14 python docs/scripts/CI_graphic.py
@@ -56,93 +59,85 @@ plt.rcParams.update(
     }
 )
 
-np.random.seed(12)  # reproducible observation noise
-
-FIG_W, FIG_H = 16.0, 6.0  # inches; used to size physically-square icon axes
-
 
 # ----------------------------------------------------------------------------
-# Hero chart: noisy observations -> AI-fit trend -> dashed projection
+# Chart data -- synthesized ONCE with a fixed seed and reused by both formats.
 # ----------------------------------------------------------------------------
 def _signal(year):
-    """Smooth, accelerating warming 'signal' (the truth the AI recovers).
-
-    -0.2 degC ~1850  ->  ~0 ~1950  ->  ~+1.1 ~2025  ->  ~+1.9 ~2050.
-    """
+    """Smooth, accelerating warming 'signal' underlying the observed record."""
     n = year - 1850.0
     return -0.2 + 2.1 * (n / 200.0) ** 3.6
 
 
-def draw_chart(ax):
-    """A real data Axes showing only the OBSERVED climate record: a scatter of
-    annual anomalies with a smooth trend line + modest uncertainty band.
+np.random.seed(12)  # reproducible observation noise (seeded once, before draw)
+_OBS_YEARS = np.arange(1850, 2026)  # historical / observed only (ends ~present)
+_TREND = _signal(_OBS_YEARS)
+_OBS = _TREND + np.random.normal(0.0, 0.11, _OBS_YEARS.size)
+
+
+# ----------------------------------------------------------------------------
+# Element helpers -- each takes a layout config so positions/sizes are not
+# hard-coded and can be reused across formats.
+# ----------------------------------------------------------------------------
+def draw_title(ax, cfg):
+    """Wordmark (top-left) + two-line tagline (upper-right)."""
+    t = cfg["title"]
+    ax.text(t["x"], t["y"], "Climate Intelligence",
+            ha="left", va="center", fontsize=t["fs"], fontweight="bold",
+            color=CHARCOAL)
+    g = cfg["tagline"]
+    ax.text(g["x"], g["y1"], "Where climate science meets",
+            ha=g["ha"], va="center", fontsize=g["fs"], color=MUTED)
+    ax.text(g["x"], g["y2"], "artificial intelligence.",
+            ha=g["ha"], va="center", fontsize=g["fs"], color=MUTED)
+
+
+def draw_stats(ax, cfg):
+    """Three well-sourced climate numbers as small quiet accents (left column)."""
+    stats = [
+        ("+1.1 °C", "warming since pre-industrial"),
+        (">430 ppm", "atmospheric CO₂"),
+        ("+3.7 mm/yr", "sea-level rise"),
+    ]
+    s = cfg["stats"]
+    for (number, caption), y in zip(stats, s["ys"]):
+        ax.text(s["num_x"], y, number, ha="left", va="center",
+                fontsize=s["num_fs"], fontweight="bold", color=STAT)
+        ax.text(s["cap_x"], y - s["cap_dy"], caption, ha="left", va="center",
+                fontsize=s["cap_fs"], color=MUTED)
+
+
+def draw_chart(ax, cfg):
+    """The OBSERVED climate record: scatter + smooth trend + uncertainty band.
 
     No forecast/projection and no 'AI' analysis is depicted -- this is simply
-    the climate evidence. AI's role in the project lives in the title, tagline,
-    and the Artificial Intelligence topic icon, not in computing the warming.
+    the climate evidence.
     """
-    obs_years = np.arange(1850, 2026)  # historical / observed only
-    obs = _signal(obs_years) + np.random.normal(0.0, 0.11, obs_years.size)
-
-    # Observations: light, semi-transparent dots (the raw record).
-    ax.scatter(obs_years, obs, s=20, color=NAVY, alpha=0.30,
+    f = cfg["chart_fonts"]
+    ax.scatter(_OBS_YEARS, _OBS, s=20, color=NAVY, alpha=0.30,
                edgecolors="none", zorder=2, label="observations")
-
-    # Smooth trend through the historical data, with a modest (constant)
-    # uncertainty band -- uncertainty, NOT a prediction.
-    trend = _signal(obs_years)
-    ax.plot(obs_years, trend, color=ACCENT, lw=3.4, zorder=4, label="trend")
-    ax.fill_between(obs_years, trend - 0.11, trend + 0.11,
-                    color=ACCENT, alpha=0.15, zorder=1)
-
-    # Zero baseline only -- no 'present' divider, no future region.
+    ax.plot(_OBS_YEARS, _TREND, color=ACCENT, lw=3.4, zorder=4, label="trend")
+    ax.fill_between(_OBS_YEARS, _TREND - 0.11, _TREND + 0.11,
+                    color=ACCENT, alpha=0.15, zorder=1)  # uncertainty, not a forecast
     ax.axhline(0.0, color=MUTED, lw=0.8, alpha=0.35, zorder=1)
 
-    # Clean, minimal axes; x ends at the present.
     ax.set_facecolor(BG)
     ax.set_xlim(1848, 2026)
     ax.set_ylim(-0.6, 1.5)
     ax.set_xticks([1900, 1950, 2000])
     ax.set_yticks([0, 0.5, 1.0])
     ax.set_yticklabels(["0", "+0.5", "+1.0"])
-    ax.tick_params(labelsize=16, length=4, color=MUTED, labelcolor=CHARCOAL)
+    ax.tick_params(labelsize=f["tick"], length=4, color=MUTED,
+                   labelcolor=CHARCOAL)
     for side in ("top", "right"):
         ax.spines[side].set_visible(False)
     for side in ("left", "bottom"):
         ax.spines[side].set_color(MUTED)
-    ax.set_ylabel("temperature anomaly (°C)", fontsize=15, color=MUTED)
+    ax.set_ylabel("temperature anomaly (°C)", fontsize=f["ylabel"], color=MUTED)
     ax.set_title("observed global warming (1850–present)",
-                 fontsize=18, color=CHARCOAL, loc="left", pad=8)
-    ax.legend(loc="upper left", fontsize=15, frameon=False,
+                 fontsize=f["title"], color=CHARCOAL, loc="left", pad=8)
+    ax.legend(loc="upper left", fontsize=f["legend"], frameon=False,
               handlelength=1.6, borderaxespad=0.4)
-
-
-# ----------------------------------------------------------------------------
-# Title + climate stat callouts (left column)
-# ----------------------------------------------------------------------------
-def draw_title(ax):
-    ax.text(0.05, 0.905, "Climate Intelligence",
-            ha="left", va="center", fontsize=52, fontweight="bold",
-            color=CHARCOAL)
-    # Tagline: round-4 option 3 (see Q&A in claude_prompts/website.md), "for now".
-    ax.text(0.052, 0.805, "Where climate science meets artificial intelligence.",
-            ha="left", va="center", fontsize=24, color=MUTED)
-
-
-def draw_stats(ax):
-    """Three well-sourced climate numbers stacked under the title (left)."""
-    stats = [
-        ("+1.1 °C", "warming since pre-industrial"),
-        (">430 ppm", "atmospheric CO₂"),
-        ("+3.7 mm/yr", "sea-level rise"),
-    ]
-    # Quiet supporting accents: smaller + muted so they don't dominate.
-    ys = [0.62, 0.48, 0.34]
-    for (number, caption), y in zip(stats, ys):
-        ax.text(0.05, y, number, ha="left", va="center",
-                fontsize=30, fontweight="bold", color=STAT)
-        ax.text(0.052, y - 0.055, caption, ha="left", va="center",
-                fontsize=16, color=MUTED)
 
 
 # ----------------------------------------------------------------------------
@@ -155,7 +150,6 @@ def glyph_thermometer(a, c, bg):
     a.add_patch(Circle((0, 0.60), 0.13, facecolor=c, edgecolor="none", zorder=3))
     a.add_patch(Circle((0, -0.45), 0.30, facecolor=c, edgecolor="none",
                        zorder=3))
-    # light "mercury" channel inside the stem, with a filled bulb
     a.add_patch(Rectangle((-0.05, -0.45), 0.10, 0.85, facecolor=bg,
                           edgecolor="none", zorder=4))
     a.add_patch(Circle((0, -0.45), 0.15, facecolor=c, edgecolor="none",
@@ -186,7 +180,7 @@ def glyph_people(a, c, bg):
 
 
 def glyph_house(a, c, bg):
-    """Homelessness -> a simple house (base + triangular roof + door)."""
+    """Unhoused -> a simple house (base + triangular roof + door)."""
     a.add_patch(Rectangle((-0.42, -0.55), 0.84, 0.72, facecolor=c,
                           edgecolor="none", zorder=3))
     a.add_patch(Polygon([(-0.58, 0.14), (0.58, 0.14), (0.0, 0.72)],
@@ -196,11 +190,7 @@ def glyph_house(a, c, bg):
 
 
 def glyph_chip(a, c, bg):
-    """Artificial Intelligence -> a microchip / processor (die + pins).
-
-    A fresher AI cue than a robot: a rounded-square chip body with a small inner
-    'die' square and short pins along all four sides.
-    """
+    """Artificial Intelligence -> a microchip / processor (die + pins)."""
     pin_len, pin_w = 0.16, 0.09
     for off in (-0.24, 0.0, 0.24):  # three pins per side, behind the body
         a.add_patch(Rectangle((off - pin_w / 2, 0.42), pin_w, pin_len,
@@ -213,12 +203,10 @@ def glyph_chip(a, c, bg):
                               zorder=2))                                  # left
         a.add_patch(Rectangle((0.42, off - pin_w / 2), pin_len, pin_w,
                               facecolor=c, edgecolor="none", zorder=2))   # right
-    # rounded-square chip body
     a.add_patch(FancyBboxPatch((-0.40, -0.40), 0.80, 0.80,
                                boxstyle="round,pad=0,rounding_size=0.14",
                                facecolor=c, edgecolor="none", zorder=3,
                                mutation_aspect=1))
-    # inner die (tint cut-out)
     a.add_patch(Rectangle((-0.17, -0.17), 0.34, 0.34, facecolor=bg,
                           edgecolor="none", zorder=4))
 
@@ -227,21 +215,21 @@ TOPICS = [
     ("Climate Physics",        "#d9ecef", "#0f5e6e", glyph_thermometer),
     ("Biodiversity",           "#dcefe0", "#2e7d4f", glyph_leaf),
     ("Population",             "#dde7f2", "#123b52", glyph_people),
-    ("Homelessness",           "#f5e9d5", "#b5761f", glyph_house),
+    ("Unhoused",               "#f5e9d5", "#b5761f", glyph_house),
     ("Artificial\nIntelligence", "#e6e1f0", "#6d5b9e", glyph_chip),
 ]
 
 
-def draw_topics(fig, ax):
-    """Row of four topic icons (colored circle + glyph) with labels beneath."""
-    # Five topic icons, evenly spaced as bin-centers across the width.
+def draw_topics(fig, ax, cfg):
+    """Row of five topic icons (colored circle + glyph) with labels beneath."""
+    t = cfg["topics"]
     n = len(TOPICS)
-    left, right = 0.06, 0.94
-    step = (right - left) / n
-    centers = [left + (i + 0.5) * step for i in range(n)]
-    icon_h = 0.15
-    icon_w = icon_h * FIG_H / FIG_W  # keep the icon Axes physically square
-    y0 = 0.12
+    step = (t["right"] - t["left"]) / n
+    centers = [t["left"] + (i + 0.5) * step for i in range(n)]
+    icon_h = t["icon_h"]
+    # Keep each icon Axes physically square for this figure's aspect ratio.
+    icon_w = icon_h * cfg["fig_h"] / cfg["fig_w"]
+    y0 = t["y0"]
     for cx, (label, tint, glyph_color, glyph_fn) in zip(centers, TOPICS):
         iax = fig.add_axes([cx - icon_w / 2.0, y0, icon_w, icon_h])
         iax.set_xlim(-1, 1)
@@ -251,15 +239,46 @@ def draw_topics(fig, ax):
         iax.add_patch(Circle((0, 0), 0.98, facecolor=tint, edgecolor="none",
                              zorder=1))
         glyph_fn(iax, glyph_color, tint)
-        ax.text(cx, y0 - 0.018, label, ha="center", va="top",
-                fontsize=22, color=CHARCOAL, linespacing=1.0)
+        ax.text(cx, y0 - t["label_dy"], label, ha="center", va="top",
+                fontsize=t["label_fs"], color=CHARCOAL, linespacing=1.0)
 
 
 # ----------------------------------------------------------------------------
-# Compose the banner
+# Per-format layout configs
 # ----------------------------------------------------------------------------
-def build_figure():
-    fig = plt.figure(figsize=(FIG_W, FIG_H))
+LAYOUTS = {
+    # Wide README banner -- reproduces the established appearance exactly.
+    "banner": {
+        "fig_w": 16.0, "fig_h": 6.0,
+        "title": {"x": 0.05, "y": 0.905, "fs": 52},
+        "tagline": {"x": 0.965, "y1": 0.895, "y2": 0.825, "fs": 23, "ha": "right"},
+        "stats": {"num_x": 0.05, "cap_x": 0.052, "ys": [0.75, 0.64, 0.53],
+                  "num_fs": 24, "cap_fs": 14, "cap_dy": 0.045},
+        "chart": [0.45, 0.35, 0.51, 0.37],
+        "chart_fonts": {"tick": 16, "ylabel": 15, "title": 18, "legend": 15},
+        "topics": {"left": 0.06, "right": 0.94, "y0": 0.12, "icon_h": 0.15,
+                   "label_fs": 22, "label_dy": 0.018},
+    },
+    # Google Slides 16:9 -- uses the extra vertical room; larger fonts.
+    "slides": {
+        "fig_w": 16.0, "fig_h": 9.0,
+        "title": {"x": 0.05, "y": 0.925, "fs": 58},
+        "tagline": {"x": 0.965, "y1": 0.930, "y2": 0.868, "fs": 26, "ha": "right"},
+        "stats": {"num_x": 0.05, "cap_x": 0.052, "ys": [0.64, 0.52, 0.40],
+                  "num_fs": 31, "cap_fs": 17, "cap_dy": 0.05},
+        "chart": [0.37, 0.34, 0.57, 0.40],
+        "chart_fonts": {"tick": 18, "ylabel": 17, "title": 22, "legend": 17},
+        "topics": {"left": 0.05, "right": 0.95, "y0": 0.10, "icon_h": 0.14,
+                   "label_fs": 24, "label_dy": 0.020},
+    },
+}
+
+
+# ----------------------------------------------------------------------------
+# Compose a figure for a given layout, then render both formats.
+# ----------------------------------------------------------------------------
+def build_figure(layout):
+    fig = plt.figure(figsize=(layout["fig_w"], layout["fig_h"]))
 
     # Full-figure decorative background Axes (manual 0-1 placement).
     bg = fig.add_axes([0, 0, 1, 1])
@@ -267,24 +286,28 @@ def build_figure():
     bg.set_ylim(0, 1)
     bg.axis("off")
 
-    draw_title(bg)
-    draw_stats(bg)
-    draw_topics(fig, bg)
+    draw_title(bg, layout)
+    draw_stats(bg, layout)
+    draw_topics(fig, bg, layout)
 
-    # Hero data chart on the right, sitting on top of the background Axes.
-    # Kept low enough that its title clears the wordmark + tagline on the left.
-    cax = fig.add_axes([0.45, 0.35, 0.51, 0.37])
-    draw_chart(cax)
+    cax = fig.add_axes(layout["chart"])
+    draw_chart(cax, layout)
 
     return fig
 
 
 def main():
-    out_path = Path(__file__).resolve().parents[1] / "CI_graphic.png"
-    fig = build_figure()
-    fig.savefig(out_path, dpi=200)
-    plt.close(fig)
-    print(f"Saved: {out_path}")
+    out_dir = Path(__file__).resolve().parents[1]
+    outputs = {
+        "banner": "CI_graphic.png",
+        "slides": "CI_graphic_google_slides.png",
+    }
+    for fmt, fname in outputs.items():
+        fig = build_figure(LAYOUTS[fmt])
+        path = out_dir / fname
+        fig.savefig(path, dpi=200)
+        plt.close(fig)
+        print(f"Saved [{fmt}]: {path}")
 
 
 if __name__ == "__main__":

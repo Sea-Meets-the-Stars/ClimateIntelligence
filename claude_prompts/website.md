@@ -47,6 +47,17 @@ With that understanding, work on the tag lines and a new graphic.  Log your work
     - The figure suggests the role of AI in this project is to make climate predictions.  That is not true and therefore very misleading.  Please keep at it..
     - Log your work
 
+8. More:
+
+    - Make the red text fonts even smaller and move that text up
+    - Can you move the tag line to the right of the title and above the figure?  You can split it into two lines
+    - Replace "Homelessness" with "Unhoused"
+    - Log your work
+
+9. Ok, that's great.  Can you generate a second one that has an aspect ratio that is ideal for Google Slides?  
+Put it in `docs/CI_graphic_google_slides.png` and try to reuse as much code as possible from the first graphic.  Log your work.
+
+
 ## Q&A
 
 ### GitHub Website

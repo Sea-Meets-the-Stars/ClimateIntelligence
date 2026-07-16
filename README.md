@@ -32,7 +32,8 @@ A few of our guiding principles:
 - Climate physics
 - Biodiversity
 - Global population
-- Homelessness
+- Unhoused
+- Artificial intelligence — not only a tool we use, but a subject in its own right
 
 More themes will be added as the blog grows.
 
