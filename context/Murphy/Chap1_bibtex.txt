@@ -1,0 +1,274 @@
+﻿@article{BarOn2018biomass,
+  title = {The biomass distribution on Earth},
+  volume = {115},
+  ISSN = {1091-6490},
+  url = {http://dx.doi.org/10.1073/pnas.1711842115},
+  DOI = {10.1073/pnas.1711842115},
+  number = {25},
+  journal = {Proceedings of the National Academy of Sciences},
+  publisher = {Proceedings of the National Academy of Sciences},
+  author = {Bar-On,  Yinon M. and Phillips,  Rob and Milo,  Ron},
+  year = {2018},
+  month = may,
+  pages = {6506–6511}
+}
+
+
+@article{Barnosky2008megafauna,
+  title = {Megafauna biomass tradeoff as a driver of Quaternary and future extinctions},
+  volume = {105},
+  ISSN = {1091-6490},
+  url = {http://dx.doi.org/10.1073/pnas.0801918105},
+  DOI = {10.1073/pnas.0801918105},
+  number = {supplement_1},
+  journal = {Proceedings of the National Academy of Sciences},
+  publisher = {Proceedings of the National Academy of Sciences},
+  author = {Barnosky,  Anthony D.},
+  year = {2008},
+  month = aug,
+  pages = {11543–11548}
+}
+@article{Greenspoon2023mammals,
+  title = {The global biomass of wild mammals},
+  volume = {120},
+  ISSN = {1091-6490},
+  url = {http://dx.doi.org/10.1073/pnas.2204892120},
+  DOI = {10.1073/pnas.2204892120},
+  number = {10},
+  journal = {Proceedings of the National Academy of Sciences},
+  publisher = {Proceedings of the National Academy of Sciences},
+  author = {Greenspoon,  Lior and Krieger,  Eyal and Sender,  Ron and Rosenberg,  Yuval and Bar-On,  Yinon M. and Moran,  Uri and Antman,  Tomer and Meiri,  Shai and Roll,  Uri and Noor,  Elad and Milo,  Ron},
+  year = {2023},
+  month = feb 
+}
+
+
+
+
+@article{Finn2023defaunation,
+  title = {More losers than winners: investigating Anthropocene defaunation through the diversity of population trends},
+  volume = {98},
+  ISSN = {1469-185X},
+  url = {http://dx.doi.org/10.1111/brv.12974},
+  DOI = {10.1111/brv.12974},
+  number = {5},
+  journal = {Biological Reviews},
+  publisher = {Wiley},
+  author = {Finn,  Catherine and Grattarola,  Florencia and Pincheira‐Donoso,  Daniel},
+  year = {2023},
+  month = may,
+  pages = {1732–1748}
+}
+
+
+@article{Ceballos2015extinction,
+  title = {Accelerated modern human–induced species losses: Entering the sixth mass extinction},
+  volume = {1},
+  ISSN = {2375-2548},
+  url = {http://dx.doi.org/10.1126/sciadv.1400253},
+  DOI = {10.1126/sciadv.1400253},
+  number = {5},
+  journal = {Science Advances},
+  publisher = {American Association for the Advancement of Science (AAAS)},
+  author = {Ceballos,  Gerardo and Ehrlich,  Paul R. and Barnosky,  Anthony D. and García,  Andrés and Pringle,  Robert M. and Palmer,  Todd M.},
+  year = {2015},
+  month = jun
+}
+
+
+@article{Barnosky2011extinction,
+  title = {Has the Earth’s sixth mass extinction already arrived?},
+  volume = {471},
+  ISSN = {1476-4687},
+  url = {http://dx.doi.org/10.1038/nature09678},
+  DOI = {10.1038/nature09678},
+  number = {7336},
+  journal = {Nature},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Barnosky,  Anthony D. and Matzke,  Nicholas and Tomiya,  Susumu and Wogan,  Guinevere O. U. and Swartz,  Brian and Quental,  Tiago B. and Marshall,  Charles and McGuire,  Jenny L. and Lindsey,  Emily L. and Maguire,  Kaitlin C. and Mersey,  Ben and Ferrer,  Elizabeth A.},
+  year = {2011},
+  month = mar,
+  pages = {51–57}
+}
+
+
+@article{Cowie2022extinction,
+  title = {The Sixth Mass Extinction: fact,  fiction or speculation?},
+  volume = {97},
+  ISSN = {1469-185X},
+  url = {http://dx.doi.org/10.1111/brv.12816},
+  DOI = {10.1111/brv.12816},
+  number = {2},
+  journal = {Biological Reviews},
+  publisher = {Wiley},
+  author = {Cowie,  Robert H. and Bouchet,  Philippe and Fontaine,  Benoît},
+  year = {2022},
+  month = jan,
+  pages = {640–663}
+}
+
+
+@article{Ceballos2018extinction,
+  title = {The misunderstood sixth mass extinction},
+  volume = {360},
+  ISSN = {1095-9203},
+  url = {http://dx.doi.org/10.1126/science.aau0191},
+  DOI = {10.1126/science.aau0191},
+  number = {6393},
+  journal = {Science},
+  publisher = {American Association for the Advancement of Science (AAAS)},
+  author = {Ceballos,  Gerardo and Ehrlich,  Paul R.},
+  editor = {Sills,  Jennifer},
+  year = {2018},
+  month = jun,
+  pages = {1080–1081}
+}
+
+
+@article{Ceballos2017extinction,
+  title = {Biological annihilation via the ongoing sixth mass extinction signaled by vertebrate population losses and declines},
+  volume = {114},
+  ISSN = {1091-6490},
+  url = {http://dx.doi.org/10.1073/pnas.1704949114},
+  DOI = {10.1073/pnas.1704949114},
+  number = {30},
+  journal = {Proceedings of the National Academy of Sciences},
+  publisher = {Proceedings of the National Academy of Sciences},
+  author = {Ceballos,  Gerardo and Ehrlich,  Paul R. and Dirzo,  Rodolfo},
+  year = {2017},
+  month = jul
+}
+
+
+@article{Ceballos2020extinction,
+  title = {Vertebrates on the brink as indicators of biological annihilation and the sixth mass extinction},
+  volume = {117},
+  ISSN = {1091-6490},
+  url = {http://dx.doi.org/10.1073/pnas.1922686117},
+  DOI = {10.1073/pnas.1922686117},
+  number = {24},
+  journal = {Proceedings of the National Academy of Sciences},
+  publisher = {Proceedings of the National Academy of Sciences},
+  author = {Ceballos,  Gerardo and Ehrlich,  Paul R. and Raven,  Peter H.},
+  year = {2020},
+  month = jun,
+  pages = {13596–13602}
+}
+
+
+@book{Kolbert2014extinction,
+  title={The Sixth Extinction: An Unnatural History},
+  author = {Kolbert, Elizabeth},
+  year = {2014},
+  ISBN = {978-0-8050-9299-8},
+  publisher = {Henry Holt and Company}
+}
+
+
+@article{Murphy2022LtEG,
+  title = {Limits to economic growth},
+  volume = {18},
+  ISSN = {1745-2481},
+  url = {http://dx.doi.org/10.1038/s41567-022-01652-6},
+  DOI = {10.1038/s41567-022-01652-6},
+  number = {8},
+  journal = {Nature Physics},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Murphy,  Thomas W.},
+  year = {2022},
+  month = jul,
+  pages = {844–847}
+}
+
+
+
+
+@article{Murphy2023physlimits,
+  title = {The Physics of Limits},
+  volume = {61},
+  ISSN = {1943-4928},
+  url = {http://dx.doi.org/10.1119/5.0134159},
+  DOI = {10.1119/5.0134159},
+  number = {6},
+  journal = {The Physics Teacher},
+  publisher = {American Association of Physics Teachers (AAPT)},
+  author = {Murphy,  Thomas W.},
+  year = {2023},
+  month = sep,
+  pages = {512–515}
+}
+
+
+@book{Murphy2021textbook,
+  doi = {10.21221/S2978-0-578-86717-5},
+  url = {https://escholarship.org/uc/item/9js5291m},
+  author = {Murphy,  Thomas W.},
+  keywords = {energy,  renewables,  solar power,  wind power,  nuclear power,  adaptation},
+  language = {en},
+  title = {Energy and Human Ambitions on a Finite Planet},
+  publisher = {eScholarship,  University of California},
+  year = {2021},
+  copyright = {Creative Commons Attribution Non Commercial 4.0 International}
+}
+
+
+@article{Gurven2007lifespan,
+  title = {Longevity Among Hunter‐ Gatherers: A Cross‐Cultural Examination},
+  volume = {33},
+  ISSN = {1728-4457},
+  url = {http://dx.doi.org/10.1111/j.1728-4457.2007.00171.x},
+  DOI = {10.1111/j.1728-4457.2007.00171.x},
+  number = {2},
+  journal = {Population and Development Review},
+  publisher = {Wiley},
+  author = {Gurven,  Michael and Kaplan,  Hillard},
+  year = {2007},
+  month = may,
+  pages = {321–365}
+}
+
+
+@article{Smart2023devonian,
+  title = {The expansion of land plants during the Late Devonian contributed to the marine mass extinction},
+  volume = {4},
+  ISSN = {2662-4435},
+  url = {http://dx.doi.org/10.1038/s43247-023-01087-8},
+  DOI = {10.1038/s43247-023-01087-8},
+  number = {1},
+  journal = {Communications Earth &amp; Environment},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Smart,  Matthew S. and Filippelli,  Gabriel and Gilhooly,  William P. and Ozaki,  Kazumi and Reinhard,  Christopher T. and Marshall,  John E. A. and Whiteside,  Jessica H.},
+  year = {2023},
+  month = nov
+}
+
+
+@article{Oswald2020lorenz,
+  title = {Large inequality in international and intranational energy footprints between income groups and across consumption categories},
+  volume = {5},
+  ISSN = {2058-7546},
+  url = {http://dx.doi.org/10.1038/s41560-020-0579-8},
+  DOI = {10.1038/s41560-020-0579-8},
+  number = {3},
+  journal = {Nature Energy},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Oswald,  Yannick and Owen,  Anne and Steinberger,  Julia K.},
+  year = {2020},
+  month = mar,
+  pages = {231–239}
+}
+
+
+@article{CarbajalesDale2023,
+  title = {The environmental and moral implications of human space travel},
+  volume = {856},
+  ISSN = {0048-9697},
+  url = {http://dx.doi.org/10.1016/j.scitotenv.2022.159222},
+  DOI = {10.1016/j.scitotenv.2022.159222},
+  journal = {Science of The Total Environment},
+  publisher = {Elsevier BV},
+  author = {Carbajales-Dale,  Michael and Murphy,  Thomas W.},
+  year = {2023},
+  month = jan,
+  pages = {159222}
+}

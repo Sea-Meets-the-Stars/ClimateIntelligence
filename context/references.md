@@ -213,8 +213,240 @@ is researched in depth.)*
 - Critical dossiers (advocacy-oriented; use for leads, cross-check claims): https://www.desmog.com ; https://www.sourcewatch.org
 - Published rebuttals hub: RealClimate (https://www.realclimate.org), Skeptical Science, Science Feedback.
 
-## 9. Changelog
+**The opposite tail — credible high-sensitivity / high-alarm voice** (added 2026-07-13; profiled in `claudes_context.md` §13):
+- **Dr. James Hansen** — former director, NASA GISS; now Climate Science, Awareness and Solutions (CSAS), Columbia Earth Institute. The most prominent "the mainstream is *under*-alarmed" scientist — the mirror image of the §8 critics, and the reason §13 exists as a paired counterweight.
+- Key recent works: *Global Warming in the Pipeline* (Oxford Open Climate Change, 2023); Hansen et al. 2025, "Global warming has accelerated: are the United Nations and the public well-informed?"; *Ice Melt, Sea Level Rise and Superstorms* (2016). Claims ECS ~4–5 °C, >50% post-2010 acceleration, ship-aerosol unmasking, "2 °C is dead," AMOC shutdown within 20–30 yr.
+- Platforms: https://www.climatescienceawarenesssolutions.org/communications ; Substack https://jimehansen.substack.com ; publications https://www.columbia.edu/~jeh1/publications.shtml
+- Rebuttal to cite for balance: Judith Curry's critique of the *Pipeline* paper (judithcurry.com, 2023) — the two tails arguing directly.
 
+## 9. Homelessness (sources for context §11 / report §7)
+
+*Added 2026-07-11. The blog's first "related topic" outside climate proper;
+sources below were used to build the homelessness sections.*
+
+**Primary sources (read in full):**
+- **Kimmelman, M. (reported with L. Tompkins), "How Houston Moved 25,000 People
+  From the Streets Into Homes of Their Own,"** *NYT* (Headway), 2022-06-14 —
+  https://www.nytimes.com/2022/06/14/headway/houston-homeless-people.html
+  *(nytimes.com blocks automated fetching; a full PDF is saved at
+  `context/NYT/`)*. The definitive narrative of Houston's Housing First
+  continuum-of-care.
+- **Urban Institute — Denver Supportive Housing Social Impact Bond Initiative**
+  — https://www.urban.org/policy-centers/metropolitan-housing-and-communities-policy-center/projects/denver-supportive-housing-social-impact-bond-initiative
+  Project hub for the 2016–2020 RCT (n=724). Final report read in full:
+  *Breaking the Homelessness-Jail Cycle with Housing First* (2021),
+  https://www.urban.org/sites/default/files/publication/104501/breaking-the-homelessness-jail-cycle-with-housing-first_1.pdf ;
+  companion cost study: *Costs and Offsets of Providing Supportive Housing to
+  Break the Homelessness-Jail Cycle* (2021).
+
+**Data & institutional:**
+- **Coalition for the Homeless of Houston/Harris County** — https://www.cfthhouston.org/
+  The Way Home lead agency; "One Year Later" retrospective
+  (https://www.cfthhouston.org/one-year-later-the-new-york-times-article),
+  annual PIT releases (https://www.cfthhouston.org/2025-pit-results), funding
+  pages.
+- **HUD — Annual Homeless Assessment Report (AHAR) / PIT counts** —
+  https://www.huduser.gov/portal/datasets/ahar.html — the authoritative
+  national counts (2024: 771,480, record; 2025: 745,652, first decline since
+  2016).
+- **National Alliance to End Homelessness — State of Homelessness** —
+  https://endhomelessness.org/state-of-homelessness/ — annual analysis layer
+  over HUD data.
+- **Housing First Europe Hub — Finland** — https://housingfirsteurope.eu/country/finland/
+  (with the Y-Foundation) — the national-scale Housing First case.
+
+**U.S. cost-to-house estimate (report §7):**
+- **National Alliance to End Homelessness, 2025.** *How Much Would It Cost to
+  Provide Housing First to All Households Staying in Homeless Shelters?* —
+  https://endhomelessness.org/resources/research-and-analysis/how-much-would-it-cost-to-provide-housing-first-to-all-households-staying-in-homeless-shelters/
+  (~$9.6B/yr, sheltered households; per-household PSH ≈ $20,115, RRH ≈ $8,486 in
+  2022$). Basis for the Climate Intelligence estimate in
+  `CI_Reports/cost_to_house_homeless.py`.
+
+**International comparison — Canada & Europe (report §7):**
+- **Canada — At Home/Chez Soi** (Mental Health Commission of Canada; MAP Centre
+  for Urban Health Solutions) — https://maphealth.ca/at-home-chez-soi/ — the
+  2009–13 RCT (>2,000 participants). Cost-effectiveness: Latimer et al., 2020,
+  *Psychiatric Services* — https://psychiatryonline.org/doi/10.1176/appi.ps.202000029
+  (high-needs offset ~69%). Canada's national strategy: **Reaching Home** —
+  https://www.infrastructure.gc.ca/homelessness-sans-abri/index-eng.html
+- **Finland — Y-Foundation (Y-Säätiö)** — https://ysaatio.fi/en/housing-first/
+  — Housing First as national policy since 2007–08; ~€15,000/person/yr savings;
+  long-term homelessness down ~75% since the late 1980s.
+- **France — "Un Chez-Soi d'Abord"** RCT (Housing First Europe country page:
+  https://housingfirsteurope.eu/country/france/; 4-year follow-up, Tinland et
+  al., 2022, PubMed https://pubmed.ncbi.nlm.nih.gov/35125129/) — ~85% housed at
+  2 yrs, costs fully offset; national *"Logement d'abord"* plan.
+- **Norway & Denmark** country pages — https://housingfirsteurope.eu/country/denmark/
+  — Norway halved homelessness since 2012; Denmark's national Housing First
+  (2009) with good individual outcomes but rising totals (esp. youth).
+- **Germany — BAGW** (Bundesarbeitsgemeinschaft Wohnungslosenhilfe) —
+  https://www.bagw.de/ — ~1,029,000 without housing in 2024 (first time >1M);
+  Berlin Housing First pilot (>90% retention): https://housingfirsteurope.eu/country/germany/
+- **FEANTSA & Fondation Abbé Pierre — Overview of Housing Exclusion in Europe**
+  (9th, 2024; 10th, 2025) — https://www.feantsa.org/resources/9th-overview-of-housing-exclusion-in-europe-2024
+  — the pan-European scorecard (~900k homeless/night in the EU; France & Germany
+  roughly doubled in a decade).
+- **Lisbon Declaration / European Platform on Combatting Homelessness** (2021;
+  pledge to end homelessness by 2030) — https://ec.europa.eu/social/main.jsp?catId=1497
+
+**The debate (read both sides; Principle 2):**
+- **National Academies, 2018.** *Permanent Supportive Housing: Evaluating the
+  Evidence…* — https://nap.nationalacademies.org/catalog/25133 — the null
+  health-outcomes finding.
+- **Corinth, K., 2017.** "The impact of permanent supportive housing on
+  homeless populations," *J. Housing Economics* 35:69–84 (AEI profile:
+  https://www.aei.org/profile/kevin-corinth/) — ~10 PSH units per 1-person PIT
+  reduction; Utah statistics critique.
+- **Cicero Institute** — https://ciceroinstitute.org/research/why-americas-homelessness-strategy-failed-and-how-to-fix-it/
+  and **Manhattan Institute** — https://manhattan.institute/article/housing-first-and-homelessness-the-rhetoric-and-the-reality
+  — the treatment-first critique. *Advocacy-oriented; cross-check claims.*
+- **UCSF Benioff Homelessness and Housing Initiative** — https://homelessness.ucsf.edu/
+  ("Housing First is not Housing Only") — the research-side rebuttal.
+
+**Policy landscape 2024–2026:**
+- ***City of Grants Pass v. Johnson***, 603 U.S. ___ (2024) —
+  https://www.supremecourt.gov/opinions/23pdf/23-175_19m2.pdf
+- **Executive Order 14321,** "Ending Crime and Disorder on America's Streets"
+  (2025-07-24) — whitehouse.gov; Bipartisan Policy Center explainer:
+  https://bipartisanpolicy.org/article/president-trumps-executive-order-on-homelessness-a-shift-in-federal-policy/
+- **Stateline** homelessness coverage — https://stateline.org/ (Grants Pass
+  two-year tracking; Dec 2025 HUD funding-rule shift).
+
+**Climate × homelessness:**
+- **Maricopa County heat-related deaths reports** —
+  https://www.maricopa.gov/1858/Heat-Surveillance — unhoused ≈40–50% of heat
+  deaths; **Yale Climate Connections** (2023) on Phoenix:
+  https://yaleclimateconnections.org/2023/07/for-unhoused-people-in-americas-hottest-large-city-heat-waves-are-a-merciless-killer/
+- **Community Solutions — The Intersection of Climate Change and
+  Homelessness** — https://community.solutions/research-posts/learning-brief-the-intersection-of-climate-change-and-homelessness/
+- **Georgetown Environmental Law Review, "Dual Hazards of Homelessness and
+  Climate Change"** — https://www.law.georgetown.edu/environmental-law-review/blog/dual-hazards-of-homelessness-and-climate-change/
+
+## 10. Population & demographics (sources for context §12 / report §8)
+
+*Added 2026-07-11. Sources for the global-population sections and figures 7–9.*
+
+**Primary sources (read in full):**
+- **UN DESA Population Division — World Population Prospects 2024** —
+  https://population.un.org/wpp/ — the authoritative estimates/projections
+  (1950–2100, probabilistic). *Summary of Results* PDF (read in full):
+  https://population.un.org/wpp/assets/Files/WPP2024_Summary-of-Results.pdf
+- **Vollset, S.E. et al., 2020.** "Fertility, mortality, migration, and
+  population scenarios for 195 countries…," *The Lancet* 396:1285–1306 —
+  https://www.thelancet.com/article/S0140-6736(20)30677-2/fulltext — the
+  IHME/GBD alternative forecast (peak 2064 at 9.7 B; 8.8 B by 2100).
+
+**Data & tools:**
+- **Our World in Data — Population & Demography** —
+  https://ourworldindata.org/population-growth — long-run series (HYDE 3.3 +
+  Gapminder + UN) and grapher CSV downloads; the series behind figures 7–9 are
+  cached in `CI_Reports/data/` (graphers
+  `population-long-run-with-projections`, `fertility-rate-with-projections`).
+  2024-revision explainer: https://ourworldindata.org/un-population-2024-revision
+- **Wittgenstein Centre Human Capital Data Explorer** —
+  https://dataexplorer.wittgensteincentre.org/ — education-stratified
+  projections (the SSP demographic backbone; 9.9 B in 2100 per its 2023
+  revision).
+- **OWID — Kaya identity decomposition** —
+  https://ourworldindata.org/grapher/kaya-identity-co2 — population vs
+  affluence vs intensity drivers of CO₂, 1965–2022.
+- **UN Population Division data portal** — https://population.un.org/dataportal/
+  — API access to the full WPP indicator set.
+
+## 11. AI energy, water & the grid (sources for context §14 / report §9)
+
+*Added 2026-07-14. The four DOE/DOE-lab reports behind the AI-footprint sections.
+PDFs staged in `context/Reports/` and on `GDrive:ClimateIntelligence/Reports/`.*
+
+**Primary sources (LBNL reports read in full):**
+- **Shehabi, A. et al., 2024. *2024 United States Data Center Energy Usage
+  Report* (LBNL-2001637).** — landing:
+  https://eta-publications.lbl.gov/publications/2024-lbnl-data-center-energy-usage-report
+  · eScholarship: https://escholarship.org/uc/item/32d6m0d1 · DOI 10.71468/P1WC7Q.
+  Congressionally mandated (Energy Act of 2020). **The DOE source for water** —
+  direct vs indirect water, WUE, PUE, 2023 = 176 TWh (4.4%), 2028 = 325–580 TWh.
+- **Smith, S.J. et al., 2026. *United States Data Center Energy Usage Report:
+  2025 Update* (LBNL-2001758).** — landing:
+  https://eta.lbl.gov/publications/united-states-data-center-energy-2025 ·
+  eScholarship: https://escholarship.org/uc/item/33m6w3x0 · DOI 10.71468/P1RP4F.
+  Extends projections to 2030 (reference 649 TWh / 11.8%; range 9.5–15.3%).
+  Electricity only — no water chapter.
+
+**DOE policy documents on powering AI:**
+- **DOE Secretary of Energy Advisory Board, 2024. *Recommendations on Powering
+  Artificial Intelligence and Data Center Infrastructure*** (July 2024) —
+  https://www.energy.gov/sites/default/files/2024-08/Powering%20AI%20and%20Data%20Center%20Infrastructure%20Recommendations%20July%202024.pdf
+  — 18 recommendations across efficiency, demand flexibility, and clean-firm
+  generation; advisory, not a measurement study.
+- **DOE, 2025. *Report on Evaluating U.S. Grid Reliability and Security*** (EO
+  14262 resource-adequacy report, with PNNL/NREL, July 2025) —
+  https://www.energy.gov/sites/default/files/2025-07/DOE%20Final%20EO%20Report%20(FINAL%20JULY%207).pdf
+  — ~50 GW new data-center load by 2030; conditional ~100× loss-of-load-hours
+  result. No water content; national-security framing.
+
+**Context / secondary:**
+- **Berkeley Lab News Center**, "How researchers are driving advances for data
+  centers" — https://newscenter.lbl.gov/2025/12/16/how-researchers-are-driving-advances-for-data-centers/
+  (plain-language summary of the water figures).
+
+## 12. Carbon cycle, sinks & feedbacks (sources for report §3.5 / §5)
+
+*Added 2026-07-15 in response to R.'s review comments on natural-sink failure,
+the CO₂-fertilization effect, and tipping points not captured by emission-driven
+scenarios.*
+
+- **Ke, P. et al., 2024. "Low-latency carbon budget analysis reveals a large
+  decline of the land carbon sink in 2023." *National Science Review*
+  11(12):nwae367.** — https://academic.oup.com/nsr/article/11/12/nwae367/7831648
+  (preprint: https://arxiv.org/abs/2407.12447). Record 2023 CO₂ growth
+  (3.37 ppm at Mauna Loa, ~86% above 2022) against ~0.6% fossil-emission growth
+  ⇒ the weakest land sink since 2003; ≥78% of the decline is tropical
+  (El Niño heat/drought). The empirical core of R.'s "natural systems failing to
+  absorb" point.
+- **Friedlingstein, P. et al. Global Carbon Budget 2024/2025.** *Earth System
+  Science Data* — https://essd.copernicus.org/articles/17/965/2025/ ·
+  https://globalcarbonproject.org/carbonbudget/ . Airborne fraction, land/ocean
+  sink partitioning, and the projected 2024 land-sink rebound as El Niño receded.
+- **Wang, S. et al., 2020. "Recent global decline of CO₂ fertilization effects on
+  vegetation photosynthesis." *Science* 370(6522):1295–1300.** —
+  https://www.science.org/doi/10.1126/science.abb7772 . The declining-CFE
+  hypothesis (nutrient limitation) R. cites.
+- **Zhu, Z. et al., 2021. Comment on the above. *Science* 373(6562):eabg2947.** —
+  https://www.science.org/doi/10.1126/science.abg2947 . Argues the reported
+  decline is largely an AVHRR satellite-calibration artifact — the reason we
+  present CFE decline as unsettled (Principle 2), not established.
+- **Armstrong McKay, D.I. et al., 2022. "Exceeding 1.5 °C global warming could
+  trigger multiple climate tipping points." *Science* 377(6611):eabn7950.** —
+  https://www.science.org/doi/10.1126/science.abn7950 . Tipping-element
+  thresholds, several within the Paris range; support for the §5 caveat that the
+  core scenario set under-samples carbon-cycle/tipping tails.
+- **NOAA GML CH₄ trends** (already in report source 6) —
+  https://gml.noaa.gov/ccgg/trends_ch4/ . The globally averaged CH₄ series
+  differenced in `CI_Reports/methane_growth_rate.py`: 2020s ≈ 11 ppb/yr
+  (fastest decade in the record), 2021–22 peak ≈ 16–17 ppb/yr.
+
+## 13. Changelog
+
+- **2026-07-15** — Added §12 (Carbon cycle, sinks & feedbacks) in response to
+  R.'s review of the initial report (`claude_init_report.md` prompt 4): the 2023
+  land-sink decline (Ke et al.; GCB), the contested CO₂-fertilization decline
+  (Wang et al.; Zhu et al. comment), tipping points (Armstrong McKay et al.), and
+  the NOAA CH₄ growth-rate series. Changelog renumbered to §13.
+- **2026-07-14** — Added §11 (AI energy, water & the grid): the four DOE/LBNL
+  reports behind `claudes_context.md` §14 and CI report §9. All URLs verified to
+  resolve. Changelog renumbered to §12.
+- **2026-07-13** — Added Dr. James Hansen to §8 as the credible high-sensitivity
+  counterweight (paired with `claudes_context.md` §13); CSAS site, Substack, and
+  key papers.
+- **2026-07-12** — Extended §9 (Homelessness) with the U.S. cost-to-house
+  estimate source (NAEH 2025) and an international-comparison block (Canada
+  At Home/Chez Soi; Finland Y-Foundation; France Un Chez-Soi d'Abord; Norway;
+  Denmark; Germany BAGW; FEANTSA; Lisbon Declaration) for CI report §7's cost
+  and other-nations additions (context.md Homelessness prompts 3–4).
+- **2026-07-11** — Added §9 (Homelessness) and §10 (Population & demographics):
+  the sources used for `claudes_context.md` §§11–12 and CI report §§7–8
+  (context.md, Population prompt 2). Changelog renumbered to §11.
 - **2026-07-08 (later)** — Added §8: profiles and works of seven heterodox
   scientists (Curry, Lindzen, Christy, Spencer, Koonin, Happer, both Pielkes) from
   four parallel research passes; URLs verified.

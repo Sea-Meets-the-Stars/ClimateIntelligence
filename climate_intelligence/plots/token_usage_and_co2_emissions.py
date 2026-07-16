@@ -40,6 +40,10 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_CSV = REPO_ROOT / "Logs" / "log_summary.csv"
 DEFAULT_HTML = REPO_ROOT / "Logs" / "token_usage_and_co2_emissions.html"
 
+# CO2-to-car-miles conversion (logging.md, prompt 7): 0.36 kg (~0.8 lb) of CO2
+# per mile driven. Stored in grams to match the log's units.
+GRAMS_CO2_PER_MILE = 360.0
+
 
 def load_usage_log(csv_path):
     """Created by JXP and Claude.
@@ -68,6 +72,10 @@ def load_usage_log(csv_path):
 
     # Running total of emissions — the headline number for a climate blog.
     df["cumulative_co2"] = df["co2_grams_estimate"].cumsum()
+
+    # Same total expressed as car-miles driven, for an intuitive scale
+    # (logging.md, prompt 7). Used in the hover and the twin miles axis.
+    df["cumulative_miles"] = df["cumulative_co2"] / GRAMS_CO2_PER_MILE
     return df
 
 
@@ -129,13 +137,38 @@ def make_co2_figure(source, daily_co2_source, df):
     """
     # Cumulative CO2 is the headline, so it owns the LEFT axis and the height.
     fig = figure(
-        title="Estimated cumulative CO2 emissions (headline) and per-prompt/daily CO2",
+        title="Estimated cumulative CO2 emissions — with car-miles equivalent (0.36 kg CO2/mile)",
         x_axis_type="datetime",
         height=420,
         sizing_mode="stretch_width",
         tools="pan,wheel_zoom,box_zoom,reset,save",
         y_axis_label="Cumulative CO2 (g)",
     )
+
+    # Pin the cumulative (left) axis to the data extent with headroom. A fixed
+    # range lets the twin "miles" axis stay a true proportional mirror; the
+    # CustomJS link below keeps them locked under any pan/zoom too.
+    max_cum = float(df["cumulative_co2"].max()) if len(df) else 1.0
+    fig.y_range = Range1d(start=0, end=max_cum * 1.1)
+
+    # Twin LEFT axis: the same cumulative total read as miles driven by a car
+    # (grams / 360). No glyphs are drawn on it — it is purely an alternate ruler
+    # for the headline line, so a reader sees both "grams" and "miles" at once.
+    fig.extra_y_ranges = {
+        "miles": Range1d(start=0, end=max_cum * 1.1 / GRAMS_CO2_PER_MILE),
+    }
+    fig.add_layout(
+        LinearAxis(y_range_name="miles",
+                   axis_label="≈ equivalent miles driven by a car (cumulative)"),
+        "left",
+    )
+    # Keep the miles ruler locked to the CO2 axis under pan/zoom (static-HTML safe).
+    _link = CustomJS(args=dict(miles=fig.extra_y_ranges["miles"],
+                               f=GRAMS_CO2_PER_MILE),
+                     code="miles.start = cb_obj.start / f; "
+                          "miles.end = cb_obj.end / f;")
+    fig.y_range.js_on_change("start", _link)
+    fig.y_range.js_on_change("end", _link)
 
     # Primary series: the running total, always visible in both views.
     cumulative = fig.line("ut_time", "cumulative_co2", source=source,
@@ -147,7 +180,9 @@ def make_co2_figure(source, daily_co2_source, df):
         daily_co2_source.data["co2_grams_estimate"].max() if
         len(daily_co2_source.data["co2_grams_estimate"]) else 0.0,
     )) if len(df) else 1.0
-    fig.extra_y_ranges = {"granular": Range1d(start=0, end=max_granular * 1.1)}
+    # Add (do not replace) the granular range so the "miles" twin axis set up
+    # above survives.
+    fig.extra_y_ranges["granular"] = Range1d(start=0, end=max_granular * 1.1)
     fig.add_layout(LinearAxis(y_range_name="granular", axis_label="CO2 per prompt / day (g)"),
                    "right")
 
@@ -167,6 +202,7 @@ def make_co2_figure(source, daily_co2_source, df):
         tooltips=[("time (UT)", "@ut_time{%F %T}"),
                   ("CO2 (g)", "@co2_grams_estimate{0,0.00}"),
                   ("cumulative (g)", "@cumulative_co2{0,0.00}"),
+                  ("≈ miles driven", "@cumulative_miles{0,0.0}"),
                   ("model", "@model")],
         formatters={"@ut_time": "datetime"},
     ))
@@ -179,7 +215,8 @@ def make_co2_figure(source, daily_co2_source, df):
     fig.add_tools(HoverTool(
         renderers=[cumulative],
         tooltips=[("time (UT)", "@ut_time{%F %T}"),
-                  ("cumulative (g)", "@cumulative_co2{0,0.00}")],
+                  ("cumulative (g)", "@cumulative_co2{0,0.00}"),
+                  ("≈ miles driven", "@cumulative_miles{0,0.0}")],
         formatters={"@ut_time": "datetime"},
     ))
     fig.legend.location = "top_left"

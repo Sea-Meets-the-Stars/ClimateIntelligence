@@ -1,9 +1,12 @@
 # ToDo for Climate Intelligence
 
-## High Priority
+## Pre-Launch
 
 1. Hire a few undergraduates to help with the project.
-2. Add a balanced selection of books/reports/etc
+2. [COMPLETED] Add a balanced selection of books/reports/etc
+3. Logo
+4. Confirm name of Climate Intelligence
+5. Context on ecological economics
 
 ## Medium Priority
 
