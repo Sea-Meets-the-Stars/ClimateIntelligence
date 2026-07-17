@@ -1,0 +1,21 @@
+Dear students,
+
+I am recruiting undergraduates to join Climate Intelligence, a new blog on the science of the climate, biodiversity, global population, the unhoused, and artificial intelligence, all grounded in primary sources such as the IPCC AR6 reports. The project is a genuine human+AI collaboration: we will be using AI to generate the blog posts, the website, and the graphics — AI is both a tool we use every day and a subject we study. If you want hands-on experience at the intersection of climate science and AI, this is a chance to build it. The position pays the lowest hourly rate allowed at UCSC, anticipated to be $16.90/hour (the student-employee minimum, tracking California's minimum wage effective January 1, 2026; to be confirmed). You can explore the project here: https://github.com/Sea-Meets-the-Stars/ClimateIntelligence
+
+What you'd do:
+- Deepen your understanding of the climate crisis and of artificial intelligence
+- Work with me to generate the blog posts
+- Work with me to generate the website
+- Work with me to generate the graphics
+- Work with me to convert the blog into posts on social-media platforms (e.g. YouTube, Facebook, Instagram)
+
+No prior experience with AI tools is required — curiosity and a willingness to learn matter most. To apply, join our Slack workspace using this invite link and send me your CV by direct message: https://join.slack.com/t/climate-intelligence/shared_invite/zt-42x7nf5no-UjDqPPW3e6He14NpWX3PhA
+
+Your CV should include:
+- Year of graduation
+- Major
+- Relevant coursework
+- Relevant experience
+- A graphic explaining why you want to work on this project
+
+— Prof. J. Xavier Prochaska, UC Santa Cruz
