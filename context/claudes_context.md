@@ -5,7 +5,10 @@
 > collected so posts can be grounded, cited, and internally consistent.
 >
 > **Status:** living document — updated ad infinitum as we add sources.
-> **Last updated:** 2026-07-16 (added §15 — a clustered reading of Richard
+> **Last updated:** 2026-07-17 (added §16 — Alexie's two recommended sites: §16.1
+> the Stockholm Resilience Centre's **planetary boundaries** framework, with the
+> control-variable table and the 2025 seven-of-nine-transgressed status, and §16.5
+> a source profile of **Carbon Brief**; §15 — a clustered reading of Richard
 > Nolthenius's ~465-link climate URL collection, framed as a third non-consensus
 > "school"; §14 AI's energy & water footprint added 2026-07-14 from four
 > DOE/LBNL reports — the 2024 & 2025 Data Center Energy Usage reports, the SEAB
@@ -1263,7 +1266,126 @@ tension the blog should inhabit. (3) Three schools now disagree with the
 consensus in three different directions (milder / faster / growth-is-the-real-
 problem) — mapping *why* is more illuminating than picking one.
 
-## 16. Changelog
+## 16. The Planetary Boundaries framework (Stockholm Resilience Centre)
+
+Recommended by Alexie alongside Carbon Brief. Source:
+`stockholmresilience.org/research/planetary-boundaries.html` plus the 2025
+**Planetary Health Check** (Potsdam Institute / planetaryhealthcheck.org) and the
+Sept 2025 SRC news release. This is a *systems* frame that sets the blog's climate
+story inside the wider set of Earth-system limits — it pairs naturally with §10
+(biodiversity) and the §2 cross-cutting numbers.
+
+### 16.1 What the framework is
+
+Nine planetary-scale processes regulate the stability and resilience of the Earth
+system. For each, scientists define a **control variable** and a quantitative
+**boundary** — a "guardrail" marking the edge of a *safe operating space* for
+humanity, set conservatively at the lower end of the danger zone (not the point of
+catastrophe, but the point past which the risk of large, possibly irreversible
+change rises non-linearly). Staying inside all nine is the condition under which
+the Holocene-like stability that civilization grew up in can persist.
+
+**Origin:** proposed in 2009 by **Johan Rockström** and 28 co-authors (*Nature*).
+Major updates: **2015** (*Science*, Steffen et al. — four boundaries then judged
+crossed), and **2023** (*Science Advances*, Richardson et al. — first time **all
+nine** were quantified, with six transgressed). Since **2024** the **Planetary
+Health Check** gives an annual update (Potsdam Institute für Klimafolgenforschung,
+PIK). Note the framework is a *global* aggregate; several boundaries are really
+sums of strongly heterogeneous regional problems.
+
+### 16.2 The nine boundaries and current status (2025)
+
+**Seven of nine are now transgressed** (2025 Planetary Health Check), all with
+worsening trends:
+
+1. **Climate change** — transgressed. Control variables: CO₂ ≈ 420+ ppm (boundary
+   350 ppm) and radiative forcing. Ties directly to §2.
+2. **Biosphere integrity** — transgressed, and among the most deeply exceeded
+   (genetic diversity via extinction rate; functional diversity). Ties to §10.
+3. **Land-system change** — transgressed (forest cover remaining vs. potential).
+4. **Freshwater change** — transgressed (green + blue water; expanded in 2023 to
+   include soil moisture, not just river withdrawals).
+5. **Biogeochemical flows** — transgressed, deeply (nitrogen and phosphorus from
+   fertilizer; the N boundary is one of the most overshot of all).
+6. **Novel entities** — transgressed (synthetic chemicals, plastics, "forever"
+   compounds; assessed for the first time in 2022–23, immediately judged over).
+7. **Ocean acidification** — **newly transgressed in 2025** — the headline of the
+   2025 Planetary Health Check. Control variable: mean surface **aragonite
+   saturation Ω ≈ 2.84**, now just past the (revised) boundary of **Ω ≈ 2.86**.
+   Surface-ocean pH has fallen ~0.1 units since pre-industrial (~30–40% rise in
+   H⁺). Driven by the same fossil-CO₂ the ocean absorbs (>90% of excess heat, §2).
+   Cold-water and tropical corals, pteropods, and Arctic life are most exposed.
+
+**Still within the safe operating space (2 of 9):**
+
+8. **Stratospheric ozone depletion** — inside the boundary and *recovering* — the
+   Montreal Protocol success story, and the framework's proof that a boundary can
+   be pulled back.
+9. **Atmospheric aerosol loading** — assessed as within the boundary globally
+   (though regionally severe over South/East Asia).
+
+### 16.3 Why it matters for the blog
+
+- **A better frame than "climate alone."** The single most useful message: climate
+  is *one* of seven crossed guardrails, and the other six (nutrients, biosphere,
+  land, freshwater, novel entities, now oceans) are being pushed by the same
+  industrial metabolism. It reframes the blog's biodiversity, energy, and even
+  population threads as one story about operating a finite system past its limits —
+  consonant with Murphy's finite-planet argument (§3.1, §10.5).
+- **Ozone as the hopeful counter-example.** The one boundary moving back inside is
+  the one where a global treaty worked. A genuinely non-doom hook: guardrails are
+  not one-way.
+- **Ocean acidification is the fresh, concrete 2025 news.** "The ocean quietly
+  crossed its line this year" — a vivid, datable angle tying CO₂ chemistry to reef
+  and shellfish loss, and to the ocean's role as Earth's stabilizer.
+
+### 16.4 Handle-with-care caveats (Principle 2)
+
+- **The numbers are contested at the edges.** Boundary *values* (especially for
+  biosphere integrity, freshwater, and the aerosol variable) involve real
+  scientific judgment; critics argue some are more normative than measured, and
+  that a single global figure hides where the problem actually bites. Present the
+  *status* (crossed / not) with more confidence than the *exact* control values.
+- **"Transgressed" ≠ "collapsed."** A crossed boundary means rising risk of
+  large-scale change, not that a threshold of catastrophe has been passed. Say so.
+- **It is a resilience/systems frame, not an IPCC-style consensus assessment** —
+  cite it as the Stockholm Resilience Centre / PIK view, distinct in provenance
+  from AR6 (§3). It is mainstream and widely adopted (EU policy, national reviews,
+  WBCSD business use) but is one group's synthesis, updated annually.
+
+Quote to reach for (Rockström, 2025): *"We are witnessing widespread decline in
+the health of our planet… Even if the diagnosis is dire, the window of cure is
+still open."*
+
+### 16.5 Carbon Brief — the other site Alexie recommended (source profile)
+
+Not a distillation (per the doc's division of labor, sources are catalogued in
+`references.md` §5/§6 — enriched and verified there under this prompt); noted here
+because it was the second of Alexie's two links. **Carbon Brief** is a UK nonprofit
+climate-science / energy-policy publication (dir./ed. Leo Hickman; ~25 staff incl.
+PhD scientists), regarded as one of the most rigorous specialist outlets. Useful
+formats for us: **explainers**, **factchecks**, **guest posts** by scientists on
+their own new papers (primary-adjacent), "State of the Climate" assessments, COP
+wrap-ups, and the citable **extreme-weather attribution map** (~967 events / 819
+studies; ~77% made more likely or severe by climate change, Nov 2024 update).
+Philanthropically funded (European Climate Foundation, Meliore Foundation) and it
+publicly discloses funders; CC-licensed. Caveats: consensus-aligned (not a
+"both sides" outlet — use §9/§15 for the strongest heterodox case), so for any
+claim of record cite the underlying study it links, and add a one-line funding
+disclosure when citing on contested *policy* questions (Principle 4).
+
+## 17. Changelog
+
+- **2026-07-17** — Added §16 (Planetary Boundaries framework, Stockholm Resilience
+  Centre) from `stockholmresilience.org/research/planetary-boundaries.html`, the
+  2025 Planetary Health Check (PIK), and the 24 Sep 2025 SRC news release: the
+  nine boundaries, the 2009/2015/2023 lineage, the **seven-of-nine transgressed**
+  2025 status with ocean acidification newly crossed (Ω ≈ 2.84 vs 2.86), ozone as
+  the recovering counter-example, and blog framing + Principle-2 caveats. Also
+  added §16.5, a source profile of **Carbon Brief** (the second site Alexie
+  recommended). Added SRC + Planetary Health Check + Carbon Brief attribution-map
+  entries to `references.md` and enriched/verified its Carbon Brief entry.
+  Renumbered changelog to §17 (context.md Websites prompt 2b).
 
 - **2026-07-16** — Added §15 (Richard Nolthenius's curated climate collection):
   a clustered reading of the ~465-link `context/URLs/RichardN-ClimateURL-list.txt`

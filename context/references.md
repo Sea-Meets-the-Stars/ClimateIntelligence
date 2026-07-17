@@ -60,7 +60,12 @@
 - **Berkeley Earth** — https://berkeleyearth.org/ — independent global temperature
   dataset and annual review; also air quality.
 - **PIK — Potsdam Institute for Climate Impact Research** — https://www.pik-potsdam.de/en
-  — Earth-system analysis, tipping points, transformation pathways.
+  — Earth-system analysis, tipping points, transformation pathways; runs the annual
+  Planetary Health Check (see §6).
+- **Stockholm Resilience Centre (SRC)** — https://www.stockholmresilience.org/ —
+  home of the **planetary boundaries** framework (Rockström, Steffen et al.).
+  Framework page: https://www.stockholmresilience.org/research/planetary-boundaries.html
+  (used for `claudes_context.md` §16).
 - **Woodwell Climate Research Center** — https://www.woodwellclimate.org/ — carbon,
   forests, permafrost, physical climate risk.
 - **CICERO (Oslo)** — https://cicero.oslo.no/en — atmospheric science, emissions
@@ -116,8 +121,16 @@
 > below are a starter set from well-established knowledge and should be expanded
 > and freshly verified. All are science-aligned and widely cited.
 
-- **Carbon Brief** — https://www.carbonbrief.org/ — UK science journalism; superb
-  explainers, "State of the Climate" quarterlies (Zeke Hausfather), Q&As, and data.
+- **Carbon Brief** — https://www.carbonbrief.org/ — UK nonprofit science/energy-policy
+  journalism (dir./ed. Leo Hickman; ~25 staff incl. PhD scientists). Superb
+  explainers, factchecks, **guest posts** by publishing scientists on their own
+  papers, "State of the Climate" assessments (Zeke Hausfather), COP wrap-ups, and
+  the **extreme-weather attribution map/database** (see §6). Newsletters: DeBriefed
+  (weekly), Cropped (food/land/nature), China Briefing. Philanthropically funded
+  (European Climate Foundation, Meliore Foundation) and *publicly discloses* funders;
+  CC-licensed. Consensus-aligned (not a "both sides" outlet); for claims of record,
+  cite the underlying study it links. *(Reviewed & verified 2026-07-17 — recommended
+  by Alexie alongside the planetary-boundaries page; profile in `claudes_context.md` §16.2.)*
 - **Inside Climate News** — https://insideclimatenews.org/ — Pulitzer-winning US nonprofit newsroom.
 - **Yale Climate Connections** — https://yaleclimateconnections.org/ — accessible science + solutions.
 - **Grist** — https://grist.org/ — climate, justice, and solutions journalism.
@@ -139,6 +152,8 @@ is researched in depth.)*
 - **Climate Action Tracker** — https://climateactiontracker.org/ — pledges/policies vs Paris; end-of-century warming (≈2.6 °C as of Nov 2025).
 - **Carbon Clock (PIK, formerly MCC Berlin)** — https://www.pik-potsdam.de/en/institute/departments/climate-economics-and-policy/carbon-clock/remaining-carbon-budget — live remaining-budget counter (calibrated to IPCC AR6).
 - **Carbon Brief trackers** — https://www.carbonbrief.org/ — State of the Climate, attribution and policy trackers.
+- **Carbon Brief extreme-weather attribution map** — https://interactive.carbonbrief.org/attribution-studies/index.html — searchable database of peer-reviewed attribution studies (~967 events / 819 studies as of the Nov 2024 update; ~77% made more likely/severe by climate change). Verify counts before citing.
+- **Planetary Health Check (PIK)** — https://www.planetaryhealthcheck.org/ — annual quantified update of the nine planetary boundaries (2025: seven of nine transgressed, ocean acidification newly crossed). Underpins `claudes_context.md` §16.
 - **Our World in Data** — https://ourworldindata.org/ — interactive emissions/energy explorers.
 
 ## 7. Recent developments snapshot (mid-2025 – mid-2026)
@@ -428,6 +443,11 @@ scenarios.*
 
 ## 13. Changelog
 
+- **2026-07-17** — Alexie's two recommended sites (context.md Websites prompt 2b):
+  added the **Stockholm Resilience Centre** (planetary boundaries) to §2 and the
+  **Planetary Health Check (PIK)** + **Carbon Brief attribution map** to §6;
+  enriched and verified the **Carbon Brief** entry in §5 (director/funding/formats,
+  replacing the halted-pass starter note). Supports `claudes_context.md` §16.
 - **2026-07-15** — Added §12 (Carbon cycle, sinks & feedbacks) in response to
   R.'s review of the initial report (`claude_init_report.md` prompt 4): the 2023
   land-sink decline (Ke et al.; GCB), the contested CO₂-fertilization decline

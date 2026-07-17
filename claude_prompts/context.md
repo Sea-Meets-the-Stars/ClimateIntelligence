@@ -75,6 +75,13 @@ This repository will create the blog "Climate Intelligence".  This file will hel
 
 2. Richard Nolthenius has provided a long list of his favorite websites on the subject of climate change.  These are provided in `context/URLs/RichardN-ClimateURL-list.txt`. Please review them and update the `claudes_context.md` document with your findings.  Log your work.
 
+3. Here are 2 more recommended by Alexie:
+
+     - https://www.stockholmresilience.org/research/planetary-boundaries.html
+     - https://www.carbonbrief.org/
+
+Please add to your context document. Log your work.
+
 ### James Hansen
 
 1. Review the Climate Science Awareness Solutions website and blog posts maintained by Dr. James Hansen.  Update the `claudes_context.md` document with your findings.  Log your work.  Here is the main URL:
