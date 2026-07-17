@@ -5,7 +5,9 @@
 > collected so posts can be grounded, cited, and internally consistent.
 >
 > **Status:** living document — updated ad infinitum as we add sources.
-> **Last updated:** 2026-07-14 (added §14 AI's energy & water footprint from four
+> **Last updated:** 2026-07-16 (added §15 — a clustered reading of Richard
+> Nolthenius's ~465-link climate URL collection, framed as a third non-consensus
+> "school"; §14 AI's energy & water footprint added 2026-07-14 from four
 > DOE/LBNL reports — the 2024 & 2025 Data Center Energy Usage reports, the SEAB
 > *Powering AI* recommendations, and the DOE grid-reliability report; added §10.6
 > Living Planet Index (WWF/ZSL 2024) with its interpretation caveat; §13 James
@@ -1166,8 +1168,109 @@ today's pipeline gets built — worth quoting *with* its assumptions, not withou
 (8) The biggest uncertainty in AI's 2030 energy bill is something nobody measures
 well: how hard chatbots idle between your questions.
 
-## 15. Changelog
+## 15. Richard Nolthenius's curated climate collection — a reading of the list
 
+*Added 2026-07-16 from `context/URLs/RichardN-ClimateURL-list.txt` — ~465 links
+Richard Nolthenius sent. This is a **characterization of the collection**, not a
+read of every link: fetching 465 URLs would be disproportionate (and this project
+budgets CO₂). I clustered the list by inspecting all the URLs, sampled/verified
+representative entries, and confirmed the curator's identity and stance. The
+value is the map, plus the genuinely useful and genuinely new threads it
+surfaces for the blog.*
+
+**Who curated it.** Dr. Richard ("Rick") Nolthenius — Astronomy Program Chair,
+Cabrillo College (Santa Cruz); background in thermal engineering and astronomy;
+pivoted to climate ~2009, built a "Planetary Climate Science" course and a large
+climate site (dr-ricknolthenius.com; scruzclimate.org). Firmly in the
+**limits-to-growth / degrowth / thermodynamic-economics** school: an admirer of
+Tim Garrett, aligned with Tom Murphy and Nate Hagens, convinced that only sharp,
+rapid fossil-fuel cuts (carbon fee-and-dividend, consumption taxes, explicit
+population-growth discouragement) can avert catastrophe, and sharply critical of
+mainstream "hopium" — including the IPCC's, which he reads as *too conservative*.
+(The list's final link is literally this project's own report on GitHub — he is
+reading our work.)
+
+**Editorial placement — a *third* school.** The context now brackets three
+credible non-consensus positions: §9 low-sensitivity skeptics (warming milder);
+§13 Hansen (warming faster, but within physics-as-usual); and this
+**limits/degrowth** school (the physical climate is roughly as IPCC says or
+worse, but the *binding* problem is that growth-based industrial civilization is
+thermodynamically unsustainable and mainstream *economics* is the broken part).
+It overlaps Hansen on alarm and Murphy (§3.1) on physics-of-limits, but its
+distinctive claim is **economic**, not climatological. Principle 2: engage the
+strongest version; Principle 4: its degrowth/anti-capitalist politics are a
+viewpoint to present, not endorse.
+
+**The collection's thematic clusters** (what the ~465 links actually are):
+1. **Ecological / thermodynamic economics & degrowth** (the backbone): Tim
+   Garrett (Garrett–Grasselli–Keen, "civilization as a heat engine"), Steve
+   Keen, Nate Hagens (*The Great Simplification*), Timothée Parrique, Herman
+   Daly / steady-state economics, Giampietro, Club of Rome / *Limits to Growth*.
+2. **Critique of mainstream climate economics** (a whole sub-library): dozens of
+   papers attacking Nordhaus/DICE, integrated assessment models, and the social
+   cost of carbon (Weitzman fat tails, "misapplication of conventional economic
+   analysis," post-normal-science critiques). The most *distinctive* strand in
+   the list — a serious, citable case that IAMs badly understate climate risk.
+3. **Tom Murphy "Do the Math"** — many posts (already our §3.1); and **James
+   Hansen** — many Columbia mailings incl. the 2025 *Acceleration* paper
+   (already our §13).
+4. **AMOC / tipping points**: Rahmstorf, RealClimate AMOC threads,
+   global-tipping-points.org, the 2023–24 AMOC-collapse papers (pairs with
+   Hansen §13 and report §7's tipping material).
+5. **Energy-transition realism/skepticism**: Art Berman ("no energy
+   transition"), energyskeptic.com, the "100% renewables squashed" rebuttal,
+   materials/rare-earth constraints — in tension with the optimistic entries
+   (CleanTechnica, Canary Media, "cheaper than fossil fuels"). A genuine debate
+   the list holds both sides of.
+6. **Carbon dioxide removal & geoengineering**, mostly skeptical: CDR "sucks,"
+   ocean iron fertilization doubts, solar geoengineering / cloud-whitening
+   coverage, olivine, DAC. Useful for a future CDR post.
+7. **Nuclear**, both pro and con (thorium/molten-salt hype *and* SMR-waste and
+   anti-nuclear pieces) — the list does not resolve it.
+8. **Biodiversity / 6th extinction**: Bradshaw, Ceballos, defaunation,
+   insect/bird declines, coral bleaching (reinforces §10).
+9. **Climate psychology, communication, misinformation, activism**: Margaret
+   Klein Salamon ("emergency mode"), climate-anxiety studies, Finland's
+   misinformation classes, science-activism culture shift.
+10. **RealClimate** rebuttals (Mann/Schmidt; "Spencer's Shenanigans" — a direct
+    hit on our §9 Roy Spencer), and **local Santa Cruz** items (Cabrillo's
+    climate-course graduation requirement, UCSC EarthFutures).
+
+**What's new and worth pulling in later** (not yet in our sources): the
+**climate-economics-critique** library (cluster 2) is the biggest gap it fills —
+a rigorous counter to the Nordhaus/DICE tradition that would strengthen any
+post on carbon pricing or the "cost of action vs inaction." The **degrowth /
+Garrett thermodynamic-economics** strand (cluster 1) is a citable intellectual
+home for Murphy's limits argument (§3.1). Both are *heterodox economics*, and
+both should be engaged as arguments, clearly separated from the physical-science
+consensus.
+
+**Cautions (Principles 1, 2, 4).** (a) The list is a **curated viewpoint**, not
+a balanced bibliography — it leans degrowth, high-alarm, and
+anti-mainstream-economics; weight accordingly. (b) It is heterogeneous in
+quality: peer-reviewed papers (Nature, PNAS, Copernicus) sit beside YouTube
+videos, Substacks, Medium posts, dead `file:///` and webmail links, and
+advocacy blogs — cite the primary literature, use the rest as leads. (c) Many
+links are already dead or personal (local file paths, mail URLs); treat the list
+as a snapshot of one thoughtful curator's 2022–2026 reading, not a maintained
+resource. (d) Keep its economics politics as viewpoint, not doctrine.
+
+**Blog hooks:** (1) A community-college astronomer's reading list is a better
+climate-economics syllabus than most econ departments — the Nordhaus/DICE
+critique deserves a post of its own. (2) The same collection holds "renewables
+will save us" and "there is no energy transition" side by side — the honest
+tension the blog should inhabit. (3) Three schools now disagree with the
+consensus in three different directions (milder / faster / growth-is-the-real-
+problem) — mapping *why* is more illuminating than picking one.
+
+## 16. Changelog
+
+- **2026-07-16** — Added §15 (Richard Nolthenius's curated climate collection):
+  a clustered reading of the ~465-link `context/URLs/RichardN-ClimateURL-list.txt`
+  — curator identity/stance, ten thematic clusters, the new climate-economics-
+  critique and degrowth threads worth pulling in, and cautions; framed as a third
+  non-consensus "school" alongside §9 and §13 (context.md Websites prompt 2).
+  Renumbered changelog to §16.
 - **2026-07-15** — Responded to R.'s review of the initial report
   (`claude_init_report.md` prompt 4). CI report changes: §1 gained an "IPCC used,
   not worshipped" caveat (consensus lag + the *under*-prediction cases: sea ice,
