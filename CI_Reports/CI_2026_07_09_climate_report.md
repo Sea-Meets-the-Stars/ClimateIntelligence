@@ -27,7 +27,7 @@ WGII/WGIII 2022, Synthesis 2023) and three Special Reports (SR1.5, SROCC, SRCCL)
 supplemented by primary data archives (NOAA, NASA, CSIRO, the Global Carbon
 Project) and by the 2025 U.S. Department of Energy "Climate Working Group" report
 and its 85-author expert rebuttal, which together bracket the live debate. Full
-citations are in §10; data portals are catalogued in `context/references.md`.
+citations are in §12; data portals are catalogued in `context/references.md`.
 
 **On the IPCC's authority — used, not worshipped.** The IPCC is an *assessment* of
 the published literature, not an oracle, and treating it as the final word would
@@ -151,7 +151,7 @@ coast is dominated by **land subsidence** (groundwater/hydrocarbon extraction,
 sediment starvation), not ocean rise — at Grand Isle the relative rise is ~4× the
 absolute climate signal. This is true and important for adaptation planning, but it
 is a *local* modifier: it does not reduce the globally averaged, satellite-measured
-climate signal. Conflating the two is a scope error (§6).
+climate signal. Conflating the two is a scope error (§11).
 
 ![Figure 3](fig3_sea_level.png)
 
@@ -406,7 +406,167 @@ probability is not zero, and a high-impact tail carries weight even when unlikel
 
 ---
 
-## 6. Biodiversity and the living planet
+## 6. Planetary boundaries and the energy balance of a low-carbon future
+
+The previous sections ask how far the climate has moved and where it is headed.
+This one widens the frame to two further questions. First, where does climate sit
+among the *other* limits of the Earth system? Second — the question that decides
+whether any of the mitigation pathways in §5 are physically achievable — can a
+civilization run on the energy budget that remains once fossil fuels are largely
+removed? The first question is answered by the **planetary-boundaries** framework
+(Stockholm Resilience Centre); the second by the energy-accounting tradition of
+Tom Murphy's *Energy and Human Ambitions on a Finite Planet* (2021) and David
+MacKay before him. We lead with the civilizational-supply balance and treat the
+planet's own thermal balance as a bounding sidebar at the end.
+
+**Climate is one of seven limits, not the only one.** The planetary-boundaries
+framework defines nine Earth-system processes, each with a quantitative
+"guardrail" marking the edge of a safe operating space. As of the 2025 Planetary
+Health Check, **seven of the nine have been transgressed** (Figure 15): climate
+change, biosphere integrity, land-system change, freshwater change, biogeochemical
+(nitrogen and phosphorus) flows, novel entities, and — newly crossed in 2025 —
+ocean acidification, which is the same fossil-CO₂ chemistry as the warming problem
+seen from the ocean's side (§3.3). Only stratospheric ozone and atmospheric
+aerosol loading remain inside their boundaries, and ozone is actively
+*recovering* — the one success story, and proof that a coordinated global treaty
+(the Montreal Protocol) can pull a boundary back. The framework's control values
+carry real scientific judgment at the edges (Principle 2), so Figure 15 shows the
+*status* — beyond or within — with more confidence than the exact ratios. The
+essential message is that the same industrial metabolism drives all seven, and
+that a headlong energy transition is not automatically benign for the other six:
+a planet-scale build-out of solar, wind, and storage itself pushes on
+land-system, freshwater, biogeochemical, and novel-entities (materials, mining)
+boundaries. "Solve climate" is a necessary aim, not a free one.
+
+![Figure 15](fig15_planetary_boundaries.png)
+
+**Figure 15.** The nine planetary boundaries as a transgression ratio (current
+pressure ÷ boundary; >1 is beyond the safe zone), from the Stockholm Resilience
+Centre framework and the 2025 Planetary Health Check. Seven of nine are
+transgressed; biosphere integrity is off-scale (extinction rate >100× vs a <10×
+boundary). Original redraw from the published control values — not the copyrighted
+SRC "wheel." (See `context/claudes_context.md` §16 for the full control-variable
+table.)
+
+**The size of the task.** Humanity ran on about **620 EJ of primary energy in
+2023 — a continuous ≈19.7 TW — of which 81.5% was fossil** (Energy Institute,
+Statistical Review of World Energy 2024). Removing fossil fuels means rebuilding
+roughly four-fifths of that supply on low-carbon sources within this century. How
+big is the 2100 target? Two honest bookends: hold demand *flat* and it stays near
+**20 TW**; let it grow at a modest **1%/yr** (well below the historical ~2.3%) and
+it reaches **~42 TW** by 2100. Pulling the other way is an efficiency dividend the
+pessimistic accounts often omit: **electrifying end-uses discards most of the
+thermal-conversion loss baked into fossil primary energy** (a car or furnace
+wastes 60–75% as heat; an electric motor or heat pump does not), so a fully
+electrified world needs *less primary-equivalent* power for the same services —
+perhaps ~0.55×, or **~11 TW**, for today's level of service. The realistic 2100
+target is therefore a band, roughly **11–42 TW**, depending on whether efficiency
+or growth wins.
+
+**Energy return on investment (EROI).** A source is only useful if it yields much
+more energy than it costs to build; below roughly **7:1** an industrial society
+cannot fund the rest of its complexity. Murphy's (2021) table (Figure 16) put
+solar PV at 6 and nuclear at 5 — uncomfortably close to that line — against 18–40
+for coal, hydro, and wind. But those two figures are the most contested numbers in
+the field, and they have moved: recent lifecycle assessments put **solar PV at
+roughly 8–34** with an energy payback near **one year** (Fraunhofer ISE), and
+**nuclear at 20–81** (World Nuclear Association); the spread comes mostly from
+where one draws the system boundary (point-of-use vs primary-energy-equivalent).
+A 2023 *Nature Communications* analysis of systemwide EROI
+finds that a net-zero electricity system can retain an adequate whole-system EROI.
+The fair reading (Principle 2): PV's return is better than the pessimistic case
+allowed, but it is genuinely lower and more variable than the coal it replaces,
+and the transition must be paid for in energy up front — Murphy's **Energy Trap**,
+which bites hardest if the build-out starts late.
+
+![Figure 16](fig16_eroi.png)
+
+**Figure 16.** EROI by source. Bars are Murphy's (2021) values; orange ranges are
+recent lifecycle estimates for the two most contested (solar PV, nuclear). The
+dotted line is the ~7:1 threshold widely taken as the minimum for a complex
+society.
+
+**Land is not the binding constraint.** Solar is the one renewable that scales
+past all conceivable demand — Earth intercepts ~123,000 TW of sunlight, thousands
+of times what civilization uses. The land needed is modest and worth stating
+plainly against the doom framing: meeting a flat **20 TW** entirely from solar
+takes **~0.5% of ice-free land** at Murphy's panel-area density (30 W/m²), rising
+to **~1.5–3%** once realistic inter-row spacing is included (10 and 5 W/m²); even
+the 42 TW growth case tops out near **6%** (Figure 17a). For scale, we already
+farm about **11%** of land. Land, in other words, is not what stops a solar
+civilization.
+
+**Storage is.** What stops it — or rather, what makes it hard and expensive — is
+matching a variable supply to a constant demand across nights, weeks, and
+seasons. Battery storage sufficient to carry global demand through even a
+**7-day** lull would be about **3,300 TWh — roughly 1,100 times the entire world's
+2024 battery-manufacturing capacity** (~3 TWh/yr, IEA); a 30-day seasonal buffer
+is ~4,700× (Figure 17b). Batteries, at ~1/65th the energy density of gasoline,
+simply cannot do seasonal storage at civilizational scale, and the same density
+gap means there is no drop-in battery replacement for liquid aviation and shipping
+fuel. The honest counterpoint (Principle 2) is that no serious decarbonization
+plan proposes months of batteries: real pathways lean on **overbuilding and
+curtailment, continental transmission, demand flexibility, long-duration storage
+(pumped hydro, hydrogen), and retained firm low-carbon generation** (nuclear,
+hydro, geothermal). So the binding constraint is not total sunlight or land but
+**firm, dispatchable, and seasonal energy** — a harder and more expensive problem
+than the falling price of a solar panel suggests, but an engineering problem, not
+a physical impossibility.
+
+![Figure 17](fig17_solar_land_storage.png)
+
+**Figure 17.** (a) Solar footprint to meet 2100 demand, as a percentage of
+ice-free land, for two demand cases and three power densities; cropland today
+(~11%) is marked for scale. (b) Battery storage to buffer 1, 7, and 30 days of
+global demand, in TWh and as multiples of 2024 global battery-manufacturing
+capacity. Land is cheap; seasonal storage is the wall. Computed in
+`CI_Reports/planetary_boundaries_energy.py`.
+
+**A bounding sidebar: the waste-heat ceiling.** Even granting limitless clean
+energy, thermodynamics imposes a final ceiling — one that is about growth itself,
+not about the source. All the energy we use ultimately degrades to heat. Today
+that waste heat is a negligible **0.039 W/m²**, about **1.3%** of the ~3 W/m² of
+greenhouse forcing, and locally visible only as urban heat islands. But it
+compounds: at a sustained **2.3%/yr** it would rival *today's entire greenhouse
+forcing* in about **190 years**, and approach the surface's boiling point in about
+**430 years** — and no energy source, fusion included, escapes this, because the
+heat is the *output*, not the fuel (Figure 18). This is Murphy's deepest point and
+his firmest: whatever we power civilization with, **indefinite exponential growth
+in energy use is impossible on a fixed planet.** The ceiling is centuries away and
+should not be confused with the near-term climate problem — but it reframes
+"unlimited clean energy" as still bounded, and it is why the limits tradition
+treats endless growth as a predicament to adapt to rather than a problem to solve.
+
+![Figure 18](fig18_waste_heat.png)
+
+**Figure 18.** Anthropogenic waste heat expressed as a global-mean surface forcing
+over the coming centuries, for several primary-power growth rates (log scale),
+against today's total greenhouse forcing (~3 W/m²) and a CO₂-doubling forcing
+(~4 W/m²). At any positive growth rate the waste heat eventually dominates; only
+flat energy use avoids the ceiling.
+
+**Synthesis (Principles 2 and 4).** Two coherent readings sit on the same physics.
+The **limits reading** (Murphy): the fossil era was a one-time energy subsidy; a
+post-fossil civilization must live within a smaller, firmer, storage-constrained
+budget, and growth cannot continue indefinitely — so the task is adaptation to a
+predicament. The **optimistic reading**: sunlight and wind are effectively
+unlimited and now cheap, land is not binding, PV's EROI has improved markedly, and
+the firm-and-seasonal problem is a solvable (if costly) matter of overbuild,
+transmission, long-duration storage, and firm low-carbon generation — aided by an
+electrification efficiency dividend that shrinks the target. These disagree about
+*ambition and pace*, not about the physics, and they converge on three points: the
+transition is physically possible; its binding constraints are firm/seasonal
+energy, materials, and build-out speed (the Energy Trap), not total sunlight or
+land; and the build-out itself must be managed so that relieving the climate
+boundary does not blow through the land, freshwater, biogeochemical, and
+novel-entities boundaries of Figure 15. Whether a modern society *should* aim to
+keep growing on that budget, or deliberately consume less, is a question of values
+and politics, not measurement — and per Principle 4 this report leaves it to the
+reader, having laid out what the energy arithmetic does and does not allow.
+
+---
+
+## 7. Biodiversity and the living planet
 
 Climate is only half the story. The blog's purview and its third guiding
 principle — *all life on Earth is relevant; human life need not be prioritized* —
@@ -473,7 +633,7 @@ above distinct from any such framing, per Principles 2 and 4.)*
 
 ---
 
-## 7. Homelessness: evidence, policy, and the climate connection
+## 8. Homelessness: evidence, policy, and the climate connection
 
 *(Added 2026-07-11. Homelessness enters this report as one of the blog's
 "related topics," and it earns the place twice over: the unhoused are the most
@@ -707,7 +867,7 @@ experiencing homelessness."
 
 ---
 
-## 8. Global population: the *P* in every projection
+## 9. Global population: the *P* in every projection
 
 *(Added 2026-07-11. Population is a direct input to every emissions scenario —
 the first factor of the Kaya identity — and the denominator of every per-capita
@@ -795,7 +955,7 @@ planning, child survival) are development goods in their own right.
 
 ---
 
-## 9. Artificial intelligence: the data-center energy and water surge
+## 10. Artificial intelligence: the data-center energy and water surge
 
 Artificial intelligence is a topic of the blog in its own right, and its physical
 footprint is where it meets this report. The U.S. Department of Energy is the
@@ -899,7 +1059,7 @@ the reports are staged in `context/Reports/` and on the shared Drive.*
 
 ---
 
-## 10. A note on scope and framing
+## 11. A note on scope and framing
 
 Several of the sharpest disagreements are not about physics but about **scope**, and
 recognizing this defuses much apparent contradiction:
@@ -919,7 +1079,7 @@ these are questions of measurement and logic, not ideology.
 
 ---
 
-## 11. References
+## 12. References
 
 *Primary assessments and data (full portals in `context/references.md`):*
 
@@ -951,7 +1111,7 @@ these are questions of measurement and logic, not ideology.
 15. Dessler, A. & Kopp, R. (eds.), 2025. *Climate Experts' Review of the DOE Climate
     Working Group Report.* ESS Open Archive.
 
-*Biodiversity (§6):*
+*Biodiversity (§7):*
 
 16. Bar-On, Y., Phillips, R. & Milo, R., 2018. The biomass distribution on Earth.
     *PNAS* 115(25):6506–6511.
@@ -978,7 +1138,7 @@ these are questions of measurement and logic, not ideology.
 27. Murphy, T.W., "Do the Math" (dothemath.ucsd.edu): "Ecological Cliff Edge"
     (2023) and "Is the 6ME Hyperbole?" (2025) — cited as viewpoint/framing.
 
-*Homelessness (§7):*
+*Homelessness (§8):*
 
 28. Kimmelman, M. (reported with L. Tompkins), 2022. How Houston Moved 25,000
     People From the Streets Into Homes of Their Own. *The New York Times*
@@ -1017,7 +1177,7 @@ these are questions of measurement and logic, not ideology.
     2025 PIT 745,652). The Climate Intelligence national cost estimate is
     computed in `CI_Reports/cost_to_house_homeless.py`.
 
-*Global population (§8):*
+*Global population (§9):*
 
 38. United Nations, Department of Economic and Social Affairs, Population
     Division, 2024. *World Population Prospects 2024: Summary of Results*
@@ -1033,7 +1193,7 @@ these are questions of measurement and logic, not ideology.
     2026-07-11); "Kaya identity: drivers of CO₂ emissions" (Global Carbon
     Budget / Energy Institute decomposition, 1965–2022).
 
-*AI energy & water (§9):*
+*AI energy & water (§10):*
 
 42. Shehabi, A. et al., 2024. *2024 United States Data Center Energy Usage
     Report.* Lawrence Berkeley National Laboratory, LBNL-2001637 (DOI
@@ -1065,6 +1225,34 @@ these are questions of measurement and logic, not ideology.
 50. Armstrong McKay, D.I. et al., 2022. Exceeding 1.5 °C global warming could
     trigger multiple climate tipping points. *Science* 377(6611):eabn7950.
 
+*Planetary boundaries & the energy balance of a low-carbon future (§6):*
+
+51. Murphy, T.W., Jr., 2021. *Energy and Human Ambitions on a Finite Planet:
+    Assessing and Adapting to Planetary Limits.* eScholarship, UC San Diego
+    (open access, CC-BY-NC). DOI 10.21221/S2978-0-578-86717-5.
+52. Energy Institute, 2024. *Statistical Review of World Energy 2024* (73rd ed.).
+    Global primary energy 2023 = 620 EJ; fossil = 505 EJ (81.5%); energy CO₂ >40
+    Gt. https://www.energyinst.org/statistical-review
+53. Rockström, J. et al., 2009. A safe operating space for humanity. *Nature*
+    461:472–475 (and *Ecology & Society* 14(2):32).
+54. Steffen, W. et al., 2015. Planetary boundaries: guiding human development on a
+    changing planet. *Science* 347(6223):1259855.
+55. Richardson, K. et al., 2023. Earth beyond six of nine planetary boundaries.
+    *Science Advances* 9(37):eadh2458.
+56. Planetary Health Check 2025 (Potsdam Institute for Climate Impact Research;
+    Sakschewski et al.). Ocean acidification assessed as the seventh transgressed
+    boundary (aragonite saturation Ω ≈ 2.84 vs boundary ≈ 2.86).
+    https://www.planetaryhealthcheck.org/
+57. International Energy Agency, 2025. *Batteries and Secure Energy Transitions* /
+    battery market data: global Li-ion manufacturing capacity ~3 TWh/yr and annual
+    demand >1 TWh in 2024. https://www.iea.org/
+58. Fraunhofer ISE, *Photovoltaics Report* (energy payback ~1 yr; PV EROI ~8–34);
+    World Nuclear Association, *Energy Return on Investment* (nuclear ~20–81);
+    and a 2023 *Nature Communications* analysis of systemwide EROI in a net-zero
+    transition (whole-system EROI remains adequate).
+59. MacKay, D.J.C., 2009. *Sustainable Energy — Without the Hot Air.* UIT
+    Cambridge (methodological forerunner of the energy-accounting used here).
+
 *Figures 1–5 are original, generated by `CI_Reports/make_figures.py` from the data
 in sources 6–9 (Figure 5's CH₄ growth-rate context is computed in
 `CI_Reports/methane_growth_rate.py`). Figure 6 is reproduced from IPCC AR6 WG1 Figure SPM.10 (source 1),
@@ -1076,9 +1264,15 @@ generated by `CI_Reports/make_population_figures.py` from the data in source 41
 with interval anchors from sources 38–39. Figures 10–12 (homelessness) are
 original, generated by `CI_Reports/make_homelessness_figures.py` from HUD PIT
 counts and OWID/OECD national-definition rates cached in `CI_Reports/data/`
-(source 37 and the HUD/OWID portals). Uncertainty ranges and baselines are
-annotated on each figure. Literature figures are cited inline to the assessments
-above rather than reproduced, pending permissions.*
+(source 37 and the HUD/OWID portals). Figures 13–14 (AI) are original, generated
+by `CI_Reports/make_ai_figures.py` from LBNL-reported values (sources 42–43).
+Figures 15–18 (planetary boundaries & energy balance) are original, generated by
+`CI_Reports/planetary_boundaries_energy.py` from the inputs in sources 51–58;
+Figure 15 is an original redraw from the published planetary-boundaries control
+values, deliberately *not* a reproduction of the copyrighted SRC "wheel."
+Uncertainty ranges and baselines are annotated on each figure. Literature figures
+are cited inline to the assessments above rather than reproduced, pending
+permissions.*
 
 ---
 

@@ -5,7 +5,10 @@
 > collected so posts can be grounded, cited, and internally consistent.
 >
 > **Status:** living document — updated ad infinitum as we add sources.
-> **Last updated:** 2026-07-17 (added §16 — Alexie's two recommended sites: §16.1
+> **Last updated:** 2026-07-17 (added §17 — the energy-balance synthesis: can a
+> civilization run without fossil fuels? pairs §16 with §3.1/Murphy, updated to
+> 2023–2024 data, and drives the report's new §6 with Figures 15–18; added §16 —
+> Alexie's two recommended sites: §16.1
 > the Stockholm Resilience Centre's **planetary boundaries** framework, with the
 > control-variable table and the 2025 seven-of-nine-transgressed status, and §16.5
 > a source profile of **Carbon Brief**; §15 — a clustered reading of Richard
@@ -1374,7 +1377,81 @@ publicly discloses funders; CC-licensed. Caveats: consensus-aligned (not a
 claim of record cite the underlying study it links, and add a one-line funding
 disclosure when citing on contested *policy* questions (Principle 4).
 
-## 17. Changelog
+## 17. Living within planetary boundaries without fossil fuels — the energy-balance synthesis
+
+*Added 2026-07-17 (planetary_boundaries.md prompt). Pairs §16 (planetary
+boundaries) with §3.1 (Murphy) to answer the question the mitigation scenarios
+in the report's §5 quietly assume away: can a civilization run on the energy that
+remains once fossil fuels are removed? All numbers below are computed in
+`CI_Reports/planetary_boundaries_energy.py` and drive the report's new §6 with
+Figures 15–18. Following Murphy but updating his ~2018 inputs to 2023–2024 data.*
+
+**The size of the task (updated).** Global primary energy 2023 = **620 EJ ≈ 19.7
+TW**, still **81.5% fossil** (Energy Institute 2024). Murphy's book used ~18 TW;
+the story is unchanged. 2100 demand bookends: **flat ≈ 20 TW**; **1%/yr growth ≈
+42 TW**; and — the efficiency dividend the limits accounts often omit —
+**electrified-flat ≈ 11 TW**, because electrifying end-uses discards the 60–75%
+thermal-conversion loss in fossil primary energy. Realistic 2100 target band ≈
+**11–42 TW**.
+
+**What is NOT the binding constraint.** *Land.* Solar scales past all demand
+(Earth intercepts ~123,000 TW). Running a 20 TW world on solar takes **~0.5% of
+ice-free land** at Murphy's panel-area density (30 W/m²), **~1.5–3%** at realistic
+land densities (10 and 5 W/m²), ~6% even for the 42 TW case — vs ~11% of land
+already farmed. *EROI.* Murphy's PV=6 / nuclear=5 are the field's most contested
+numbers and have moved: recent lifecycle PV **8–34** (payback ~1 yr), nuclear
+**20–81**; a 2023 *Nature Comms* whole-system analysis finds net-zero grids keep
+adequate systemwide EROI. So PV's return is lower and more variable than the coal
+it replaces, but not the near-break-even Murphy feared.
+
+**What IS the binding constraint.** *Firm/seasonal energy.* Batteries to buffer
+**7 days** of global demand ≈ **3,300 TWh ≈ 1,100× the entire world's 2024
+battery-manufacturing capacity** (~3 TWh/yr); 30 days ≈ 4,700×. At ~1/65th
+gasoline's energy density, batteries cannot do seasonal storage at scale, nor
+replace liquid aviation/shipping fuel. The honest counter (Principle 2): no
+serious plan uses months of batteries — real pathways use overbuild+curtailment,
+continental transmission, demand flexibility, long-duration storage (H₂, pumped
+hydro), and retained firm low-carbon (nuclear, hydro, geothermal). So the wall is
+**firm and seasonal** energy plus materials and build-out speed (Murphy's **Energy
+Trap**), not sunlight or land.
+
+**The bounding sidebar — waste heat.** Even with limitless clean energy,
+thermodynamics caps *growth itself*: all energy ends as heat. Today negligible
+(**0.039 W/m²**, ~1.3% of GHG forcing), but at sustained **2.3%/yr** it rivals
+today's entire GHG forcing in **~190 yr** and nears boiling in **~430 yr** —
+fusion included, because the heat is the output not the fuel. Murphy's firmest
+point: indefinite exponential energy growth is impossible on a fixed planet.
+
+**The synthesis to hold (Principles 2 & 4).** Two coherent readings on one set of
+physics — the **limits** reading (post-fossil budget is smaller, firmer,
+storage-bound; adapt to a predicament) and the **optimistic** reading (sun/wind
+unlimited and cheap, land non-binding, PV improved, firm/seasonal is a solvable
+engineering+cost problem, electrification shrinks the target). They differ on
+*ambition and pace*, not physics, and converge on three things: the transition is
+physically possible; the binding constraints are firm/seasonal energy, materials,
+and speed — not sunlight or land; and the build-out must not blow through the
+land, freshwater, biogeochemical, and novel-entities boundaries (§16) while
+relieving the climate one. Growth-vs-degrowth is values, not measurement — flag,
+don't adjudicate. See §3.1 (Murphy), §16 (planetary boundaries), and §15
+(Nolthenius/degrowth school).
+
+**Blog hooks:** (1) "Land is cheap; storage is the wall" corrects the two most
+common misframings at once (solar-takes-too-much-land *and* batteries-will-fix-it).
+(2) Murphy's PV/nuclear EROI numbers are the honest place to show a limits thinker
+being partly overtaken by a decade of data — a model of updating. (3) The
+waste-heat ceiling is a genuinely mind-expanding "even fusion can't grow forever"
+angle that is centuries away yet mathematically certain.
+
+## 18. Changelog
+
+- **2026-07-17 (later)** — Added §17 (energy-balance synthesis: living within
+  planetary boundaries without fossil fuels), pairing §16 with §3.1 (Murphy),
+  updated to 2023–2024 data (620 EJ/19.7 TW; PV/nuclear EROI ranges; battery-mfg
+  scale). Wrote the report's new **§6** ("Planetary boundaries and the energy
+  balance of a low-carbon future") with Figures 15–18 and the calculation script
+  `CI_Reports/planetary_boundaries_energy.py`; renumbered report §§6–11→7–12 and
+  fixed its section cross-refs; added report refs 51–59. Renumbered this changelog
+  to §18 (planetary_boundaries.md prompt).
 
 - **2026-07-17** — Added §16 (Planetary Boundaries framework, Stockholm Resilience
   Centre) from `stockholmresilience.org/research/planetary-boundaries.html`, the
