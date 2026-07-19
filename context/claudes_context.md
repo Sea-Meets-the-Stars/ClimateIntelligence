@@ -5,7 +5,15 @@
 > collected so posts can be grounded, cited, and internally consistent.
 >
 > **Status:** living document — updated ad infinitum as we add sources.
-> **Last updated:** 2026-07-14 (added §14 AI's energy & water footprint from four
+> **Last updated:** 2026-07-17 (added §17 — the energy-balance synthesis: can a
+> civilization run without fossil fuels? pairs §16 with §3.1/Murphy, updated to
+> 2023–2024 data, and drives the report's new §6 with Figures 15–18; added §16 —
+> Alexie's two recommended sites: §16.1
+> the Stockholm Resilience Centre's **planetary boundaries** framework, with the
+> control-variable table and the 2025 seven-of-nine-transgressed status, and §16.5
+> a source profile of **Carbon Brief**; §15 — a clustered reading of Richard
+> Nolthenius's ~465-link climate URL collection, framed as a third non-consensus
+> "school"; §14 AI's energy & water footprint added 2026-07-14 from four
 > DOE/LBNL reports — the 2024 & 2025 Data Center Energy Usage reports, the SEAB
 > *Powering AI* recommendations, and the DOE grid-reliability report; added §10.6
 > Living Planet Index (WWF/ZSL 2024) with its interpretation caveat; §13 James
@@ -1166,8 +1174,302 @@ today's pipeline gets built — worth quoting *with* its assumptions, not withou
 (8) The biggest uncertainty in AI's 2030 energy bill is something nobody measures
 well: how hard chatbots idle between your questions.
 
-## 15. Changelog
+## 15. Richard Nolthenius's curated climate collection — a reading of the list
 
+*Added 2026-07-16 from `context/URLs/RichardN-ClimateURL-list.txt` — ~465 links
+Richard Nolthenius sent. This is a **characterization of the collection**, not a
+read of every link: fetching 465 URLs would be disproportionate (and this project
+budgets CO₂). I clustered the list by inspecting all the URLs, sampled/verified
+representative entries, and confirmed the curator's identity and stance. The
+value is the map, plus the genuinely useful and genuinely new threads it
+surfaces for the blog.*
+
+**Who curated it.** Dr. Richard ("Rick") Nolthenius — Astronomy Program Chair,
+Cabrillo College (Santa Cruz); background in thermal engineering and astronomy;
+pivoted to climate ~2009, built a "Planetary Climate Science" course and a large
+climate site (dr-ricknolthenius.com; scruzclimate.org). Firmly in the
+**limits-to-growth / degrowth / thermodynamic-economics** school: an admirer of
+Tim Garrett, aligned with Tom Murphy and Nate Hagens, convinced that only sharp,
+rapid fossil-fuel cuts (carbon fee-and-dividend, consumption taxes, explicit
+population-growth discouragement) can avert catastrophe, and sharply critical of
+mainstream "hopium" — including the IPCC's, which he reads as *too conservative*.
+(The list's final link is literally this project's own report on GitHub — he is
+reading our work.)
+
+**Editorial placement — a *third* school.** The context now brackets three
+credible non-consensus positions: §9 low-sensitivity skeptics (warming milder);
+§13 Hansen (warming faster, but within physics-as-usual); and this
+**limits/degrowth** school (the physical climate is roughly as IPCC says or
+worse, but the *binding* problem is that growth-based industrial civilization is
+thermodynamically unsustainable and mainstream *economics* is the broken part).
+It overlaps Hansen on alarm and Murphy (§3.1) on physics-of-limits, but its
+distinctive claim is **economic**, not climatological. Principle 2: engage the
+strongest version; Principle 4: its degrowth/anti-capitalist politics are a
+viewpoint to present, not endorse.
+
+**The collection's thematic clusters** (what the ~465 links actually are):
+1. **Ecological / thermodynamic economics & degrowth** (the backbone): Tim
+   Garrett (Garrett–Grasselli–Keen, "civilization as a heat engine"), Steve
+   Keen, Nate Hagens (*The Great Simplification*), Timothée Parrique, Herman
+   Daly / steady-state economics, Giampietro, Club of Rome / *Limits to Growth*.
+2. **Critique of mainstream climate economics** (a whole sub-library): dozens of
+   papers attacking Nordhaus/DICE, integrated assessment models, and the social
+   cost of carbon (Weitzman fat tails, "misapplication of conventional economic
+   analysis," post-normal-science critiques). The most *distinctive* strand in
+   the list — a serious, citable case that IAMs badly understate climate risk.
+3. **Tom Murphy "Do the Math"** — many posts (already our §3.1); and **James
+   Hansen** — many Columbia mailings incl. the 2025 *Acceleration* paper
+   (already our §13).
+4. **AMOC / tipping points**: Rahmstorf, RealClimate AMOC threads,
+   global-tipping-points.org, the 2023–24 AMOC-collapse papers (pairs with
+   Hansen §13 and report §7's tipping material).
+5. **Energy-transition realism/skepticism**: Art Berman ("no energy
+   transition"), energyskeptic.com, the "100% renewables squashed" rebuttal,
+   materials/rare-earth constraints — in tension with the optimistic entries
+   (CleanTechnica, Canary Media, "cheaper than fossil fuels"). A genuine debate
+   the list holds both sides of.
+6. **Carbon dioxide removal & geoengineering**, mostly skeptical: CDR "sucks,"
+   ocean iron fertilization doubts, solar geoengineering / cloud-whitening
+   coverage, olivine, DAC. Useful for a future CDR post.
+7. **Nuclear**, both pro and con (thorium/molten-salt hype *and* SMR-waste and
+   anti-nuclear pieces) — the list does not resolve it.
+8. **Biodiversity / 6th extinction**: Bradshaw, Ceballos, defaunation,
+   insect/bird declines, coral bleaching (reinforces §10).
+9. **Climate psychology, communication, misinformation, activism**: Margaret
+   Klein Salamon ("emergency mode"), climate-anxiety studies, Finland's
+   misinformation classes, science-activism culture shift.
+10. **RealClimate** rebuttals (Mann/Schmidt; "Spencer's Shenanigans" — a direct
+    hit on our §9 Roy Spencer), and **local Santa Cruz** items (Cabrillo's
+    climate-course graduation requirement, UCSC EarthFutures).
+
+**What's new and worth pulling in later** (not yet in our sources): the
+**climate-economics-critique** library (cluster 2) is the biggest gap it fills —
+a rigorous counter to the Nordhaus/DICE tradition that would strengthen any
+post on carbon pricing or the "cost of action vs inaction." The **degrowth /
+Garrett thermodynamic-economics** strand (cluster 1) is a citable intellectual
+home for Murphy's limits argument (§3.1). Both are *heterodox economics*, and
+both should be engaged as arguments, clearly separated from the physical-science
+consensus.
+
+**Cautions (Principles 1, 2, 4).** (a) The list is a **curated viewpoint**, not
+a balanced bibliography — it leans degrowth, high-alarm, and
+anti-mainstream-economics; weight accordingly. (b) It is heterogeneous in
+quality: peer-reviewed papers (Nature, PNAS, Copernicus) sit beside YouTube
+videos, Substacks, Medium posts, dead `file:///` and webmail links, and
+advocacy blogs — cite the primary literature, use the rest as leads. (c) Many
+links are already dead or personal (local file paths, mail URLs); treat the list
+as a snapshot of one thoughtful curator's 2022–2026 reading, not a maintained
+resource. (d) Keep its economics politics as viewpoint, not doctrine.
+
+**Blog hooks:** (1) A community-college astronomer's reading list is a better
+climate-economics syllabus than most econ departments — the Nordhaus/DICE
+critique deserves a post of its own. (2) The same collection holds "renewables
+will save us" and "there is no energy transition" side by side — the honest
+tension the blog should inhabit. (3) Three schools now disagree with the
+consensus in three different directions (milder / faster / growth-is-the-real-
+problem) — mapping *why* is more illuminating than picking one.
+
+## 16. The Planetary Boundaries framework (Stockholm Resilience Centre)
+
+Recommended by Alexie alongside Carbon Brief. Source:
+`stockholmresilience.org/research/planetary-boundaries.html` plus the 2025
+**Planetary Health Check** (Potsdam Institute / planetaryhealthcheck.org) and the
+Sept 2025 SRC news release. This is a *systems* frame that sets the blog's climate
+story inside the wider set of Earth-system limits — it pairs naturally with §10
+(biodiversity) and the §2 cross-cutting numbers.
+
+### 16.1 What the framework is
+
+Nine planetary-scale processes regulate the stability and resilience of the Earth
+system. For each, scientists define a **control variable** and a quantitative
+**boundary** — a "guardrail" marking the edge of a *safe operating space* for
+humanity, set conservatively at the lower end of the danger zone (not the point of
+catastrophe, but the point past which the risk of large, possibly irreversible
+change rises non-linearly). Staying inside all nine is the condition under which
+the Holocene-like stability that civilization grew up in can persist.
+
+**Origin:** proposed in 2009 by **Johan Rockström** and 28 co-authors (*Nature*).
+Major updates: **2015** (*Science*, Steffen et al. — four boundaries then judged
+crossed), and **2023** (*Science Advances*, Richardson et al. — first time **all
+nine** were quantified, with six transgressed). Since **2024** the **Planetary
+Health Check** gives an annual update (Potsdam Institute für Klimafolgenforschung,
+PIK). Note the framework is a *global* aggregate; several boundaries are really
+sums of strongly heterogeneous regional problems.
+
+### 16.2 The nine boundaries and current status (2025)
+
+**Seven of nine are now transgressed** (2025 Planetary Health Check), all with
+worsening trends:
+
+1. **Climate change** — transgressed. Control variables: CO₂ ≈ 420+ ppm (boundary
+   350 ppm) and radiative forcing. Ties directly to §2.
+2. **Biosphere integrity** — transgressed, and among the most deeply exceeded
+   (genetic diversity via extinction rate; functional diversity). Ties to §10.
+3. **Land-system change** — transgressed (forest cover remaining vs. potential).
+4. **Freshwater change** — transgressed (green + blue water; expanded in 2023 to
+   include soil moisture, not just river withdrawals).
+5. **Biogeochemical flows** — transgressed, deeply (nitrogen and phosphorus from
+   fertilizer; the N boundary is one of the most overshot of all).
+6. **Novel entities** — transgressed (synthetic chemicals, plastics, "forever"
+   compounds; assessed for the first time in 2022–23, immediately judged over).
+7. **Ocean acidification** — **newly transgressed in 2025** — the headline of the
+   2025 Planetary Health Check. Control variable: mean surface **aragonite
+   saturation Ω ≈ 2.84**, now just past the (revised) boundary of **Ω ≈ 2.86**.
+   Surface-ocean pH has fallen ~0.1 units since pre-industrial (~30–40% rise in
+   H⁺). Driven by the same fossil-CO₂ the ocean absorbs (>90% of excess heat, §2).
+   Cold-water and tropical corals, pteropods, and Arctic life are most exposed.
+
+**Still within the safe operating space (2 of 9):**
+
+8. **Stratospheric ozone depletion** — inside the boundary and *recovering* — the
+   Montreal Protocol success story, and the framework's proof that a boundary can
+   be pulled back.
+9. **Atmospheric aerosol loading** — assessed as within the boundary globally
+   (though regionally severe over South/East Asia).
+
+### 16.3 Why it matters for the blog
+
+- **A better frame than "climate alone."** The single most useful message: climate
+  is *one* of seven crossed guardrails, and the other six (nutrients, biosphere,
+  land, freshwater, novel entities, now oceans) are being pushed by the same
+  industrial metabolism. It reframes the blog's biodiversity, energy, and even
+  population threads as one story about operating a finite system past its limits —
+  consonant with Murphy's finite-planet argument (§3.1, §10.5).
+- **Ozone as the hopeful counter-example.** The one boundary moving back inside is
+  the one where a global treaty worked. A genuinely non-doom hook: guardrails are
+  not one-way.
+- **Ocean acidification is the fresh, concrete 2025 news.** "The ocean quietly
+  crossed its line this year" — a vivid, datable angle tying CO₂ chemistry to reef
+  and shellfish loss, and to the ocean's role as Earth's stabilizer.
+
+### 16.4 Handle-with-care caveats (Principle 2)
+
+- **The numbers are contested at the edges.** Boundary *values* (especially for
+  biosphere integrity, freshwater, and the aerosol variable) involve real
+  scientific judgment; critics argue some are more normative than measured, and
+  that a single global figure hides where the problem actually bites. Present the
+  *status* (crossed / not) with more confidence than the *exact* control values.
+- **"Transgressed" ≠ "collapsed."** A crossed boundary means rising risk of
+  large-scale change, not that a threshold of catastrophe has been passed. Say so.
+- **It is a resilience/systems frame, not an IPCC-style consensus assessment** —
+  cite it as the Stockholm Resilience Centre / PIK view, distinct in provenance
+  from AR6 (§3). It is mainstream and widely adopted (EU policy, national reviews,
+  WBCSD business use) but is one group's synthesis, updated annually.
+
+Quote to reach for (Rockström, 2025): *"We are witnessing widespread decline in
+the health of our planet… Even if the diagnosis is dire, the window of cure is
+still open."*
+
+### 16.5 Carbon Brief — the other site Alexie recommended (source profile)
+
+Not a distillation (per the doc's division of labor, sources are catalogued in
+`references.md` §5/§6 — enriched and verified there under this prompt); noted here
+because it was the second of Alexie's two links. **Carbon Brief** is a UK nonprofit
+climate-science / energy-policy publication (dir./ed. Leo Hickman; ~25 staff incl.
+PhD scientists), regarded as one of the most rigorous specialist outlets. Useful
+formats for us: **explainers**, **factchecks**, **guest posts** by scientists on
+their own new papers (primary-adjacent), "State of the Climate" assessments, COP
+wrap-ups, and the citable **extreme-weather attribution map** (~967 events / 819
+studies; ~77% made more likely or severe by climate change, Nov 2024 update).
+Philanthropically funded (European Climate Foundation, Meliore Foundation) and it
+publicly discloses funders; CC-licensed. Caveats: consensus-aligned (not a
+"both sides" outlet — use §9/§15 for the strongest heterodox case), so for any
+claim of record cite the underlying study it links, and add a one-line funding
+disclosure when citing on contested *policy* questions (Principle 4).
+
+## 17. Living within planetary boundaries without fossil fuels — the energy-balance synthesis
+
+*Added 2026-07-17 (planetary_boundaries.md prompt). Pairs §16 (planetary
+boundaries) with §3.1 (Murphy) to answer the question the mitigation scenarios
+in the report's §5 quietly assume away: can a civilization run on the energy that
+remains once fossil fuels are removed? All numbers below are computed in
+`CI_Reports/planetary_boundaries_energy.py` and drive the report's new §6 with
+Figures 15–18. Following Murphy but updating his ~2018 inputs to 2023–2024 data.*
+
+**The size of the task (updated).** Global primary energy 2023 = **620 EJ ≈ 19.7
+TW**, still **81.5% fossil** (Energy Institute 2024). Murphy's book used ~18 TW;
+the story is unchanged. 2100 demand bookends: **flat ≈ 20 TW**; **1%/yr growth ≈
+42 TW**; and — the efficiency dividend the limits accounts often omit —
+**electrified-flat ≈ 11 TW**, because electrifying end-uses discards the 60–75%
+thermal-conversion loss in fossil primary energy. Realistic 2100 target band ≈
+**11–42 TW**.
+
+**What is NOT the binding constraint.** *Land.* Solar scales past all demand
+(Earth intercepts ~123,000 TW). Running a 20 TW world on solar takes **~0.5% of
+ice-free land** at Murphy's panel-area density (30 W/m²), **~1.5–3%** at realistic
+land densities (10 and 5 W/m²), ~6% even for the 42 TW case — vs ~11% of land
+already farmed. *EROI.* Murphy's PV=6 / nuclear=5 are the field's most contested
+numbers and have moved: recent lifecycle PV **8–34** (payback ~1 yr), nuclear
+**20–81**; a 2023 *Nature Comms* whole-system analysis finds net-zero grids keep
+adequate systemwide EROI. So PV's return is lower and more variable than the coal
+it replaces, but not the near-break-even Murphy feared.
+
+**What IS the binding constraint.** *Firm/seasonal energy.* Batteries to buffer
+**7 days** of global demand ≈ **3,300 TWh ≈ 1,100× the entire world's 2024
+battery-manufacturing capacity** (~3 TWh/yr); 30 days ≈ 4,700×. At ~1/65th
+gasoline's energy density, batteries cannot do seasonal storage at scale, nor
+replace liquid aviation/shipping fuel. The honest counter (Principle 2): no
+serious plan uses months of batteries — real pathways use overbuild+curtailment,
+continental transmission, demand flexibility, long-duration storage (H₂, pumped
+hydro), and retained firm low-carbon (nuclear, hydro, geothermal). So the wall is
+**firm and seasonal** energy plus materials and build-out speed (Murphy's **Energy
+Trap**), not sunlight or land.
+
+**The bounding sidebar — waste heat.** Even with limitless clean energy,
+thermodynamics caps *growth itself*: all energy ends as heat. Today negligible
+(**0.039 W/m²**, ~1.3% of GHG forcing), but at sustained **2.3%/yr** it rivals
+today's entire GHG forcing in **~190 yr** and nears boiling in **~430 yr** —
+fusion included, because the heat is the output not the fuel. Murphy's firmest
+point: indefinite exponential energy growth is impossible on a fixed planet.
+
+**The synthesis to hold (Principles 2 & 4).** Two coherent readings on one set of
+physics — the **limits** reading (post-fossil budget is smaller, firmer,
+storage-bound; adapt to a predicament) and the **optimistic** reading (sun/wind
+unlimited and cheap, land non-binding, PV improved, firm/seasonal is a solvable
+engineering+cost problem, electrification shrinks the target). They differ on
+*ambition and pace*, not physics, and converge on three things: the transition is
+physically possible; the binding constraints are firm/seasonal energy, materials,
+and speed — not sunlight or land; and the build-out must not blow through the
+land, freshwater, biogeochemical, and novel-entities boundaries (§16) while
+relieving the climate one. Growth-vs-degrowth is values, not measurement — flag,
+don't adjudicate. See §3.1 (Murphy), §16 (planetary boundaries), and §15
+(Nolthenius/degrowth school).
+
+**Blog hooks:** (1) "Land is cheap; storage is the wall" corrects the two most
+common misframings at once (solar-takes-too-much-land *and* batteries-will-fix-it).
+(2) Murphy's PV/nuclear EROI numbers are the honest place to show a limits thinker
+being partly overtaken by a decade of data — a model of updating. (3) The
+waste-heat ceiling is a genuinely mind-expanding "even fusion can't grow forever"
+angle that is centuries away yet mathematically certain.
+
+## 18. Changelog
+
+- **2026-07-17 (later)** — Added §17 (energy-balance synthesis: living within
+  planetary boundaries without fossil fuels), pairing §16 with §3.1 (Murphy),
+  updated to 2023–2024 data (620 EJ/19.7 TW; PV/nuclear EROI ranges; battery-mfg
+  scale). Wrote the report's new **§6** ("Planetary boundaries and the energy
+  balance of a low-carbon future") with Figures 15–18 and the calculation script
+  `CI_Reports/planetary_boundaries_energy.py`; renumbered report §§6–11→7–12 and
+  fixed its section cross-refs; added report refs 51–59. Renumbered this changelog
+  to §18 (planetary_boundaries.md prompt).
+
+- **2026-07-17** — Added §16 (Planetary Boundaries framework, Stockholm Resilience
+  Centre) from `stockholmresilience.org/research/planetary-boundaries.html`, the
+  2025 Planetary Health Check (PIK), and the 24 Sep 2025 SRC news release: the
+  nine boundaries, the 2009/2015/2023 lineage, the **seven-of-nine transgressed**
+  2025 status with ocean acidification newly crossed (Ω ≈ 2.84 vs 2.86), ozone as
+  the recovering counter-example, and blog framing + Principle-2 caveats. Also
+  added §16.5, a source profile of **Carbon Brief** (the second site Alexie
+  recommended). Added SRC + Planetary Health Check + Carbon Brief attribution-map
+  entries to `references.md` and enriched/verified its Carbon Brief entry.
+  Renumbered changelog to §17 (context.md Websites prompt 2b).
+
+- **2026-07-16** — Added §15 (Richard Nolthenius's curated climate collection):
+  a clustered reading of the ~465-link `context/URLs/RichardN-ClimateURL-list.txt`
+  — curator identity/stance, ten thematic clusters, the new climate-economics-
+  critique and degrowth threads worth pulling in, and cautions; framed as a third
+  non-consensus "school" alongside §9 and §13 (context.md Websites prompt 2).
+  Renumbered changelog to §16.
 - **2026-07-15** — Responded to R.'s review of the initial report
   (`claude_init_report.md` prompt 4). CI report changes: §1 gained an "IPCC used,
   not worshipped" caveat (consensus lag + the *under*-prediction cases: sea ice,

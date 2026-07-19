@@ -1,0 +1,15 @@
+You and Claude had...   Uncertainty and bias. Four independent groups — NASA GISTEMP, NOAA, the UK's HadCRUT5, and Berkeley Earth — plus reanalyses (ERA5) compute the global anomaly. They agree to within ~0.05 °C on recent decadal trends, which is itself strong evidence: the warming is not an artifact of one team's choices. The known biases are real and corrected-for, not ignored: changing instruments (buckets → engine intakes → buoys for sea-surface temperature), station moves, time-of-observation changes, and — the contrarians' favourite — urban heat islands (UHI). The DOE report argues residual UHI inflates land trends. The mainstream position, supported by studies comparing rural-only stations, is that UHI is corrected to within ≈10% of the land trend and cannot explain ocean warming (71% of the surface) or the warming seen in reanalyses and satellites. This is a legitimate area to quantify, not a reason to doubt the trend's sign or rough magnitude.
+======================
+
+There's no mention here that these different data sets are not simply to be averaged to get the best truth. GISTEMP is the most accurate in that it makes a good attempt to correct for large areas that do not have weather stations; the Arctic, and the Sahara for best example.    The DOE?!   A politically appointed agency. No, if you look at my webpage debunking the standard denialists' memes, you see a graph showing Earth temperatures using all the weather stations, including those the denialists would have you believe are tainted by this UHI myth, and then the set which removes these stations. You'll see they are essentially identical. There IS no "UHI Effect". It's made up just to further "Doubt is our Product" pseudo science and foot-drag on doing anything real about our plight. 
+
+https://www.dr-ricknolthenius.com/climate/index.html
+
+and the included separate website debunking climate denialist claims.
+
+https://www.dr-ricknolthenius.com/climate/DenialClaims2.html
+
+including the "Urban Heat Island" myth.
+
+ X, you should NOT give the credibility of honest disagreement over evidence to these climate "contrarians"! It is completely ceding the battle to them to do so!  That is EXACTLY what they want! They know they can't win over science, but they can still posture as "sciencey" and healthy skeptics and thereby accomplish what they can - to confuse the public and the policy makers and keep the status quoa going for yet longer. 
+
