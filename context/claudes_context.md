@@ -5,7 +5,11 @@
 > collected so posts can be grounded, cited, and internally consistent.
 >
 > **Status:** living document — updated ad infinitum as we add sources.
-> **Last updated:** 2026-07-17 (added §17 — the energy-balance synthesis: can a
+> **Last updated:** 2026-07-22 (added §18 — Chemistry: the Haber-Bosch process, the
+> nitrogen-fixation revolution that feeds ~half of humanity, its WWI-explosives
+> origin, and its CO₂/N₂O/nitrogen-boundary costs; drives the report's "Feeding the
+> billions" section and Figure 20. Prior:
+> 2026-07-17 (added §17 — the energy-balance synthesis: can a
 > civilization run without fossil fuels? pairs §16 with §3.1/Murphy, updated to
 > 2023–2024 data, and drives the report's new §6 with Figures 15–18; added §16 —
 > Alexie's two recommended sites: §16.1
@@ -1442,7 +1446,82 @@ being partly overtaken by a decade of data — a model of updating. (3) The
 waste-heat ceiling is a genuinely mind-expanding "even fusion can't grow forever"
 angle that is centuries away yet mathematically certain.
 
-## 18. Changelog
+## 18. Chemistry: the Haber-Bosch process — nitrogen, population, and its climate cost
+
+*Added 2026-07-22 after a conversation with Dean Paul Koch (UCSC), who made the
+point that the industrialization of ammonia synthesis — pioneered in Germany, and
+first scaled to make explosives — is the hinge on which the 20th-century population
+explosion turns. This section is the chemistry behind §12 (population), the
+biogeochemical-flows boundary in §16, and the N₂O line in the greenhouse story
+(§3.5 of the report). It drives the report's new "Feeding the billions" section and
+Figure 20 (`CI_Reports/haber_bosch_nitrogen.py`).*
+
+**The reaction and its people.** The Haber-Bosch process fixes inert atmospheric
+N₂ into reactive ammonia: **N₂ + 3H₂ → 2NH₃**, run at ~150–300 bar and ~400–500 °C
+over an iron catalyst. Fritz Haber demonstrated the synthesis in the lab (1909);
+Carl Bosch and BASF solved the high-pressure engineering and opened the first
+industrial plant at **Oppau in 1913** (≈40 t/day within a year). Both won Nobel
+Prizes (Haber 1918, Bosch 1931). Before it, reactive nitrogen for crops came from
+manure, legumes, guano, and mined **Chilean saltpeter** (sodium nitrate) — of which
+Chile supplied ~80% of the world's natural nitrate.
+
+**The explosives origin (Koch's point).** Nitrogen fixation feeds *both* fertilizer
+and explosives: NH₃ → nitric acid → nitrates → TNT, and ammonium nitrate itself.
+When the British blockade cut Germany off from Chilean saltpeter in WWI, Haber-Bosch
+ammonia let Germany manufacture munitions domestically (BASF committed to ~5,000 t
+of sodium nitrate/month for the military by 1915). The consensus of historians is
+that the process **materially prolonged WWI**. The same Haber led Germany's chemical
+(gas) weapons program — the darker half of a dual-use invention. Only after the war
+did the fertilizer application scale globally.
+
+**How many people it feeds.** The best synthesis (Smil 2001; **Erisman et al. 2008**,
+*Nature Geoscience*; Our World in Data) is that synthetic nitrogen underwrites **~48%
+of the world's food supply** — i.e. **roughly half of humanity, about 4 billion of
+today's ~8.2 billion people, could not be fed without it** (42% of 20th-century
+births are attributable to it). Population and synthetic-N use rose in lock-step
+after ~1950 (Figure 20). This is the single strongest rejoinder to any "just stop
+industrial agriculture" argument, and it belongs beside the population material in
+§12: the demographic transition happened *on top of* a nitrogen subsidy.
+
+**The climate and environmental cost (kept honest, both directions).**
+- **Production CO₂.** Ammonia is ~**180 Mt NH₃/yr**, ~**2% of global final energy**
+  (8.6 EJ, IEA 2021), and ~**450 Mt CO₂/yr of direct emissions ≈ 1.2% of global
+  fossil CO₂** — because ~70% of its hydrogen comes from steam-reforming natural gas
+  (the rest largely coal, in China), giving an average ~2.5 tCO₂/tNH₃. It is one of
+  the hardest-to-abate heavy-industry emitters; "green ammonia" (electrolytic H₂) is
+  the decarbonization route.
+- **N₂O.** Applying all that nitrogen leaks **nitrous oxide**, a greenhouse gas with
+  ~**273× the 100-yr warming potential of CO₂** and now the dominant ozone-depleting
+  emission. Agriculture is ~**81% of anthropogenic N₂O** (AR6/SRCCL, §3.8) — so the
+  nitrogen that feeds us is also the third greenhouse gas in the report's Figure 5.
+- **The nitrogen cascade / planetary boundary.** Reactive N runs off into rivers and
+  coasts (eutrophication, dead zones) and this is exactly why **biogeochemical flows
+  (N and P)** is one of the *most* transgressed planetary boundaries (§16) — the
+  industrial N flow is several times the boundary.
+
+**Editorial framing (Principles 1, 2, 5).** This is a textbook "no free lunch" story
+and a genuinely two-sided one: the invention is arguably the most consequential of
+the 20th century — it feeds ~4 billion people — *and* it is a major climate/pollution
+burden and was born of war. Present both without flinching, and resist the two easy
+narratives (techno-triumph vs. industrial-agriculture-is-evil). The honest line is
+that half of us are here because of it, and the planet carries the bill.
+
+**Blog hooks:** (1) "About half the nitrogen in your body was fixed in a factory."
+(2) The same machine that feeds four billion people was built to make explosives —
+and probably lengthened the First World War. (3) Bread from air: Haber-Bosch pulls
+fertilizer out of the atmosphere, but pays for it in CO₂ and N₂O. (4) The population
+curve and the fertilizer curve are the same curve. (5) Nitrogen is the planetary
+boundary almost no one talks about, and we've blown past it worse than carbon.
+
+## 19. Changelog
+
+- **2026-07-22** — Added §18 (Chemistry: the Haber-Bosch process — nitrogen,
+  population, and its climate cost) after a conversation with Dean Paul Koch: the
+  reaction, its explosives origin in WWI Germany, the Smil/Erisman estimate that
+  synthetic N feeds ~48% of humanity (~4 billion), and its CO₂/N₂O/nitrogen-boundary
+  costs. Wrote the report's new "Feeding the billions" section with **Figure 20** and
+  the calculation script `CI_Reports/haber_bosch_nitrogen.py`. Renumbered this
+  changelog to §19 (chemistry.md prompt 1).
 
 - **2026-07-17 (later)** — Added §17 (energy-balance synthesis: living within
   planetary boundaries without fossil fuels), pairing §16 with §3.1 (Murphy),
