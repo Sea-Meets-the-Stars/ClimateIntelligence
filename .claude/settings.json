@@ -6,7 +6,8 @@
       "WebFetch",
       "WebFetch(domain:www.iai.int)",
       "WebFetch(domain:www.sciencedaily.com)",
-      "Bash(grep -n -E \"^#{1,3} |^!\\\\[Figure|^\\\\*\\\\*Figure\" /Users/xavier/Projects/ClimateIntelligence/CI_Reports/CI_2026_07_09_climate_report.md)"
+      "Bash(grep -n -E \"^#{1,3} |^!\\\\[Figure|^\\\\*\\\\*Figure\" /Users/xavier/Projects/ClimateIntelligence/CI_Reports/CI_2026_07_09_climate_report.md)",
+      "Bash(grep -n \"make_fertility_map.py\\\\` from source 60\\\\|Figure 19 \\(fertility\" /Users/xavier/Projects/ClimateIntelligence/CI_Reports/CI_2026_07_09_climate_report.md)"
     ]
   },
   "hooks": {

@@ -8,7 +8,7 @@
 > **Last updated:** 2026-07-22 (added §18 — Chemistry: the Haber-Bosch process, the
 > nitrogen-fixation revolution that feeds ~half of humanity, its WWI-explosives
 > origin, and its CO₂/N₂O/nitrogen-boundary costs; drives the report's "Feeding the
-> billions" section and Figure 20. Prior:
+> billions" section and Figure 20). Prior:
 > 2026-07-17 (added §17 — the energy-balance synthesis: can a
 > civilization run without fossil fuels? pairs §16 with §3.1/Murphy, updated to
 > 2023–2024 data, and drives the report's new §6 with Figures 15–18; added §16 —
