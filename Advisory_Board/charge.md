@@ -16,7 +16,7 @@ and human life need not be prioritized; that religion and politics are left asid
 wherever possible; that statistics are respected; and that mathematics trumps all.
 
 The Advisory Board exists to hold CI to those principles. It is built, by design, to
-**bracket the debate rather than to agree**: its founding members sit at opposite
+**bracket the debate rather than to agree**: its founding members sit towards opposite
 poles of the informed conversation, and the Board's value lies in the honest tension
 between credible viewpoints, not in consensus. This charter defines what the Board
 does, how it is composed and governed, and the standing power it holds to speak to
