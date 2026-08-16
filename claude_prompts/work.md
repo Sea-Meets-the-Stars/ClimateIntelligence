@@ -10,17 +10,266 @@ See your context file `context/claudes_context.md` for the current context.
 
 ## Prompts
 
+### Prep
+
 1. We are going to give careful consideration to the number of people who need to work in the United States.  Or better the average number of hours per week under these assumptions:
 
-    - Each healthy household will have 2 persons doing traditioanl and non-traditional work
+    - Each healthy household will have 2 persons doing traditional and non-traditional work
     - Non-traditional work is caring for children, elderly, or disabled.  And cooking, cleaning, and other household tasks.
     - Traditional work is working in a factory, office, or other job that is not related to caring for children, elderly, or disabled.
     - Persons aged 20-60 will de both types of work.  They will not do any such work beyond age 60
     - A fraction of society will be unable to work due to disability, illness, or other reasons.
 
 Initially, let us restrict the discussion to the United States.
-Before we proceed, please search the web on this topic and add your findings to the Report section below.  Then ask me a series of questions in Q&A to proceed.
+Before we proceed, please search the web on this topic and add your findings to the Report section below.  Then ask me a series of questions in Q&A to proceed.  Log your work.
+
+2. I have answered the questions in Q&A.  Please read them, and then ask another round.  Log your work.  Use Opus.
+
+3. I have answered the 2nd round of questions in Q&A.  Please read them, and then ask another round if needed.  Log your work.  Use Opus.
+
+### Calculations
+
+1. Ok, I've answered the latest round of questions in Q&A.  Please read them. Then proceed to do your first round of calculations.  Log your work.  Use Opus.  If questions arise during your work, ask them in the Q&A/Calculations section below. 
+
 
 ## Q&A
 
+### Calculations
+
+### Prep
+
+### Claude's questions — prompt 1 (2026-08-15)
+
+Before building any calculation, the model in Prompts §1 has several free parameters
+that the web research can't settle on its own — they're modeling choices. Please
+answer what you can; "use your judgment" is a fine answer for any of these.
+
+1. **What defines "need"?** Should hours-needed be (a) *descriptive* — how much
+   paid + unpaid labor Americans actually perform today, taken from BLS/ATUS
+   empirical averages, or (b) *normative* — an independently derived estimate of
+   the labor a household objectively requires (e.g. time-motion needs for cooking/
+   cleaning/care, or an "essential goods and services" cut of the economy à la the
+   Murphy-textbook essential/discretionary distinction already in our context
+   file)? This choice drives which data source anchors the whole calculation.
+>A. Indeed, we should avoid money and stay normative.  And, yes, let's use the Murphy-textbook essential/discretionary distinction already in our context
+
+2. **Traditional-work total.** For the paid-work side, do you want total hours
+   actually worked in the US economy (employment × average weekly hours, all
+   sectors) as the "need," or a narrower subset — e.g. excluding sectors you'd
+   call discretionary/non-essential (finance, marketing, luxury retail, etc.)?
+>A. I should have been more clear in the prompt.  We want to estimate the number of hours needed to shelter, feed, and care for each other.  We should also assume a minimum set of goods (clothing, basic furniture) and services (education) that are essential to life.  But ignore the frivilous luxuries.
+
+3. **Non-traditional-work total.** For household/caregiving hours, should I use
+   ATUS *actual* averages (what people currently report doing), or a needs-based
+   estimate independent of current practice (e.g., what a household of a given
+   size objectively requires for meals, cleaning, and care regardless of who
+   currently supplies it or how well)?
+>A. Let's aim for a needs-based estimate independent of current practice but use ATUS as a good benchmark.
+
+4. **Household model.** The prompt specifies exactly 2 working-age (20–60) adults
+   per "healthy household." Real US households vary a lot — average size is 2.5
+   persons, ~29% are single-person, married-couple households are down to ~47% of
+   all households, and many households have 0, 1, 3, or more adults aged 20–60.
+   Should we (a) treat "2 adults per healthy household" as a stipulated idealized
+   unit and compute the model on that abstraction, using national dependency
+   ratios to size the dependents each such household supports, or (b) try to
+   weight by the actual distribution of household compositions?
+>A. This is a bit more complicated.  Assume:
+   - 2 adults per household until death
+   - 2 children per household until age 20
+   - The adults work until age 60 and then are cared for by others
+
+5. **Who counts as a dependent?** Children under 20, adults over 60, and disabled
+   working-age adults are candidates. Under your rule that nobody works past 60,
+   should the 60+ population itself be treated as needing *care* (eldercare
+   hours), or simply as retired-but-self-sufficient unless disabled?
+>A. Yes, under 20 and over 60.
+
+6. **Which disability/incapacity measure?** Two very different BLS figures are on
+   the table: (a) the disability employment-population ratio, implying ~75–77% of
+   people *with a disability* are not working, or (b) the broader "work-limiting
+   health condition" prevalence, ~12.4% of ages 16–75, of whom ~27% still
+   participate in the labor force. These imply very different "fraction unable to
+   work" inputs — which should anchor the model, or would you rather I derive a
+   blended figure?
+>A. Let's use (b)
+
+7. **Students aged 20–24.** A large share of the participation gap at 20–24
+   (participation ~72% vs. ~83% for 25–54) is school enrollment, not caregiving or
+   disability. Should full-time students be counted as "working" for this model,
+   excluded from the working pool entirely, or treated as a third category?
+>A. Agreed, assume college for now
+
+8. **Time horizon.** Present-day (2025/2026) snapshot using current empirical
+   data, or do you also want the sensitivity of the answer to future demographic
+   shifts (aging population, falling birth rates) explored later?
+>A. Lets aim for present-day for now.
+
+9. **Geographic aggregation.** Confirming US-only, national-aggregate for now
+   (no state/regional breakdown) — correct?
+>A. Yes, US-only.
+
+### Claude's questions — prompt 2 (2026-08-16, drafted by Opus)
+
+Your answers to round 1 fix the framing (normative, non-monetary, Murphy essential/discretionary) and the household stipulations. Before I can write a calculation script, nine structural choices remain. Where useful I've proposed a concrete default — confirm, reject, or modify.
+
+**Household and generational structure**
+
+1. **Does the household recycle?** Proposed default: a steady-state *unit cell* in which the 2 children, on turning 20, leave and each pair with an unrelated partner to found a new 2-adult household, which in turn has 2 children — so every household is at some point in the same repeating life-cycle. The alternative is a single multi-generational co-resident household (children never leave, grandparents live in). The first keeps the arithmetic clean; the second changes both eldercare logistics and housing-hours-per-person. Which?
+>A. Yes, assume recycling of all households, including the house itself.
+
+2. **Who provides eldercare, and for how long?** Proposed default: adults become dependent at 60 and are cared for until death at ~80 (US life expectancy ≈ 78-79; round to 20 dependent years), with care intensity ramped — light support ages 60-75, intensive care 75+ — and the care performed by their own working-age children as non-traditional work. Confirm the death age, the ramp (or a flat intensity), and whether the caregiver is the adult child or a congregate/institutional arrangement. If institutional, see question 4.
+>A. Care by a congregate/institutional arrangement.  And that death age is fine.
+
+3. **Real 2026 population, or idealized steady state?** "2 children per household" implies TFR = 2.0, versus the actual US TFR of ~1.6, and "work until 60" implies a retirement age below the real one. Proposed default: build the *synthetic* steady-state pyramid implied by your stipulations (2 kids, 20-year childhood, 40-year working life, 20-year dependent old age), and report the real US pyramid only as a benchmark comparison — the same way ATUS is a benchmark, not the target. Agree, or should the real age structure size the dependent population?
+>A. Use the 2026 population.  But I'm not sure it matters provided it is steady state.  Assume that for now.
+
+**Traditional / non-traditional boundary**
+
+4. **Where does paid care work go?** The original framing defined traditional work as paid work *not* related to caring for children/elderly/disabled — which strands nurses, aides, daycare staff, and teachers. Proposed default: classify by *activity, not by payment* — all care hours are non-traditional wherever they occur, so a nursing-home aide's hours are non-traditional work counted once, and traditional work covers only production of goods and non-care services. This avoids double-counting but means "non-traditional" no longer maps to "unpaid." Accept that, or would you rather define non-traditional as strictly in-household and treat professional care as an essential traditional service sector?
+>A. Yes, classify by activity, not by payment.
+
+5. **Is schooling child-care, essential service, or both?** Proposed default: K-12 (and pre-K from age 3) counts as an essential *service* — teacher hours enter the model as care/instruction hours at a stipulated student-teacher ratio — and household child-care hours cover only the non-school hours (evenings, weekends, summers, ages 0-3). Confirm the school-age boundaries, the ratio, and whether the 20-24 college students from round 1 also require instructor hours or are simply absent from the labor pool.
+>A. K-12 is an essential service.  College is not.
+
+**Non-monetary quantification**
+
+6. **How do we get hours-to-produce without prices?** Since money is off the table, the only routes I see are (a) *labor-embodied physical estimates* — construction-hours per dwelling amortized over a ~75-year lifespan, agricultural-plus-processing hours per person-year of calories, garment-hours per person-year of clothing — or (b) *sector employment counts* in the essential NAICS categories, converted to hours per capita, which uses BLS headcounts rather than dollars. Proposed default: (a) as the primary normative estimate, with (b) as a sanity check. Confirm — (a) is a substantially heavier data-gathering task than round 1's participation-rate work, so it's worth being deliberate.
+>A. I confirm. (a) is the primary normative estimate and (b) is a sanity check.
+
+7. **Is the essential list closed?** Round 1 named shelter, food, care, minimal clothing and furniture, and education. Proposed additions, each of which is arguably prerequisite to the named items: water and sanitation, electricity, basic medical care (distinct from eldercare — surgeries, antibiotics, obstetrics), and the transport/logistics needed to move food and materials. Which of these are in? In particular, is medical care an essential service (traditional, question 4) or care work (non-traditional)?
+>A. I like your list of additional essentials.  Use them
+
+**Aggregation and output**
+
+8. **Unit cell or national totals?** Proposed default: compute per unit cell (2 working adults plus their dependent shares — 2 children, a fractional share of elderly parents, a fractional share of the disabled and student populations) and then express everything per working adult. The alternative is national totals divided by the working population. Also confirm the denominator: does it exclude all 12.4% with work-limiting conditions, or only the ~73% of them who don't work — and do that group's *care needs* enter the numerator, and at what intensity?
+>A. Yes, unit cell is best.
+
+9. **What is the headline number?** Proposed default: hours per week per working-age adult, reported as three figures — traditional, non-traditional, and total — with the non-traditional load split evenly between the two adults in a household (an explicitly normative choice worth flagging in the post, since ATUS shows it isn't). Confirm the units and the split, and say whether you want a central estimate with an uncertainty range on each essential category, or a single point estimate with the sensitivities discussed in prose.
+>A. Confirme.  Hours per week per working-age adult reported as three figures.  I like central estimate with an uncertainty range on each essential category.
+
+### Claude's questions — prompt 3 (2026-08-16, drafted by Opus)
+
+**Verdict.** Two rounds have settled essentially all of the structural choices, and most of what remains is data-gathering I should just go do — nursing-home staffing ratios, student-teacher ratios, construction-hours per dwelling, agricultural hours per person-year. Three things, however, are genuine forks that I should not decide for you. Two of them are questions from round 2 that your answers only half-covered (the eldercare intensity ramp in Q2, and the second half of Q8 on the disabled), and the third is the one dial that has never been pinned down and that moves the headline number more than anything else: *how minimal is "minimal."* Everything else — how eldercare-institution staff hours are attributed (same logic as K-12 teachers), whether to count embodied hours in capital goods, how wide to draw the uncertainty bands, pre-K boundaries, dwelling lifespan — I'll decide and document inline in the script.
+
+---
+
+1. **How many of the 20 dependent years are institutional?** Round 2 fixed congregate/institutional eldercare and death at ~80, but didn't settle the intensity profile. Taken literally, "cared for by others from 60" means 20 years of staffed residential care per person, which would likely dominate the entire non-traditional total and is far from any real society's practice (~4% of Americans 65+ live in institutions; median nursing-home stay is 1-2 years). Proposed default: the 60+ cohort leaves the labor force at 60 but remains self-sufficient in housing and daily living until frailty, with congregate care concentrated in the last ~5 years of life (~75-80) at full staffing intensity, plus a light support tier (meals, transport, medical) for 60-75. Confirm, or set a different ramp — including "no, assume full institutional care for all 20 years" if that's the normative point you want to make.
+>A. I like your ramp up and default.  
+
+2. **Do disabled working-age adults generate care demand, or only remove labor?** Round 1's dependent list named only under-20 and over-60; round 2's Q8 asked this directly and the answer addressed the unit cell but not this part. The ~9% of working-age adults with a work-limiting condition who don't work are, under the current spec, fed and housed but receive zero care hours. Proposed default: they *do* enter the numerator, at a care intensity well below the frail elderly — say roughly a quarter of institutional intensity, mostly personal assistance rather than skilled care — since a work-limiting condition is not the same as needing daily attendance. Confirm or set the intensity. Related and quick: for the headline denominator, is "per working-age adult" the two able adults in the unit cell (i.e. the disabled and the 20-24 students are burdens, not divisors)? That's what the unit-cell framing implies and it's what I'll use unless you say otherwise.
+>A. They generate care demand.  And it is actually ok to assume that they provide non-traditional work for the first 10 years of retirement.
+
+3. **What standard of living defines "essential"?** This is the largest un-pinned lever. "Minimum goods, ignore frivolous luxuries" admits a factor-of-two range: an essential dwelling could be 1,000 or 2,000 sq ft; an essential diet could be current US consumption minus waste, or a nutritionally adequate lower-input diet; essential medicine could be the full modern hospital-and-pharma apparatus or a basic tier of surgery, obstetrics, antibiotics, and vaccines. Proposed default: a *sufficiency* standard rather than a scaled-down-current-consumption standard — modest but genuinely decent, roughly mid-20th-century US material provision delivered with present-day (2026) technology and productivity. Concretely: ~250 sq ft of dwelling per person, ~2,300 kcal/day with meat as a modest rather than central component, a small durable wardrobe, and a basic-tier medical system. Confirm the *principle*, and flag any of those anchors you'd move — I'll source and justify the rest.
+>A. I confirm the principle.  No anchors to move for now.
+
+---
+
+**Next research steps (no input needed):**
+
+- Direct labor-hours per new dwelling (residential construction hours per unit), plus dwelling service life, for the amortized shelter estimate.
+- Agricultural + processing + distribution hours per person-year of food, US industrial system.
+- Nursing-home and assisted-living direct-care hours per resident-day (CMS payroll-based journal data gives this cleanly).
+- K-12 student-teacher ratio and total school-staff-to-student ratio (teachers alone understate it).
+- Garment, furniture, water/sanitation, electricity, and freight-logistics hours per capita — likely via sector employment as the primary route for the ones where no physical labor-embodiment estimate exists.
+- BLS sector employment in the essential NAICS categories, converted to hours per capita, as the round-2 method (b) sanity check.
+- 2026 US population by single year of age, for the unit-cell dependency shares.
+
 ## Report
+
+*Web research conducted 2026-08-15 in support of Prompts §1 (hours of work needed
+per person under the household model). All figures are current US data (BLS,
+Census) unless noted; treat as time-stamped empirical inputs, not the final model.*
+
+### Working-age population & labor force participation (BLS)
+
+- **Prime-age (25–54) participation:** ~83.3% are in the labor force — the
+  benchmark "fully engaged" cohort.
+- **Young adults (20–24):** ~72% participation (Mar 2025) — the gap versus prime-age
+  is largely school enrollment, not non-participation for other reasons.
+- **Older workers (55+):** ~37–38% participation overall; narrowing to 65+:
+  ~19.1% still in the labor force in 2025 (men 23.1%, women 15.7%) — i.e. a
+  substantial minority keep working well past the prompt's age-60 cutoff, which is
+  useful context even though the model stipulates nobody works past 60.
+- No official BLS table breaks participation into 5-year bins for 55–59/60–64
+  specifically; only "55 and older" and "65 and older" bins were found. A more
+  granular breakdown, if wanted, would require pulling BLS's underlying CPS
+  microdata rather than the published summary tables.
+
+### Actual hours worked (BLS Current Employment Statistics)
+
+- Average weekly hours for **all** employees on private nonfarm payrolls: **34.2
+  hours** (Aug 2025) — this blends full- and part-time workers across every
+  industry.
+- Full-time-only average runs higher (historically ~40–42 hrs/week for full-time
+  workers specifically), but a precise, current full-time-only national figure
+  wasn't isolated in this pass — flagged for a follow-up, more targeted BLS table
+  pull if the model needs it.
+
+### Unpaid household work & caregiving (BLS American Time Use Survey, ATUS)
+
+- **Household activities** (housework, cooking, lawn care, household management):
+  81% of people engage in some household activity on an average day; among women,
+  87% do so (averaging 2.8 hrs on days they do it); among men, 75% do so
+  (averaging 2.1 hrs).
+- **Childcare:** adults in households with a child under 13 spend an average of
+  **5.1 hours/day** providing secondary childcare (i.e., childcare done while also
+  doing something else — not 5.1 hours of undivided attention).
+- **Eldercare:** 14% of the civilian population 15+ (38.2 million people) provide
+  unpaid eldercare; of those, 28% do so on a given day, averaging **3.9 hours** on
+  the days they provide it.
+- These are *averages across providers*, not per-household totals — translating
+  them into "hours needed per household" will require an explicit modeling step
+  (see Q&A #3).
+
+### Household composition (US Census Bureau)
+
+- Average household size: **2.5 persons** (2024 ACS), continuing a long historical
+  decline.
+- Married-couple households: down to **~47%** of all households (2022/2024), from
+  71% in 1970; ~74% of *family* households (64% of all households) are
+  married-couple.
+- No figure was found in this pass for "2-adult, working-age households" as a
+  distinct share — the Census tables split by household *type* (family/nonfamily,
+  married-couple, etc.) and by *size*, not directly by "exactly 2 adults aged
+  20–60."
+
+### Disability / incapacity to work (BLS)
+
+- **Employment-population ratio for people with a disability:** 22.7% (2024),
+  22.8% (2025) — i.e., only ~23% of the disability-identified population is
+  employed; ~75% are not in the labor force at all (vs. ~32% of people with no
+  disability).
+- **Broader "work-limiting health condition" measure:** 30.7 million people aged
+  16–75 (12.4% of that age range, July 2024) report a health condition or
+  difficulty that limits work; of these, 27.1% still participate in the labor
+  force.
+- These two disability-related figures answer different questions (identifies-as-
+  disabled vs. has-a-work-limiting-condition) and give quite different "fraction
+  unable to work" inputs — see Q&A #6.
+
+### Gaps / follow-up flagged for later
+
+- No single BLS table gives 5-year age-bin (55–59, 60–64) labor force
+  participation; would need CPS microdata for that granularity.
+- A precise, current, full-time-only average weekly hours figure (as opposed to
+  the all-employees blended 34.2 hrs) wasn't isolated and should be pulled
+  directly from BLS Table B if the model needs it.
+- No Census breakdown found for households by exact adult count in the 20–60
+  range specifically (only by total size and family/nonfamily type).
+
+**Sources:**
+- [American Time Use Survey — 2025 A01 Results (BLS)](https://www.bls.gov/news.release/atus.nr0.htm)
+- [American Time Use Survey — 2025 Results (PDF)](https://www.bls.gov/news.release/pdf/atus.pdf)
+- [Unpaid Eldercare in the United States — BLS](https://www.bls.gov/news.release/archives/elcare_09212023.htm)
+- [Nearly one in five older Americans in the labor force in 2025 — BLS](https://www.bls.gov/opub/ted/2026/nearly-one-in-five-older-americans-in-the-labor-force-in-2025.htm)
+- [Labor Force Participation Rate (CIVPART) — FRED](https://fred.stlouisfed.org/series/CIVPART)
+- [Labor Force Participation Rate — 25-54 Yrs (LNS11300060) — FRED](https://fred.stlouisfed.org/series/LNS11300060)
+- [Labor Force Participation Rate — 20-24 Yrs (LNU01300036) — FRED](https://fred.stlouisfed.org/series/LNU01300036)
+- [Civilian labor force participation rate by age, sex, race, ethnicity — BLS](https://www.bls.gov/emp/tables/civilian-labor-force-participation-rate.htm)
+- [Average weekly hours, US — Trading Economics](https://tradingeconomics.com/united-states/average-weekly-hours)
+- [People with a Disability: Labor Force Characteristics — 2025 (BLS PDF)](https://www.bls.gov/news.release/pdf/disabl.pdf)
+- [People with Health Conditions or Difficulties that Limit Work — BLS](https://www.bls.gov/news.release/archives/dissup_09302025.htm)
+- [Average Household Size by State 2026 — World Population Review](https://worldpopulationreview.com/state-rankings/average-household-size-by-state)
+- [Married Couple Households Still the Majority… — US Census Bureau](https://www.census.gov/library/stories/2024/03/coupled-households.html)
+- [Nearly Two-Thirds of U.S. Households are Family Households — US Census Bureau](https://content.govdelivery.com/accounts/USCENSUS/bulletins/3c16e18)

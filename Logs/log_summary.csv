@@ -70,3 +70,6 @@ ut_time,tokens_used,model,co2_grams_estimate
 2026-07-17T12:05:05Z,188130,claude-opus-4-8,14.3
 2026-07-17T12:12:28Z,386133,claude-opus-4-8,29.35
 2026-07-18T16:08:29Z,462665,claude-opus-4-8,35.16
+2026-08-15T13:14:29Z,201201,claude-sonnet-5,15.29
+2026-08-16T11:29:09Z,218164,claude-sonnet-5,16.58
+2026-08-16T11:44:54Z,81932,claude-sonnet-5,6.23
