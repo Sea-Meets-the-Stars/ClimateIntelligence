@@ -33,7 +33,38 @@ Before we proceed, please search the web on this topic and add your findings to 
 
 2. Thanks for your first round of calculations.  Please read my answers to your 4 questions and then research the ones discussed.  Then update the calculations accordingly.  Log your work.  Use Opus.
 
+### Report
+
+1. We are about ready to generate a full report, as a separate markdown file named 
+`CI_Reports/work_hours_needed_report.md`.  Before proceeding, please let me know if you have any questions.  If so, add them to the Q&A/Report section below.  Use Opus. Log your work.
+
+2. I have answered the latest round of questions in Q&A.  Please read them. Then proceed to write the report.  Log your work.  Use Opus.  If questions arise during your work, ask them in the Q&A/Report section below.
+
 ## Q&A
+
+### Report
+
+### Claude's questions — Report round 1 (2026-08-17, drafted by Opus)
+
+The model itself is settled (modulo FLAG 6), so these are scoping questions about the *document*, not the calculation. I've proposed a default for each so you can confirm quickly rather than specify from scratch.
+
+1. **FLAG 6 first, or flag it in the report?** It is the one live technical thread, and it only bites the LOW column (a 60-69-year-old credited with 22 hr/wk of care labor while a working adult carries 9.2 hr). It does not move CENTRAL at all. Proposed default: I write the report now, present CENTRAL/HIGH as the real result, and label the LOW column **provisional** with FLAG 6 spelled out as a named open limitation alongside FLAG 3 (stipulated fertility) and the import-adjustment asymmetry. Alternatively, give me a one-line ruling now — my own recommendation would be to cap the elder contribution at the per-capita non-traditional demand of a working adult, which removes the inversion without re-deriving anything — and I fold the fix into the script and the report together.
+>A. I like your Proposed default.
+
+2. **Blog voice or methods report?** These are different documents. Proposed default: the same voice as `CI_2026_07_09_climate_report.md` — rigorous but accessible prose, tables where they earn their place, caveats stated in the open rather than buried — targeting **~3,000–4,000 words**, comparable to the report's homelessness (§8) and population (§9) sections. The alternative is a much longer technical/methods document that re-derives every category. Confirm the voice and the length target, or name a different one.
+>A. Use the Proposed default.
+
+3. **Is the 46.0 → 32.2 story the spine, or a coda?** There is a genuinely good narrative in *why* the number moved — childcare (ATUS secondary-care double-counting), clothing (durability, not wardrobe size), and household tasks (needs-based can go *up*, not just down) each teach a different methodological lesson, and together they are a case study in how a normative estimate should be built. Proposed default: lead with the final model as the result, then a dedicated near-the-end section on the revision and its three lessons — so the reader gets the answer first and the epistemics second. The alternative is to present only the settled model and drop round 1 to a footnote. Which?
+>A. Use the Proposed default.
+
+4. **Does the report draw the conclusion, or stop at the estimate?** 32.2 hr/week per working adult covers *everything* — all essential production plus all care and household work — against a current US reality of ~34 hr/wk of paid work *on top of* substantial unpaid labor. That comparison is the obvious punchline and it points somewhere normative (Keynes' 15-hour week, post-work, and Murphy-style sufficiency/degrowth). Proposed default: state the comparison explicitly and honestly, note what the model does and does not license (it says nothing about *distribution*, coordination, or transition), but stop short of policy advocacy. Related and worth your view: how explicitly should the piece tie itself to the blog's climate/energy throughline — i.e. why a labor-hours exercise belongs on Climate Intelligence at all? I'd make that the framing of the opening rather than an afterthought.
+>A. Use the Proposed default.
+
+5. **Figures?** Every other quantitative topic in this project got a companion plotting script (`make_homelessness_figures.py`, `make_population_figures.py`, `make_ai_figures.py`) and numbered figures in the main report (currently up through Figure 19). Proposed default: yes — a `CI_Reports/make_work_figures.py` producing three, continuing the existing sequence as **Figures 20–22**: (a) the traditional/non-traditional category breakdown as a stacked or horizontal bar, (b) the LOW/CENTRAL/HIGH range on the headline total, (c) a waterfall reconciling 46.0 → 32.2. Or defer all visuals to a separate prompt and ship a text-and-tables report now — say which, since it changes what I write into the markdown.
+>A. Use the Proposed default.
+
+6. **Standalone piece, or a future section of the main report?** The homelessness calculation became §8 of `CI_2026_07_09_climate_report.md`, and this one could plausibly follow the same path as a new numbered section after §10 (AI). That decision affects heading levels, whether the piece re-establishes shared context, and citation style — the main report uses numbered `[n]` references with a consolidated reference section, whereas the prompt doc uses inline markdown links. Proposed default: write it as a self-contained standalone document with its own inline-link sources (easier to fold in later), and treat the script docstring as the authoritative methods reference rather than re-deriving all of it in prose. Confirm, or tell me it's headed for the main report and I'll match that format from the start.
+>A. Use the Proposed default.
 
 ### Calculations
 

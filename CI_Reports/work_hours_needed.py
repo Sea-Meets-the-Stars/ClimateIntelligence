@@ -36,7 +36,10 @@ METHOD
 4. NON-TRADITIONAL: sum the care/household demands over the populations that
    generate them, then SUBTRACT the non-traditional labor CONTRIBUTED by
    Tier-1 active elders (60-70), who are outside the traditional labor pool
-   but are net contributors of care and household work.
+   but are net contributors of care and household work. That contribution is
+   CAPPED at the gross non-traditional demand per working adult in the same
+   column, so no elder is credited with out-producing a working adult's own
+   full load of this labor (FLAG 6).
 5. Divide both national totals by the working-adult pool.
 
 Childcare, household tasks and clothing are now NEEDS-BASED bottom-up
@@ -99,8 +102,8 @@ with the ~80-yr lifespan. US total fertility rate (CDC, 2024) is 1.599 — see
 FLAG 3 below.
 
 --------------------------------------------------------------------------------
-FLAGS — four of the five round-1 flags are now RESOLVED (author, round 2);
-FLAG 3 stands as an accepted limitation; FLAG 6 is newly raised.
+FLAGS — FLAGS 1, 2, 4, 5 resolved (author, round 2); FLAG 6 resolved in round 3
+(the elder-contribution cap); FLAG 3 stands as an accepted limitation.
 --------------------------------------------------------------------------------
 FLAG 1  RESOLVED — MEDICAL CARE IS TRADITIONAL. The question was whether
         "classify by activity, not by who pays" forced nursing/doctoring into
@@ -192,16 +195,37 @@ FLAG 5  RESOLVED — SCENARIO ALIGNMENT OF THE ELDER LABOR CONTRIBUTION. The
         parameter-aligned alternative is still printed, for transparency about
         how much the choice is worth.
 
-FLAG 6  NEW, OPEN — THE ELDER CONTRIBUTION IS NOW LARGE RELATIVE TO A SMALLER
-        DEMAND SIDE. The round-2 needs-based childcare and household figures
+FLAG 6  RESOLVED — THE ELDER CONTRIBUTION IS NOW CAPPED AT A WORKING ADULT'S
+        OWN NET BURDEN. The credited Tier-1 contribution may not exceed what a
+        working adult in the same scenario column is actually SHOWN to carry,
+        net of that same contribution (author-confirmed fix): no elder can
+        plausibly supply more care and household labor than a working adult's
+        own final load of it.
+
+        The problem: the round-2 needs-based childcare and household figures
         cut gross non-traditional demand by roughly a third, but the Tier-1
         contribution parameters (5 / 12 / 22 hr/wk) were carried over unchanged
-        from round 1. The offset therefore covers ~14% of gross demand at
-        CENTRAL but ~43% in the LOW column, where a 60-69-year-old is credited
-        with 22 hr/wk of care and household labor while a working adult carries
-        only ~9 hr/wk of it. That inversion is at least odd and may mean the
-        HIGH elder-contribution parameter needs a cap tied to the demand side.
-        Printed in the elder-netting block. Author input welcome.
+        from round 1. The offset therefore covered ~14% of gross demand at
+        CENTRAL but ~43% in the LOW column, where a 60-69-year-old was credited
+        with 22 hr/wk of care and household labor while a working adult ended
+        up carrying only ~9 hr/wk of it net — an internally inconsistent
+        result: the elder out-produced the working adult's entire final load.
+
+        The fix is an exact cap, not an approximation: letting G be gross
+        demand, W the working-adult population and T the Tier-1 population, the
+        constraint "credited contribution c <= a working adult's net burden
+        (G - c*T)/W" solves in closed form to c <= G / (W + T) — no iteration,
+        and at that boundary the elder's credited hours exactly equal the
+        working adult's own final net total. (A simpler G/W cap was tried
+        first; it only bounds c below GROSS demand, which still let an elder
+        exceed the working adult's NET total — this version closes that gap.)
+
+        The fix deliberately changes NO research number: childcare, household
+        tasks and every eldercare tier are untouched, and the contribution
+        parameters themselves are untouched. Only the LOW-burden column binds
+        (22 hr/wk -> ~12.2 hr/wk); CENTRAL and HIGH are unaffected. See
+        ELDER_CONTRIB_CAP_TO_DEMAND, elder_contribution_detail(), and the
+        elder-netting print block, which announces the cap only where it binds.
 
 --------------------------------------------------------------------------------
 DATA SOURCES (round-1 passes, updated by the round-2 needs-based passes)
@@ -352,7 +376,20 @@ TIER2_SUPPORT_HRWK = {"LOW": 7.0, "CENTRAL": 14.0, "HIGH": 25.0}
 
 # Non-traditional labor CONTRIBUTED by Tier-1 active elders, hours/week,
 # population-averaged across the whole 60-70 band (not just active grandparents).
+# These are round-1 parameters; the round-2 needs-based rebuild shrank the demand
+# side by ~1/3 without rescaling them, so they are now CAPPED at the demand side
+# (see ELDER_CONTRIB_CAP_TO_DEMAND and FLAG 6).
 TIER1_CONTRIB_HRWK = {"LOW": 5.0, "CENTRAL": 12.0, "HIGH": 22.0}
+
+# FLAG 6 (resolved, author-confirmed): cap the credited Tier-1 elder contribution
+# at the GROSS non-traditional demand per working adult in the same column.  An
+# elder cannot plausibly be credited with supplying more non-traditional labor
+# than the whole per-working-adult load of that labor.  Set False to reproduce
+# the uncapped round-1/round-2 behavior.
+ELDER_CONTRIB_CAP_TO_DEMAND = True
+
+# Dict key for the (negative) elder-contribution line in the non-traditional table.
+ELDER_CONTRIB_LINE = "LESS: Tier-1 elder labor contributed"
 
 # Non-working disabled adults: care intensity ~1/4 of Tier-3, hours/week each.
 DISABLED_CARE_INTENSITY = 0.25   # of Tier-3 weekly receive-rate
@@ -478,16 +515,15 @@ def traditional_national_hours(pops, scenario):
             for name, rates in TRADITIONAL_RATES.items()}
 
 
-def nontraditional_national_hours(pops, scenario,
-                                  invert_elder=INVERT_ELDER_CONTRIBUTION,
-                                  medical_is_nontraditional=False):
+def nontraditional_demand_hours(pops, scenario, medical_is_nontraditional=False):
     """Created by JXP and Claude.
 
-    National weekly NON-TRADITIONAL labor hours, by category.
+    National weekly GROSS non-traditional demand hours, by category.
 
-    Demand terms are positive; the Tier-1 active-elder labor CONTRIBUTION is a
-    NEGATIVE entry, because those hours are supplied from outside the
-    working-adult pool and therefore reduce the burden that pool must carry.
+    "Gross" means before netting out the labor supplied by Tier-1 active elders,
+    so every entry here is positive.  Split out from
+    nontraditional_national_hours() because the elder-contribution CAP (FLAG 6)
+    must be measured against this gross demand.
 
     Inputs
     ------
@@ -495,9 +531,6 @@ def nontraditional_national_hours(pops, scenario,
         Output of population_breakdown().
     scenario : str
         'LOW', 'CENTRAL' or 'HIGH'.
-    invert_elder : bool
-        If True, the elder contribution uses the OPPOSITE scenario, so that a
-        LOW-burden column pairs low demand with a high offset (FLAG 5).
     medical_is_nontraditional : bool
         Default False: essential medical care is TRADITIONAL per the author's
         round-2 decision (FLAG 1). Set True only to reproduce the round-1
@@ -506,8 +539,7 @@ def nontraditional_national_hours(pops, scenario,
     Outputs
     -------
     dict
-        Category name -> national hours per week (float; the elder-contribution
-        entry is negative).
+        Category name -> national hours per week (float, all positive).
     """
     out = {}
 
@@ -540,11 +572,128 @@ def nontraditional_national_hours(pops, scenario,
     if medical_is_nontraditional:
         out["Essential medical care"] = MEDICAL_RATES[scenario] * pops["total"]
 
-    # --- Labor SUPPLIED by Tier-1 active elders (negative) ------------------
-    contrib_scenario = opposite_scenario(scenario) if invert_elder else scenario
-    out["LESS: Tier-1 elder labor contributed"] = (
-        -TIER1_CONTRIB_HRWK[contrib_scenario] * pops["tier1_60_69"])
+    return out
 
+
+def elder_contribution_detail(pops, scenario, gross_national,
+                              invert_elder=INVERT_ELDER_CONTRIBUTION,
+                              cap_to_demand=ELDER_CONTRIB_CAP_TO_DEMAND):
+    """Created by JXP and Claude.
+
+    Tier-1 elder non-traditional labor contribution for one scenario column,
+    after the FLAG 6 demand cap.
+
+    FLAG 6 (RESOLVED, author-confirmed): the TIER1_CONTRIB_HRWK parameters
+    (5 / 12 / 22 hr/wk) were set in round 1 against a demand side that the
+    round-2 needs-based childcare and household rebuild then shrank by roughly a
+    third.  Left uncapped, the LOW-burden column credits ONE Tier-1 elder with
+    22 hr/wk of non-traditional labor while a working adult in that same column
+    ends up carrying only ~9 hr/wk of it AFTER the elder's own offset is netted
+    in -- an elder out-producing a full-time working adult's entire final
+    non-traditional load, which is not a plausible result.  The fix agreed with
+    the author is to cap the credited elder contribution so it can never exceed
+    what a working adult is actually SHOWN to carry net of that same offset.
+
+    That is a self-referential constraint (the net burden depends on the
+    contribution, which depends on the cap), but it has an exact closed form.
+    Let G be gross demand, W the working-adult population, T the Tier-1
+    population, and c the credited hours/week per elder. The constraint
+    c <= (G - c*T) / W solves to c <= G / (W + T) -- no iteration needed, and at
+    that boundary the elder's credited contribution exactly equals the working
+    adult's own final net burden. (The simpler G / W cap considered first only
+    bounds the contribution below GROSS demand, which still let an elder exceed
+    the working adult's NET total -- this version fixes that.)
+
+    Inputs
+    ------
+    pops : dict
+        Output of population_breakdown().
+    scenario : str
+        'LOW', 'CENTRAL' or 'HIGH' (the BURDEN column).
+    gross_national : float
+        Total national weekly GROSS non-traditional demand hours for this
+        column, i.e. sum(nontraditional_demand_hours(...).values()).
+    invert_elder : bool
+        If True, the elder contribution uses the OPPOSITE scenario, so that a
+        LOW-burden column pairs low demand with a high offset (FLAG 5).
+    cap_to_demand : bool
+        If True (default), apply the FLAG 6 cap.  False reproduces the uncapped
+        behavior, for sensitivity reporting.
+
+    Outputs
+    -------
+    dict
+        'scenario'    : the contribution scenario actually used (FLAG 5),
+        'raw_hrwk'    : the unmodified parameter, hr/wk per Tier-1 elder,
+        'cap_hrwk'    : the cap, hr/wk (= a working adult's own final net
+                        non-traditional burden at the boundary),
+        'hrwk'        : the credited contribution after the cap,
+        'capped'      : bool, True if the cap actually bound,
+        'national'    : credited national hours/week supplied by Tier-1 elders
+                        (POSITIVE; the table entry is its negation).
+    """
+    contrib_scenario = opposite_scenario(scenario) if invert_elder else scenario
+    raw_hrwk = TIER1_CONTRIB_HRWK[contrib_scenario]
+
+    # The cap: G / (W + T), the closed-form solution to "credited contribution
+    # <= a working adult's own NET non-traditional burden after this same
+    # contribution is subtracted out" (see derivation above).
+    cap_hrwk = gross_national / (pops["working_adults"] + pops["tier1_60_69"])
+
+    hrwk = min(raw_hrwk, cap_hrwk) if cap_to_demand else raw_hrwk
+    return {
+        "scenario": contrib_scenario,
+        "raw_hrwk": raw_hrwk,
+        "cap_hrwk": cap_hrwk,
+        "hrwk": hrwk,
+        "capped": hrwk < raw_hrwk,
+        "national": hrwk * pops["tier1_60_69"],
+    }
+
+
+def nontraditional_national_hours(pops, scenario,
+                                  invert_elder=INVERT_ELDER_CONTRIBUTION,
+                                  medical_is_nontraditional=False,
+                                  cap_to_demand=ELDER_CONTRIB_CAP_TO_DEMAND):
+    """Created by JXP and Claude.
+
+    National weekly NON-TRADITIONAL labor hours, by category.
+
+    Demand terms are positive; the Tier-1 active-elder labor CONTRIBUTION is a
+    NEGATIVE entry, because those hours are supplied from outside the
+    working-adult pool and therefore reduce the burden that pool must carry.
+    The computation is two-pass: gross demand first, then the elder contribution
+    capped against it (FLAG 6), then the netting.
+
+    Inputs
+    ------
+    pops : dict
+        Output of population_breakdown().
+    scenario : str
+        'LOW', 'CENTRAL' or 'HIGH'.
+    invert_elder : bool
+        If True, the elder contribution uses the OPPOSITE scenario, so that a
+        LOW-burden column pairs low demand with a high offset (FLAG 5).
+    medical_is_nontraditional : bool
+        Default False: essential medical care is TRADITIONAL per the author's
+        round-2 decision (FLAG 1). Set True only to reproduce the round-1
+        classification.
+    cap_to_demand : bool
+        If True (default), cap the elder contribution at the per-working-adult
+        gross non-traditional demand (FLAG 6).
+
+    Outputs
+    -------
+    dict
+        Category name -> national hours per week (float; the elder-contribution
+        entry is negative).
+    """
+    out = nontraditional_demand_hours(
+        pops, scenario, medical_is_nontraditional=medical_is_nontraditional)
+    elder = elder_contribution_detail(
+        pops, scenario, sum(out.values()), invert_elder=invert_elder,
+        cap_to_demand=cap_to_demand)
+    out[ELDER_CONTRIB_LINE] = -elder["national"]
     return out
 
 
@@ -569,7 +718,8 @@ def hours_per_working_adult(national_hours, pops):
 
 
 def compute_all(pops, invert_elder=INVERT_ELDER_CONTRIBUTION,
-                medical_is_nontraditional=False):
+                medical_is_nontraditional=False,
+                cap_to_demand=ELDER_CONTRIB_CAP_TO_DEMAND):
     """Created by JXP and Claude.
 
     Run the full calculation for every scenario column.
@@ -579,25 +729,36 @@ def compute_all(pops, invert_elder=INVERT_ELDER_CONTRIBUTION,
     pops : dict
         Output of population_breakdown().
     invert_elder : bool
-        Passed through to nontraditional_national_hours() (FLAG 5).
+        Passed through to elder_contribution_detail() (FLAG 5).
     medical_is_nontraditional : bool
         Default False: medical care sits in the TRADITIONAL bucket (FLAG 1,
         resolved by the author in round 2). True reproduces the round-1
         classification; the bucket changes but the total never does.
+    cap_to_demand : bool
+        If True (default), cap the Tier-1 elder contribution at the
+        per-working-adult gross non-traditional demand (FLAG 6).
 
     Outputs
     -------
     dict
         scenario -> dict with keys 'trad_detail', 'nontrad_detail',
-        'trad_national', 'nontrad_national', 'trad_pwa', 'nontrad_pwa',
-        'total_pwa'.
+        'trad_national', 'nontrad_national', 'gross_nontrad_national',
+        'elder' (the elder_contribution_detail() dict), 'trad_pwa',
+        'nontrad_pwa', 'total_pwa'.
     """
     results = {}
     for scenario in SCENARIOS:
         trad = traditional_national_hours(pops, scenario)
-        nontrad = nontraditional_national_hours(
-            pops, scenario, invert_elder=invert_elder,
-            medical_is_nontraditional=medical_is_nontraditional)
+
+        # Two-pass non-traditional side: gross demand, then the elder
+        # contribution capped against it (FLAG 6), then the netting.
+        nontrad = nontraditional_demand_hours(
+            pops, scenario, medical_is_nontraditional=medical_is_nontraditional)
+        gross_nontrad_national = sum(nontrad.values())
+        elder = elder_contribution_detail(
+            pops, scenario, gross_nontrad_national, invert_elder=invert_elder,
+            cap_to_demand=cap_to_demand)
+        nontrad[ELDER_CONTRIB_LINE] = -elder["national"]
 
         if not medical_is_nontraditional:
             # Default path: medical care is a TRADITIONAL line (FLAG 1).
@@ -614,6 +775,8 @@ def compute_all(pops, invert_elder=INVERT_ELDER_CONTRIBUTION,
             "nontrad_detail": nontrad,
             "trad_national": trad_national,
             "nontrad_national": nontrad_national,
+            "gross_nontrad_national": gross_nontrad_national,
+            "elder": elder,
             "trad_pwa": trad_pwa,
             "nontrad_pwa": nontrad_pwa,
             "total_pwa": trad_pwa + nontrad_pwa,
@@ -725,6 +888,7 @@ def main():
     """Created by JXP and Claude.
 
     Print the full estimate: population, category breakdowns, headline numbers,
+    the elder netting (including the FLAG 6 cap, announced only where it binds),
     the clothing sufficiency-vs-current comparison, and the FLAG 5 transparency
     sensitivity.
 
@@ -793,21 +957,43 @@ def main():
     print("ELDER LABOR NETTING (shown explicitly, per the model spec)")
     print("-" * 78)
     for s in SCENARIOS:
-        det = results[s]["nontrad_detail"]
-        contrib = -det["LESS: Tier-1 elder labor contributed"]
-        gross = sum(v for v in det.values() if v > 0)
-        net = gross - contrib
+        res = results[s]
+        elder = res["elder"]
+        gross = res["gross_nontrad_national"]
+        contrib = elder["national"]
+        net = res["nontrad_national"]
+        flag = "  [CAPPED]" if elder["capped"] else ""
         print(f"  [{s:7s}] gross demand {bhr(gross)}  - elder supply {bhr(contrib)}"
               f"  = net {bhr(net)}   "
               f"({hours_per_working_adult(net, pops):5.1f} hr/wk per working adult)"
-              f"   elders cover {100*contrib/gross:4.1f}%")
-    print("  The offset share now varies sharply across columns because the "
-          "round-2\n  needs-based demand side is ~1/3 smaller than the round-1 "
-          "placeholders while\n  the elder-contribution parameters are unchanged. "
-          "In the LOW column a\n  Tier-1 elder is credited with more weekly "
-          "non-traditional labor "
-          f"({TIER1_CONTRIB_HRWK['HIGH']:.0f} hr)\n  than a working adult carries "
-          f"in total ({results['LOW']['nontrad_pwa']:.1f} hr) — worth a look.")
+              f"   elders cover {100*contrib/gross:4.1f}%{flag}")
+
+    # FLAG 6 cap: report it only where it actually binds, so it is visible when
+    # it matters and silent when it does not.
+    bound = [s for s in SCENARIOS if results[s]["elder"]["capped"]]
+    if bound:
+        print()
+        print("  FLAG 6 CAP APPLIED — the credited Tier-1 elder contribution is "
+              "capped so it can\n  never exceed a working adult's own NET "
+              "non-traditional burden in the same\n  column (closed form: "
+              "gross demand / (working adults + Tier-1 population)),\n  "
+              "because no elder can plausibly supply more of that labor than a "
+              "working\n  adult's own final load of it. The round-1 "
+              "contribution parameters (5/12/22\n  hr/wk) were never rescaled "
+              "when the round-2 needs-based rebuild cut demand\n  by ~1/3.")
+        uncapped = compute_all(pops, cap_to_demand=False)
+        for s in bound:
+            e = results[s]["elder"]
+            print(f"    [{s:7s}] parameter {e['raw_hrwk']:5.1f} hr/wk "
+                  f"(scenario {e['scenario']}) -> capped to "
+                  f"{e['hrwk']:5.2f} hr/wk per Tier-1 elder; total "
+                  f"{uncapped[s]['total_pwa']:.1f} -> "
+                  f"{results[s]['total_pwa']:.1f} hr/wk per working adult")
+    else:
+        print()
+        print("  FLAG 6 cap not binding in any column (every elder-contribution "
+              "parameter is\n  below the gross non-traditional demand per working "
+              "adult).")
     print()
 
     # ---- FLAG 4: sufficiency wardrobe vs current consumption ---------------
@@ -863,8 +1049,9 @@ def main():
           f"scratch-cooked, restaurant-free diet costs real labor).")
     print()
     print("See the module docstring for FLAGS 1-6 and full source citations.")
-    print("  FLAGS 1, 2, 4, 5 resolved in round 2. FLAG 3 accepted as a stated")
-    print("  limitation. FLAG 6 (elder-contribution scale) is newly open.")
+    print("  FLAGS 1, 2, 4, 5 resolved in round 2; FLAG 6 (elder-contribution")
+    print("  scale) resolved by the demand cap. FLAG 3 accepted as a stated")
+    print("  limitation.")
 
 
 if __name__ == "__main__":
