@@ -31,6 +31,7 @@ Before we proceed, please search the web on this topic and add your findings to 
 
 1. Ok, I've answered the latest round of questions in Q&A.  Please read them. Then proceed to do your first round of calculations.  Log your work.  Use Opus.  If questions arise during your work, ask them in the Q&A/Calculations section below. 
 
+2. Thanks for your first round of calculations.  Please read my answers to your 4 questions and then research the ones discussed.  Then update the calculations accordingly.  Log your work.  Use Opus.
 
 ## Q&A
 
@@ -41,14 +42,26 @@ Before we proceed, please search the web on this topic and add your findings to 
 The script ran cleanly (`CI_Reports/work_hours_needed.py`, full results below). Building it surfaced four things that are genuine forks or noteworthy findings, not implementation details I should quietly decide myself.
 
 1. **Is medical care traditional or non-traditional?** The settled rule is "classify by activity, not by who pays" — nursing/doctoring is a care activity, so I put it in non-traditional. But you carved K-12 OUT of care and INTO traditional despite it also being "about children," and medical care was never separately re-confirmed the same way. It's a real swing: reclassifying it to traditional moves the split from 9.1/36.9 to 11.5/34.5 hours (traditional/non-traditional) at CENTRAL — the TOTAL (46.0 hr/week) doesn't change either way, only the labels. Confirm non-traditional (current default), or move it.
+>A. Move it to traditional.
 
 2. **The two least-researched numbers dominate the answer.** Childcare (non-school) and general household tasks (cooking/cleaning/laundry) were NOT given a dedicated needs-based research pass this round — unlike every other category, they're raw ATUS behavioral benchmarks (what people currently do), not independent derivations of what's required, which was your stated preferred method. They turn out to be **70% of all non-traditional demand and 58% of the entire headline total** at CENTRAL. The headline "46 hours/week" is therefore mostly resting on the weakest-sourced part of the model. I'd recommend a dedicated research round for these two (parallel to what we did for eldercare this round) before treating the headline number as solid enough to write about. Agree?
+>A. I agree.  Let's do a dedicated research round for these two.
 
 3. **Elder-contribution scenario alignment.** Tier-1 elders (60-69) both receive light support AND contribute non-traditional labor (grandchild care, household help) — a genuine net offset. I paired the LOW-burden demand column with the HIGH elder-contribution offset (and vice versa) to get an honest low/high *outcome* bound, rather than naively matching same-named columns, which would understate the plausible low end. Default gives TOTAL range 25.6–46.0–69.5 hr/week; the naive parameter-aligned alternative gives 30.9–46.0–64.1. Confirm the outcome-scenario convention (default), or prefer the simpler parameter-aligned one?
+>A. This sounds sensible.
 
 4. **Clothing is, unexpectedly, nearly half of all traditional hours** (4.27 of 9.06 hr/week at CENTRAL) — because ~97% of US apparel is imported, so counting the true embodied offshore labor (rather than the tiny domestic BLS figure) makes clothing dominate shelter, food, and everything else combined. This is a real, sourced finding (two independent estimation routes converge), not a bug, but it's surprising enough that it's worth you eyeballing before it goes in a post — sanity-check the ~1.7 hr/capita/week figure against your own intuition?
+>A. What does this assume about the size of the wardrobe?  And what does it assume about the quality and duration of the clothing? Let's scrutinize these further.
 
 **Full script output, headline numbers, and modeling notes are in the Report section below** (see "Calculations round 1").
+
+### Claude's questions — Calculations round 2 (2026-08-17, drafted by Opus)
+
+Implemented all four of your answers (medical care → traditional; dedicated needs-based research for childcare and household tasks; kept the elder-contribution outcome-scenario convention; rebuilt clothing as a bottom-up sufficiency-wardrobe estimate). The script re-ran cleanly. One genuinely new issue turned up as a side effect — not manufactured, a real artifact of the other changes.
+
+1. **The elder labor-contribution parameters need re-scaling now that demand shrank.** The needs-based childcare/household research cut total demand by about a third (46.0 → 32.2 hr/week at CENTRAL). The Tier-1 active-elder contribution (5/12/22 hr/week, set last round against the old, larger demand) didn't move with it, so its offset share swings wildly across columns: elders cover 43% of gross non-traditional demand at LOW, only 4% at HIGH. Worse, in the LOW column a single 60-69-year-old is credited with more weekly non-traditional labor (22 hr) than a working adult carries in total (9.2 hr) — an inversion that's at least odd. I flagged this as FLAG 6 in the script rather than quietly rescaling it myself, since it's a real modeling choice (cap the elder contribution relative to per-capita demand? re-derive it as a fraction of the childcare/household total instead of an independent absolute figure? leave it as-is and treat the LOW column as a labeled edge case?). How would you like to handle it?
+
+**Updated headline (CENTRAL): 32.2 hr/week per working adult (8.3 traditional + 23.9 non-traditional), down from 46.0 last round** — full breakdown and the exact category-by-category reconciliation are in the Report section below (see "Calculations round 2").
 
 ### Prep
 
@@ -245,6 +258,62 @@ needs-based derivations — see Q&A flag 2. They currently drive most of the
 headline number, so a dedicated research pass on these two (matching the rigor
 applied to eldercare this round) is the recommended next step before treating
 46 hr/week as a stable estimate.
+
+### Calculations round 2 (2026-08-17)
+
+Script updated in place: [`CI_Reports/work_hours_needed.py`](../CI_Reports/work_hours_needed.py).
+Implements all four round-1 answers: medical care reclassified to traditional;
+childcare and household tasks rebuilt as needs-based derivations (replacing
+the ATUS-benchmark placeholders); clothing rebuilt as a bottom-up sufficiency-
+wardrobe estimate; the elder-contribution outcome-scenario convention kept as
+confirmed. Full method, sources, and the FLAGS 1-6 history are in the script's
+module docstring.
+
+**Updated headline — hours per week per healthy working-age (25-59) adult:**
+
+| | LOW | CENTRAL | HIGH | (was, round 1) |
+|---|---|---|---|---|
+| Traditional | 5.8 | **8.3** | 12.2 | (5.3 / 9.1 / 14.6) |
+| Non-traditional | 9.2 | **23.9** | 37.8 | (20.3 / 36.9 / 54.9) |
+| **Total** | **15.0** | **32.2** | **50.0** | (25.6 / 46.0 / 69.5) |
+
+CENTRAL fell from 46.0 to **32.2 hours/week** (−30%). Exact reconciliation,
+CENTRAL, hr/week per working adult:
+
+- Childcare: 17.85 → 5.29 = **−12.56** (the dominant move — the round-1
+  placeholder used ATUS "secondary childcare," which counts a child merely
+  being present during leisure/housework; the needs-based figure, built from
+  AAP/APHA child-care staffing ratios applied to waking hours minus school
+  time, removes that double-counting. Independently corroborated by ATUS
+  *primary* childcare, which lands within 1% of the same number.)
+- Clothing: 4.27 → 1.13 = **−3.14** (durability, not wardrobe size, drives
+  this — see below)
+- Household tasks: 10.78 → 12.74 = **+1.96** (the opposite direction: a real
+  scratch-cooked, restaurant-free sufficiency diet costs *more* labor than
+  people's current, restaurant- and processed-food-supplemented behavior —
+  built from USDA Thrifty Food Plan meal-prep-time studies and ISSA
+  industry cleaning-time standards)
+- Medical care: net zero on the total — moved from non-traditional to
+  traditional (2.39 hr/week at CENTRAL), only the bucket changed
+
+**Clothing finding worth keeping for the post:** the round-1 figure (1.70
+hr/wk) implicitly assumed a ~1.8-year garment replacement cycle — it was
+measuring current US fast-fashion *throughput*, not what a durable wardrobe
+requires. Rebuilding bottom-up from an explicit "sufficiency wardrobe" (103
+items — the Hot or Cool Institute's 2022 "1.5-degree wardrobe" standard, 85
+four-season garments including footwear plus underwear/socks — at a
+stock-weighted average 4.1-year durable service life) gives 0.45 hr/wk, a
+3.8x reduction. Counterintuitively, wardrobe *size* barely matters for
+wear-limited garments (it largely cancels out of the stock÷lifespan ratio);
+it is specifically *durability* that buys the reduction, not "small."
+
+**New issue surfaced, not yet resolved (FLAG 6):** the Tier-1 active-elder
+labor-contribution parameters (5/12/22 hr/week) were calibrated last round
+against non-traditional demand that has since shrunk by about a third. Their
+offset share now swings from 43% of gross demand at LOW to just 4% at HIGH,
+and in the LOW column a single elder is credited with more weekly labor (22
+hr) than a working adult's entire non-traditional burden (9.2 hr) — see the
+new Q&A question above.
 
 ---
 

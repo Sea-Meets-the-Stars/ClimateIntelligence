@@ -5,10 +5,16 @@ US adult to sustain a sufficiency standard of living, split into
 
     TRADITIONAL      production of essential goods and non-care services
                      (shelter, food, clothing, furniture, water/sanitation,
-                     electricity, essential freight, K-12 education), and
+                     electricity, essential freight, K-12 education) PLUS
+                     essential medical care, and
     NON-TRADITIONAL  all care work wherever it occurs (childcare, eldercare,
-                     disabled-adult care), household tasks (cooking, cleaning,
-                     laundry, shopping), and essential medical care.
+                     disabled-adult care) and household tasks (cooking,
+                     cleaning, laundry, shopping).
+
+Medical care sits in TRADITIONAL by author decision (round 2), alongside the
+K-12 carve-out: both are professionalized, credentialed services delivered by a
+dedicated workforce rather than the diffuse unpaid care the non-traditional
+bucket is meant to capture.
 
 This is a NORMATIVE, NON-MONETARY estimate: it asks how many hours of human
 labor a sufficiency standard REQUIRES, not how many hours the current economy
@@ -25,12 +31,17 @@ METHOD
    cycle (below), applied against the real 2026 US population (~343M).
 2. The DENOMINATOR is the "working adult" pool: ages 25-59 minus the fraction
    who do not work because of a work-limiting health condition.
-3. TRADITIONAL: sum eight per-capita hour-rates, multiply by TOTAL population.
+3. TRADITIONAL: sum nine per-capita hour-rates (the eight goods/services lines
+   plus essential medical care), multiply by TOTAL population.
 4. NON-TRADITIONAL: sum the care/household demands over the populations that
    generate them, then SUBTRACT the non-traditional labor CONTRIBUTED by
    Tier-1 active elders (60-70), who are outside the traditional labor pool
    but are net contributors of care and household work.
 5. Divide both national totals by the working-adult pool.
+
+Childcare, household tasks and clothing are now NEEDS-BASED bottom-up
+derivations (round-2 research passes) rather than behavioral benchmarks or
+market-employment allocations; see DATA SOURCES and the RESOLVED notes below.
 
 UNIT-CELL EQUIVALENCE (modeling note)
 -------------------------------------
@@ -64,8 +75,10 @@ SETTLED LIFE CYCLE (per author Q&A, rounds 1-3) — 80-year lifespan
 
 SUFFICIENCY STANDARD (settled; already baked into the hour-rates below)
 -----------------------------------------------------------------------
-~250 sq ft of dwelling per person; ~2,300 kcal/day modest-meat diet; a small
-durable wardrobe; basic-tier medicine.
+~250 sq ft of dwelling per person; ~2,300 kcal/day modest-meat diet, cooked at
+home (no restaurant labor); a small DURABLE wardrobe (now made concrete as the
+Hot or Cool 103-item, ~4.1-yr-service-life wardrobe); basic-tier medicine;
+CFOC-standard child supervision during non-school waking hours.
 
 POPULATION
 ----------
@@ -86,52 +99,112 @@ with the ~80-yr lifespan. US total fertility rate (CDC, 2024) is 1.599 — see
 FLAG 3 below.
 
 --------------------------------------------------------------------------------
-OPEN FLAGS — things the author should rule on
+FLAGS — four of the five round-1 flags are now RESOLVED (author, round 2);
+FLAG 3 stands as an accepted limitation; FLAG 6 is newly raised.
 --------------------------------------------------------------------------------
-FLAG 1  MEDICAL CARE IS CLASSIFIED AS NON-TRADITIONAL. The settled rule is
-        "classify by activity, not by who pays," and nursing/doctoring is a
-        care activity — so basic medical care lands in NON-TRADITIONAL. But the
-        author explicitly carved K-12 education OUT of care and INTO
-        traditional, and medical care was never separately re-confirmed. This
-        is our extrapolation of the rule, not an author decision. Moving
-        medical care to TRADITIONAL would shift ~0.95 hr/capita/week (central)
-        ~ 2.4 hr/week per working adult across the line. Sensitivity printed.
+FLAG 1  RESOLVED — MEDICAL CARE IS TRADITIONAL. The question was whether
+        "classify by activity, not by who pays" forced nursing/doctoring into
+        the care bucket. The author ruled in round 2 that essential medical
+        care belongs in TRADITIONAL, parallel to the existing K-12 carve-out:
+        it is a credentialed, institutionally organized service, not the
+        diffuse unpaid care the non-traditional bucket exists to surface. The
+        per-capita rate and its derivation (NAICS 621+622 x ~65% essential
+        fraction) are UNCHANGED — only the bucket moved, so ~0.95
+        hr/capita/week central (~2.4 hr/wk per working adult) shifted from the
+        non-traditional column to the traditional one. The total is unaffected.
 
-FLAG 2  CHILDCARE AND HOUSEHOLD TASKS ARE UNRESEARCHED PLACEHOLDERS. Unlike
-        every other line, these two were NOT given a dedicated needs-based
-        research pass this round. They are raw ATUS behavioral benchmarks
-        (what people actually do), not sufficiency-based derivations of what is
-        REQUIRED — which is the author's stated preferred method, with ATUS as
-        a cross-check only. They are also the two LARGEST non-traditional lines
-        by a wide margin (~78% of gross non-traditional demand at CENTRAL), so
-        the headline number is dominated by the least-researched inputs. They
-        need a dedicated pass next round, parallel to the eldercare work.
+FLAG 2  RESOLVED — CHILDCARE AND HOUSEHOLD TASKS ARE NOW NEEDS-BASED. Both
+        lines got the dedicated bottom-up research pass this flag called for,
+        and both placeholders are gone.
 
-FLAG 3  STIPULATED FERTILITY (2 children/household, ~replacement) EXCEEDS
-        REALITY (US TFR 1.599, CDC 2024). The model is explicitly normative
-        and idealized here, not descriptive. A sub-replacement population has
-        fewer children (less childcare) but a heavier elder dependency ratio
-        than this steady state — the two effects push the answer in opposite
-        directions. Discussed and accepted in author Q&A round 2.
+        Childcare (2.94 / 5.29 / 7.93 hr/wk per working adult). CFOC (Caring
+        for Our Children, the AAP/APHA national child-care health-and-safety
+        standards) child:staff ratios by age — 3:1 infants, 4:1 toddlers,
+        7:1-8:1 preschool, 10:1-12:1 school-age — applied to AASM-consensus
+        waking hours by age, MINUS K-12 in-school hours (6.5 hr/day x 180
+        days/yr, ages 5-17, already carried in the traditional K-12 line),
+        summed over ages 0-17. That yields ~9.35 adult-hours/week of required
+        supervision PER CHILD, scaled by the model's own children-per-
+        working-adult ratio (0.5655 = the 18/80 child share divided by the
+        0.3979 working-adult share) to a population average. An independent
+        ATUS PRIMARY-childcare cross-check lands within 1%. This is about
+        ONE THIRD of last round's placeholder (17.85) because that placeholder
+        used ATUS SECONDARY childcare — merely having a child in one's care
+        while doing something else (leisure, housework) — which a needs-based
+        method must exclude as double-counting.
 
-FLAG 4  CLOTHING COUNTS EMBODIED OFFSHORE LABOR. ~97% of US apparel is
-        imported, so a domestic-only BLS figure (~0.10 hr/capita/wk) understates
-        the true labor requirement by more than an order of magnitude. We use
-        the global-embodied figure (central 1.70). This is a deliberate modeling
-        choice consistent with "hours a sufficiency standard REQUIRES" rather
-        than "hours performed inside US borders." Note the asymmetry: clothing
-        and furniture are import-adjusted, but the other traditional categories
-        are domestic-activity figures, so total traditional hours are somewhat
-        understated for any category with hidden import content.
+        Household tasks (7.14 / 12.74 / 16.11 hr/wk per working adult). USDA
+        Thrifty Food Plan recipe-preparation-time studies (Rose 2007; Davis &
+        You 2010-2011) for meal prep, ISSA 540/612 cleaning time-and-motion
+        standards plus an independent hotel-housekeeping stopwatch study for
+        cleaning, ENERGY STAR/DOE loads-per-week data for laundry, and a
+        reasoned grocery/errands estimate. Career-weighted across the ~51.4%
+        of a working career spent in a 4-person/1,000-sq-ft household with two
+        children at home and the ~48.6% spent in a 2-person/500-sq-ft
+        household. This is ~18% HIGHER than last round's placeholder (10.78) —
+        the OPPOSITE direction from childcare — because a scratch-cooked,
+        restaurant-free sufficiency diet takes more labor than current
+        behavior, which is supplemented by restaurants and processed food.
+        The two lines together are a good illustration that needs-based and
+        ATUS-actual diverge in BOTH directions, not just one.
 
-FLAG 5  SCENARIO ALIGNMENT OF THE ELDER LABOR CONTRIBUTION. The Tier-1 elder
-        contribution REDUCES the burden, so a coherent LOW *burden* column
-        pairs low demand with the HIGH elder contribution. We do that by
-        default (columns are OUTCOME scenarios, not parameter columns) and
-        print the parameter-aligned alternative as a sensitivity.
+FLAG 3  OPEN (accepted) — STIPULATED FERTILITY (2 children/household,
+        ~replacement) EXCEEDS REALITY (US TFR 1.599, CDC 2024). The model is
+        explicitly normative and idealized here, not descriptive. A
+        sub-replacement population has fewer children (less childcare) but a
+        heavier elder dependency ratio than this steady state — the two
+        effects push the answer in opposite directions. Discussed and accepted
+        in author Q&A round 2; retained as a stated limitation, not a to-do.
+
+FLAG 4  RESOLVED — CLOTHING IS NOW A BOTTOM-UP SUFFICIENCY WARDROBE. Round 1
+        allocated the global garment workforce to US consumption (central 1.70
+        hr/capita/wk). Round 2 built the requirement from the garment up: a
+        103-item wardrobe per the Hot or Cool Institute's 2022 "1.5-degree
+        wardrobe" sufficiency standard (85 four-season garments including
+        footwear, plus underwear and socks), a stock-weighted average durable
+        service life of ~4.1 years, and all-in labor-hours per garment covering
+        fiber production, spinning/weaving, dyeing, cutting, sewing and
+        finishing. Result: 0.15 / 0.45 / 1.00 hr/capita/wk — roughly a 4x
+        reduction.
+
+        Two findings worth keeping in view. (a) The old 1.70 implicitly assumed
+        a ~1.8-year replacement cycle, i.e. it was measuring CURRENT
+        fast-fashion THROUGHPUT, not the labor a durable wardrobe requires. It
+        is retained as the named comparator CLOTHING_CURRENT_CONSUMPTION_HRWK
+        for reporting only, and is NOT used in the model. (b)
+        Counterintuitively, wardrobe SIZE barely matters for wear-limited
+        garments: the requirement is stock/lifespan, and size largely cancels
+        out of that ratio. It is the DURABILITY assumption, not the "small" in
+        "small durable wardrobe," that drives the 4x.
+
+        The round-1 asymmetry note still stands: clothing and furniture are
+        import-adjusted (~97% of US apparel is imported, so a domestic-only
+        BLS figure of ~0.10 hr/capita/wk would understate the requirement by
+        more than an order of magnitude), while the other traditional
+        categories are domestic-activity figures — so traditional hours remain
+        somewhat understated for any category with hidden import content.
+
+FLAG 5  RESOLVED — SCENARIO ALIGNMENT OF THE ELDER LABOR CONTRIBUTION. The
+        Tier-1 elder contribution REDUCES the burden, so a coherent LOW
+        *burden* column pairs low demand with the HIGH elder contribution.
+        The author confirmed this default in round 2 ("this sounds sensible"):
+        the columns are OUTCOME scenarios, not parameter columns. The
+        parameter-aligned alternative is still printed, for transparency about
+        how much the choice is worth.
+
+FLAG 6  NEW, OPEN — THE ELDER CONTRIBUTION IS NOW LARGE RELATIVE TO A SMALLER
+        DEMAND SIDE. The round-2 needs-based childcare and household figures
+        cut gross non-traditional demand by roughly a third, but the Tier-1
+        contribution parameters (5 / 12 / 22 hr/wk) were carried over unchanged
+        from round 1. The offset therefore covers ~14% of gross demand at
+        CENTRAL but ~43% in the LOW column, where a 60-69-year-old is credited
+        with 22 hr/wk of care and household labor while a working adult carries
+        only ~9 hr/wk of it. That inversion is at least odd and may mean the
+        HIGH elder-contribution parameter needs a cap tied to the demand side.
+        Printed in the elder-netting block. Author input welcome.
 
 --------------------------------------------------------------------------------
-DATA SOURCES (hour-rates gathered by four parallel research passes)
+DATA SOURCES (round-1 passes, updated by the round-2 needs-based passes)
 --------------------------------------------------------------------------------
 TRADITIONAL (hours per capita per week, whole-population denominator):
   Shelter      BLS Bulletins 1755/1892 construction labor-hours per sq ft;
@@ -139,9 +212,12 @@ TRADITIONAL (hours per capita per week, whole-population denominator):
   Food         USDA ERS food-dollar/labor series + BLS CES NAICS 311/424/445,
                adjusted for waste reduction and a modest-meat diet; restaurants
                excluded (not a sufficiency requirement).
-  Clothing     ILO global garment-workforce allocation to US consumption, plus
-               a labor-cost-share cross-check; two independent methods converge
-               near 1.6-1.7 hr/capita/wk. See FLAG 4.
+  Clothing     Bottom-up sufficiency wardrobe: Hot or Cool Institute (2022),
+               "Unfit, Unfair, Unfashionable" 1.5-degree wardrobe standard —
+               103 items, ~4.1-yr stock-weighted service life, all-in
+               labor-hours per garment from fiber to finishing. See FLAG 4.
+               The round-1 ILO global-garment-workforce allocation (central
+               1.70) is kept only as a labeled current-consumption comparator.
   Furniture    BLS CES NAICS 337 + 4491 (domestic 0.073); ~60% imported, so the
                import-adjusted embodied figure is higher (HIGH column).
   Water/san.   BLS CES NAICS 2213 + waste management, PLUS Census ASPEP public
@@ -153,6 +229,11 @@ TRADITIONAL (hours per capita per week, whole-population denominator):
                (FAF5.7) commodity split.
   K-12         NCES Digest staff/student ratio (7.3 pupils per staff member,
                ALL staff not just teachers) x NTPS teacher hours (~53 hr/wk).
+  Medical      BLS CES NAICS 621 (ambulatory) + 622 (hospitals) only — NAICS
+               623 long-term/nursing care is EXCLUDED because it is already
+               counted in the eldercare tiers. An ~65% "essential fraction" is
+               applied, net of administrative waste and low-value or elective
+               care. Classified TRADITIONAL per FLAG 1 (author, round 2).
 
 NON-TRADITIONAL:
   Tier-3 institutional care  CMS Payroll-Based Journal hours per resident day
@@ -170,12 +251,21 @@ NON-TRADITIONAL:
                Population-averaged across the WHOLE 60-70 band.
   Disabled-adult care        Set at ~1/4 of Tier-3 intensity per the author,
                mostly personal assistance rather than skilled nursing.
-  Essential medical care     BLS CES NAICS 621 (ambulatory) + 622 (hospitals)
-               only — NAICS 623 long-term/nursing care is EXCLUDED because it
-               is already counted in the eldercare tiers. An ~65% "essential
-               fraction" is applied, net of administrative waste and low-value
-               or elective care.
-  Childcare, household tasks ATUS benchmarks — PLACEHOLDERS. See FLAG 2.
+  Childcare (non-school)     CFOC / Caring for Our Children (AAP + APHA + HRSA
+               MCHB), 4th ed., child:staff ratios by age band; AASM consensus
+               sleep-duration recommendations by age (to get waking hours);
+               NCES/state K-12 instructional-time norms for the school-hours
+               subtraction. Cross-checked against ATUS PRIMARY childcare
+               (within 1%). Needs-based, NOT a behavioral benchmark. FLAG 2.
+  Household tasks            USDA Thrifty Food Plan preparation-time research
+               (Rose, "Food Stamps, the Thrifty Food Plan, and meal
+               preparation: the importance of the time dimension," J. Nutr.
+               Educ. Behav. 2007; Davis & You, USDA ERS / Public Health Nutr.
+               2010-2011 time-cost-of-TFP work) for meal prep; ISSA 540/612
+               cleaning-times standards plus a published hotel-housekeeping
+               time-and-motion study for cleaning; ENERGY STAR / DOE appliance
+               data for laundry loads per week. Career-weighted over household
+               composition. Needs-based. FLAG 2.
 
 Run under the project conda environment:
     conda run -n ocean14 python CI_Reports/work_hours_needed.py
@@ -228,13 +318,26 @@ TFR_2024 = 1.599                # CDC; model stipulates ~2.0 — see FLAG 3
 TRADITIONAL_RATES = {
     "Shelter (build+materials+maint)": {"LOW": 0.087, "CENTRAL": 0.134, "HIGH": 0.271},
     "Food (farm+process+distribute)":  {"LOW": 0.500, "CENTRAL": 0.630, "HIGH": 0.760},
-    "Clothing (embodied, incl. imports)": {"LOW": 0.690, "CENTRAL": 1.700, "HIGH": 3.230},
+    # Clothing: bottom-up sufficiency wardrobe (Hot or Cool Institute 2022
+    # 1.5-degree standard, 103 items, ~4.1-yr stock-weighted service life,
+    # all-in labor from fiber through finishing).  ~4x below the round-1
+    # market-allocation figure; see CLOTHING_CURRENT_CONSUMPTION_HRWK and FLAG 4.
+    "Clothing (sufficiency wardrobe, embodied)": {"LOW": 0.150, "CENTRAL": 0.450, "HIGH": 1.000},
     "Furniture (import-adjusted)":     {"LOW": 0.038, "CENTRAL": 0.100, "HIGH": 0.160},
     "Water / sanitation":              {"LOW": 0.043, "CENTRAL": 0.083, "HIGH": 0.120},
     "Electricity":                     {"LOW": 0.054, "CENTRAL": 0.063, "HIGH": 0.064},
     "Freight (essential goods only)":  {"LOW": 0.162, "CENTRAL": 0.263, "HIGH": 0.401},
     "K-12 education (all staff)":      {"LOW": 0.549, "CENTRAL": 0.633, "HIGH": 0.814},
 }
+
+# Round-1 clothing figure: the ILO global-garment-workforce allocation to US
+# consumption.  It implicitly encodes a ~1.8-yr garment replacement cycle, i.e.
+# it measures CURRENT US fast-fashion THROUGHPUT rather than the labor a durable
+# sufficiency wardrobe requires.  Kept for side-by-side reporting only —
+# NOT used in the model.  (Note: wardrobe SIZE turns out to matter little for
+# wear-limited garments, since the requirement is stock/lifespan and size
+# largely cancels; DURABILITY is what drives the ~4x gap.)
+CLOTHING_CURRENT_CONSUMPTION_HRWK = {"LOW": 0.690, "CENTRAL": 1.700, "HIGH": 3.230}
 
 # ----------------------------------------------------------------------------
 # NON-TRADITIONAL hour-rates.
@@ -255,28 +358,41 @@ TIER1_CONTRIB_HRWK = {"LOW": 5.0, "CENTRAL": 12.0, "HIGH": 22.0}
 DISABLED_CARE_INTENSITY = 0.25   # of Tier-3 weekly receive-rate
 
 # Essential medical care (NAICS 621+622, ~65% essential fraction), hours per
-# capita per week on the WHOLE-POPULATION denominator.
+# capita per week on the WHOLE-POPULATION denominator.  Classified TRADITIONAL
+# per the author's round-2 decision (FLAG 1); the rate itself is unchanged.
 MEDICAL_RATES = {"LOW": 0.73, "CENTRAL": 0.95, "HIGH": 1.25}
 
-# --- PLACEHOLDERS (see FLAG 2) ----------------------------------------------
-# Childcare, non-school hours. ATUS "secondary childcare" for adults in
-# households with a child under 13 is 5.1 hr/DAY. In the steady-state model a
-# working adult shares a home with a dependent child for roughly half a ~35-40
-# yr career, so we apply ~50% incidence to get a population average over ALL
-# working adults.
-ATUS_SECONDARY_CHILDCARE_HRDAY = 5.1
-CHILDCARE_INCIDENCE = 0.50
-CHILDCARE_LOW_MULT = 0.60      # deliberately wide: not researched this round
-CHILDCARE_HIGH_MULT = 1.40
+# --- NEEDS-BASED care and household rates (round-2 research, FLAG 2) --------
+# Both dicts are ALREADY hours per week per WORKING ADULT (population- and
+# career-averaged), so no incidence arithmetic happens in this module.
+#
+# Childcare, non-school hours.  CFOC (AAP/APHA) child:staff ratios by age
+# applied to AASM-consensus waking hours, minus K-12 in-school hours
+# (6.5 hr/day x 180 days/yr, ages 5-17, already in the traditional K-12 line),
+# summed over ages 0-17 -> ~9.35 adult-hours/wk of required supervision PER
+# CHILD, x 0.5655 children per working adult (the 18/80 child share divided by
+# the 0.3979 working-adult share of this model's own steady state).
+# Corroborated within 1% by an ATUS PRIMARY-childcare cross-check.  Note this
+# is ~1/3 of last round's placeholder (17.85), which used ATUS SECONDARY
+# childcare — supervision while doing something else — and so double-counted.
+# (Minor conservatism: the per-child sum runs 0-17 while the model's child band
+# is 0-19, so the population average is if anything slightly understated.)
+CHILDCARE_NEEDS_HRWK = {"LOW": 2.94, "CENTRAL": 5.29, "HIGH": 7.93}
 
-# General household tasks (cooking, cleaning, laundry, shopping, management),
-# hours/week per adult. Derived: ATUS total household activities ~14.07 hr/wk
-# (population 15+) MINUS ~3.29 hr/wk of dwelling-fabric maintenance, lawn and
-# garden, and household management already folded into the shelter category,
-# to avoid double-counting.
-ATUS_HOUSEHOLD_TOTAL_HRWK = 14.07
-ATUS_HOUSEHOLD_IN_SHELTER_HRWK = 3.29
-HOUSEHOLD_UNCERTAINTY = 0.20   # +/- 20%
+# Household tasks: cooking, cleaning, laundry, shopping.  EXCLUDES dwelling
+# maintenance and lawn/garden, which remain in the shelter category.  USDA
+# Thrifty Food Plan preparation-time research (Rose 2007; Davis & You 2010-11)
+# for meal prep (16.1 hr/wk for a family of four on a scratch-cooked sufficiency
+# diet, since the food category excludes restaurants), ISSA 540/612 cleaning
+# time-and-motion standards plus a hotel-housekeeping stopwatch study for
+# cleaning, ENERGY STAR/DOE loads-per-week for laundry, and a reasoned
+# grocery/errands estimate.  Career-weighted over the ~51.4% of a working career
+# in a 4-person/1,000-sq-ft household and the ~48.6% in a 2-person/500-sq-ft one.
+# CONTRAST WORTH NOTING: this runs ~18% ABOVE last round's ATUS placeholder
+# (10.78), the opposite direction from childcare, because a genuinely
+# scratch-cooked, restaurant-free diet takes MORE labor than current behavior —
+# needs-based estimates diverge from ATUS-actual in both directions.
+HOUSEHOLD_NEEDS_HRWK = {"LOW": 7.14, "CENTRAL": 12.74, "HIGH": 16.11}
 
 # By default, treat the columns as OUTCOME scenarios: the LOW-burden column
 # pairs low demand with the HIGH elder contribution (see FLAG 5).
@@ -338,56 +454,6 @@ def population_breakdown(total_pop=TOTAL_POP):
     return pops
 
 
-def childcare_hours_per_working_adult(scenario):
-    """Created by JXP and Claude.
-
-    Placeholder childcare hours per week, averaged over ALL working adults.
-
-    ATUS secondary childcare (5.1 hr/day among households with a child under
-    13) x 7 days x ~50% career incidence.  PLACEHOLDER — see FLAG 2.
-
-    Inputs
-    ------
-    scenario : str
-        'LOW', 'CENTRAL' or 'HIGH'.
-
-    Outputs
-    -------
-    float
-        Hours per week per working adult.
-    """
-    central = (ATUS_SECONDARY_CHILDCARE_HRDAY * HOURS_PER_DAY_TO_WEEK
-               * CHILDCARE_INCIDENCE)
-    return central * {"LOW": CHILDCARE_LOW_MULT,
-                      "CENTRAL": 1.0,
-                      "HIGH": CHILDCARE_HIGH_MULT}[scenario]
-
-
-def household_hours_per_working_adult(scenario):
-    """Created by JXP and Claude.
-
-    Placeholder household-task hours per week, per working adult.
-
-    ATUS total household activities minus the sub-items already counted in the
-    shelter category (dwelling-fabric maintenance, lawn/garden, household
-    management), with a flat +/-20% band.  PLACEHOLDER — see FLAG 2.
-
-    Inputs
-    ------
-    scenario : str
-        'LOW', 'CENTRAL' or 'HIGH'.
-
-    Outputs
-    -------
-    float
-        Hours per week per working adult.
-    """
-    central = ATUS_HOUSEHOLD_TOTAL_HRWK - ATUS_HOUSEHOLD_IN_SHELTER_HRWK
-    return central * {"LOW": 1.0 - HOUSEHOLD_UNCERTAINTY,
-                      "CENTRAL": 1.0,
-                      "HIGH": 1.0 + HOUSEHOLD_UNCERTAINTY}[scenario]
-
-
 def traditional_national_hours(pops, scenario):
     """Created by JXP and Claude.
 
@@ -414,7 +480,7 @@ def traditional_national_hours(pops, scenario):
 
 def nontraditional_national_hours(pops, scenario,
                                   invert_elder=INVERT_ELDER_CONTRIBUTION,
-                                  medical_is_nontraditional=True):
+                                  medical_is_nontraditional=False):
     """Created by JXP and Claude.
 
     National weekly NON-TRADITIONAL labor hours, by category.
@@ -433,8 +499,9 @@ def nontraditional_national_hours(pops, scenario,
         If True, the elder contribution uses the OPPOSITE scenario, so that a
         LOW-burden column pairs low demand with a high offset (FLAG 5).
     medical_is_nontraditional : bool
-        If False, essential medical care is omitted here (used for the FLAG 1
-        sensitivity, where it is reclassified as traditional instead).
+        Default False: essential medical care is TRADITIONAL per the author's
+        round-2 decision (FLAG 1). Set True only to reproduce the round-1
+        classification.
 
     Outputs
     -------
@@ -445,10 +512,15 @@ def nontraditional_national_hours(pops, scenario,
     out = {}
 
     # --- Demand generated by the working adults' own households -------------
-    out["Childcare (non-school) [PLACEHOLDER]"] = (
-        childcare_hours_per_working_adult(scenario) * pops["working_adults"])
-    out["Household tasks [PLACEHOLDER]"] = (
-        household_hours_per_working_adult(scenario) * pops["working_adults"])
+    # CHILDCARE_NEEDS_HRWK / HOUSEHOLD_NEEDS_HRWK are already per WORKING ADULT,
+    # so multiplying by the working-adult pool here (and dividing by it again in
+    # hours_per_working_adult()) is numerically a no-op.  It is kept deliberately
+    # so every category flows to the printed table by the same national-hours
+    # route, with no special-cased path.
+    out["Childcare (non-school, needs-based)"] = (
+        CHILDCARE_NEEDS_HRWK[scenario] * pops["working_adults"])
+    out["Household tasks (needs-based)"] = (
+        HOUSEHOLD_NEEDS_HRWK[scenario] * pops["working_adults"])
 
     # --- Elder care demand, by tier -----------------------------------------
     out["Tier-1 elder light support (60-69)"] = (
@@ -464,9 +536,9 @@ def nontraditional_national_hours(pops, scenario,
     out["Disabled-adult care (25-59)"] = disabled_hrwk * pops["disabled_nonworking"]
 
     # --- Essential medical care, whole-population rate ----------------------
+    # Normally SKIPPED: medical care is traditional (FLAG 1, resolved).
     if medical_is_nontraditional:
-        out["Essential medical care [FLAG 1]"] = (
-            MEDICAL_RATES[scenario] * pops["total"])
+        out["Essential medical care"] = MEDICAL_RATES[scenario] * pops["total"]
 
     # --- Labor SUPPLIED by Tier-1 active elders (negative) ------------------
     contrib_scenario = opposite_scenario(scenario) if invert_elder else scenario
@@ -497,7 +569,7 @@ def hours_per_working_adult(national_hours, pops):
 
 
 def compute_all(pops, invert_elder=INVERT_ELDER_CONTRIBUTION,
-                medical_is_nontraditional=True):
+                medical_is_nontraditional=False):
     """Created by JXP and Claude.
 
     Run the full calculation for every scenario column.
@@ -509,7 +581,9 @@ def compute_all(pops, invert_elder=INVERT_ELDER_CONTRIBUTION,
     invert_elder : bool
         Passed through to nontraditional_national_hours() (FLAG 5).
     medical_is_nontraditional : bool
-        If False, medical care is moved into the TRADITIONAL bucket (FLAG 1).
+        Default False: medical care sits in the TRADITIONAL bucket (FLAG 1,
+        resolved by the author in round 2). True reproduces the round-1
+        classification; the bucket changes but the total never does.
 
     Outputs
     -------
@@ -526,10 +600,9 @@ def compute_all(pops, invert_elder=INVERT_ELDER_CONTRIBUTION,
             medical_is_nontraditional=medical_is_nontraditional)
 
         if not medical_is_nontraditional:
-            # FLAG 1 sensitivity: reclassify medical care as traditional.
+            # Default path: medical care is a TRADITIONAL line (FLAG 1).
             trad = dict(trad)
-            trad["Essential medical care [reclassified]"] = (
-                MEDICAL_RATES[scenario] * pops["total"])
+            trad["Essential medical care"] = MEDICAL_RATES[scenario] * pops["total"]
 
         trad_national = sum(trad.values())
         nontrad_national = sum(nontrad.values())
@@ -652,7 +725,8 @@ def main():
     """Created by JXP and Claude.
 
     Print the full estimate: population, category breakdowns, headline numbers,
-    and the FLAG 1 / FLAG 5 sensitivities.
+    the clothing sufficiency-vs-current comparison, and the FLAG 5 transparency
+    sensitivity.
 
     Inputs
     ------
@@ -673,12 +747,16 @@ def main():
 
     results = compute_all(pops)
 
+    print("  Note: medical care is classified TRADITIONAL per author decision, "
+          "round 2 (FLAG 1).")
+    print()
+
     print_detail_table(
-        "TRADITIONAL — essential goods and non-care services",
+        "TRADITIONAL — essential goods, non-care services, medical care",
         {s: results[s]["trad_detail"] for s in SCENARIOS}, pops)
 
     print_detail_table(
-        "NON-TRADITIONAL — care, household tasks, medical "
+        "NON-TRADITIONAL — care work and household tasks "
         "(elder contribution is NEGATIVE)",
         {s: results[s]["nontrad_detail"] for s in SCENARIOS}, pops)
 
@@ -721,47 +799,72 @@ def main():
         net = gross - contrib
         print(f"  [{s:7s}] gross demand {bhr(gross)}  - elder supply {bhr(contrib)}"
               f"  = net {bhr(net)}   "
-              f"({hours_per_working_adult(net, pops):5.1f} hr/wk per working adult)")
-    print(f"  Tier-1 elders supply {100*(-results['CENTRAL']['nontrad_detail']['LESS: Tier-1 elder labor contributed'])/sum(v for v in results['CENTRAL']['nontrad_detail'].values() if v > 0):.1f}%"
-          " of gross non-traditional demand at CENTRAL.")
+              f"({hours_per_working_adult(net, pops):5.1f} hr/wk per working adult)"
+              f"   elders cover {100*contrib/gross:4.1f}%")
+    print("  The offset share now varies sharply across columns because the "
+          "round-2\n  needs-based demand side is ~1/3 smaller than the round-1 "
+          "placeholders while\n  the elder-contribution parameters are unchanged. "
+          "In the LOW column a\n  Tier-1 elder is credited with more weekly "
+          "non-traditional labor "
+          f"({TIER1_CONTRIB_HRWK['HIGH']:.0f} hr)\n  than a working adult carries "
+          f"in total ({results['LOW']['nontrad_pwa']:.1f} hr) — worth a look.")
     print()
 
-    # ---- FLAG 1 sensitivity: medical care reclassified ---------------------
-    print("SENSITIVITY, FLAG 1 — medical care moved to TRADITIONAL")
+    # ---- FLAG 4: sufficiency wardrobe vs current consumption ---------------
+    print("CLOTHING, FLAG 4 — sufficiency/durability standard vs current US "
+          "consumption")
     print("-" * 78)
-    alt = compute_all(pops, medical_is_nontraditional=False)
-    print(f"  {'':22s} {'LOW':>10s} {'CENTRAL':>10s} {'HIGH':>10s}")
-    for label, key in (("TRADITIONAL", "trad_pwa"),
-                       ("NON-TRADITIONAL", "nontrad_pwa"),
-                       ("TOTAL (unchanged)", "total_pwa")):
-        v = [alt[s][key] for s in SCENARIOS]
-        print(f"  {label:22s} {v[0]:10.1f} {v[1]:10.1f} {v[2]:10.1f}")
-    print("  The split moves; the total does not. Author decision needed.")
+    suff = TRADITIONAL_RATES["Clothing (sufficiency wardrobe, embodied)"]
+    curr = CLOTHING_CURRENT_CONSUMPTION_HRWK
+    print(f"  {'hr/capita/wk':30s} {'LOW':>10s} {'CENTRAL':>10s} {'HIGH':>10s}")
+    print(f"  {'sufficiency wardrobe (USED)':30s} "
+          f"{suff['LOW']:10.2f} {suff['CENTRAL']:10.2f} {suff['HIGH']:10.2f}")
+    print(f"  {'current consumption (ref only)':30s} "
+          f"{curr['LOW']:10.2f} {curr['CENTRAL']:10.2f} {curr['HIGH']:10.2f}")
+    print(f"  Current US clothing consumption would cost ~{curr['CENTRAL']:.2f} "
+          f"hr/wk per capita;\n  the sufficiency/durability standard costs "
+          f"~{suff['CENTRAL']:.2f} hr/wk — a "
+          f"{curr['CENTRAL']/suff['CENTRAL']:.1f}x difference.")
+    print("  The old figure implied a ~1.8-yr replacement cycle: it measured "
+          "fast-fashion\n  THROUGHPUT, not the labor a durable wardrobe needs.")
+    print("  Wardrobe SIZE barely matters for wear-limited garments (stock/lifespan,"
+          "\n  and size largely cancels); DURABILITY drives the whole gap.")
     print()
 
-    # ---- FLAG 5 sensitivity: parameter-aligned elder contribution ----------
-    print("SENSITIVITY, FLAG 5 — elder contribution aligned WITH the column")
+    # ---- FLAG 5: elder-contribution alignment (author-confirmed default) ---
+    print("ELDER-CONTRIBUTION ALIGNMENT, FLAG 5 — kept for transparency")
     print("-" * 78)
     alt5 = compute_all(pops, invert_elder=False)
     print(f"  {'':22s} {'LOW':>10s} {'CENTRAL':>10s} {'HIGH':>10s}")
     v = [alt5[s]["total_pwa"] for s in SCENARIOS]
     print(f"  {'TOTAL':22s} {v[0]:10.1f} {v[1]:10.1f} {v[2]:10.1f}")
-    print("  (Default inverts it so LOW is a genuine low-burden bound.)")
+    print("  This is the parameter-aligned variant (elder supply follows the "
+          "column).\n  The author confirmed the default, which INVERTS it so LOW "
+          "is a genuine\n  low-burden bound. Shown only so the size of the choice "
+          "is visible.")
     print()
 
-    # ---- Placeholder share, to keep FLAG 2 honest --------------------------
+    # ---- FLAG 2: the two needs-based care/household lines, in proportion ---
     det = results["CENTRAL"]["nontrad_detail"]
-    ph = (det["Childcare (non-school) [PLACEHOLDER]"]
-          + det["Household tasks [PLACEHOLDER]"])
+    nb = (det["Childcare (non-school, needs-based)"]
+          + det["Household tasks (needs-based)"])
     gross = sum(x for x in det.values() if x > 0)
-    print("FLAG 2 SCALE CHECK")
+    print("CARE + HOUSEHOLD SCALE CHECK, FLAG 2 — now needs-based, not placeholder")
     print("-" * 78)
-    print(f"  The two UNRESEARCHED placeholder lines (childcare + household "
-          f"tasks)\n  are {100*ph/gross:.1f}% of gross non-traditional demand and "
-          f"{100*ph/(gross + results['CENTRAL']['trad_national']):.1f}% of ALL gross\n"
-          f"  demand at CENTRAL. They need a dedicated research pass next round.")
+    print(f"  Childcare + household tasks are {100*nb/gross:.1f}% of gross "
+          f"non-traditional demand\n  and "
+          f"{100*nb/(gross + results['CENTRAL']['trad_national']):.1f}% of ALL "
+          f"gross demand at CENTRAL. They still dominate the\n  headline, but "
+          f"they are now bottom-up needs-based derivations (CFOC/AASM\n  "
+          f"ratios; USDA TFP prep-time and ISSA cleaning standards) rather than "
+          f"raw\n  ATUS behavior — and they moved in OPPOSITE directions from "
+          f"the placeholders:\n  childcare down ~3x (secondary-childcare "
+          f"double-counting removed), household\n  tasks up ~18% (a "
+          f"scratch-cooked, restaurant-free diet costs real labor).")
     print()
-    print("See the module docstring for FLAGS 1-5 and full source citations.")
+    print("See the module docstring for FLAGS 1-6 and full source citations.")
+    print("  FLAGS 1, 2, 4, 5 resolved in round 2. FLAG 3 accepted as a stated")
+    print("  limitation. FLAG 6 (elder-contribution scale) is newly open.")
 
 
 if __name__ == "__main__":
