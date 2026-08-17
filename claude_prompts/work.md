@@ -36,6 +36,20 @@ Before we proceed, please search the web on this topic and add your findings to 
 
 ### Calculations
 
+### Claude's questions — Calculations round 1 (2026-08-16, drafted by Opus)
+
+The script ran cleanly (`CI_Reports/work_hours_needed.py`, full results below). Building it surfaced four things that are genuine forks or noteworthy findings, not implementation details I should quietly decide myself.
+
+1. **Is medical care traditional or non-traditional?** The settled rule is "classify by activity, not by who pays" — nursing/doctoring is a care activity, so I put it in non-traditional. But you carved K-12 OUT of care and INTO traditional despite it also being "about children," and medical care was never separately re-confirmed the same way. It's a real swing: reclassifying it to traditional moves the split from 9.1/36.9 to 11.5/34.5 hours (traditional/non-traditional) at CENTRAL — the TOTAL (46.0 hr/week) doesn't change either way, only the labels. Confirm non-traditional (current default), or move it.
+
+2. **The two least-researched numbers dominate the answer.** Childcare (non-school) and general household tasks (cooking/cleaning/laundry) were NOT given a dedicated needs-based research pass this round — unlike every other category, they're raw ATUS behavioral benchmarks (what people currently do), not independent derivations of what's required, which was your stated preferred method. They turn out to be **70% of all non-traditional demand and 58% of the entire headline total** at CENTRAL. The headline "46 hours/week" is therefore mostly resting on the weakest-sourced part of the model. I'd recommend a dedicated research round for these two (parallel to what we did for eldercare this round) before treating the headline number as solid enough to write about. Agree?
+
+3. **Elder-contribution scenario alignment.** Tier-1 elders (60-69) both receive light support AND contribute non-traditional labor (grandchild care, household help) — a genuine net offset. I paired the LOW-burden demand column with the HIGH elder-contribution offset (and vice versa) to get an honest low/high *outcome* bound, rather than naively matching same-named columns, which would understate the plausible low end. Default gives TOTAL range 25.6–46.0–69.5 hr/week; the naive parameter-aligned alternative gives 30.9–46.0–64.1. Confirm the outcome-scenario convention (default), or prefer the simpler parameter-aligned one?
+
+4. **Clothing is, unexpectedly, nearly half of all traditional hours** (4.27 of 9.06 hr/week at CENTRAL) — because ~97% of US apparel is imported, so counting the true embodied offshore labor (rather than the tiny domestic BLS figure) makes clothing dominate shelter, food, and everything else combined. This is a real, sourced finding (two independent estimation routes converge), not a bug, but it's surprising enough that it's worth you eyeballing before it goes in a post — sanity-check the ~1.7 hr/capita/week figure against your own intuition?
+
+**Full script output, headline numbers, and modeling notes are in the Report section below** (see "Calculations round 1").
+
 ### Prep
 
 ### Claude's questions — prompt 1 (2026-08-15)
@@ -176,6 +190,63 @@ Your answers to round 1 fix the framing (normative, non-monetary, Murphy essenti
 - 2026 US population by single year of age, for the unit-cell dependency shares.
 
 ## Report
+
+### Calculations round 1 (2026-08-16)
+
+Script: [`CI_Reports/work_hours_needed.py`](../CI_Reports/work_hours_needed.py) — run with
+`conda run -n ocean14 python CI_Reports/work_hours_needed.py`. Full method,
+every settled assumption, all data sources, and five explicit modeling flags
+are documented in the script's module docstring; the headline numbers below
+are its actual printed output.
+
+**Headline — hours per week per healthy working-age (25-59) adult:**
+
+| | LOW | CENTRAL | HIGH |
+|---|---|---|---|
+| Traditional | 5.3 | **9.1** | 14.6 |
+| Non-traditional | 20.3 | **36.9** | 54.9 |
+| **Total** | **25.6** | **46.0** | **69.5** |
+
+CENTRAL reads as 9.1 hours of traditional (goods/services) work plus 36.9
+hours of non-traditional (care/household) work = 46.0 hours/week per working
+adult — i.e. under this sufficiency standard, non-traditional work is roughly
+4x the traditional load, not remotely a 50/50 split.
+
+**How the population divides** (idealized steady-state 80-year life cycle,
+applied to the real 2026 US population of ~343M): children 0-19 25.0%,
+college students 20-24 6.25%, working adults 25-59 43.75% (of whom 9.05% are
+non-working-disabled — removed from the labor pool, added to care demand),
+Tier-1 active elders 60-69 12.5%, Tier-2 frail elders 70-74 6.25%, Tier-3
+institutional-care elders 75-79 6.25%. The "working adult" denominator is
+136.5M people (39.8% of the total population).
+
+**Traditional category breakdown (hr/week per working adult, CENTRAL):**
+shelter 0.34, food 1.58, clothing 4.27, furniture 0.25, water/sanitation 0.21,
+electricity 0.16, essential freight 0.66, K-12 education 1.59.
+
+**Non-traditional category breakdown (hr/week per working adult, CENTRAL):**
+childcare (non-school) 17.85 [placeholder — see Q&A flag 2], household tasks
+10.78 [placeholder], Tier-1 light support 1.10, Tier-2 support 2.20, Tier-3
+institutional care 5.50, disabled-adult care 0.87, essential medical care
+2.39, minus Tier-1 elder labor contributed −3.77 (elders supply ~9.3% of
+gross non-traditional demand back).
+
+**Research conducted this round:** four parallel deep-dive passes (shelter
+construction/maintenance labor; food-system labor; institutional eldercare,
+disability, and medical-care labor; K-12/clothing/furniture/utilities/freight
+labor via BLS sector-employment method), each returning LOW/CENTRAL/HIGH with
+primary sources (CMS Payroll-Based Journal, NCES, BLS CES/OEWS/ECEC, USDA ERS,
+Census ASPEP, BTS/FHWA Freight Analysis Framework, AARP, JCHS, and others).
+Full citations are in the script docstring rather than duplicated here.
+
+**Known gaps flagged for a follow-up round:** childcare (non-school) and
+general household tasks are ATUS actual-behavior benchmarks, not independent
+needs-based derivations — see Q&A flag 2. They currently drive most of the
+headline number, so a dedicated research pass on these two (matching the rigor
+applied to eldercare this round) is the recommended next step before treating
+46 hr/week as a stable estimate.
+
+---
 
 *Web research conducted 2026-08-15 in support of Prompts §1 (hours of work needed
 per person under the household model). All figures are current US data (BLS,
