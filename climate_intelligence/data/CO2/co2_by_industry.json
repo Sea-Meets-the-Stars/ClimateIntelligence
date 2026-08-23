@@ -1,0 +1,123 @@
+{
+  "title": "World CO2 Emissions by Industry Subsector",
+  "description": "Global direct CO2 emissions (fuel combustion + industrial process emissions) from the major heavy-industry subsectors -- iron & steel, cement, chemicals & petrochemicals, aluminium/non-ferrous metals, and pulp & paper -- plus the IEA's total for all of industry. This is a finer-grained breakdown of the 'Industry' / 'Manufacturing & Construction' totals already reported in co2_by_sector.json.",
+  "unit": "MtCO2",
+  "data": [
+    {
+      "category": "Iron and steel",
+      "year": 2022,
+      "value": 2600,
+      "unit": "MtCO2",
+      "source": "IEA - Iron & Steel (Energy System)",
+      "notes": "Direct CO2 emissions (fuel combustion + process); the largest single industrial subsector, at roughly 7% of global energy-system CO2 and about 28% of total direct industrial CO2."
+    },
+    {
+      "category": "Cement",
+      "year": 2023,
+      "value": 2400,
+      "unit": "MtCO2e",
+      "source": "IEA - Cement",
+      "notes": "Combustion + process (calcination) emissions combined; approximately 6% of total global CO2 emissions. Process-only (calcination) emissions alone are smaller, on the order of 1.6 GtCO2 in recent years (see caveats)."
+    },
+    {
+      "category": "Chemicals and petrochemicals",
+      "year": 2021,
+      "value": 925,
+      "unit": "MtCO2",
+      "source": "IEA - Primary Chemicals",
+      "notes": "Direct CO2 from primary chemical production (ammonia, methanol, ethylene, propylene, etc.); roughly one-quarter is process emissions and the rest is fuel combustion. The chemicals sector is the largest industrial consumer of oil and gas, but ranks only third among industry subsectors in direct CO2 (behind iron & steel and cement)."
+    },
+    {
+      "category": "Aluminium (primary production, non-ferrous metals)",
+      "year": 2022,
+      "value": 270,
+      "unit": "MtCO2",
+      "source": "IEA - Aluminium",
+      "notes": "Direct emissions only, about 3% of total direct industrial CO2. Because primary aluminium smelting is highly electricity-intensive, including indirect emissions from purchased electricity brings the sector's total footprint to roughly 1 GtCO2e."
+    },
+    {
+      "category": "Pulp and paper",
+      "year": 2021,
+      "value": 190,
+      "unit": "MtCO2",
+      "source": "IEA - Pulp and Paper",
+      "notes": "All-time high in 2021 amid a global production spike; about 2% of total direct industrial CO2 emissions."
+    },
+    {
+      "category": "Other industry (residual, not separately published by IEA)",
+      "year": 2022,
+      "value": 2815,
+      "unit": "MtCO2",
+      "source": "derived",
+      "notes": "Computed by the author as total direct industrial CO2 (9,200 MtCO2, 2022) minus the five named subsectors above (using each subsector's most recently available year, 2021-2023). Covers light manufacturing, machinery, mining, food & tobacco, textiles, and other/unallocated industry. This is NOT an IEA-published single category and mixes data vintages -- treat as an approximate order-of-magnitude figure only."
+    },
+    {
+      "category": "Total industry (all subsectors, direct CO2)",
+      "year": 2022,
+      "value": 9200,
+      "unit": "MtCO2",
+      "source": "IEA - CO2 Emissions in 2022",
+      "notes": "Direct CO2 from fuel combustion and industrial processes across all of industry; roughly one-quarter of global energy-system CO2 emissions in 2022."
+    }
+  ],
+  "provenance": [
+    {
+      "source_name": "IEA - CO2 Emissions in 2022",
+      "url": "https://www.iea.org/reports/co2-emissions-in-2022",
+      "publisher": "International Energy Agency",
+      "publication_year": 2023,
+      "accessed_date": "2026-08-23"
+    },
+    {
+      "source_name": "IEA - Iron & Steel (Energy System)",
+      "url": "https://www.iea.org/energy-system/industry/steel",
+      "publisher": "International Energy Agency",
+      "publication_year": 2024,
+      "accessed_date": "2026-08-23"
+    },
+    {
+      "source_name": "IEA - Cement",
+      "url": "https://www.iea.org/reports/cement-3",
+      "publisher": "International Energy Agency",
+      "publication_year": 2024,
+      "accessed_date": "2026-08-23"
+    },
+    {
+      "source_name": "IEA - Primary Chemicals",
+      "url": "https://www.iea.org/reports/primary-chemicals",
+      "publisher": "International Energy Agency",
+      "publication_year": 2022,
+      "accessed_date": "2026-08-23"
+    },
+    {
+      "source_name": "IEA - Chemicals (Energy System)",
+      "url": "https://www.iea.org/energy-system/industry/chemicals",
+      "publisher": "International Energy Agency",
+      "publication_year": 2024,
+      "accessed_date": "2026-08-23"
+    },
+    {
+      "source_name": "IEA - Aluminium (Energy System)",
+      "url": "https://www.iea.org/energy-system/industry/aluminium",
+      "publisher": "International Energy Agency",
+      "publication_year": 2024,
+      "accessed_date": "2026-08-23"
+    },
+    {
+      "source_name": "IEA - Pulp and Paper (Energy System)",
+      "url": "https://www.iea.org/energy-system/industry/pulp-and-paper",
+      "publisher": "International Energy Agency",
+      "publication_year": 2024,
+      "accessed_date": "2026-08-23"
+    },
+    {
+      "source_name": "IEA - Global Energy Review 2025 (industry process-emissions context)",
+      "url": "https://iea.blob.core.windows.net/assets/5b169aa1-bc88-4c96-b828-aaa50406ba80/GlobalEnergyReview2025.pdf",
+      "publisher": "International Energy Agency",
+      "publication_year": 2025,
+      "accessed_date": "2026-08-23",
+      "notes": "Confirms IEA's industry emissions scope: direct CO2 from all fossil fuel combustion plus industrial-process emissions for cement, iron & steel, and chemicals, drawing on production data for clinker, steel, aluminium and chemicals."
+    }
+  ],
+  "caveats": "Figures are drawn from separate IEA sector/tracking pages published at different times, so subsector values are NOT all for the same year (2021 for chemicals and pulp & paper, 2022 for iron & steel and aluminium, 2023 for cement); they should be read as 'recent, representative' order-of-magnitude figures rather than a perfectly consistent single-year snapshot. The 'Total industry' figure (9,200 Mt, 2022) is the only officially published aggregate found; the 'Other industry' row is a residual computed by the author (total minus the five named subsectors) and is explicitly not an IEA-published category -- it should be treated with caution given the year mismatches feeding into it. The cement figure (2,400 MtCO2e) combines process (calcination) and combustion emissions and may include a small non-CO2 GHG component (hence 'CO2e'), whereas the other subsector figures are CO2 only. All figures represent DIRECT emissions at the point of fuel combustion or industrial process; indirect emissions embodied in purchased electricity and heat (which can be very large for electricity-intensive sectors like aluminium) are excluded except where separately noted. For a complementary, coarser sector view (e.g. 'Manufacturing & Construction' as one line item) see co2_by_sector.json in this same directory, which uses Climate Watch/OWID data with a different sector taxonomy and will not sum to the same totals as this file."
+}

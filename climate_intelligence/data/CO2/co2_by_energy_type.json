@@ -1,0 +1,138 @@
+{
+  "title": "World CO2 Emissions by Energy Type (Electricity & Heat Generation)",
+  "description": "Global electricity generation mix and the CO2 emissions attributable to the power (electricity & heat) sector, broken down by primary energy source -- coal, natural gas, oil -- with renewables and nuclear noted as near-zero direct-emission sources. This is distinct from co2_by_fuel_type.json, which uses the Global Carbon Project's economy-wide fuel categories (coal/oil/gas/cement/flaring across ALL combustion, not just power generation).",
+  "unit": "MtCO2",
+  "data": [
+    {
+      "category": "Coal-fired electricity generation",
+      "year": 2023,
+      "value": 9450,
+      "unit": "MtCO2",
+      "source": "Ember - Global Electricity Review 2024",
+      "notes": "Record high; ~66% of global power-sector CO2 emissions despite coal supplying only ~36% of generation that year, reflecting coal's higher carbon intensity per kWh generated."
+    },
+    {
+      "category": "Natural gas- and oil-fired electricity generation (combined)",
+      "year": 2023,
+      "value": 4703,
+      "unit": "MtCO2",
+      "source": "derived from Ember - Global Electricity Review 2024",
+      "notes": "Derived as a residual: total power-sector CO2 (14,153 MtCO2) minus coal-fired CO2 (9,450 MtCO2), both directly reported by Ember. Covers natural gas (~22% of global generation) and oil (~3%); a public source giving the gas/oil split in absolute MtCO2 was not located during this research, so the two are combined here rather than estimated separately."
+    },
+    {
+      "category": "Total power-sector CO2 (all fuels)",
+      "year": 2023,
+      "value": 14153,
+      "unit": "MtCO2",
+      "source": "Ember - Global Electricity Review 2024",
+      "notes": "+1% (+135 MtCO2) versus 2022; described by Ember as an all-time high at the time of publication."
+    },
+    {
+      "category": "Total power-sector CO2 (all fuels)",
+      "year": 2024,
+      "value": 14600,
+      "unit": "MtCO2",
+      "source": "Ember - Global Electricity Review 2025 (via Carbon Brief)",
+      "notes": "New all-time high, +1.6% year-on-year, even though renewables and nuclear supplied 80% of the growth in generation. IEA's own Electricity 2025 report gives a lower figure (~13,800 MtCO2 for 2024), reflecting scope/methodology differences between the two organizations (see caveats)."
+    },
+    {
+      "category": "Coal share of global electricity generation",
+      "year": 2024,
+      "value": 35,
+      "unit": "% of global generation",
+      "source": "IEA - Global Energy Review 2025",
+      "notes": "Coal-fired generation reached a new volume high of ~10,700 TWh even as its share of the mix fell to the lowest level since the IEA's founding in 1974."
+    },
+    {
+      "category": "Natural gas share of global electricity generation",
+      "year": 2024,
+      "value": 22,
+      "unit": "% of global generation",
+      "source": "IEA - Global Energy Review 2025",
+      "notes": "Second-largest generation source for more than two decades running; gas-fired generation rose by about 2.5% year-on-year in 2024."
+    },
+    {
+      "category": "Oil share of global electricity generation",
+      "year": 2024,
+      "value": 2,
+      "unit": "% of global generation",
+      "source": "IEA - Global Energy Review 2025",
+      "notes": "IEA describes oil-fired power as generating 'just a few percent' of the global total; 2% is an approximate mid-point, not an exact reported figure."
+    },
+    {
+      "category": "Renewables + nuclear electricity generation (near-zero direct CO2)",
+      "year": 2024,
+      "value": 40,
+      "unit": "% of global generation",
+      "source": "IEA - Global Energy Review 2025",
+      "notes": "First year on record that these near-zero-direct-emission sources together crossed 40% of global generation. Renewables alone supplied ~32% (hydropower 14%, wind 8%, solar PV 7%, bioenergy & waste 3%); nuclear supplied the remaining ~9%. 'Near-zero direct' means smokestack/combustion CO2 is effectively zero; full life-cycle emissions (manufacturing, mining, construction) are small but non-zero and are not represented here."
+    },
+    {
+      "category": "Carbon intensity of global electricity generation",
+      "year": 2023,
+      "value": 480,
+      "unit": "gCO2/kWh",
+      "source": "Ember - Global Electricity Review 2024",
+      "notes": "The cleanest average kWh of electricity on record at the time (since at least 2000)."
+    },
+    {
+      "category": "Carbon intensity of global electricity generation",
+      "year": 2024,
+      "value": 445,
+      "unit": "gCO2/kWh",
+      "source": "IEA - Electricity 2025",
+      "notes": "IEA forecasts this intensity declining at ~3.7% per year on average, reaching roughly 415 gCO2/kWh by 2026."
+    }
+  ],
+  "provenance": [
+    {
+      "source_name": "IEA - Global Energy Review 2025",
+      "url": "https://iea.blob.core.windows.net/assets/5b169aa1-bc88-4c96-b828-aaa50406ba80/GlobalEnergyReview2025.pdf",
+      "publisher": "International Energy Agency",
+      "publication_year": 2025,
+      "accessed_date": "2026-08-23",
+      "notes": "Revised version, March 2025. Source for the 2024 electricity generation mix (coal/gas/oil/renewables/nuclear shares), coal generation volume, and total energy-related CO2 context."
+    },
+    {
+      "source_name": "IEA - CO2 Emissions in 2023",
+      "url": "https://iea.blob.core.windows.net/assets/33e2badc-b839-4c18-84ce-f6387b3c008f/CO2Emissionsin2023.pdf",
+      "publisher": "International Energy Agency",
+      "publication_year": 2024,
+      "accessed_date": "2026-08-23",
+      "notes": "Used for cross-checking the power sector's role in the 2023 emissions increase and the coal-to-gas switching narrative in advanced economies."
+    },
+    {
+      "source_name": "Ember - Global Electricity Review 2024",
+      "url": "https://ember-energy.org/latest-insights/global-electricity-review-2024/",
+      "publisher": "Ember",
+      "publication_year": 2024,
+      "accessed_date": "2026-08-23",
+      "notes": "Source for 2023 absolute power-sector CO2 emissions, the coal-fired power CO2 figure, and 2023 carbon intensity of generation."
+    },
+    {
+      "source_name": "Ember - Global Electricity Review 2025",
+      "url": "https://ember-energy.org/latest-insights/global-electricity-review-2025/",
+      "publisher": "Ember",
+      "publication_year": 2025,
+      "accessed_date": "2026-08-23",
+      "notes": "Source (via Carbon Brief's reporting) for the 2024 total power-sector CO2 figure."
+    },
+    {
+      "source_name": "Carbon Brief - 'Power-sector CO2 hits all-time high in 2024 despite record growth for clean energy'",
+      "url": "https://www.carbonbrief.org/power-sector-co2-hits-all-time-high-in-2024-despite-record-growth-for-clean-energy/",
+      "publisher": "Carbon Brief",
+      "publication_year": 2025,
+      "accessed_date": "2026-08-23",
+      "notes": "Secondary analysis of Ember's Global Electricity Review 2025 data; used for the 2024 generation-mix percentages (coal 34.4%/10,602 TWh, gas 22%/6,788 TWh) as a cross-check against the IEA figures."
+    },
+    {
+      "source_name": "IEA - Electricity 2025",
+      "url": "https://www.iea.org/reports/electricity-2025/emissions",
+      "publisher": "International Energy Agency",
+      "publication_year": 2025,
+      "accessed_date": "2026-08-23",
+      "notes": "Source for the 2024 carbon intensity of global electricity generation (445 gCO2/kWh) and the IEA's own (lower) power-sector CO2 total for 2024 (~13,800 MtCO2), noted here as a methodology cross-check against Ember's figure."
+    }
+  ],
+  "caveats": "Two different organizations (IEA and Ember) publish global power-sector CO2 totals using different plant boundaries, regional coverage, and estimation methods; their totals for the same year differ by several percent (e.g. ~13.8 GtCO2 per IEA's Electricity 2025 report vs. ~14.6 GtCO2 per Ember's Global Electricity Review 2025, both for 2024). Both are included here, clearly labeled by source, rather than reconciled into one 'true' number. The 'natural gas- and oil-fired' row is a derived residual (total minus coal), not a directly published figure, because no source located during this research broke out gas-fired vs. oil-fired CO2 in absolute terms globally -- only their generation SHARES (%) are directly reported. 'Near-zero direct CO2' for renewables and nuclear refers only to combustion/smokestack emissions at the point of generation; it excludes life-cycle emissions from manufacturing, mining, plant construction, and fuel supply chains, which are small but nonzero and vary significantly by technology. This dataset covers only the electricity & heat generation sector; it should not be confused with co2_by_fuel_type.json in this directory, which reports the Global Carbon Project's economy-wide coal/oil/gas/cement/flaring breakdown spanning ALL combustion sectors (transport, industry, buildings, power, etc.), not power generation alone -- the two are conceptually different slices of the data and their category totals are not comparable line-for-line."
+}

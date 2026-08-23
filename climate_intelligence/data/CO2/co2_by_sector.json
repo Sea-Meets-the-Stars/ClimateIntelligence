@@ -1,0 +1,153 @@
+{
+  "title": "Global CO2 Emissions by Sector",
+  "description": "Global CO2 emissions in 2023 broken down by economic sector (Climate Watch / OWID data, energy- and process-based CO2 only), plus the standard IPCC AR6 WGIII all-greenhouse-gas sectoral breakdown for 2019 shown for policy-context comparison.",
+  "unit": "MtCO2",
+  "data": [
+    {
+      "category": "Electricity & Heat",
+      "year": 2023,
+      "value": 16988.8,
+      "unit": "MtCO2",
+      "source": "Climate Watch (2026) - Greenhouse Gas Emissions by Sector"
+    },
+    {
+      "category": "Transport",
+      "year": 2023,
+      "value": 8276.3,
+      "unit": "MtCO2",
+      "source": "Climate Watch (2026) - Greenhouse Gas Emissions by Sector"
+    },
+    {
+      "category": "Manufacturing & Construction",
+      "year": 2023,
+      "value": 6162.4,
+      "unit": "MtCO2",
+      "source": "Climate Watch (2026) - Greenhouse Gas Emissions by Sector"
+    },
+    {
+      "category": "Buildings",
+      "year": 2023,
+      "value": 2676.9,
+      "unit": "MtCO2",
+      "source": "Climate Watch (2026) - Greenhouse Gas Emissions by Sector"
+    },
+    {
+      "category": "Industry (other, non-combustion & direct)",
+      "year": 2023,
+      "value": 1546.2,
+      "unit": "MtCO2",
+      "source": "Climate Watch (2026) - Greenhouse Gas Emissions by Sector"
+    },
+    {
+      "category": "International Aviation & Shipping",
+      "year": 2023,
+      "value": 1213.4,
+      "unit": "MtCO2",
+      "source": "Climate Watch (2026) - Greenhouse Gas Emissions by Sector"
+    },
+    {
+      "category": "Other Fuel Combustion",
+      "year": 2023,
+      "value": 587.3,
+      "unit": "MtCO2",
+      "source": "Climate Watch (2026) - Greenhouse Gas Emissions by Sector"
+    },
+    {
+      "category": "Fugitive Emissions",
+      "year": 2023,
+      "value": 273.1,
+      "unit": "MtCO2",
+      "source": "Climate Watch (2026) - Greenhouse Gas Emissions by Sector"
+    },
+    {
+      "category": "Land-Use Change & Forestry",
+      "year": 2023,
+      "value": 238.9,
+      "unit": "MtCO2",
+      "source": "Climate Watch (2026) - Greenhouse Gas Emissions by Sector"
+    },
+    {
+      "category": "Total (sum of sectors above, Climate Watch basis)",
+      "year": 2023,
+      "value": 37963.4,
+      "unit": "MtCO2",
+      "source": "Climate Watch (2026) - Greenhouse Gas Emissions by Sector",
+      "notes": "Sum of the CO2-by-sector categories above; included for reference. This differs from the Global Carbon Project fossil+industry CO2 total for the same year because the two datasets use different sources, sector definitions, and (for Climate Watch) include CO2 from land-use change/forestry."
+    },
+    {
+      "category": "Total (Global Carbon Project fossil + industry CO2, for comparison)",
+      "year": 2023,
+      "value": 38094.0,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "notes": "Independent world total from the Global Carbon Budget, shown for comparison with the Climate Watch sector sum above; excludes land-use change CO2."
+    },
+    {
+      "category": "Energy Supply (IPCC AR6 WGIII, all GHG, 2019)",
+      "year": 2019,
+      "value": 20000,
+      "unit": "MtCO2eq",
+      "source": "IPCC AR6 WGIII (2022), Figure SPM.2",
+      "notes": "This is ALL greenhouse gases (CO2 + CH4 + N2O + F-gases) expressed as CO2-equivalent, not CO2 alone -- included for comparison against the standard IPCC sectoral framing used in policy discussions. Energy supply, industry, transport, and buildings sum to 78% of the total; AFOLU adds the remainder (~22%). If indirect emissions from electricity/heat are reallocated to end-use sectors, industry's and buildings' shares rise from 24%->34% and 6%->16% respectively."
+    },
+    {
+      "category": "Industry (IPCC AR6 WGIII, all GHG, 2019)",
+      "year": 2019,
+      "value": 14000,
+      "unit": "MtCO2eq",
+      "source": "IPCC AR6 WGIII (2022), Figure SPM.2",
+      "notes": "This is ALL greenhouse gases (CO2 + CH4 + N2O + F-gases) expressed as CO2-equivalent, not CO2 alone -- included for comparison against the standard IPCC sectoral framing used in policy discussions. Energy supply, industry, transport, and buildings sum to 78% of the total; AFOLU adds the remainder (~22%). If indirect emissions from electricity/heat are reallocated to end-use sectors, industry's and buildings' shares rise from 24%->34% and 6%->16% respectively."
+    },
+    {
+      "category": "AFOLU - Agriculture, Forestry & Other Land Use (IPCC AR6 WGIII, all GHG, 2019)",
+      "year": 2019,
+      "value": 13000,
+      "unit": "MtCO2eq",
+      "source": "IPCC AR6 WGIII (2022), Figure SPM.2",
+      "notes": "This is ALL greenhouse gases (CO2 + CH4 + N2O + F-gases) expressed as CO2-equivalent, not CO2 alone -- included for comparison against the standard IPCC sectoral framing used in policy discussions. Energy supply, industry, transport, and buildings sum to 78% of the total; AFOLU adds the remainder (~22%). If indirect emissions from electricity/heat are reallocated to end-use sectors, industry's and buildings' shares rise from 24%->34% and 6%->16% respectively."
+    },
+    {
+      "category": "Transport (IPCC AR6 WGIII, all GHG, 2019)",
+      "year": 2019,
+      "value": 8700,
+      "unit": "MtCO2eq",
+      "source": "IPCC AR6 WGIII (2022), Figure SPM.2",
+      "notes": "This is ALL greenhouse gases (CO2 + CH4 + N2O + F-gases) expressed as CO2-equivalent, not CO2 alone -- included for comparison against the standard IPCC sectoral framing used in policy discussions. Energy supply, industry, transport, and buildings sum to 78% of the total; AFOLU adds the remainder (~22%). If indirect emissions from electricity/heat are reallocated to end-use sectors, industry's and buildings' shares rise from 24%->34% and 6%->16% respectively."
+    },
+    {
+      "category": "Buildings (IPCC AR6 WGIII, all GHG, 2019)",
+      "year": 2019,
+      "value": 3300,
+      "unit": "MtCO2eq",
+      "source": "IPCC AR6 WGIII (2022), Figure SPM.2",
+      "notes": "This is ALL greenhouse gases (CO2 + CH4 + N2O + F-gases) expressed as CO2-equivalent, not CO2 alone -- included for comparison against the standard IPCC sectoral framing used in policy discussions. Energy supply, industry, transport, and buildings sum to 78% of the total; AFOLU adds the remainder (~22%). If indirect emissions from electricity/heat are reallocated to end-use sectors, industry's and buildings' shares rise from 24%->34% and 6%->16% respectively."
+    }
+  ],
+  "provenance": [
+    {
+      "source_name": "Climate Watch (2026) - Greenhouse Gas Emissions by Sector",
+      "url": "https://www.climatewatchdata.org/ghg-emissions",
+      "publisher": "World Resources Institute (Climate Watch)",
+      "publication_year": 2026,
+      "accessed_date": "2026-08-23",
+      "notes": "Retrieved via Our World in Data grapher CSV export (co-emissions-by-sector), which republishes Climate Watch's CO2-only sectoral series (1990-2023)."
+    },
+    {
+      "source_name": "Global Carbon Project - Global Carbon Budget 2025",
+      "url": "https://globalcarbonbudget.org/",
+      "publisher": "Global Carbon Project",
+      "publication_year": 2025,
+      "accessed_date": "2026-08-23",
+      "notes": "Used only for the independent world fossil+industry CO2 total shown for comparison."
+    },
+    {
+      "source_name": "IPCC AR6 WGIII (2022), Figure SPM.2",
+      "url": "https://www.ipcc.ch/report/ar6/wg3/figures/summary-for-policymakers/figure-spm-2/",
+      "publisher": "Intergovernmental Panel on Climate Change, Working Group III",
+      "publication_year": 2022,
+      "accessed_date": "2026-08-23",
+      "notes": "Sectoral breakdown of total anthropogenic GHG emissions (all gases, CO2eq) for 2019, from the AR6 WGIII Summary for Policymakers."
+    }
+  ],
+  "caveats": "The Climate Watch/OWID sector series is CO2 only (not all GHG) and uses a different sectoral taxonomy and total than the Global Carbon Project's fossil+industry figure shown here for comparison -- the two will not sum to the same world total, reflecting differences in underlying data sources, sector boundaries, and (for Climate Watch) inclusion of land-use-change CO2 and use of a 2023 data vintage. The 'Industry' category in the Climate Watch data covers non-combustion industrial process emissions (e.g. cement calcination, chemical processes), while combustion-related industrial energy use is mostly captured under 'Manufacturing & Construction'; how a given source draws that line varies. The IPCC AR6 WGIII entries are ALL greenhouse gases in CO2-equivalent (not CO2 alone), for 2019 (the AR6 cutoff year), and are included because they are the standard policy reference framing (IPCC AR6 WGIII Figure SPM.2) -- do not sum or directly compare these CO2eq/2019 values against the CO2-only/2023 figures above without accounting for gas scope and year differences."
+}

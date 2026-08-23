@@ -1,0 +1,254 @@
+{
+  "title": "World CO2 Emissions by Transport Type",
+  "description": "Global CO2 emissions from the transport sector, broken down by mode (road passenger, road freight, aviation, shipping, rail, other), combining IEA's most detailed public sub-sector percentage-share breakdown (2018) with total transport-sector CO2 time series (2015-2023) and independently sourced, more recent mode-specific figures for road (2024), aviation (2019, 2023, 2024), and shipping (2023).",
+  "unit": "MtCO2",
+  "data": [
+    {
+      "category": "total_transport",
+      "year": 2015,
+      "value": 7727.8,
+      "unit": "MtCO2",
+      "source": "Climate Watch / CAIT (via Our World in Data)",
+      "notes": "Total CO2 emissions from the transport sector, all modes."
+    },
+    {
+      "category": "total_transport",
+      "year": 2016,
+      "value": 7888.8,
+      "unit": "MtCO2",
+      "source": "Climate Watch / CAIT (via Our World in Data)",
+      "notes": "Total CO2 emissions from the transport sector, all modes."
+    },
+    {
+      "category": "total_transport",
+      "year": 2017,
+      "value": 8080.2,
+      "unit": "MtCO2",
+      "source": "Climate Watch / CAIT (via Our World in Data)",
+      "notes": "Total CO2 emissions from the transport sector, all modes."
+    },
+    {
+      "category": "total_transport",
+      "year": 2018,
+      "value": 8281.8,
+      "unit": "MtCO2",
+      "source": "Climate Watch / CAIT (via Our World in Data)",
+      "notes": "Total CO2 emissions from the transport sector, all modes."
+    },
+    {
+      "category": "total_transport",
+      "year": 2019,
+      "value": 8358.4,
+      "unit": "MtCO2",
+      "source": "Climate Watch / CAIT (via Our World in Data)",
+      "notes": "Total CO2 emissions from the transport sector, all modes."
+    },
+    {
+      "category": "total_transport",
+      "year": 2020,
+      "value": 7241.5,
+      "unit": "MtCO2",
+      "source": "Climate Watch / CAIT (via Our World in Data)",
+      "notes": "Total CO2 emissions from the transport sector, all modes."
+    },
+    {
+      "category": "total_transport",
+      "year": 2021,
+      "value": 7810.3,
+      "unit": "MtCO2",
+      "source": "Climate Watch / CAIT (via Our World in Data)",
+      "notes": "Total CO2 emissions from the transport sector, all modes."
+    },
+    {
+      "category": "total_transport",
+      "year": 2022,
+      "value": 8102.4,
+      "unit": "MtCO2",
+      "source": "Climate Watch / CAIT (via Our World in Data)",
+      "notes": "Total CO2 emissions from the transport sector, all modes."
+    },
+    {
+      "category": "total_transport",
+      "year": 2023,
+      "value": 8276.3,
+      "unit": "MtCO2",
+      "source": "Climate Watch / CAIT (via Our World in Data)",
+      "notes": "Total CO2 emissions from the transport sector, all modes."
+    },
+    {
+      "category": "road_passenger",
+      "year": 2018,
+      "value": 45.1,
+      "unit": "% of transport-sector CO2",
+      "source": "IEA (2018 global transport sub-sector shares, via Our World in Data)"
+    },
+    {
+      "category": "road_freight",
+      "year": 2018,
+      "value": 29.4,
+      "unit": "% of transport-sector CO2",
+      "source": "IEA (2018 global transport sub-sector shares, via Our World in Data)"
+    },
+    {
+      "category": "aviation",
+      "year": 2018,
+      "value": 11.6,
+      "unit": "% of transport-sector CO2",
+      "source": "IEA (2018 global transport sub-sector shares, via Our World in Data)"
+    },
+    {
+      "category": "shipping",
+      "year": 2018,
+      "value": 10.6,
+      "unit": "% of transport-sector CO2",
+      "source": "IEA (2018 global transport sub-sector shares, via Our World in Data)"
+    },
+    {
+      "category": "rail",
+      "year": 2018,
+      "value": 1.0,
+      "unit": "% of transport-sector CO2",
+      "source": "IEA (2018 global transport sub-sector shares, via Our World in Data)"
+    },
+    {
+      "category": "other_transport",
+      "year": 2018,
+      "value": 2.2,
+      "unit": "% of transport-sector CO2",
+      "source": "IEA (2018 global transport sub-sector shares, via Our World in Data)"
+    },
+    {
+      "category": "road_passenger",
+      "year": 2018,
+      "value": 3735.1,
+      "unit": "MtCO2",
+      "source": "Derived: IEA (2018 global transport sub-sector shares, via Our World in Data) share x Climate Watch / CAIT (via Our World in Data) total",
+      "notes": "Approximate: IEA's 2018 percentage share of transport CO2 applied to the OWID/Climate Watch total transport CO2 figure for 2018. Combines two different underlying datasets/methodologies; treat as indicative, not exact."
+    },
+    {
+      "category": "road_freight",
+      "year": 2018,
+      "value": 2434.8,
+      "unit": "MtCO2",
+      "source": "Derived: IEA (2018 global transport sub-sector shares, via Our World in Data) share x Climate Watch / CAIT (via Our World in Data) total",
+      "notes": "Approximate: IEA's 2018 percentage share of transport CO2 applied to the OWID/Climate Watch total transport CO2 figure for 2018. Combines two different underlying datasets/methodologies; treat as indicative, not exact."
+    },
+    {
+      "category": "aviation",
+      "year": 2018,
+      "value": 960.7,
+      "unit": "MtCO2",
+      "source": "Derived: IEA (2018 global transport sub-sector shares, via Our World in Data) share x Climate Watch / CAIT (via Our World in Data) total",
+      "notes": "Approximate: IEA's 2018 percentage share of transport CO2 applied to the OWID/Climate Watch total transport CO2 figure for 2018. Combines two different underlying datasets/methodologies; treat as indicative, not exact."
+    },
+    {
+      "category": "shipping",
+      "year": 2018,
+      "value": 877.9,
+      "unit": "MtCO2",
+      "source": "Derived: IEA (2018 global transport sub-sector shares, via Our World in Data) share x Climate Watch / CAIT (via Our World in Data) total",
+      "notes": "Approximate: IEA's 2018 percentage share of transport CO2 applied to the OWID/Climate Watch total transport CO2 figure for 2018. Combines two different underlying datasets/methodologies; treat as indicative, not exact."
+    },
+    {
+      "category": "rail",
+      "year": 2018,
+      "value": 82.8,
+      "unit": "MtCO2",
+      "source": "Derived: IEA (2018 global transport sub-sector shares, via Our World in Data) share x Climate Watch / CAIT (via Our World in Data) total",
+      "notes": "Approximate: IEA's 2018 percentage share of transport CO2 applied to the OWID/Climate Watch total transport CO2 figure for 2018. Combines two different underlying datasets/methodologies; treat as indicative, not exact."
+    },
+    {
+      "category": "other_transport",
+      "year": 2018,
+      "value": 182.2,
+      "unit": "MtCO2",
+      "source": "Derived: IEA (2018 global transport sub-sector shares, via Our World in Data) share x Climate Watch / CAIT (via Our World in Data) total",
+      "notes": "Approximate: IEA's 2018 percentage share of transport CO2 applied to the OWID/Climate Watch total transport CO2 figure for 2018. Combines two different underlying datasets/methodologies; treat as indicative, not exact."
+    },
+    {
+      "category": "road",
+      "year": 2024,
+      "value": 6000.0,
+      "unit": "MtCO2",
+      "source": "IEA - Global Energy Review 2025",
+      "notes": "IEA reports road-sector CO2 emissions 'just over 6 GtCO2' in 2024, 8% higher than 2015; growth averaged only 0.2%/yr from 2019-2024. Combined road passenger + freight."
+    },
+    {
+      "category": "aviation",
+      "year": 2019,
+      "value": 1000.0,
+      "unit": "MtCO2",
+      "source": "Bergero et al. 2023, Nature Sustainability (via Our World in Data)",
+      "notes": "~2.5% of global CO2 emissions from fossil sources and land-use change in 2019 (pre-pandemic peak)."
+    },
+    {
+      "category": "aviation",
+      "year": 2023,
+      "value": 882.0,
+      "unit": "MtCO2",
+      "source": "IATA - 2024 Aviation Emissions: Efficiency Gains vs. Rising Totals",
+      "notes": "Gross CO2 emissions from commercial aviation."
+    },
+    {
+      "category": "aviation",
+      "year": 2024,
+      "value": 942.0,
+      "unit": "MtCO2",
+      "source": "IATA - 2024 Aviation Emissions: Efficiency Gains vs. Rising Totals",
+      "notes": "Gross CO2 emissions from commercial aviation."
+    },
+    {
+      "category": "shipping",
+      "year": 2023,
+      "value": 911.0,
+      "unit": "MtCO2e (GWP100, tank-to-wake)",
+      "source": "ICCT - Greenhouse gas emissions and air pollution from global shipping, 2016-2023",
+      "notes": "CO2-equivalent (includes methane and N2O, not pure CO2), tank-to-wake, 100-year GWP. 925 Mt using 20-year GWP. ~86% international shipping, ~10% domestic, ~4% fishing. Grew ~12% (CAGR ~1.4%/yr) from 2016 to 2023."
+    }
+  ],
+  "provenance": [
+    {
+      "source_name": "IEA (2018 transport sub-sector shares, via Our World in Data)",
+      "url": "https://ourworldindata.org/co2-emissions-from-transport",
+      "publisher": "International Energy Agency / Our World in Data",
+      "publication_year": 2020,
+      "accessed_date": "2026-08-23"
+    },
+    {
+      "source_name": "Climate Watch / CAIT total transport CO2 (via Our World in Data)",
+      "url": "https://ourworldindata.org/grapher/co2-emissions-transport",
+      "publisher": "Climate Watch (World Resources Institute) / Our World in Data",
+      "publication_year": 2024,
+      "accessed_date": "2026-08-23"
+    },
+    {
+      "source_name": "IEA - Global Energy Review 2025",
+      "url": "https://www.iea.org/reports/global-energy-review-2025",
+      "publisher": "International Energy Agency",
+      "publication_year": 2025,
+      "accessed_date": "2026-08-23"
+    },
+    {
+      "source_name": "Bergero et al. 2023, Nature Sustainability (global aviation emissions, via Our World in Data)",
+      "url": "https://ourworldindata.org/global-aviation-emissions",
+      "publisher": "Nature Sustainability / Our World in Data",
+      "publication_year": 2023,
+      "accessed_date": "2026-08-23"
+    },
+    {
+      "source_name": "IATA - 2024 Aviation Emissions: Efficiency Gains vs. Rising Totals",
+      "url": "https://www.iata.org/en/iata-repository/publications/economic-reports/2024-aviation-emissions-efficiency-gains-vs.-rising-totals",
+      "publisher": "International Air Transport Association",
+      "publication_year": 2024,
+      "accessed_date": "2026-08-23"
+    },
+    {
+      "source_name": "ICCT - Greenhouse gas emissions and air pollution from global shipping, 2016-2023",
+      "url": "https://theicct.org/publication/greenhouse-gas-emissions-and-air-pollution-from-global-shipping-2016-2023-apr25/",
+      "publisher": "International Council on Clean Transportation",
+      "publication_year": 2025,
+      "accessed_date": "2026-08-23"
+    }
+  ],
+  "caveats": "No single authoritative source publishes an annually updated, full mode-by-mode (road passenger / road freight / aviation / shipping / rail) breakdown of global transport CO2 at the time of writing; the widely cited detailed percentage breakdown (45.1% road passenger, 29.4% road freight, 11.6% aviation, 10.6% international shipping, 1.0% rail, 2.2% other) is IEA data for 2018, reproduced by Our World in Data. Absolute MtCO2 values by mode for 2018 in this file are DERIVED by applying those 2018 percentage shares to a total transport CO2 figure for 2018 from a different dataset (Climate Watch/CAIT, via OWID) -- treat these as approximate, order-of-magnitude figures, not official statistics. The road-sector 2024 figure ('just over 6 GtCO2') is from IEA's Global Energy Review 2025 and is NOT strictly comparable to the IEA 2018 road_passenger+road_freight figures because methodologies/scopes may differ slightly between IEA publications and vintages. The ICCT shipping figure (911 Mt for 2023) is CO2-EQUIVALENT (includes methane and N2O using 100-year GWP), not pure CO2, and is tank-to-wake (fuel combustion only, excludes well-to-tank upstream emissions) -- it is therefore not directly additive with the pure-CO2 figures for other modes. Aviation figures differ by source: OWID's academic-literature-based estimate (~1,000 Mt in 2019) covers all aviation (commercial + other), while IATA's more recent 882/942 Mt figures (2023/2024) cover commercial aviation only and use IATA's own accounting; the two series should not be spliced together as if fully consistent. 'Total transport CO2' (Climate Watch/CAIT) will not exactly equal the sum of by-mode figures here because those individual mode entries mix vintages, sources, and (for shipping) gas scope. Transport is commonly cited as roughly 21-24% of global energy-related/fossil CO2 emissions, with road transport alone historically accounting for roughly three-quarters of transport-sector CO2."
+}
