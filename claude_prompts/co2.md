@@ -38,6 +38,8 @@ Record these in a machine readable format in a file in `Projects/ClimateIntellig
 
 Include figures.  Assess the growth in emissions, e.g. is it exponential?  What are the trends?  What are the drivers?  What are the implications?  What are the risks?  What are the opportunities?  What are the solutions?  What are the next steps?
 
+3. Thanks!  Can you add to the report an estimate of where the world's CO2 emissions have gone, i.e. atmosphere vs. ocean?  Use Fable if you can.  Log your work.
+
 ## Q&A
 
 ### Prep

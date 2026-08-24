@@ -1,7 +1,7 @@
 """Created by JXP and Claude.
 
-Generate figures 23-29 for the CO2 emissions report (CI_Reports/co2_report.md).
-Every figure is built from the six machine-readable CO2 datasets in
+Generate figures 23-31 for the CO2 emissions report (CI_Reports/co2_report.md).
+Every figure is built from the seven machine-readable CO2 datasets in
 climate_intelligence/data/CO2/*.json (each with its own provenance/caveats
 fields) plus the long-run historical time series cached in
 climate_intelligence/data/raw/owid-co2-data.csv (Global Carbon Project fossil
@@ -18,6 +18,10 @@ Data sources (see the JSON files themselves for full provenance):
                              file's own caveats)
   - co2_by_industry.json   : IEA sector/tracking pages, mixed years 2021-2023
   - co2_by_energy_type.json: IEA / Ember (power sector), 2023-2024
+  - co2_fate_atmosphere_ocean_land.json : Global Carbon Project - Global
+                             Carbon Budget 2024 (Friedlingstein et al. 2025)
+                             decade-average sink partition, plus IPCC AR6 and
+                             Bennett et al. 2024 historical comparison points
   - owid-co2-data.csv      : Global Carbon Project fossil+industry CO2,
                              World row, 1750-2024 (used here from 1850)
 
@@ -29,7 +33,7 @@ functions (no classes), imports at top, inline comments, matplotlib for
 plotting, docstrings with inputs/outputs, and "Created by JXP and Claude" on
 the file and each method. Figure numbering continues from the existing
 CI_Reports house style (highest prior figure was fig22), so this file writes
-fig23-fig29.
+fig23-fig31.
 """
 
 # Imports at the top of the file (project coding guideline).
@@ -599,10 +603,166 @@ def fig29_energy_type_breakdown():
     plt.close(fig)
 
 
+def fig30_fate_partition():
+    """Created by JXP and Claude.
+
+    Figure 30: where 2014-2023's annually emitted CO2 (fossil+industry+
+    land-use-change combined) actually went -- a stacked bar (a) showing the
+    atmosphere/ocean-sink/land-sink partition in MtCO2/yr with the small
+    budget-imbalance residual annotated, and a matching pie (b) of the same
+    three headline percentages (48% / 26% / 30%), which is this report's most
+    direct answer to "where has the world's CO2 gone?".
+
+    Inputs
+    ------
+    (none) reads
+    climate_intelligence/data/CO2/co2_fate_atmosphere_ocean_land.json
+
+    Outputs
+    -------
+    None. Saves fig30_co2_fate_partition.png.
+    """
+    d = load_json("co2_fate_atmosphere_ocean_land.json")
+    decade = [r for r in d["data"] if r.get("period") == "2014-2023"]
+
+    def val(cat):
+        return next(r["value"] for r in decade if r["category"] == cat)
+
+    def pct(cat):
+        return next(r["pct_of_total_emissions"] for r in decade if r["category"] == cat)
+
+    cats = ["atmosphere", "ocean_sink", "land_sink"]
+    labels = ["Atmosphere", "Ocean sink", "Land sink"]
+    colors = [RED, BLUE, GREEN]
+    vals = [val(c) for c in cats]
+    pcts = [pct(c) for c in cats]
+    imbalance = val("budget_imbalance")
+
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5.5))
+
+    # (a) stacked single bar, MtCO2/yr, with the imbalance called out.
+    bottom = 0.0
+    for lab, v, c in zip(labels, vals, colors):
+        axes[0].bar(["2014-2023\naverage"], [v], bottom=[bottom], color=c, label=lab, width=0.5)
+        axes[0].text(0, bottom + v / 2, f"{lab}\n{v:,.0f} MtCO$_2$/yr", ha="center",
+                     va="center", color="white", fontsize=9)
+        bottom += v
+    axes[0].set_ylabel("CO$_2$ (MtCO$_2$/yr)")
+    axes[0].set_title("(a) Decade-average partition\n(stacked, with imbalance noted)")
+    axes[0].text(0, bottom * 1.03,
+                 f"Sum of the three shares = {sum(pcts):.0f}% (not exactly 100%);\n"
+                 f"implied budget imbalance $\\approx$ {imbalance:,.0f} MtCO$_2$/yr "
+                 "(author-derived residual, see caveats).",
+                 ha="center", va="bottom", fontsize=7.5, color="#555")
+    axes[0].set_ylim(0, bottom * 1.25)
+
+    # (b) pie of the three headline percentages -- the number readers will
+    # actually remember and quote.
+    axes[1].pie(pcts, labels=[f"{lab}\n{p:.0f}%" for lab, p in zip(labels, pcts)],
+                colors=colors, startangle=90, textprops={"fontsize": 10})
+    axes[1].set_title("(b) Share of total emitted CO$_2$,\n2014-2023 average")
+
+    fig.suptitle("Where does emitted CO$_2$ go? Atmosphere vs. ocean vs. land, 2014-2023",
+                  y=0.99, fontsize=13)
+    # Footer wrapped into short lines (each well under the figure width) so
+    # bbox_inches="tight" does not stretch the saved canvas to fit one very
+    # long unwrapped line.
+    fig.text(0.01, 0.01,
+             "Data: Global Carbon Project - Global Carbon Budget 2024 (Friedlingstein et al. 2025, ESSD),\n"
+             "decade average 2014-2023 (co2_fate_atmosphere_ocean_land.json). 'Total emissions' here = fossil +\n"
+             "industry + land-use-change CO2 combined -- a broader scope than the fossil-only totals used in\n"
+             "section 1/4 of this report. The ocean's ~26% CARBON uptake shown here is NOT the same statistic as\n"
+             "the ocean's >90% HEAT uptake (a different physical quantity, IPCC SROCC) -- see the report text.",
+             ha="left", va="bottom", fontsize=7, color="#555")
+    fig.tight_layout(rect=(0, 0.14, 1, 0.92))
+    fig.savefig(HERE / "fig30_co2_fate_partition.png")
+    plt.close(fig)
+
+
+def fig31_airborne_fraction_history():
+    """Created by JXP and Claude.
+
+    Figure 31: how stable has the "airborne fraction" (atmosphere's share of
+    total emitted CO2) been over time? Three sourced comparison points --
+    the six-decade (1959-2023) long-term average, the 2010-2019 decade
+    (IPCC AR6), and the 2014-2023 decade (Global Carbon Budget 2024) -- shown
+    as a small bar chart, annotated with the open question of whether the
+    fraction is now creeping upward.
+
+    Inputs
+    ------
+    (none) reads
+    climate_intelligence/data/CO2/co2_fate_atmosphere_ocean_land.json
+
+    Outputs
+    -------
+    None. Saves fig31_airborne_fraction_history.png.
+    """
+    d = load_json("co2_fate_atmosphere_ocean_land.json")
+    atmo_rows = [r for r in d["data"] if r["category"] == "atmosphere"]
+
+    def pct_value(r):
+        # The 2014-2023 "atmosphere" record's 'value' field is the absolute
+        # MtCO2/yr figure (unit "MtCO2/yr"); its percentage lives in
+        # 'pct_of_total_emissions'. The other two records store the
+        # percentage directly in 'value' (unit is a "%..." string). Handle
+        # both so this figure always plots a percentage, never MtCO2/yr.
+        return r["pct_of_total_emissions"] if "pct_of_total_emissions" in r else r["value"]
+
+    # Order chronologically by period label for a left-to-right "over time" read.
+    order = ["1959-2023 (long-term average)", "2010-2019", "2014-2023"]
+    rows = sorted(atmo_rows, key=lambda r: order.index(r["period"]))
+    period_labels = ["1959-2023\n(long-term avg.)", "2010-2019\n(IPCC AR6)", "2014-2023\n(GCB 2024)"]
+    values = [pct_value(r) for r in rows]
+
+    fig, ax = plt.subplots(figsize=(8.5, 6))
+    bars = ax.bar(period_labels, values, color=[GRAY, ORANGE, RED], width=0.55)
+    for b, v in zip(bars, values):
+        ax.text(b.get_x() + b.get_width() / 2, v + 1.5, f"{v:.0f}%", ha="center", fontsize=11)
+    # Headroom above the tallest bar's label so the dashed reference line and
+    # its own label (placed on the RIGHT, away from the "44%" bar-top label
+    # on the left, so the two texts never overlap) both fit cleanly.
+    ax.set_ylim(0, max(values) * 1.35)
+    ax.axhline(44.0, color=GRAY, ls="--", lw=1, alpha=0.6)
+    # Widen the x-axis so there is empty space to the right of the last bar,
+    # and put the reference-line label there -- the first bar's own value
+    # (44%) equals this reference line exactly, so any label placed near the
+    # bars would collide with that bar's "44%" top-of-bar text; parking it
+    # off to the side avoids that entirely.
+    ax.set_xlim(-0.6, len(period_labels) - 0.15)
+    ax.text(len(period_labels) - 0.65, 44.0, "six-decade avg. (44%)",
+            ha="left", va="center", fontsize=8, color="#555",
+            bbox=dict(facecolor="white", edgecolor="none", alpha=0.75, pad=1.5))
+    ax.set_ylabel("Airborne fraction (% of total CO$_2$ emissions\nremaining in the atmosphere)")
+    ax.set_title("Is the airborne fraction stable? Three sourced comparison points")
+    # Explanatory note placed in the otherwise-empty upper-left of the plot
+    # area (above the short 1959-2023 bar), not overlapping any bar or label.
+    ax.text(0.02, 0.97,
+            "Long-standing finding: ~44% for six decades even as\n"
+            "absolute emissions grew several-fold. Recent decades\n"
+            "run a few points higher; whether this is a genuine\n"
+            "upward trend (sinks struggling to keep pace) or\n"
+            "decadal noise is actively debated -- not yet settled.",
+            transform=ax.transAxes, ha="left", va="top", fontsize=7.5, color="#555")
+
+    # Footer wrapped into short lines (each well under the figure width) so
+    # bbox_inches="tight" does not stretch the saved canvas to fit one very
+    # long unwrapped line, as happened in an earlier version of this figure.
+    fig.text(0.01, 0.01,
+             "Data: co2_fate_atmosphere_ocean_land.json. Sources: Bennett et al. 2024 (JGR Biogeosciences,\n"
+             "long-term average); IPCC AR6 WGI Ch.5 (2010-2019, author-derived residual from ocean+land shares);\n"
+             "Global Carbon Project - Global Carbon Budget 2024 (2014-2023). See file caveats for the 2010-2019\n"
+             "derivation and the open debate over a possible recent upward trend.",
+             ha="left", va="bottom", fontsize=7, color="#555")
+    fig.tight_layout(rect=(0, 0.13, 1, 1))
+    fig.savefig(HERE / "fig31_airborne_fraction_history.png")
+    plt.close(fig)
+
+
 def main():
     """Created by JXP and Claude.
 
-    Generate all CO2 figures (23-29) for the report.
+    Generate all CO2 figures (23-31) for the report.
 
     Inputs
     ------
@@ -610,7 +770,7 @@ def main():
 
     Outputs
     -------
-    None. Writes fig23-fig29 PNGs into CI_Reports/ and prints the computed
+    None. Writes fig23-fig31 PNGs into CI_Reports/ and prints the computed
     era CAGRs (also used verbatim in co2_report.md).
     """
     era_cagrs = fig23_global_growth()
@@ -620,7 +780,9 @@ def main():
     fig27_transport_breakdown()
     fig28_industry_breakdown()
     fig29_energy_type_breakdown()
-    print("Wrote fig23_global_co2_growth.png through fig29_energy_type_breakdown.png")
+    fig30_fate_partition()
+    fig31_airborne_fraction_history()
+    print("Wrote fig23_global_co2_growth.png through fig31_airborne_fraction_history.png")
     print("Era CAGRs (%/yr):", {k: round(v, 2) for k, v in era_cagrs.items()})
 
 
