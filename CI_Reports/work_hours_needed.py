@@ -291,6 +291,117 @@ NON-TRADITIONAL:
                data for laundry loads per week. Career-weighted over household
                composition. Needs-based. FLAG 2.
 
+--------------------------------------------------------------------------------
+ENERGY ASSUMPTIONS (Calculations round 3) — what powers every rate above
+--------------------------------------------------------------------------------
+Every rate in this script up to this point is a FOSSIL-BASELINE rate: it comes
+from labor data describing the ACTUAL 2025-2026 US economy, which runs on
+today's energy mix. That mix is NOT incidental to the numbers -- it is baked
+into them, because BLS/USDA/NCES/CMS employment and time-motion data describe
+how goods and services are ACTUALLY produced right now, with today's
+machinery, fuels, and grid. Stated precisely (EIA, 2025): fossil fuels are
+~82% of total US primary energy consumption (petroleum ~38%, natural gas
+~35%, coal ~9%; nuclear ~9%, renewables ~9%), and ~58% of electricity
+generation specifically (renewables ~24-26%, nuclear ~18%). Every category
+above should be read against that baseline unless noted otherwise.
+
+The author asked for a second, MINIMAL-FOSSIL scenario: the same sufficiency
+standard, produced with predominantly non-fossil primary energy (renewables +
+nuclear) and, where relevant, without fossil-derived inputs (synthetic
+nitrogen fertilizer made from natural-gas hydrogen; petroleum-derived
+synthetic fiber). This is deliberately NOT a collapse or de-mechanization
+scenario -- it assumes successful electrification of machinery and transport,
+not a forced retreat from automation. The question is narrower: given
+sufficiency-level output, does the LABOR requirement change when the energy
+carrier changes? For most categories in this model, tellingly, the answer is
+close to no -- but not for all of them.
+
+Per-category reasoning, HIGH to LOW fossil-sensitivity:
+
+  Food          HIGH sensitivity. Synthetic nitrogen fertilizer (Haber-Bosch)
+                uses natural gas as its hydrogen feedstock, and green-hydrogen
+                alternatives remain markedly more energy-intensive; diesel
+                still dominates field machinery. The best available proxy is
+                the organic-vs-conventional labor literature, since organic
+                methods also forgo synthetic fertilizer and rely on more
+                manual weed/pest management: crop-specific studies find
+                7-34% more field labor (tomatoes +34%, pumpkins +13%, sweet
+                corn +7%; Rodale-lineage extension literature via
+                cias.wisc.edu), and a California/Washington employment
+                survey finds organic farms employ 2-12% more workers per
+                acre (Brown & Getz-style survey, PDX Scholar, 2018). Central
+                multiplier 1.15, applied to the WHOLE food category (farming
+                is roughly a third of food-chain labor; processing,
+                distribution and retail labor are largely energy-source
+                agnostic), with a defensible range of roughly 1.05-1.30.
+  Electricity   HIGH sensitivity, but AMBIGUOUS DIRECTION -- the most
+                genuinely uncertain line in this table. Mature wind and solar
+                need far fewer ongoing operations-and-maintenance workers per
+                TWh than fossil generation (20-30 vs ~100-260 jobs/TWh,
+                Berkeley "Putting Renewables to Work"-style labor studies),
+                but construction-phase labor is much higher (250-500
+                jobs/TWh) and a high-renewables grid needs additional
+                storage, transmission, and balancing labor to manage
+                intermittency that a dispatchable fossil/nuclear grid does
+                not. Amortized over asset life these effects partly offset;
+                the literature does not converge. Central multiplier 1.25
+                (leaning toward "somewhat more labor," on the storage/
+                balancing argument), with a wide and genuinely uncertain
+                range of roughly 0.90-1.60.
+  Clothing      MODERATE sensitivity. Synthetic fibers (polyester, nylon,
+                acrylic) are petroleum derivatives; a minimal-fossil textile
+                supply shifts toward natural fiber (cotton, wool), which is
+                more land- and labor-intensive to grow than synthetic fiber
+                is to synthesize, though garment assembly labor itself is
+                not energy-source-sensitive. Central multiplier 1.12, range
+                roughly 1.05-1.25.
+  Shelter,      LOW-MODERATE sensitivity. Cement and steel production carry
+  Furniture,    real process emissions independent of the fuel used for heat
+  Freight       (calcination releases CO2 from limestone itself), and
+                lower-carbon alternatives (mass timber, novel binders) are
+                not obviously more or less labor-intensive per unit
+                delivered -- the on-site labor-hours-per-square-foot figures
+                this model uses are a function of trade practice, not fuel
+                choice. Electrified freight needs the same drivers a
+                diesel fleet does. Central multipliers: shelter 1.08,
+                furniture 1.05, freight 1.08 -- modest, reflecting mostly
+                materials-sourcing friction rather than a clear mechanism.
+  Water/        MINIMAL sensitivity (multiplier 1.00). Treatment and
+  sanitation    distribution labor is bound by system operation and
+                maintenance, not by the fuel that generates the electricity
+                running the pumps.
+  K-12,         NO sensitivity (multiplier 1.00). These are human-attention-
+  medical care  bound professional services: decarbonizing the power behind
+                a classroom or a clinic does not change how many hours of
+                teaching or clinical care a student or patient needs. (This
+                deliberately ignores upstream energy embedded in
+                pharmaceutical and medical-equipment manufacturing, which
+                this model's resolution does not capture -- a limitation,
+                not a claim that it is zero.)
+  ALL NON-      NO sensitivity (multiplier 1.00), for the same reason as
+  TRADITIONAL   K-12/medical: childcare, eldercare, disabled-adult care, and
+  categories    household tasks are bound by the number of humans needing
+                attention and the physical tasks of cooking and cleaning,
+                not by how the building they happen in is powered.
+
+Net effect (computed, not asserted): because the two largest TRADITIONAL
+lines (essential medical care and K-12 education) and the entire
+NON-TRADITIONAL side (three-quarters of the whole model) get a 1.00
+multiplier, the headline TOTAL is far less fossil-sensitive than any single
+energy-intensive category looked at alone. See main()'s "ENERGY SCENARIOS"
+block for the exact comparison. This is itself a finding worth keeping: the
+"essential/discretionary" energy story is really a "goods/materials vs.
+care/services" story, and most of what a sufficiency standard of living
+actually requires is the latter.
+
+These multipliers are REASONED SENSITIVITIES, not researched rates like the
+ones earlier in this file -- each is a central estimate over a real range,
+built from the best available proxy literature rather than a direct
+minimal-fossil-fuel labor study (none exists at this resolution). Treat the
+MINIMAL_FOSSIL scenario as an order-of-magnitude sensitivity check on the
+model's energy dependence, not a rate with the same evidentiary standing as
+the FOSSIL_BASELINE numbers.
+
 Run under the project conda environment:
     conda run -n ocean14 python CI_Reports/work_hours_needed.py
 """
@@ -362,6 +473,30 @@ TRADITIONAL_RATES = {
 # wear-limited garments, since the requirement is stock/lifespan and size
 # largely cancels; DURABILITY is what drives the ~4x gap.)
 CLOTHING_CURRENT_CONSUMPTION_HRWK = {"LOW": 0.690, "CENTRAL": 1.700, "HIGH": 3.230}
+
+# ----------------------------------------------------------------------------
+# ENERGY SCENARIO (Calculations round 3): FOSSIL_BASELINE vs MINIMAL_FOSSIL.
+# See the module docstring's ENERGY ASSUMPTIONS section for the full
+# per-category reasoning and citations. Every TRADITIONAL_RATES entry IS the
+# FOSSIL_BASELINE rate (today's ~82%-fossil US economy); MINIMAL_FOSSIL_MULT
+# scales each to a predominantly non-fossil alternative at the SAME
+# sufficiency standard. Categories with no listed entry (K-12, and every
+# NON-TRADITIONAL category, plus essential medical care) get an implicit 1.00:
+# human-attention-bound activities whose hour requirement does not change with
+# the energy source powering the building they happen in.
+# ----------------------------------------------------------------------------
+MINIMAL_FOSSIL_MULT = {
+    "Shelter (build+materials+maint)":            1.08,
+    "Food (farm+process+distribute)":             1.15,
+    "Clothing (sufficiency wardrobe, embodied)":  1.12,
+    "Furniture (import-adjusted)":                1.05,
+    "Water / sanitation":                         1.00,
+    "Electricity":                                1.25,
+    "Freight (essential goods only)":             1.08,
+    "K-12 education (all staff)":                 1.00,
+}
+
+ENERGY_SCENARIOS = ("FOSSIL_BASELINE", "MINIMAL_FOSSIL")
 
 # ----------------------------------------------------------------------------
 # NON-TRADITIONAL hour-rates.
@@ -491,7 +626,39 @@ def population_breakdown(total_pop=TOTAL_POP):
     return pops
 
 
-def traditional_national_hours(pops, scenario):
+def energy_scenario_traditional_rates(energy_scenario="FOSSIL_BASELINE"):
+    """Created by JXP and Claude.
+
+    TRADITIONAL_RATES under one of the two energy scenarios (round 3).
+
+    FOSSIL_BASELINE returns TRADITIONAL_RATES unchanged (today's ~82%-fossil
+    US economy, the rates as researched). MINIMAL_FOSSIL scales each category
+    by MINIMAL_FOSSIL_MULT -- a REASONED SENSITIVITY, not a researched rate;
+    see the module docstring's ENERGY ASSUMPTIONS section for the per-category
+    reasoning, citations, and honest uncertainty ranges.
+
+    Inputs
+    ------
+    energy_scenario : str
+        'FOSSIL_BASELINE' or 'MINIMAL_FOSSIL'.
+
+    Outputs
+    -------
+    dict
+        Category name -> {'LOW':.., 'CENTRAL':.., 'HIGH':..}, same shape as
+        TRADITIONAL_RATES.
+    """
+    if energy_scenario == "FOSSIL_BASELINE":
+        return TRADITIONAL_RATES
+    if energy_scenario != "MINIMAL_FOSSIL":
+        raise ValueError(f"unknown energy_scenario {energy_scenario!r}")
+    return {
+        name: {s: v * MINIMAL_FOSSIL_MULT.get(name, 1.0) for s, v in rates.items()}
+        for name, rates in TRADITIONAL_RATES.items()
+    }
+
+
+def traditional_national_hours(pops, scenario, energy_scenario="FOSSIL_BASELINE"):
     """Created by JXP and Claude.
 
     National weekly TRADITIONAL labor hours, by category.
@@ -505,14 +672,17 @@ def traditional_national_hours(pops, scenario):
         Output of population_breakdown().
     scenario : str
         'LOW', 'CENTRAL' or 'HIGH'.
+    energy_scenario : str
+        'FOSSIL_BASELINE' (default) or 'MINIMAL_FOSSIL' (round 3). See
+        energy_scenario_traditional_rates().
 
     Outputs
     -------
     dict
         Category name -> national hours per week (float).
     """
-    return {name: rates[scenario] * pops["total"]
-            for name, rates in TRADITIONAL_RATES.items()}
+    rates = energy_scenario_traditional_rates(energy_scenario)
+    return {name: r[scenario] * pops["total"] for name, r in rates.items()}
 
 
 def nontraditional_demand_hours(pops, scenario, medical_is_nontraditional=False):
@@ -719,7 +889,8 @@ def hours_per_working_adult(national_hours, pops):
 
 def compute_all(pops, invert_elder=INVERT_ELDER_CONTRIBUTION,
                 medical_is_nontraditional=False,
-                cap_to_demand=ELDER_CONTRIB_CAP_TO_DEMAND):
+                cap_to_demand=ELDER_CONTRIB_CAP_TO_DEMAND,
+                energy_scenario="FOSSIL_BASELINE"):
     """Created by JXP and Claude.
 
     Run the full calculation for every scenario column.
@@ -737,6 +908,13 @@ def compute_all(pops, invert_elder=INVERT_ELDER_CONTRIBUTION,
     cap_to_demand : bool
         If True (default), cap the Tier-1 elder contribution at the
         per-working-adult gross non-traditional demand (FLAG 6).
+    energy_scenario : str
+        'FOSSIL_BASELINE' (default, today's ~82%-fossil US economy) or
+        'MINIMAL_FOSSIL' (round 3; see the module docstring's ENERGY
+        ASSUMPTIONS section). Only affects TRADITIONAL categories; medical
+        care and the whole non-traditional side get an implicit 1.00
+        multiplier under either scenario (human-attention-bound, not
+        energy-throughput-bound).
 
     Outputs
     -------
@@ -748,7 +926,7 @@ def compute_all(pops, invert_elder=INVERT_ELDER_CONTRIBUTION,
     """
     results = {}
     for scenario in SCENARIOS:
-        trad = traditional_national_hours(pops, scenario)
+        trad = traditional_national_hours(pops, scenario, energy_scenario=energy_scenario)
 
         # Two-pass non-traditional side: gross demand, then the elder
         # contribution capped against it (FLAG 6), then the netting.
@@ -1048,10 +1226,60 @@ def main():
           f"double-counting removed), household\n  tasks up ~18% (a "
           f"scratch-cooked, restaurant-free diet costs real labor).")
     print()
-    print("See the module docstring for FLAGS 1-6 and full source citations.")
+
+    # ---- Calculations round 3: ENERGY SCENARIOS ----------------------------
+    print("ENERGY SCENARIOS (Calculations round 3) — FOSSIL_BASELINE vs "
+          "MINIMAL_FOSSIL")
+    print("-" * 78)
+    print("  Every rate above is a FOSSIL_BASELINE rate: today's US economy, "
+          "~82% fossil\n  primary energy / ~58% fossil electricity (EIA "
+          "2025). MINIMAL_FOSSIL scales the\n  energy- and fossil-input-"
+          "sensitive TRADITIONAL categories only (food, clothing,\n  "
+          "electricity, shelter, furniture, freight); K-12, medical care, "
+          "and every\n  NON-TRADITIONAL category are unchanged "
+          "(human-attention-bound). See the module\n  docstring's ENERGY "
+          "ASSUMPTIONS section for the full per-category reasoning.")
+    print()
+    minimal = compute_all(pops, energy_scenario="MINIMAL_FOSSIL")
+    print(f"  {'':22s} {'LOW':>10s} {'CENTRAL':>10s} {'HIGH':>10s}")
+    for label, key in (("TRADITIONAL", "trad_pwa"),
+                       ("NON-TRADITIONAL", "nontrad_pwa"),
+                       ("TOTAL", "total_pwa")):
+        base = [results[s][key] for s in SCENARIOS]
+        alt = [minimal[s][key] for s in SCENARIOS]
+        print(f"  {label:22s} {base[0]:10.1f} {base[1]:10.1f} {base[2]:10.1f}"
+              f"   (FOSSIL_BASELINE)")
+        print(f"  {'':22s} {alt[0]:10.1f} {alt[1]:10.1f} {alt[2]:10.1f}"
+              f"   (MINIMAL_FOSSIL)")
+    print()
+    b, m = results["CENTRAL"], minimal["CENTRAL"]
+    print(f"  CENTRAL: TRADITIONAL {b['trad_pwa']:.2f} -> {m['trad_pwa']:.2f} "
+          f"hr/wk ({100*(m['trad_pwa']/b['trad_pwa']-1):+.1f}%); "
+          f"TOTAL {b['total_pwa']:.2f} -> {m['total_pwa']:.2f} hr/wk "
+          f"({100*(m['total_pwa']/b['total_pwa']-1):+.1f}%).")
+    print("  The headline TOTAL barely moves even though several individual "
+          "categories\n  move by double digits -- because the two largest "
+          "TRADITIONAL lines (medical\n  care, K-12) and the entire "
+          "NON-TRADITIONAL side (three-quarters of the whole\n  model) are "
+          "human-attention-bound, not energy-throughput-bound. The essential/\n"
+          "  discretionary energy story here is really a goods/materials vs. "
+          "care/services\n  story.")
+    print("  Category-level moves (CENTRAL, FOSSIL_BASELINE -> MINIMAL_FOSSIL, "
+          "hr/wk per\n  working adult):")
+    for name in TRADITIONAL_RATES:
+        base_v = hours_per_working_adult(
+            TRADITIONAL_RATES[name]["CENTRAL"] * pops["total"], pops)
+        mult = MINIMAL_FOSSIL_MULT.get(name, 1.0)
+        alt_v = base_v * mult
+        print(f"    {name:44s} {base_v:6.2f} -> {alt_v:6.2f}  "
+              f"(x{mult:.2f})")
+    print()
+
+    print("See the module docstring for FLAGS 1-6, ENERGY ASSUMPTIONS, and "
+          "full source citations.")
     print("  FLAGS 1, 2, 4, 5 resolved in round 2; FLAG 6 (elder-contribution")
     print("  scale) resolved by the demand cap. FLAG 3 accepted as a stated")
-    print("  limitation.")
+    print("  limitation. Round 3 adds the MINIMAL_FOSSIL energy scenario.")
 
 
 if __name__ == "__main__":

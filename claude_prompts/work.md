@@ -33,12 +33,24 @@ Before we proceed, please search the web on this topic and add your findings to 
 
 2. Thanks for your first round of calculations.  Please read my answers to your 4 questions and then research the ones discussed.  Then update the calculations accordingly.  Log your work.  Use Opus.
 
+3. Please be clear on the energy assumptions you are making for *all* of the work.  And, if possible, do one with signifiant fossil fuel use (i.e. today's level) and one with minimal fossil fuel use.  Use Fable if you can.  Log your work.  Then add a new prompt to the Report section below that I'll then execute separately.
+
 ### Report
 
 1. We are about ready to generate a full report, as a separate markdown file named 
 `CI_Reports/work_hours_needed_report.md`.  Before proceeding, please let me know if you have any questions.  If so, add them to the Q&A/Report section below.  Use Opus. Log your work.
 
 2. I have answered the latest round of questions in Q&A.  Please read them. Then proceed to write the report.  Log your work.  Use Opus.  If questions arise during your work, ask them in the Q&A/Report section below.
+
+3. Please update `CI_Reports/work_hours_needed_report.md` (and the companion figures, if a figure earns its place) to incorporate the energy assumptions and the FOSSIL_BASELINE vs. MINIMAL_FOSSIL comparison from Calculations round 3 — the per-category fossil-fuel-sensitivity reasoning, and the finding that the headline total barely moves even though several individual categories move by double digits. Log your work. Use Opus.
+
+## Enhancements
+
+1.  It will be important to summarize what these humans would have and what they wouldn't (relative to 21st century humans) in the report.  Please provide a table of each.  For example:
+    - Would they have access to a hospital?  If so, what level of surgery?
+    - How would they obtain tools?
+    - How would they create energy?
+Use Fable, log your work.    
 
 ## Q&A
 
@@ -345,6 +357,77 @@ offset share now swings from 43% of gross demand at LOW to just 4% at HIGH,
 and in the LOW column a single elder is credited with more weekly labor (22
 hr) than a working adult's entire non-traditional burden (9.2 hr) — see the
 new Q&A question above.
+
+*(FLAG 6 was resolved in the Report round, via an exact closed-form cap —
+`gross demand / (working adults + Tier-1 population)` — that ensures a Tier-1
+elder's credited contribution can never exceed a working adult's own final net
+burden. Only the LOW column moved as a result: 15.0 → 18.1 hr/week total,
+12.2 hr/week non-traditional. CENTRAL and HIGH were unaffected. Full
+derivation is FLAG 6 in the script.)*
+
+### Calculations round 3 — energy assumptions (2026-08-24)
+
+Every rate in the model up to this point is, implicitly, a **FOSSIL_BASELINE**
+rate: it comes from labor data describing the actual 2025-2026 US economy,
+which runs on today's energy mix. Stated precisely (EIA, 2025): fossil fuels
+are **~82% of total US primary energy** (petroleum ~38%, natural gas ~35%,
+coal ~9%; nuclear ~9%, renewables ~9%), and **~58% of electricity generation**
+specifically (renewables ~24-26%, nuclear ~18%). That mix is baked into every
+BLS/USDA/NCES/CMS figure the model uses, because those figures describe how
+goods and services are *actually* produced right now.
+
+This round adds a second scenario, **MINIMAL_FOSSIL**: the same sufficiency
+standard, produced with predominantly non-fossil primary energy and, where
+relevant, without fossil-derived inputs (synthetic nitrogen fertilizer;
+petroleum-based synthetic fiber) — deliberately *not* a de-mechanization or
+collapse scenario, just a change in energy carrier and a few fossil-specific
+inputs. Per-category reasoning (full detail and citations in the script's new
+ENERGY ASSUMPTIONS docstring section):
+
+| Category | Multiplier | Why |
+|---|---|---|
+| Electricity | ×1.25 | Most uncertain line in the table. Mature wind/solar need far fewer O&M workers per TWh than fossil (20-30 vs ~100-260 jobs/TWh), but construction-phase labor is much higher (250-500 jobs/TWh) and a high-renewables grid needs extra storage/balancing labor. The literature does not converge; range is genuinely ~0.90-1.60. |
+| Food | ×1.15 | Proxied by organic-vs-conventional labor studies (organic also forgoes synthetic fertilizer): crop-specific studies find 7-34% more field labor; a CA/WA employment survey finds 2-12% more workers per acre. Applied to the whole food category since farming is ~1/3 of food-chain labor. |
+| Clothing | ×1.12 | Shift from petroleum-derived synthetic fiber toward natural fiber (cotton, wool), which is more land/labor-intensive to grow. |
+| Shelter | ×1.08 | Cement/steel process emissions are fuel-independent; on-site labor-hours-per-sqft is a function of trade practice, not fuel choice. Modest bump for materials-sourcing friction only. |
+| Freight | ×1.08 | Electrified trucking/rail needs the same drivers; modest logistics-coordination overhead. |
+| Furniture | ×1.05 | Same materials-sourcing logic as shelter, smaller category. |
+| Water/sanitation | ×1.00 | Labor is operation/maintenance-bound, not fuel-choice-bound. |
+| K-12, essential medical care | ×1.00 | Human-attention-bound professional services — decarbonizing the power behind a classroom or clinic doesn't change how many hours of teaching or clinical care are needed. |
+| **All non-traditional categories** | ×1.00 | Same reasoning: childcare, eldercare, disabled-adult care, and household tasks are bound by the number of people needing attention and by physical tasks, not by how the building is powered. |
+
+**Result (CENTRAL, hr/week per working adult):**
+
+| | FOSSIL_BASELINE | MINIMAL_FOSSIL | Change |
+|---|---|---|---|
+| Traditional | 8.3 | 8.8 | +6.1% |
+| Non-traditional | 23.9 | 23.9 | 0% |
+| **Total** | **32.2** | **32.7** | **+1.6%** |
+
+**The headline finding:** the total is remarkably *insensitive* to the
+fossil-fuel transition, even though individual categories move by double
+digits (clothing +12%, electricity +25%, food +15%). This is because the two
+largest traditional lines (essential medical care, K-12 education) and the
+entire non-traditional side — three-quarters of the whole model — are
+human-attention-bound rather than energy-throughput-bound. Put differently:
+the "essential vs. discretionary" energy story this model set out to explore
+turns out, on this accounting, to really be a "goods/materials vs.
+care/services" story. Full LOW/CENTRAL/HIGH tables for both scenarios, and the
+per-category before/after breakdown, are in the script's `main()` output.
+
+These multipliers are **reasoned sensitivities**, not researched rates like
+the rest of the model — each is a central estimate over a real range, built
+from the best available proxy literature (no direct minimal-fossil-fuel labor
+study exists at this resolution). Treat MINIMAL_FOSSIL as an order-of-
+magnitude sensitivity check on the model's energy dependence, not a rate with
+the same evidentiary standing as FOSSIL_BASELINE.
+
+**Sources for this round:**
+- [U.S. energy facts explained — EIA](https://www.eia.gov/energyexplained/us-energy-facts/) (total primary energy mix, 2025)
+- [Electricity generation, capacity, and sales in the US — EIA](https://www.eia.gov/energyexplained/electricity/electricity-in-the-us-generation-capacity-and-sales.php) (electricity generation mix, 2025)
+- [Does organic farming present greater opportunities for employment...? — PDX Scholar, 2018](https://pdxscholar.library.pdx.edu/pubadmin_fac/24/) (CA/WA organic-vs-conventional employment survey)
+- [Module V: The Economics of Organic Agriculture — UW-Madison CIAS](https://cias.wisc.edu/curriculum-new/module-v/module-v-section-d/) (crop-specific labor-hour comparisons)
+- [Putting Renewables to Work: How Many Jobs Can the Clean Energy Industry Generate? — Berkeley](https://www.localcleanenergy.org/files/040413_renewables_berkeley%20(good%20jobs%20per%20mw%20table%20pg3).pdf) (construction vs. operational jobs per TWh)
 
 ---
 

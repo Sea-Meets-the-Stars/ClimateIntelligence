@@ -43,7 +43,7 @@ every month. It is:
 > unpaid labor identically?**
 
 That is a normative accounting question with a numerical answer, and the answer
-turns out to be interesting. It is also, we will argue in §4, a question whose
+turns out to be interesting. It is also, we will argue in §5, a question whose
 answer says something about the essential/discretionary split at the heart of
 the limits argument — though considerably less about policy than a reader might
 be tempted to conclude.
@@ -66,7 +66,7 @@ those shares to the *real* 2026 US head-count of about 343 million.
 
 The age-60 exit from paid work is a stipulation, not a prediction. So is the
 assumption of two children per household — replacement fertility, against
-a real US total fertility rate of 1.599 (CDC, 2024). Both are flagged in §6.
+a real US total fertility rate of 1.599 (CDC, 2024). Both are flagged in §7.
 
 **A sufficiency standard, not scaled-down current consumption.** "Minimal" admits
 a factor-of-two range, so we pinned it down: roughly **250 square feet of
@@ -208,11 +208,11 @@ less good at doing that for anything that must be done *to a person*.
 **Third, on the non-traditional side, household tasks alone are larger than the
 entire traditional column.** 12.74 hours a week, and the largest single line in
 the model. This is not an artifact of counting current behavior — it is what the
-stipulated sufficiency standard requires, and (as §5 explains) it came out
+stipulated sufficiency standard requires, and (as §6 explains) it came out
 *higher* than what Americans actually do. A restaurant-free, scratch-cooked diet
 is genuinely expensive in hours. Childcare, at 5.29 hours, is smaller than most
 readers will expect, and smaller than our own first estimate; that story is
-also §5.
+also §6.
 
 **Fourth, the elder tiers behave asymmetrically, and the active decade is a net
 contributor.** Care intensity ramps steeply: light support at 60-69 (1.10),
@@ -226,7 +226,45 @@ Treating recent retirees as pure dependents, as dependency-ratio arithmetic
 usually does, is simply wrong: for a decade they are among the system's larger
 net donors of care.
 
-## 4. What the number means, and what it does not
+## 4. What sufficiency looks like, concretely
+
+The numbers above are abstract by construction — hours per week, LOW to HIGH.
+It is worth making them concrete: what would a person actually have, and not
+have, living at this standard, relative to a 21st-century American today?
+
+| | Would have | Would NOT have |
+|---|---|---|
+| **Housing** | A private home built to full 2026 construction standards — plumbing, insulation, heating and cooling, electricity — sized at ~250 sq ft per person (a four-person household ≈ 1,000 sq ft) | Space beyond that: today's US average is ~740 sq ft per person, roughly three times as much. No second homes, no rooms kept empty for guests who rarely come. |
+| **Food** | A nutritionally complete, home-cooked diet (~2,300 kcal/day), meat as a real but modest component, prepared from real ingredients with a modern kitchen (stove, refrigerator, running water) | Restaurants and takeout, entirely excluded from the model; heavily processed convenience food; food waste anywhere near today's ~30% rate |
+| **Clothing** | A durable wardrobe of about 103 well-made garments — shirts, trousers, underwear, a winter coat, work and casual shoes — replaced roughly every 4 years on average, mostly natural fiber | "Fast fashion": the 150-200-item wardrobe an average American owns today, much of it replaced within 2 years; a new outfit for every occasion |
+| **Furniture** | Basic, durable furniture — bed, table, seating, storage — built to last | Trend-driven or disposable furniture; decor as its own discretionary spending category |
+| **Water and sanitation** | Clean tap water and sewage treatment, indistinguishable day to day from today's system | Nothing different — this is not a category where sufficiency asks for less |
+| **Electricity** | A reliable grid. Two scenarios are on the table (see the companion energy-assumptions analysis, Calculations round 3): today's actual US mix (~58% fossil fuels, mostly natural gas and coal, with nuclear and renewables) requires no change at all; a "minimal fossil fuel" grid — predominantly wind, solar, and nuclear, with more storage and transmission capacity to manage intermittency — costs *slightly more* labor for this one category (roughly a quarter more), not less | Rationing, blackouts, or energy poverty of any kind. Sufficiency assumes enough electricity is produced and directed toward essential uses, not that less energy exists in absolute terms. |
+| **Tools and machinery** | The full benefit of 2026 industrial technology: tractors, sewing machines, power tools, and the computers running the schools, hospitals, and utilities that serve everyone — produced through the same modern supply chains that exist today | This is *not* a low-tech or back-to-basics scenario. Sufficiency is a claim about *what* gets produced, not a retreat in *how* it gets produced — nobody here is making their own tools or forgoing machinery. |
+| **Health care** | A functioning hospital and clinic system: primary and emergency care, obstetrics (labor, delivery, prenatal care), medically necessary surgery (trauma, appendectomy, cardiac, cancer treatment), antibiotics, vaccines, and basic-tier pharmaceuticals — about 65% of today's US health-care labor, net of administrative overhead and low-value care | Cosmetic and most elective procedures, and the roughly one-third of current US medical spending and labor this model treats as administrative waste or low-value care |
+| **Education** | Free K-12 public schooling, staffed close to today's actual student-to-staff ratios | College or university — a deliberate exclusion, not an oversight (see the note below) |
+| **Movement of goods** | Trucks, rail, and warehousing move essential goods — food, materials, medical supplies — at roughly half of today's US freight sector | An allowance for moving *people*. This model has no line for commuting, no passenger vehicles, no travel of any kind — every hour above buys the movement of things, not of persons. A genuine gap; see §7. |
+| **Care of children, the sick, the disabled, and the frail elderly** | A defined, needs-based level of supervision and care at every life stage, plus nursing-home-level congregate care in the final years of life | Nothing is withheld here on purpose — if anything, this column is more likely to *understate* the need than overstate it (§6) |
+| **Governance, defense, and research** | — | Not costed anywhere in this model. Their absence is a scope limitation (§7), not a claim that they cost nothing. |
+
+**A loose end worth naming honestly.** The model excludes ages 20-24 from the
+working-adult denominator "assuming college" — a bookkeeping device to keep
+them out of the labor-supply count, borrowed from the reason most 20-24-year-
+olds aren't working today. But it does not follow that this model *funds*
+college as an essential service: higher education never made the essential
+list (§2). The standing of that five-year band is genuinely ambiguous in this
+accounting — neither counted as needing college, nor required to forgo it,
+simply absent from both sides of the ledger. We flag this rather than paper
+over it.
+
+The throughline across nearly every row: this is decidedly *not* a subsistence
+or primitivist scenario. Every essential category is produced with full modern
+technology and the full benefit of a century of productivity growth. What is
+absent is not technology, but scale and variety in the *discretionary* portion
+of consumption — the part Murphy's arithmetic already told us was the
+overwhelming majority of what a modern economy actually does.
+
+## 5. What the number means, and what it does not
 
 Here is the comparison that makes this exercise worth publishing.
 
@@ -301,7 +339,7 @@ The honest summary is that we have measured the size of one box. What belongs
 outside it, and who carries what share of what is inside, are separate questions
 this model cannot answer.
 
-## 5. How the estimate got here: a revision story
+## 6. How the estimate got here: a revision story
 
 The first pass at this calculation produced a central estimate of **46.0 hours
 per week** (9.1 traditional + 36.9 non-traditional). The current figure is
@@ -389,7 +427,7 @@ A fourth change moved no total at all: essential medical care was reclassified
 from non-traditional to traditional, on the same logic as the existing K-12
 carve-out. Only the bucket changed.
 
-## 6. Limitations, honestly stated
+## 7. Limitations, honestly stated
 
 **Stipulated fertility exceeds reality.** The model assumes two children per
 household — approximately replacement — against a real US total fertility rate
@@ -446,7 +484,7 @@ factor of three. The CENTRAL figure is our best estimate, not a measurement, and
 readers who find any particular input rate implausible should reach for the
 column that reflects their view rather than the middle one.
 
-## 7. Methods and sources
+## 8. Methods and sources
 
 The authoritative methods reference is the calculation script itself:
 [`CI_Reports/work_hours_needed.py`](work_hours_needed.py). Its module docstring
