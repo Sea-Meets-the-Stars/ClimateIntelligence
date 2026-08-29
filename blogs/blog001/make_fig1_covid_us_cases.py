@@ -159,6 +159,11 @@ def make_figure(df, doubling_days, fit_dates, fit_cases, out_png):
     ax.set_title("COVID-19 in the United States: the exponential spring of 2020",
                  loc="left", pad=12, fontweight="bold")
 
+    # Figure number for the blog post's sequence (bottom-right corner,
+    # mirroring the data-source footer at bottom-left).
+    fig.text(0.99, 0.012, "Figure 1", ha="right", fontsize=9.5,
+             fontweight="bold", color="#6b7280")
+
     # Annotation: fitted doubling time, pointing at the 2020 wave.
     x_mid = fit_dates.iloc[len(fit_dates) // 2]
     y_mid = fit_cases[len(fit_cases) // 2]

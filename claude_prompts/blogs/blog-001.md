@@ -25,7 +25,9 @@ Log your work.  Use Fable if you can.
    - Go back farther in time
    - Label and fit the main exponential periods
    - Use a log-scale x-axis if needed
+And, add "Figure XX" to each of the figures.
 Log your work.  Use Fable if you can.
+
 
 ## Q&A
 

@@ -203,6 +203,11 @@ def make_figure(df, doubling_months, growth_per_year, trend_years,
     ax.set_title("AI training compute: a sixteen-year exponential",
                  loc="left", pad=12, fontweight="bold")
 
+    # Figure number for the blog post's sequence (bottom-right corner,
+    # mirroring the data-source footer at bottom-left).
+    fig.text(0.99, 0.012, "Figure 3", ha="right", fontsize=9.5,
+             fontweight="bold", color="#6b7280")
+
     # Annotation: fitted doubling time, anchored to the trend line.
     ax.text(
         2011.0, 3e22,
