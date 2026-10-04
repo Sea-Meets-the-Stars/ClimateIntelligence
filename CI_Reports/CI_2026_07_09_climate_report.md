@@ -27,7 +27,7 @@ WGII/WGIII 2022, Synthesis 2023) and three Special Reports (SR1.5, SROCC, SRCCL)
 supplemented by primary data archives (NOAA, NASA, CSIRO, the Global Carbon
 Project) and by the 2025 U.S. Department of Energy "Climate Working Group" report
 and its 85-author expert rebuttal, which together bracket the live debate. Full
-citations are in §12; data portals are catalogued in `context/references.md`.
+citations are in §13; data portals are catalogued in `context/references.md`.
 
 **On the IPCC's authority — used, not worshipped.** The IPCC is an *assessment* of
 the published literature, not an oracle, and treating it as the final word would
@@ -151,7 +151,7 @@ coast is dominated by **land subsidence** (groundwater/hydrocarbon extraction,
 sediment starvation), not ocean rise — at Grand Isle the relative rise is ~4× the
 absolute climate signal. This is true and important for adaptation planning, but it
 is a *local* modifier: it does not reduce the globally averaged, satellite-measured
-climate signal. Conflating the two is a scope error (§11).
+climate signal. Conflating the two is a scope error (§12).
 
 ![Figure 3](fig3_sea_level.png)
 
@@ -978,7 +978,80 @@ planning, child survival) are development goods in their own right.
 
 ---
 
-## 10. Artificial intelligence: the data-center energy and water surge
+## 10. Feeding the billions: nitrogen, ammonia, and the Haber-Bosch bargain
+
+Behind the population curve of §9 sits a single chemical reaction. Atmospheric
+nitrogen (N₂) makes up 78% of the air yet is useless to plants until it is "fixed"
+into reactive forms; for all of history that was the work of soil microbes,
+lightning, legumes, and mined deposits — until **Fritz Haber** (laboratory
+synthesis, 1909) and **Carl Bosch** at BASF (first industrial plant, **Oppau,
+1913**) learned to fix it at scale: **N₂ + 3H₂ → 2NH₃**, forced together at
+~150–300 bar and ~450 °C over an iron catalyst. It is arguably the most
+consequential invention of the twentieth century, and a near-perfect illustration
+of this report's principles: it feeds roughly half of us, and the planet carries
+the bill.
+
+**Born of war.** Nitrogen fixation feeds explosives as readily as crops —
+NH₃ → nitric acid → nitrates → TNT and ammonium nitrate. Before Haber-Bosch,
+Germany depended on **Chilean saltpeter** (sodium nitrate; Chile supplied ~80% of
+the world's natural nitrate); when the British naval blockade severed that supply
+in the First World War, synthetic ammonia is what let Germany keep manufacturing
+munitions. Most historians judge that it **materially prolonged the war** — and
+Haber himself went on to direct Germany's chemical-weapons program, the dark twin
+of the same discovery. The agricultural application that reshaped humanity came
+largely *after* the war. (Per Principle 4 the history is unavoidably military, but
+the blog's interest is the chemistry and its consequences, not the politics.)
+
+**Roughly half of humanity eats because of it.** The careful estimate — Vaclav
+Smil's *Enriching the Earth* (2001) and **Erisman et al. (2008)** — is that
+synthetic nitrogen underwrites about **48% of the world's food supply**;
+equivalently, **~4 billion of today's ~8.2 billion people could not be fed without
+it** [61][62], and ~42% of twentieth-century births are attributable to it.
+Population and synthetic-nitrogen use rose in lock-step after 1950 (**Figure 20**).
+*Uncertainty and bias:* the "half of humanity" figure is a **counterfactual** — a
+model of how many people current cropland and diets could feed using only
+pre-industrial nitrogen sources, sensitive to assumed yields, diets, and recycling
+efficiency; plausible values run ~40–50%. It is not a prediction that 4 billion
+people would suddenly die, but a statement that today's population *at today's diet*
+is not supportable on natural nitrogen alone. Read against §9, the demographic
+transition happened *on top of* this nitrogen subsidy.
+
+**The climate bill, kept honest in both directions.** The bargain is real, and so
+is its cost.
+- *Production CO₂.* Ammonia synthesis runs at ~**180 Mt NH₃/yr**, consumes ~**2% of
+  global final energy**, and emits ~**450 Mt CO₂/yr — about 1.2% of global fossil
+  CO₂** — because roughly 70% of its hydrogen is stripped from natural gas (much of
+  the remainder from coal, in China), at ~2.5 t CO₂ per tonne of ammonia [63]. It is
+  among the hardest heavy industries to decarbonize; the escape route is "green
+  ammonia" made from electrolytic hydrogen.
+- *Nitrous oxide.* Spreading that nitrogen on fields leaks **N₂O**, a greenhouse gas
+  with ~**273×** the century-scale warming power of CO₂ and now the leading
+  ozone-depleting emission; agriculture is ~**81%** of anthropogenic N₂O (IPCC
+  SRCCL). The nitrogen that feeds us is the third curve in Figure 5.
+- *The nitrogen boundary.* Reactive nitrogen runs off into rivers and coasts,
+  driving eutrophication and dead zones — which is why **biogeochemical (N and P)
+  flows** is among the most-transgressed planetary boundaries (§6), overshot by even
+  more than carbon in relative terms.
+
+**The honest framing (Principles 1, 2, 5).** Resist both easy stories —
+techno-triumph and industrial-agriculture-is-evil. The Haber-Bosch process is
+*simultaneously* the reason several billion people are alive and a significant,
+hard-to-abate source of greenhouse gas and pollution. That tension, not either half
+by itself, is the story. The headline numbers here are computed in
+`CI_Reports/haber_bosch_nitrogen.py`.
+
+![Figure 20](fig20_haber_bosch.png)
+
+**Figure 20.** World population and synthetic nitrogen-fertilizer use, 1900–2020:
+the two curves rise in lock-step once the Haber-Bosch process is industrialized
+(Oppau, 1913; dotted line). Left axis, population (billions); right axis, synthetic
+nitrogen (Mt N/yr). Milestone values are illustrative decadal points from OWID/FAO/
+Smil compilations (values approximate). Generated by
+`CI_Reports/haber_bosch_nitrogen.py`.
+
+---
+
+## 11. Artificial intelligence: the data-center energy and water surge
 
 Artificial intelligence is a topic of the blog in its own right, and its physical
 footprint is where it meets this report. The U.S. Department of Energy is the
@@ -1082,7 +1155,7 @@ the reports are staged in `context/Reports/` and on the shared Drive.*
 
 ---
 
-## 11. A note on scope and framing
+## 12. A note on scope and framing
 
 Several of the sharpest disagreements are not about physics but about **scope**, and
 recognizing this defuses much apparent contradiction:
@@ -1102,7 +1175,7 @@ these are questions of measurement and logic, not ideology.
 
 ---
 
-## 12. References
+## 13. References
 
 *Primary assessments and data (full portals in `context/references.md`):*
 
@@ -1216,7 +1289,7 @@ these are questions of measurement and logic, not ideology.
     2026-07-11); "Kaya identity: drivers of CO₂ emissions" (Global Carbon
     Budget / Energy Institute decomposition, 1965–2022).
 
-*AI energy & water (§10):*
+*AI energy & water (§11):*
 
 42. Shehabi, A. et al., 2024. *2024 United States Data Center Energy Usage
     Report.* Lawrence Berkeley National Laboratory, LBNL-2001637 (DOI
@@ -1285,6 +1358,23 @@ these are questions of measurement and logic, not ideology.
     1:110m admin-0 (public domain), cached as
     `CI_Reports/data/world_countries_ne110m.geojson`.
 
+*Chemistry / nitrogen (§10):*
+
+61. Erisman, J.W., Sutton, M.A., Galloway, J., Klimont, Z. & Winiwarter, W., 2008.
+    How a century of ammonia synthesis changed the world. *Nature Geoscience*
+    1, 636–639. (Synthetic N feeds ~48% of the population; ~42% of 20th-century
+    births.)
+62. Smil, V., 2001. *Enriching the Earth: Fritz Haber, Carl Bosch, and the
+    Transformation of World Food Production.* MIT Press. Popularized via Our World in
+    Data, "How many people does synthetic fertilizer feed?" (Ritchie 2017; graphers
+    `world-population-supported-by-synthetic-nitrogen-fertilizers`,
+    `world-population-with-and-without-fertilizer`). Milestone series for Figure 20
+    from OWID/FAO fertilizer and UN/HYDE population compilations.
+63. International Energy Agency, 2021. *Ammonia Technology Roadmap.* (~180 Mt NH₃/yr;
+    ~2% of global final energy, 8.6 EJ in 2020; ~450 Mt CO₂/yr direct emissions;
+    ~70% of feedstock hydrogen from natural gas.) N₂O share of agriculture from IPCC
+    SRCCL (2019); N₂O 100-yr GWP ≈ 273 from IPCC AR6 WGI.
+
 *Figures 1–5 are original, generated by `CI_Reports/make_figures.py` from the data
 in sources 6–9 (Figure 5's CH₄ growth-rate context is computed in
 `CI_Reports/methane_growth_rate.py`). Figure 6 is reproduced from IPCC AR6 WG1 Figure SPM.10 (source 1),
@@ -1303,7 +1393,9 @@ Figures 15–18 (planetary boundaries & energy balance) are original, generated 
 Figure 15 is an original redraw from the published planetary-boundaries control
 values, deliberately *not* a reproduction of the copyrighted SRC "wheel." Figure
 19 (fertility choropleth) is original, generated by
-`CI_Reports/make_fertility_map.py` from source 60. Uncertainty ranges and
+`CI_Reports/make_fertility_map.py` from source 60. Figure 20 (population vs
+synthetic nitrogen) is original, generated by `CI_Reports/haber_bosch_nitrogen.py`
+from the milestone data in sources 61–63. Uncertainty ranges and
 baselines are annotated on each figure. Literature figures
 are cited inline to the assessments above rather than reproduced, pending
 permissions.*
