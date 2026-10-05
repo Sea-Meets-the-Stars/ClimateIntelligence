@@ -87,3 +87,6 @@ ut_time,tokens_used,model,co2_grams_estimate
 2026-08-29T19:08:30Z,154679,claude-sonnet-5,11.76
 2026-08-29T19:35:22Z,115665,claude-sonnet-5,8.79
 2026-08-30T08:57:54Z,441578,claude-sonnet-5,33.56
+2026-10-04T23:49:53Z,63820,claude-opus-5-5,4.85
+2026-10-05T00:17:41Z,13278,claude-opus-5-5,1.01
+2026-10-05T00:38:59Z,11280,claude-opus-5-5,0.86
