@@ -22,6 +22,8 @@ Usage:
 import argparse
 import json
 import os
+import tempfile
+from pathlib import Path
 
 from PIL import Image
 from pptx.dml.color import RGBColor
@@ -66,7 +68,15 @@ PAIRS = {
         "Vogt et al. 1994, Proc. SPIE 2198"),
 }
 # Slides whose image already carries its own title: drop the slide title so the image fills the slide.
-HIDE_TITLE = {"Climate Intelligence"}
+HIDE_TITLE = set()
+
+# Slides whose source line sits low and right-aligned (B9b: give the figure more room).
+# The source is sized (<= 16 pt, >= 12 pt) to fit on one line, measured in Roboto.
+SOURCE_LOW_RIGHT = {"2: AI can already help create a deadly pandemic"}
+LOW_SRC_X, LOW_SRC_W, LOW_SRC_TOP = 1.95, 7.2, 5.15   # right of the logo, left of the slide number
+
+# Wider photo/inset column for specific slides (B9b: fill the white space on A4).
+PHOTO_W_FOR = {"4: Resistance to data centers is a (valuable) distraction": 3.1}
 
 # A10: a labeled empty box; the author adds the image (Q43).
 PLACEHOLDERS = {
@@ -125,7 +135,10 @@ PLACEMENTS = {
         "c10_economist_survey.png", None,
         "Survey: Howard & Sylvan 2021, Institute for Policy Integrity (738 climate economists, worldwide)"),
     # --- B9: intro ---
-    "Climate Intelligence": ("docs/CI_graphic.png", None, None),
+    "Climate Intelligence": ("s3_ci_concept.png", None, None),
+    "Our own sensors are exquisite": (
+        "s4_senses.png", None,
+        "Vision: Hecht et al. 1942 · hearing: 0–120 dB · geosmin ~5 ng/L (USGS) · touch: Skedung et al. 2013"),
     "Humans suck at exponentials": (
         "s5_covid.png", None, "Data: Johns Hopkins CSSE via Our World in Data (Blog 001, Figure 1)"),
     # --- B9: AI half ---
@@ -134,8 +147,7 @@ PLACEMENTS = {
         "J. Xavier Prochaska, The Sacramento Bee, 21 Aug 2026 (photo: Dado Ruvic/Reuters)"),
     "2: AI can already help create a deadly pandemic": (
         "a2_bio_uplift.png", None,
-        "Quote: Fortune, 30 Sep 2026. Data: RAND & OpenAI 2024; Anthropic 2025; Zhang et al. 2026 "
-        "(knowledge tasks, not wet-lab)"),
+        "Fortune 30 Sep 2026; RAND, OpenAI 2024; Anthropic 2025; Zhang+ 2026 (not wet-lab)"),
     "3: AI can already hack nearly every system on Earth": (
         "a3_hacking.png", None,
         "Scientific American & Axios, Apr 2026 (Mythos, UK AISI); CNBC, Jul 2026 (Hugging Face)"),
@@ -160,12 +172,31 @@ def title_bottom(title, pt):
     return 0.02 + 0.2 + lines * pt * 1.2 / 72 + 0.06
 
 
+MAX_PX = 2000                 # photos larger than this are downsampled for the deck (B10)
+SLIDE_IMG_CACHE = Path(tempfile.gettempdir()) / "wmko2026_slide_images"
+
+
 def resolve(name):
-    """Created by JXP and Claude. Path of an image: figs/, figs/images/, or repo-relative."""
+    """Created by JXP and Claude. Path of an image: figs/, figs/images/, or
+    repo-relative. Photos/screenshots with a side > MAX_PX are downsampled to a
+    JPEG copy (originals untouched) to keep the deck small."""
     for base in (FIGS, IMG, ROOT):
-        if (base / name).exists():
-            return base / name
-    raise FileNotFoundError(name)
+        path = base / name
+        if path.exists():
+            break
+    else:
+        raise FileNotFoundError(name)
+    if base == FIGS:
+        return path  # our own figures are already slide-sized
+    with Image.open(path) as im:
+        if max(im.size) <= MAX_PX and path.stat().st_size < 600_000:
+            return path
+        SLIDE_IMG_CACHE.mkdir(exist_ok=True)
+        out = SLIDE_IMG_CACHE / (path.stem + "_slide.jpg")
+        small = im.convert("RGB")
+        small.thumbnail((MAX_PX, MAX_PX))
+        small.save(out, quality=88)
+    return out
 
 
 def fit(path, box_w, box_h):
@@ -177,9 +208,17 @@ def fit(path, box_w, box_h):
     return w, w / aspect
 
 
-def add_text(slide, text, top, height, pt, color, name, center=False):
-    """Created by JXP and Claude. A plain Roboto text box across the slide."""
-    tb = slide.shapes.add_textbox(Inches(SRC_X), Inches(top), Inches(SRC_W), Inches(height))
+def text_width_in(text, pt):
+    """Created by JXP and Claude. Width (inches) of text in Roboto Regular."""
+    from PIL import ImageFont
+    font = ImageFont.truetype(str(PRES / "data" / "fonts" / "Roboto.ttf"), 400)
+    font.set_variation_by_name("Regular")
+    return font.getlength(text) / 400 * pt / 72
+
+
+def add_text(slide, text, top, height, pt, color, name, center=False, x=SRC_X, w=SRC_W, right=False):
+    """Created by JXP and Claude. A plain Roboto text box (default: across the slide)."""
+    tb = slide.shapes.add_textbox(Inches(x), Inches(top), Inches(w), Inches(height))
     tf = tb.text_frame
     tf.word_wrap = True
     for side in ("margin_left", "margin_right", "margin_top", "margin_bottom"):
@@ -187,6 +226,8 @@ def add_text(slide, text, top, height, pt, color, name, center=False):
     para = tf.paragraphs[0]
     if center:
         para.alignment = PP_ALIGN.CENTER
+    elif right:
+        para.alignment = PP_ALIGN.RIGHT
     run = para.add_run()
     run.text = text
     run.font.size = Pt(pt)
@@ -203,8 +244,15 @@ def add_source(slide, text, top, n_lines):
 def place(slide, title, title_pt, fig_name, photo_name, source):
     """Created by JXP and Claude. Lay out one slide's figure, photo, note, source."""
     top = 0.4 if title in HIDE_TITLE else title_bottom(title, title_pt)
-    n_src = -(-len(source) // SRC_CHARS_PER_LINE) if source else 0
-    src_top = SRC_TOP_1LINE - SRC_LINE_H * (n_src - 1) if source else SRC_TOP_1LINE + 0.2
+    low = source and title in SOURCE_LOW_RIGHT
+    if low:
+        pt = next((p for p in (16, 15, 14, 13, 12) if text_width_in(source, p) <= LOW_SRC_W - 0.05), 12)
+        add_text(slide, source, LOW_SRC_TOP, SRC_LINE_H, pt, RGBColor(0x66, 0x66, 0x66), "Source",
+                 x=LOW_SRC_X, w=LOW_SRC_W, right=True)
+        n_src, src_top = 0, LOW_SRC_TOP + 0.02
+    else:
+        n_src = -(-len(source) // SRC_CHARS_PER_LINE) if source else 0
+        src_top = SRC_TOP_1LINE - SRC_LINE_H * (n_src - 1) if source else SRC_TOP_1LINE + 0.2
     bottom = src_top - 0.08
     note = NOTES.get(title)
     if note:
@@ -212,7 +260,8 @@ def place(slide, title, title_pt, fig_name, photo_name, source):
         add_text(slide, note, bottom + 0.05, NOTE_H, NOTE_PT, RGBColor(0x22, 0x22, 0x22), "Note", center=True)
     avail_h = bottom - top
 
-    fig_box_w = (X1 - X0) - (PHOTO_W + GAP if photo_name else 0)
+    photo_w = PHOTO_W_FOR.get(title, PHOTO_W)
+    fig_box_w = (X1 - X0) - (photo_w + GAP if photo_name else 0)
     fig_path = resolve(fig_name)
     fw, fh = fit(fig_path, fig_box_w, avail_h)
     fx = X0 + (fig_box_w - fw) / 2
@@ -220,10 +269,10 @@ def place(slide, title, title_pt, fig_name, photo_name, source):
                              Inches(fw), Inches(fh)).name = "Figure"
     if photo_name:
         photo_path = resolve(photo_name)
-        pw, ph = fit(photo_path, PHOTO_W, avail_h * 0.9)
-        slide.shapes.add_picture(str(photo_path), Inches(X1 - PHOTO_W + (PHOTO_W - pw) / 2),
+        pw, ph = fit(photo_path, photo_w, avail_h * (1.0 if title in PHOTO_W_FOR else 0.9))
+        slide.shapes.add_picture(str(photo_path), Inches(X1 - photo_w + (photo_w - pw) / 2),
                                  Inches(top + (avail_h - ph) / 2), Inches(pw), Inches(ph)).name = "Instrument"
-    if source:
+    if source and not low:
         add_source(slide, source, src_top, n_src)
 
 

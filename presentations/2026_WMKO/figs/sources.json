@@ -101,6 +101,14 @@
   },
   "a8_skills.png": {
     "slide": "A8",
-    "source": "Illustration"
+    "source": "Illustration; reading speed: Brysbaert 2019 (J. Mem. Lang.)"
+  },
+  "s4_senses.png": {
+    "slide": "4",
+    "source": "Vision: standard vision-science values (Hecht et al. 1942); hearing: 0–120 dB (JoVE); geosmin ~5 ng/L (USGS/water utilities); touch: Skedung et al. 2013, Sci. Rep."
+  },
+  "s3_ci_concept.png": {
+    "slide": "3",
+    "source": "Concept schematic"
   }
 }

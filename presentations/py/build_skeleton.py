@@ -135,6 +135,10 @@ def build(template):
     kraw3 = prs.slides[2]
     title_el = copy.deepcopy(find_shape(kraw3, TITLE_BOX_TEXT)._element)
     subline_el = copy.deepcopy(find_shape(kraw3, SUBLINE_BOX_TEXT)._element)
+    # Kraw's own slide-number placeholder (python-pptx does not clone slide-number
+    # placeholders from the layout, so new slides would otherwise have none; B9b).
+    slidenum_el = copy.deepcopy(next(sh for sh in kraw3.placeholders
+                                     if sh.placeholder_format.idx == SLIDE_NUMBER_IDX)._element)
 
     drop_slides(prs, keep={0})
     content_layout = layout_by_name(prs, CONTENT_LAYOUT)
@@ -154,8 +158,11 @@ def build(template):
     for spec in SLIDES[1:]:
         slide = prs.slides.add_slide(content_layout)
         for ph in list(slide.placeholders):
-            if ph.placeholder_format.idx != SLIDE_NUMBER_IDX:
-                ph._element.getparent().remove(ph._element)
+            ph._element.getparent().remove(ph._element)
+        num = copy.deepcopy(slidenum_el)
+        num.find(".//{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr").set(
+            "id", str(next_shape_id(slide)))
+        slide.shapes._spTree.append(num)
         if spec["title"]:
             box = add_box(slide, title_el, spec["title"], "Title", sizes.get(spec.get("group")))
             if spec["kind"] == DIVIDER:

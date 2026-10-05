@@ -20,6 +20,7 @@ A3 numbers (verified in Q&A Round 2, with sources):
 Usage:
     conda run -n ocean14 python presentations/py/ai_panels.py
 """
+import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, Rectangle
 
@@ -63,7 +64,7 @@ def a6_proposals():
     apply_style()
     fig, ax = plt.subplots(figsize=FULL)
     ax.set_xlim(0, 10)
-    ax.set_ylim(-0.3, 3.3)
+    ax.set_ylim(-0.5, 3.3)
     ax.axis("off")
     funded = 11
     for i in range(15):
@@ -75,41 +76,81 @@ def a6_proposals():
         ax.text(x + 1.38, y - 0.82, "Excellent", fontsize=10, color=GREEN, ha="right", fontweight="bold")
         if i == funded:
             ax.add_patch(Rectangle((x - 0.05, y - 1.0), 1.55, 1.02, fill=False, edgecolor=GOLD, lw=3))
-            ax.text(x + 0.72, y - 1.18, "funded (why this one?)", fontsize=11, color=GOLD,
+            ax.text(x + 0.72, y - 1.35, "funded (why this one?)", fontsize=17, color=GOLD,
                     ha="center", fontweight="bold")
     save(fig, "a6_proposals.png", "Illustration", "A6")
 
 
 def a8_skills():
-    """Created by JXP and Claude. Build a8_skills.png in xkcd style."""
+    """Created by JXP and Claude. Build a8_skills.png in xkcd style (B9b):
+      1. order-of-magnitude thinking — an estimate in the right decade beats a
+         precise-looking wrong answer;
+      2. rapid reading — AI emits pages per second; a person reads ~240 words
+         per minute (Brysbaert 2019, J. Mem. Lang.: 238 wpm, adult silent
+         reading of non-fiction);
+      3. reading & making figures — a richer hand-drawn plot (data with error
+         bars, a model with an uncertainty band, a legend, an annotation)."""
     apply_style()
+    rng = np.random.default_rng(7)
     with plt.xkcd(scale=1, length=100, randomness=2):
         plt.rcParams["font.family"] = ["Humor Sans", "Comic Neue", "Comic Sans MS", "DejaVu Sans"]
-        fig, axes = plt.subplots(1, 3, figsize=FULL)
-        # 1. Order-of-magnitude thinking: a log ladder.
+        fig, axes = plt.subplots(1, 3, figsize=FULL, gridspec_kw=dict(width_ratios=(1, 1, 1.15)))
+
+        # 1. Order of magnitude: a log number line, truth, a good estimate, a bad precise answer.
         ax = axes[0]
-        for k, lab in enumerate(["1", "10", "100", "1,000", "10,000"]):
-            ax.plot([0.2, 0.8], [k, k], color=INK, lw=1.5)
-            ax.text(0.9, k, lab, fontsize=12, va="center", color=INK)
-        ax.annotate("", (0.5, 4.2), (0.5, -0.2), arrowprops=dict(arrowstyle="->", color=RED, lw=2))
+        ax.set_xlim(-0.3, 8.6)
+        ax.set_ylim(-1.6, 4.2)
+        ax.plot([0, 8], [0, 0], color=INK, lw=1.5)
+        for k in range(0, 9, 2):
+            ax.plot([k, k], [-0.15, 0.15], color=INK, lw=1.5)
+            ax.text(k, -0.55, f"10$^{{{k}}}$", ha="center", fontsize=12)
+        ax.axvspan(3.5, 4.5, ymin=0.3, ymax=0.62, color=GREEN, alpha=0.25)
+        ax.plot(4.2, 0, "o", ms=10, color=INK)
+        ax.text(4.2, -1.25, "truth", ha="center", fontsize=12)
+        ax.plot(3.8, 0.55, "v", ms=12, color=GREEN)
+        ax.text(2.3, 1.2, "your guess:\n~10$^4$ — close!", ha="center", fontsize=11, color=GREEN)
+        ax.plot(6.5, 0.55, "v", ms=12, color=RED)
+        ax.text(7.0, 1.2, "3,141,592.65\n(precise, wrong)", ha="center", fontsize=11, color=RED)
+        ax.text(4.1, 2.6, "roughly right beats\nprecisely wrong", ha="center", fontsize=13, color=INK)
         ax.set_title("Order-of-magnitude\nthinking", fontsize=15)
-        # 2. Rapid reading with comprehension: a page of lines + a check.
+        ax.axis("off")
+
+        # 2. Rapid reading: a flood of pages from AI vs one human reader.
         ax = axes[1]
-        for k in range(9):
-            ax.plot([0.1, 0.9 - (0.25 if k % 3 == 2 else 0)], [8 - k, 8 - k], color=GRAY, lw=2)
-        ax.text(0.78, 0.3, "✓", fontsize=36, color=GREEN, ha="center")
+        ax.set_xlim(0, 10)
+        ax.set_ylim(0, 10)
+        ax.add_patch(Rectangle((0.3, 6.6), 2.6, 2.4, facecolor=BLUE, alpha=0.85))
+        ax.text(1.6, 7.8, "AI", ha="center", va="center", fontsize=22, color="white")
+        for k in range(26):
+            x, y = 3.2 + rng.uniform(0, 6.2), 2.2 + rng.uniform(0, 7.2)
+            ax.add_patch(Rectangle((x, y), 0.9, 1.15, angle=rng.uniform(-35, 35), facecolor="white",
+                                   edgecolor=GRAY, lw=1))
+        ax.text(1.6, 5.7, "pages per\nsecond", ha="center", va="top", fontsize=13, color=BLUE)
+        ax.text(2.0, 1.0, "you: ~240 words\nper minute", ha="center", fontsize=12, color=RED)
+        ax.plot([2.0], [3.2], "o", ms=14, color=RED)  # a head
+        ax.plot([2.0, 2.0], [3.0, 1.9], color=RED, lw=2)
         ax.set_title("Rapid reading\nwith comprehension", fontsize=15)
-        # 3. Reading and creating figures: a hand-drawn rising curve.
+        ax.axis("off")
+
+        # 3. Figures: data + error bars, a model with an uncertainty band, legend, annotation.
         ax = axes[2]
-        xs = [i / 20 for i in range(21)]
-        ax.plot(xs, [2 ** (6 * x) for x in xs], color=BLUE, lw=2.5)
-        ax.text(0.05, 50, "sketches\nare fine!", fontsize=13, color=RED)
+        x = np.linspace(0, 10, 12)
+        model = 1 + 0.08 * x ** 2
+        ax.fill_between(x, model - 1.2, model + 1.2, color=BLUE, alpha=0.18, lw=0)
+        ax.plot(x, model, color=BLUE, lw=2, label="model")
+        y = model + rng.normal(0, 0.8, x.size)
+        y[9] += 3.5
+        ax.errorbar(x, y, yerr=0.9, fmt="o", color=INK, ms=5, capsize=3, label="data")
+        ax.annotate("anomaly!", (x[9], y[9]), xytext=(4.3, y[9] + 0.3), fontsize=12, color=RED,
+                    arrowprops=dict(arrowstyle="->", color=RED, lw=1.5))
+        ax.legend(loc="lower right", fontsize=11, frameon=False)
+        ax.set_xlabel("time")
+        ax.set_ylabel("thing we measured")
+        ax.set_xticks([])
+        ax.set_yticks([])
+        ax.text(0.2, 11.0, "sketches\nare fine!", ha="left", va="top", fontsize=12, color=RED)
         ax.set_title("Reading & making\nfigures", fontsize=15)
-        for ax in axes[:2]:
-            ax.axis("off")
-        axes[2].set_xticks([])
-        axes[2].set_yticks([])
-        save(fig, "a8_skills.png", "Illustration", "A8")
+        save(fig, "a8_skills.png", "Illustration; reading speed: Brysbaert 2019 (J. Mem. Lang.)", "A8")
 
 
 def main():

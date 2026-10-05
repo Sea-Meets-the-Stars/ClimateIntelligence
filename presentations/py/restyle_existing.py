@@ -293,14 +293,16 @@ def a4_dc_water_inset():
             ("Power plants\n2023", aif.INDIRECT_2023_BL, BLUE)]
     fig, ax = plt.subplots(figsize=INSET)
     ypos = np.arange(len(bars))[::-1]
-    ax.barh(ypos, [b[1] for b in bars], color=[b[2] for b in bars], height=0.65)
+    ax.barh(ypos, [b[1] for b in bars], color=[b[2] for b in bars], height=0.7)
     ax.set_yticks(ypos)
-    ax.set_yticklabels([b[0] for b in bars], fontsize=11)
+    ax.set_yticklabels([b[0] for b in bars], fontsize=13)
     for y, (_, v, _) in zip(ypos, bars):
-        ax.text(v + 15, y, f"{v:g}", va="center", fontsize=11)
-    ax.set_xlim(0, 1050)
-    ax.set_xlabel("Water (billion liters/yr)", fontsize=11)
-    ax.tick_params(axis="x", labelsize=10)
+        ax.text(v + 20, y, f"{v:g}", va="center", fontsize=14, fontweight="bold")
+    ax.set_xlim(0, 1150)
+    ax.set_xticks([0, 500, 1000])
+    ax.set_xlabel("Water used\n(billion liters/yr)", fontsize=13)
+    ax.set_title("…and water", fontsize=14)
+    ax.tick_params(axis="x", labelsize=12)
     ax.grid(axis="y", visible=False)
     save(fig, "a4_dc_water_inset.png", "Data: LBNL 2024", "A4")
 

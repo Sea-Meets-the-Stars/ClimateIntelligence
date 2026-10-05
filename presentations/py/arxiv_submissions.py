@@ -48,7 +48,8 @@ def main():
 
     fig, ax = plt.subplots(figsize=FULL)
     ax.plot(t, n, color=BLUE, lw=1.6)
-    text_at = {"2016-09": (2003.5, 1.8e4), "2024-09": (2008.5, 5.0e4), "2026-09": (2011.5, 1.4e5)}
+    # Linear axis (B9b) so the recent jump is visible.
+    text_at = {"2016-09": (2003.0, 16000), "2024-09": (2008.0, 27000), "2026-09": (2012.0, 38000)}
     for m in CALLOUTS:
         x = int(m[:4]) + (int(m[5:]) - 0.5) / 12
         tx, ty = text_at[m]
@@ -58,11 +59,11 @@ def main():
                     fontweight="bold" if m == "2026-09" else "normal",
                     arrowprops=dict(arrowstyle="-", color=GRAY, lw=0.8))
     ax.axvline(2026.75, color=RED, lw=1.2, ls="--")
-    ax.text(2026.3, 30, "1 Oct 2026:\narXiv caps authors\nat 2 papers/month", ha="right",
+    ax.text(2026.3, 3000, "1 Oct 2026:\narXiv caps authors\nat 2 papers/month", ha="right",
             fontsize=12, color=RED)
-    ax.set_yscale("log")
     ax.set_xlim(1991.5, 2027.5)
-    ax.set_ylim(10, 3e5)
+    ax.set_ylim(0, 44000)
+    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda v, _: f"{v:,.0f}"))
     ax.set_ylabel("New arXiv submissions\nper month")
     save(fig, "a5_arxiv.png",
          "Data: arXiv monthly submission statistics (arxiv.org/stats); arXiv blog, 1 Oct 2026, "

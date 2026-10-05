@@ -8,7 +8,7 @@ they will occupy on the slide, so font sizes below are the sizes the
 audience sees (points on the slide):
   - FULL  : 9.2" x 3.95" — figure spans the slide (any slide without a photo)
   - MAIN  : 6.4" x 3.95" — figure plus an instrument photo beside it
-  - INSET : 3.0" x 2.6"  — small companion panel
+  - INSET : 3.1" x 3.9"  — companion panel in the photo column (fills its height)
 No in-figure titles (the slide title does that). The full source string is
 recorded in presentations/2026_WMKO/figs/sources.json; on the slides the
 source appears as ~16pt slide text (assemble_deck.py), so by default it is
@@ -30,7 +30,7 @@ SOURCES_JSON = FIGS / "sources.json"
 
 FULL = (9.2, 3.95)
 MAIN = (6.4, 3.95)
-INSET = (3.0, 2.6)
+INSET = (3.1, 3.9)
 DPI = 220
 
 # Palette carried over from CI_Reports (fixed assignments, never cycled).

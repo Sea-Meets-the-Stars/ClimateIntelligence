@@ -24,8 +24,14 @@ SLIDES = [
          notes="PLACEHOLDER: author will paste slide 6 of AOGS_2026 ('My AI Team') here by hand (Q22/Q42).\n"
                "Also serves as the acknowledgment slide (Q21)."),
     dict(section="Opening", kind=CONTENT, title="Climate Intelligence", subtitle="",
-         notes="Figure: docs/CI_graphic.png (banner, five topic icons, warming curve).\n"
-               "Source: Climate Intelligence blog."),
+         notes="Figure: s3_ci_concept.png (presentations/py/ci_schematic.py) — the CI concept: blog + "
+               "podcast (with a Gen-Z interviewer) at the hub; spokes to YouTube, TikTok, Instagram; "
+               "inputs: new climate data and new AI developments (B9b). Former banner: docs/CI_graphic.png."),
+    dict(section="Opening", kind=CONTENT, title="Our own sensors are exquisite", subtitle="",
+         notes="Figure: s4_senses.png (presentations/py/senses_panel.py). Eyes ~10 orders of magnitude in "
+               "brightness, single-photon rods; ears 10^12 in intensity (0-120 dB), eardrum moves ~1/10 an "
+               "atom at threshold; nose: geosmin at ~5 ppt; skin: ~10 nm wrinkles (Skedung et al. 2013). "
+               "Sources in the script docstring (B9b)."),
     dict(section="Opening", kind=CONTENT, title="The two exponentials", subtitle="",
          notes="Figure (new, B5): presentations/py/two_exponentials.py — AI training compute (Epoch AI, ~4x/yr) "
                "beside fossil CO2 emissions (OWID/GCP), log axes.\n"

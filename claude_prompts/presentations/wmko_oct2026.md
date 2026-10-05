@@ -473,12 +473,29 @@ Nothing else blocks the build. With answers to 35, 37, 38 (the three figure choi
 46. Slide 21 (U.S. economists, B8b): Howard & Sylvan 2021 has no U.S.-only breakdown — it surveyed authors of climate-economics papers in leading journals worldwide (738 respondents) and never asks or reports respondents' country. I kept the numbers and relabeled the source "738 climate economists, worldwide". A U.S.-specific alternative is the 2019 *Economists' Statement on Carbon Dividends* (3,600+ U.S. economists incl. 28 Nobel laureates, published in the WSJ) — but it endorses a carbon tax rather than measuring belief in technology, so it answers a different question. Keep the worldwide survey, add the U.S. statement as a second panel, or something else?
     >**Answer:** . Keep the worldwide survey
 
+### Hand-off
+
+*Claude (Opus 5.5), 2026-10-05. B10 done. Final deck: `Outreach/2026/WMKO/WMKO_2026_Climate_Intelligence.pptx` (34 slides, 7.6 MB; open with Google Slides). Source of truth: `presentations/2026_WMKO/WMKO_2026_Climate_Intelligence.pptx`, rebuilt by `conda run -n ocean14 python presentations/py/assemble_deck.py`; QA by `qa_deck.py` and `qa_numbers.py`.*
+
+**Your manual steps** (do them in Google Slides on the final file; a rebuild from the scripts would overwrite them):
+
+1. Slide 2: paste AOGS_2026 slide 6 ("My AI Team").
+2. Slide 1: update the author line (still the 2024 Kraw affiliations).
+3. Slide 23: write the Transition slide.
+4. Slide 33: drop in the Eye of Sauron image (dashed box marks the spot).
+5. Slide 34: write the Summary.
+6. Add humor sub-lines where wanted.
+7. Before any *public* posting: WMKO's OK for the HIRES photo; drop or swap any fair-use image.
+
+**Decision needed from you:** may I trash the working copies `WMKO_2026_Climate_Intelligence_v1`, `_v2`, `_v2b`, `_v3`, `_v3b` in `Outreach/2026/WMKO/`?
+    >**Answer:** OK (given in chat, 2026-10-05). *Done — moved to Google Drive Trash (recoverable for 30 days).*
+
 ## To Do
 
-1. Add the Eye of Sauron image to slide 32 ("10: The Eye of Sauron", A10) — a dashed, labeled box marks the spot (Q43).
+1. Add the Eye of Sauron image to slide 33 ("10: The Eye of Sauron", A10) — a dashed, labeled box marks the spot (Q43).
 1. Update the title-slide author line (still the 2024 Kraw affiliations: "UC Santa Cruz, Kavli IPMU, Simons Pivot Fellow") (Q44).
 1. Paste slide 6 of AOGS_2026 ("My AI Team") into slide 2 (Q22/Q42).
-1. Write the Transition slide (slide 22, blank) (Q33).
-1. Write the Summary slide (slide 33) (Q34).
+1. Write the Transition slide (slide 23, blank) (Q33).
+1. Write the Summary slide (slide 34) (Q34).
 1. Add humor sub-lines where wanted (Q9).
 1. Before any *public* posting of the deck: get WMKO's OK for the HIRES photo (keckobservatory.org asks for written consent), and swap or drop any fair-use image.
