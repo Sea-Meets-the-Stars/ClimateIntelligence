@@ -112,6 +112,20 @@ Use Fable if you can.  Log your work.
    *Check:* open v2 — figures fill the slide without touching the edges; sources legible at 16pt; instrument on every slide where one exists.
    Use Opus 5.5 if you can. Log your work.
 
+8b. **Modify v2**.  I have reviewed v2 in Google Slides.  Things look very good, but make these changes going forward:
+
+   - Slide 4:  Mark a few of the AI models on the AI compute figure, as in Figure 3 of Blog 001.
+   - Slide 6:  Title it "Top 10 things we should all know about the Climate Crisis"
+   - Top 10 climate slides:  Number them #: instead of #.  And modify the font size so that title text is only one line, never 2.
+   - Slide 9: Add text to explain what ~1 W/m^2 of heat feels like for a human.
+   - Slide 19: Fill the page more with the figure
+   - Slide 20: Fill the page more with the figure
+   - In general, resize figures so that they fill more of the slide.  Figures make a presentation, not text.
+   - Slide 21: If you have the data, refine the numbers to be for U.S. Economists
+Then generate a version `v2b` and upload to `Outreach/2026/WMKO` as `WMKO_2026_Climate_Intelligence_v2b`.
+   Use Opus 5.5 if you can. Log your work.
+
+
 9. **B9 — Assemble intro and AI half.** Slides 1–3 (title with the Keck + ocean hero image, blank "My AI Team", CI banner), 5 (humans suck at exponentials, 2 slides), and A1–A10: Sac Bee screenshot; Gates quote + uplift arc; the single hacking slide ("an AI agent broke into Hugging Face; a week later OpenAI said its models had too" + Mythos 99% unpatched / 73% AISI); data centers; arXiv; grant competition (image); Keck primary + HIRES with the agreed captions; human skills (sketch); capex; Eye of Sauron. Upload as `WMKO_2026_Climate_Intelligence_v3`.
    *Check:* AI claims phrased per Q26/Q27 (Gates's words carry the bio claim); every data slide has its source line; undated speculation.
    Use Opus 5.5 if you can. Log your work.
@@ -121,6 +135,9 @@ Use Fable if you can.  Log your work.
     Use Opus 5.5 if you can. Log your work.
 
 ## Q&A
+
+### v2
+
 
 ### Setup
 
@@ -419,3 +436,26 @@ Slides 1–3, T, E, and the Claude + X placeholder need no figures. Everything m
     >**Answer:** Yes
 
 Nothing else blocks the build. With answers to 35, 37, 38 (the three figure choices) and 39–42 (locations, images, two confirmations), I am ready to start on the next prompt: copy `Kraw_2024` → `WMKO_2026_Climate_Intelligence` stripped to the theme, lay out the 34-slide skeleton, and generate the *ready* figures first.
+
+### Build — questions (after B5–B7)
+
+*Claude (Opus 5.5), 2026-10-05. B5–B7 are done; figures in `presentations/2026_WMKO/figs/`, images + `credits.md` in `figs/images/`. Three items for you; only Q43 blocks anything (slide A10 in B9).*
+
+43. A10 "Eye of Sauron" (you asked for an actual Eye image, Q17). No usable film still is freely available: Wikipedia's non-free `File:Sauron.jpg` is the armored figure, not the Eye, at 352×199 px, and Commons' "Sauron replica" is the figure too. What I have as a placeholder is `eye_of_sauron_ngc4151.jpg` — Chandra's NGC 4151, which astronomers nicknamed the "Eye of Sauron" (public domain; a nice in-joke for a Keck audience). Options: (a) use NGC 4151; (b) you drop a film still of the Eye into `presentations/2026_WMKO/figs/images/` (fair use for an internal talk; I'll credit New Line Cinema and flag it not to be posted publicly); (c) both, side by side ("theirs / ours").
+    >**Answer:** Ok, put a blank box and I'll add it in later.
+
+44. Title slide: the author line carried over from Kraw still reads "UC Santa Cruz, Kavli IPMU, Simons Pivot Fellow". What should it say for October 2026?
+    >**Answer:** I'll update it.  Please add it and any other lingering items (like the Eye) to the ToDo section below  
+
+45. A7 images: the Keck primary is a Flickr/Commons photo (CC BY-SA 2.0, credit "z2amiller") and HIRES is from keckobservatory.org ("Courtesy W. M. Keck Observatory"). If you or WMKO have better shots of either, drop them in `figs/images/` with the same names and I'll use them; otherwise I'll go with these.
+    >**Answer:** Go with those for now
+
+## To Do
+
+1. Add the Eye of Sauron image to slide 32 ("10. The Eye of Sauron", A10) — a blank, labeled box marks the spot (Q43).
+1. Update the title-slide author line (still the 2024 Kraw affiliations: "UC Santa Cruz, Kavli IPMU, Simons Pivot Fellow") (Q44).
+1. Paste slide 6 of AOGS_2026 ("My AI Team") into slide 2 (Q22/Q42).
+1. Write the Transition slide (slide 22, blank) (Q33).
+1. Write the Summary slide (slide 33) (Q34).
+1. Add humor sub-lines where wanted (Q9).
+1. Before any *public* posting of the deck: get WMKO's OK for the HIRES photo (keckobservatory.org asks for written consent), and swap or drop any fair-use image.

@@ -10,6 +10,9 @@ __pycache__/
 # PDFs
 *.pdf
 
+# Presentations
+*.pptx
+
 # C extensions
 *.so
 
