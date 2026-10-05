@@ -76,6 +76,49 @@ Use Fable if you can.  Log your work.
 
 ### Build
 
+*Locked decisions (from Q&A rounds 1–3):* Google Slides, 16:9, full slide used but nothing near the edges; one figure per slide, caption not bullets (Kraw style); an instrument image wherever possible; sources on every data slide at ~16pt; slide-specific figure copies (originals untouched); every calculation is a Python script in `presentations/py/`, data cached in `presentations/data/`, PNGs in `presentations/2026_WMKO/figs/`; 34-slide skeleton (cap 40), no backups; speculation undated; humor, transition, and summary are yours to add later. Q40 read as: *Claude* pulls the WMKO images (segmented primary, HIRES) with the credit line "Courtesy W. M. Keck Observatory" and adds the captions — correct me if you meant your own photos.
+
+*Tooling reality:* my Google tools are Drive-only (search, read, download/export, upload, copy, rename/move, share, trash). There is **no Slides editor** — I cannot add/delete slides or insert images inside a Google Slides file. So the deck is built as a local `.pptx` on the Kraw master (exported from `Kraw_2024` → `.pptx`, stripped to the theme) and **uploaded to `Outreach/2026/WMKO` as Google Slides** (upload converts `.pptx` → Slides). Each build step re-uploads a new version (`…_v1`, `…_v2`, …); the final QA step renames the last one `WMKO_2026_Climate_Intelligence` and trashes the older versions with your OK. Consequence: **hand edits (pasting the "My AI Team" slide, humor sub-lines, transition, summary) should wait until after B10**, or tell me and I will put them in the source `.pptx`. The local source of truth is `presentations/2026_WMKO/WMKO_2026_Climate_Intelligence.pptx`.
+
+1. **B1 — Theme + skeleton.** Export `Kraw_2024` (GDrive `Outreach/2024/Kraw`) to `.pptx`, strip it to the master/theme, and build the 34-slide skeleton from the Round-2 slide budget: section markers, slide titles, a blank "My AI Team" slide (#2), a blank Transition (#T) and Summary (#E), and speaker notes on every slide listing the intended figure, instrument, and source. Save as `presentations/2026_WMKO/WMKO_2026_Climate_Intelligence.pptx` and upload to `Outreach/2026/WMKO` as `WMKO_2026_Climate_Intelligence_v1`.
+   *Check:* open v1 in Slides — Kraw look preserved (fonts, colors, title layout), exactly 34 slides, titles match the budget table, notes present.
+   Use Opus 5.5 if you can. Log your work.
+
+2. **B2 — Restyle the existing figures for slides.** One script `presentations/py/restyle_existing.py` that regenerates, at 16:9-friendly aspect with large fonts, no in-figure title, and a small source line: Keeling (C1), US cumulative share (C2), OHC 0–2000 m (C4b base), planetary boundaries (C8), population + fertility (C9), data-center electricity and water (A4). Refresh the cached NOAA/NCEI/OWID data into `presentations/data/`. Output to `presentations/2026_WMKO/figs/`.
+   *Check:* each PNG readable from the back of a room; source line present; numbers unchanged from the report figures.
+   Use Opus 5.5 if you can. Log your work.
+
+3. **B3 — New climate figures, batch 1 (heat).** `energy_budget_arrows.py` (C3a: AR6 Fig 7.2 means + Loeb et al. 2021 imbalance, CERES credited), `olr_spectrum.py` (C3b: computed *schematic* outgoing-IR spectrum — Planck 288 K vs ~220 K with the 667 cm⁻¹ CO₂ bite, labeled schematic), `committed_warming.py` (C5: committed-vs-realized bar with Murphy's 1.7 °C marker *and* the OHC/sea-level inertia panel, AR6 zero-emissions caveat in small print). All values typed with citations in the script.
+   *Check:* the numbers against `context/claudes_context.md` §2 (ERF 2.72 W/m², ECS 3 [2.5–4], ~1.1–1.2 °C realized); the spectrum is honest about being schematic.
+   Use Opus 5.5 if you can. Log your work.
+
+4. **B4 — New climate figures, batch 2 (ocean + sea level).** `sst_global.py` (C4a: NOAA ERSSTv5 global ocean-surface anomaly), `ohc_by_depth.py` (C4b: NCEI 0–700 m and 700–2000 m stacked; Argo credited), `gmsl_to_2025.py` (C6a: Church & White + NASA altimetry to 2025; Jason/Sentinel-6 credited), `honolulu_tide_gauge.py` (C6b: NOAA 1612340 monthly means since 1905 with trend).
+   *Check:* altimetry rate quoted on the figure matches the data (≈3.7–4.5 mm/yr); Honolulu trend and record start look right; depth panel shows heat reaching below 700 m.
+   Use Opus 5.5 if you can. Log your work.
+
+5. **B5 — New climate figures, batch 3 (life, economists, exponentials).** `biodiversity_lpi_biomass.py` (C7a: OWID LPI 1970–2020 with the geometric-mean caveat in small print + Bar-On 2018 wild-mammal/livestock/human biomass), `extinction_rate.py` (C7b: Ceballos 2015 cumulative vertebrate extinctions vs the 2 E/MSY background), `economist_survey.py` (C10: the approved two-column "Alarmed — and still betting on technology" panel from Howard & Sylvan 2021, n=738), `two_exponentials.py` (slide 4: Epoch AI compute ‖ fossil CO₂ emissions, side by side on log axes).
+   *Check:* biodiversity wording is "declining fast by three independent metrics," not "exponentially"; survey percentages match Round 3 (74 / 76 / 65 / >50%).
+   Use Opus 5.5 if you can. Log your work.
+
+6. **B6 — AI figures.** `bio_uplift_arc.py` (A2: RAND 2024 and OpenAI 2024 ≈1× → Anthropic Opus 4 2025 2.53× → Zhang et al. 2026 4.16×; VCT annotated as a different metric), `arxiv_submissions.py` (A5: arXiv monthly submissions 1991–2026 on a log axis, 2016/2024/2026 callouts, 1 Oct 2026 rate-limit annotated), `ai_capex.py` (A9: Microsoft, Alphabet, Amazon, Meta annual capex 2019–2025 from 10-K filings plus stated 2026 guidance, each bar sourced).
+   *Check:* every bar/point has a citation in the script and the source line; Gates quote text for A2 ready in the notes.
+   Use Opus 5.5 if you can. Log your work.
+
+7. **B7 — Images and credits.** Pull and save to `presentations/2026_WMKO/figs/images/`: instruments (Mauna Loa Observatory, an Argo float, CERES/Terra or the CERES instrument, Jason-3 or Sentinel-6, a tide gauge), the Keck segmented primary and HIRES (WMKO, "Courtesy W. M. Keck Observatory"), an Eye of Sauron still, and confirm `sacbee.png` as-is. Write `presentations/2026_WMKO/figs/images/credits.md` with URL, credit line, and usage terms for each; flag anything (e.g., the Sauron still) that is fair-use only.
+   *Check:* every image has a credit; nothing used that WMKO or NASA would object to in an internal staff talk.
+   Use Opus 5.5 if you can. Log your work.
+
+8. **B8 — Assemble the climate half.** Place figures, instrument insets, HIRES/Keck captions where relevant, and ~16pt source lines into slides C1–C10 of the source `.pptx` (and slide 4, Two exponentials); keep text to title + one sub-line. Upload as `WMKO_2026_Climate_Intelligence_v2`.
+   *Check:* open v2 — figures fill the slide without touching the edges; sources legible at 16pt; instrument on every slide where one exists.
+   Use Opus 5.5 if you can. Log your work.
+
+9. **B9 — Assemble intro and AI half.** Slides 1–3 (title with the Keck + ocean hero image, blank "My AI Team", CI banner), 5 (humans suck at exponentials, 2 slides), and A1–A10: Sac Bee screenshot; Gates quote + uplift arc; the single hacking slide ("an AI agent broke into Hugging Face; a week later OpenAI said its models had too" + Mythos 99% unpatched / 73% AISI); data centers; arXiv; grant competition (image); Keck primary + HIRES with the agreed captions; human skills (sketch); capex; Eye of Sauron. Upload as `WMKO_2026_Climate_Intelligence_v3`.
+   *Check:* AI claims phrased per Q26/Q27 (Gates's words carry the bio claim); every data slide has its source line; undated speculation.
+   Use Opus 5.5 if you can. Log your work.
+
+10. **B10 — QA and hand-off.** Full pass on v3: slide count ≤ 40; nothing within the edge margin; fonts consistent with the Kraw master; a source line on every data slide; every number cross-checked against `context/claudes_context.md` and the Q&A answers; speaker notes complete. Fix, upload the final as `WMKO_2026_Climate_Intelligence`, and (with your OK) trash v1–v3. Then list in this file, under a new `### Hand-off` heading in Q&A, the manual steps left for you: paste the AOGS "My AI Team" slide, add humor sub-lines, write the Transition and Summary, and anything deferred.
+    *Check:* the final deck opens cleanly in Slides; the hand-off list is short.
+    Use Opus 5.5 if you can. Log your work.
 
 ## Q&A
 
