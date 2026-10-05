@@ -1,0 +1,90 @@
+{
+  "c1_keeling.png": {
+    "slide": "C1",
+    "source": "Data: NOAA GML / Scripps, Mauna Loa monthly mean (blue) and seasonally adjusted (red), through 2026-08"
+  },
+  "c2_us_cumulative.png": {
+    "slide": "C2",
+    "source": "Data: Global Carbon Project, Global Carbon Budget 2025, via Our World in Data (territorial emissions, 1750–2024)"
+  },
+  "c4b_ohc_0_2000m.png": {
+    "slide": "C4b",
+    "source": "Data: NOAA NCEI ocean heat content anomaly, 0–2000 m, yearly, 2005–2025 (Argo era)"
+  },
+  "c8_planetary_bounds.png": {
+    "slide": "C8",
+    "source": "Data: Richardson et al. 2023 (Sci. Adv.); Planetary Health Check 2025 (ocean acidification crossed)"
+  },
+  "c9a_population.png": {
+    "slide": "C9a",
+    "source": "Data: OWID (HYDE / Gapminder / UN WPP 2024); 2100 bars = 95% ranges (UN WPP 2024; IHME, Vollset et al. 2020)"
+  },
+  "c9b_fertility.png": {
+    "slide": "C9b",
+    "source": "Data: UN World Population Prospects 2024 via OWID (estimates to 2023; medium projection after)"
+  },
+  "a4_dc_electricity.png": {
+    "slide": "A4",
+    "source": "Data: LBNL 2024 U.S. Data Center Energy Usage Report; LBNL 2025 Update (Reference Case and 2030 range)"
+  },
+  "a4_dc_water_inset.png": {
+    "slide": "A4",
+    "source": "Data: LBNL 2024"
+  },
+  "c3a_energy_budget.png": {
+    "slide": "C3a",
+    "source": "Arrows: IPCC AR6 WGI Fig. 7.2 (CERES-era budget; imbalance 0.7 [0.5–0.9] W/m²). Bars: CERES satellite trend, Loeb et al. 2021 (GRL), confirmed by Argo ocean heat uptake"
+  },
+  "c3b_olr_spectrum.png": {
+    "slide": "C3b",
+    "source": "Schematic: Planck emission at round effective temperatures per band (Planck's law); shape after satellite spectra, e.g. Nimbus-4 IRIS (Hanel et al. 1972)"
+  },
+  "c5_committed_warming.png": {
+    "slide": "C5",
+    "source": "Left: AR6 WGI (1.09 [0.95–1.20] °C; forcing 2.72 W/m² × ECS 3 [2.5–4] °C ÷ 3.93 W/m²); Murphy 2021. Caveat: the right-hand bar holds today's forcing constant — if CO₂ emissions stopped, surface warming would roughly stop too (AR6 zero-emissions commitment ≈ 0). Right: AR6 WGI SPM B.5.4 — sea level keeps rising for centuries either way"
+  },
+  "c4a_sst_global.png": {
+    "slide": "C4a",
+    "source": "Data: NOAA NCEI Climate at a Glance, global ocean surface (NOAAGlobalTemp / ERSSTv5), annual means 1850–2025; ships → buoys → Argo"
+  },
+  "c4b_ohc_by_depth.png": {
+    "slide": "C4b",
+    "source": "Data: NOAA NCEI ocean heat content, world ocean, 5-year means 1955–2025; XBT/CTD then Argo floats"
+  },
+  "c6a_gmsl.png": {
+    "slide": "C6a",
+    "source": "Tide gauges: CSIRO, Church & White 2011. Altimetry data are provided by NOAA Laboratory for Satellite Altimetry (TOPEX → Jason-1/2/3 → Sentinel-6MF; no GIA correction)"
+  },
+  "c6b_honolulu.png": {
+    "slide": "C6b",
+    "source": "Data: NOAA CO-OPS tide gauge 1612340, Honolulu Harbor, monthly means (seasonal cycle removed), 1905–2026; relative sea level"
+  },
+  "c7a_lpi_biomass.png": {
+    "slide": "C7a",
+    "source": "Left: WWF/ZSL Living Planet Index 2024 via Our World in Data (95% interval shaded). Right: Bar-On, Phillips & Milo 2018, PNAS (by carbon mass)"
+  },
+  "c7b_extinctions.png": {
+    "slide": "C7b",
+    "source": "Data: Ceballos et al. 2015, Science Advances (IUCN Red List 2014.3; background = 2 extinctions per 10,000 species per century, itself 2× older estimates)"
+  },
+  "c10_economist_survey.png": {
+    "slide": "C10",
+    "source": "Data: Howard & Sylvan 2021, Gauging Economic Consensus on Climate Change, Institute for Policy Integrity (NYU Law); 738 climate economists responded"
+  },
+  "s4_two_exponentials.png": {
+    "slide": "4",
+    "source": "Left: Global Carbon Project via Our World in Data. Right: Epoch AI, Notable AI Models (training compute). Fits as in Blog 001"
+  },
+  "a2_bio_uplift.png": {
+    "slide": "A2",
+    "source": "Mouton et al. 2024 (RAND); Patwardhan et al. 2024 (OpenAI); Anthropic Claude Opus 4 system card 2025; Zhang et al. 2026 (arXiv:2602.23329); Götting et al. 2025 (arXiv:2504.16137). Knowledge/in-silico tasks, not wet-lab; study designs differ"
+  },
+  "a5_arxiv.png": {
+    "slide": "A5",
+    "source": "Data: arXiv monthly submission statistics (arxiv.org/stats); arXiv blog, 1 Oct 2026, “Updated rate limit policy”"
+  },
+  "a9_ai_capex.png": {
+    "slide": "A9",
+    "source": "Data: company 10-K filings via SEC EDGAR (cash purchases of property & equipment; Microsoft fiscal years end June). 2026: guidance from July 2026 earnings calls (Platformonomics compilation)"
+  }
+}
