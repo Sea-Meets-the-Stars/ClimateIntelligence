@@ -20,7 +20,7 @@ import csv
 import numpy as np
 import matplotlib.pyplot as plt
 
-from slide_style import DATA, MAIN, apply_style, save, BLUE, RED, INK, GRAY
+from slide_style import FULL, DATA, apply_style, save, BLUE, RED, INK, GRAY
 
 CALLOUTS = ["2016-09", "2024-09", "2026-09"]
 LAST_COMPLETE_MONTH = "2026-09"  # data fetched 2026-10-05
@@ -46,7 +46,7 @@ def main():
     vals = {m: v for m, v in zip(months, n)}
     print("callouts:", {m: vals[m] for m in CALLOUTS}, f"; 2024-09 -> 2026-09 x{vals['2026-09'] / vals['2024-09']:.2f}")
 
-    fig, ax = plt.subplots(figsize=MAIN)
+    fig, ax = plt.subplots(figsize=FULL)
     ax.plot(t, n, color=BLUE, lw=1.6)
     text_at = {"2016-09": (2003.5, 1.8e4), "2024-09": (2008.5, 5.0e4), "2026-09": (2011.5, 1.4e5)}
     for m in CALLOUTS:

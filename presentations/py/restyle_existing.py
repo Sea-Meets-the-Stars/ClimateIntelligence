@@ -30,7 +30,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 
-from slide_style import (ROOT, DATA, MAIN, INSET, apply_style, save,
+from slide_style import (ROOT, DATA, FULL, MAIN, INSET, apply_style, save,
                          BLUE, LBLUE, RED, ORANGE, TEAL, PURPLE, GREEN, GRAY, MUTED)
 
 # Page-cited constants live with the original report scripts; import, don't copy.
@@ -128,7 +128,7 @@ def c2_us_cumulative():
     names = [r["category"] for r in top]
     vals = [r["cumulative_share_of_global_pct"] for r in top]
     colors = [RED if n == "United States" else "#9aa7b4" for n in names]
-    fig, ax = plt.subplots(figsize=MAIN)
+    fig, ax = plt.subplots(figsize=FULL)
     ax.barh(names, vals, color=colors, height=0.7)
     for y, v in enumerate(vals):
         ax.text(v + 0.3, y, f"{v:.1f}%", va="center", fontsize=12,
@@ -165,7 +165,7 @@ def c8_planetary_boundaries():
     """Created by JXP and Claude. C8: transgression ratio of the nine
     planetary boundaries (biosphere capped at 10 for display)."""
     items = sorted(BOUNDARIES, key=lambda b: b[1])
-    fig, ax = plt.subplots(figsize=MAIN)
+    fig, ax = plt.subplots(figsize=FULL)
     y = np.arange(len(items))
     ax.barh(y, [b[1] for b in items], color=[RED if b[2] else GREEN for b in items],
             alpha=0.88, height=0.7)
@@ -192,7 +192,7 @@ def c9a_population():
     ey, ep, py, pp = load_world_population()
     keep = ey >= 1900
     ey, ep = ey[keep], ep[keep]
-    fig, ax = plt.subplots(figsize=MAIN)
+    fig, ax = plt.subplots(figsize=FULL)
     ax.plot(ey, ep, color=BLUE, lw=2.6)
     ax.plot(py, pp, color=BLUE, lw=2.6, ls="--")
     ipk = np.argmax(pp)
@@ -222,7 +222,7 @@ def c9b_fertility():
                ("Latin America and the Caribbean (UN)", TEAL),
                ("Northern America (UN)", ORANGE), ("Europe (UN)", BLUE)]
     series = load_fertility([r[0] for r in regions] + ["World"])
-    fig, ax = plt.subplots(figsize=MAIN)
+    fig, ax = plt.subplots(figsize=FULL)
     labels = []
     for name, color in regions:
         yr, tfr, _ = series[name]

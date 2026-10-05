@@ -20,7 +20,7 @@ Usage:
 """
 import matplotlib.pyplot as plt
 
-from slide_style import MAIN, apply_style, save, GRAY, RED, ORANGE, INK
+from slide_style import FULL, apply_style, save, GRAY, RED, ORANGE, INK
 
 BACKGROUND_E_MSY = 2.0
 N_EVALUATED = 39_223
@@ -47,7 +47,7 @@ def main():
               "Observed: confirmed\nextinct",
               "Observed: incl. extinct in the\nwild & possibly extinct"]
     vals = [exp, EX_SINCE_1900, CONSERVATIVE_SINCE_1900]
-    fig, ax = plt.subplots(figsize=MAIN)
+    fig, ax = plt.subplots(figsize=FULL)
     ax.barh(labels[::-1], vals[::-1], color=[RED, ORANGE, GRAY], height=0.62)
     for y, v in enumerate(vals[::-1]):
         ax.text(v + 6, y, f"{v:.0f}", va="center", fontsize=16, fontweight="bold")

@@ -23,7 +23,7 @@ Usage:
 import numpy as np
 import matplotlib.pyplot as plt
 
-from slide_style import MAIN, apply_style, save, RED, BLUE, GRAY, MUTED, INK
+from slide_style import FULL, apply_style, save, RED, BLUE, GRAY, MUTED, INK
 
 H, C, KB = 6.62607015e-34, 2.99792458e8, 1.380649e-23  # SI
 
@@ -58,7 +58,7 @@ def main():
     """Created by JXP and Claude. Build c3b_olr_spectrum.png."""
     apply_style()
     nu = np.linspace(100, 2000, 2000)
-    fig, ax = plt.subplots(figsize=MAIN)
+    fig, ax = plt.subplots(figsize=FULL)
 
     ax.plot(nu, planck_wavenumber(nu, 288), "--", color=GRAY, lw=1.4)
     ax.text(1380, 60, "surface, 288 K", color=GRAY, fontsize=12)

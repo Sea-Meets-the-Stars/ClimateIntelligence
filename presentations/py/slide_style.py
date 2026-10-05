@@ -6,8 +6,8 @@ Kraw-style slides are 10" x 5.625" with a title across the top (~0.85") and
 an optional sub-line near the bottom. Figures are drawn at the physical size
 they will occupy on the slide, so font sizes below are the sizes the
 audience sees (points on the slide):
-  - FULL  : 9.0" x 3.7"  — figure spans the slide
-  - MAIN  : 6.6" x 3.7"  — figure plus an instrument photo beside it
+  - FULL  : 9.2" x 3.95" — figure spans the slide (any slide without a photo)
+  - MAIN  : 6.4" x 3.95" — figure plus an instrument photo beside it
   - INSET : 3.0" x 2.6"  — small companion panel
 No in-figure titles (the slide title does that). The full source string is
 recorded in presentations/2026_WMKO/figs/sources.json; on the slides the
@@ -28,8 +28,8 @@ DATA = PRES / "data"
 FIGS = PRES / "2026_WMKO" / "figs"
 SOURCES_JSON = FIGS / "sources.json"
 
-FULL = (9.0, 3.7)
-MAIN = (6.6, 3.7)
+FULL = (9.2, 3.95)
+MAIN = (6.4, 3.95)
 INSET = (3.0, 2.6)
 DPI = 220
 

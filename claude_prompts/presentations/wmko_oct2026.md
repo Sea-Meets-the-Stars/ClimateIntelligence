@@ -130,6 +130,24 @@ Then generate a version `v2b` and upload to `Outreach/2026/WMKO` as `WMKO_2026_C
    *Check:* AI claims phrased per Q26/Q27 (Gates's words carry the bio claim); every data slide has its source line; undated speculation.
    Use Opus 5.5 if you can. Log your work.
 
+9b. **Modify v3**.  I have reviewed v3 in Google Slides.  Things look very good, but make these changes going forward:
+    - Always include Slide numbers
+    - Add a Slide 4 that describes the fact that humans do have their own sensors (eyes, ears, nose, skin) with incredible sensitivity to the world around us.  This includes orders-of-magnitude dynamic range
+    - There is too much text on Slide 24, ie. the figure is too small.  Put the citation to the right and lower it.  Then lower the Bill Gates quote
+    - Make the sub-figure on Slide 26 bigger.  Fill up the wasted white space
+    - Make the y-axis on Slide 27 linear so we can see the jump.  Or make an inset 
+    - Make the "funded, why this one?" text bigger on Slide 28
+    - The idea for order-of-magnitude thinking in Slide 30 is to get the answer approximately correct.  Modify the sketch to emphasize this point
+    - For the rapid reading, make it clear that AI produces *a lot* of text, and fast
+    - Use a more complex sketch for the "making figures" schematic on Slide 30
+
+For Slide 3, I wish to have a new figure describing the concept of Climate Intelligence (CI).  Create a schematic figure that shows:
+    - At the center of CI is:  (i) a blog that I write and (ii) a podcast that I do with a Gen-Z interviewer on the blog (and more).  
+    - From there, we will have content on multiple platforms: YouTube, TikTok, and Instagram.  These should each be a separate spoke in the wheel of CI.
+    - Add inputs from the external world, i.e. new data on Climate and AI
+
+   Use Opus 5.5 if you can. Log your work.
+
 10. **B10 — QA and hand-off.** Full pass on v3: slide count ≤ 40; nothing within the edge margin; fonts consistent with the Kraw master; a source line on every data slide; every number cross-checked against `context/claudes_context.md` and the Q&A answers; speaker notes complete. Fix, upload the final as `WMKO_2026_Climate_Intelligence`, and (with your OK) trash v1–v3. Then list in this file, under a new `### Hand-off` heading in Q&A, the manual steps left for you: paste the AOGS "My AI Team" slide, add humor sub-lines, write the Transition and Summary, and anything deferred.
     *Check:* the final deck opens cleanly in Slides; the hand-off list is short.
     Use Opus 5.5 if you can. Log your work.
@@ -450,9 +468,14 @@ Nothing else blocks the build. With answers to 35, 37, 38 (the three figure choi
 45. A7 images: the Keck primary is a Flickr/Commons photo (CC BY-SA 2.0, credit "z2amiller") and HIRES is from keckobservatory.org ("Courtesy W. M. Keck Observatory"). If you or WMKO have better shots of either, drop them in `figs/images/` with the same names and I'll use them; otherwise I'll go with these.
     >**Answer:** Go with those for now
 
+### Build — questions (after B8b)
+
+46. Slide 21 (U.S. economists, B8b): Howard & Sylvan 2021 has no U.S.-only breakdown — it surveyed authors of climate-economics papers in leading journals worldwide (738 respondents) and never asks or reports respondents' country. I kept the numbers and relabeled the source "738 climate economists, worldwide". A U.S.-specific alternative is the 2019 *Economists' Statement on Carbon Dividends* (3,600+ U.S. economists incl. 28 Nobel laureates, published in the WSJ) — but it endorses a carbon tax rather than measuring belief in technology, so it answers a different question. Keep the worldwide survey, add the U.S. statement as a second panel, or something else?
+    >**Answer:** . Keep the worldwide survey
+
 ## To Do
 
-1. Add the Eye of Sauron image to slide 32 ("10. The Eye of Sauron", A10) — a blank, labeled box marks the spot (Q43).
+1. Add the Eye of Sauron image to slide 32 ("10: The Eye of Sauron", A10) — a dashed, labeled box marks the spot (Q43).
 1. Update the title-slide author line (still the 2024 Kraw affiliations: "UC Santa Cruz, Kavli IPMU, Simons Pivot Fellow") (Q44).
 1. Paste slide 6 of AOGS_2026 ("My AI Team") into slide 2 (Q22/Q42).
 1. Write the Transition slide (slide 22, blank) (Q33).

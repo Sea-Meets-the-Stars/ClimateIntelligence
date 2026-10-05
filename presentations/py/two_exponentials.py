@@ -53,6 +53,15 @@ def main():
 
     bx.scatter(models["year"], models["flop"], s=10, color=BLUE, alpha=0.45, lw=0)
     bx.plot(trend_years, trend_flop, "--", color=INK, lw=1.4)
+    # Landmark models, as in Blog 001 Figure 3 (same dataset names and offsets).
+    for name, (label, dx, dy) in ai.CALLOUTS.items():
+        row = models[models["model"] == name]
+        if row.empty:
+            continue
+        x, y = row["year"].iloc[0], row["flop"].iloc[0]
+        bx.plot(x, y, "o", ms=6, color=BLUE, mec="white", zorder=3)
+        bx.annotate(label, (x, y), xytext=(x + dx, y * 10.0 ** dy), fontsize=11, color=INK,
+                    arrowprops=dict(arrowstyle="-", color=GRAY, lw=0.7))
     bx.set_yscale("log")
     bx.set_xlim(2010, 2027)
     bx.set_ylim(1e12, 1e28)

@@ -28,7 +28,7 @@ from datetime import date
 import numpy as np
 import matplotlib.pyplot as plt
 
-from slide_style import DATA, MAIN, apply_style, save, BLUE, RED, ORANGE, TEAL, GRAY, INK
+from slide_style import FULL, DATA, apply_style, save, BLUE, RED, ORANGE, TEAL, GRAY, INK
 
 COMPANIES = [  # (ticker, label, XBRL concept, color)
     ("MSFT", "Microsoft", "PaymentsToAcquirePropertyPlantAndEquipment", BLUE),
@@ -64,7 +64,7 @@ def main():
         print(y, " ".join(f"{t} {data[t][y]:.1f}" for t, *_ in COMPANIES), f"total {tot:.1f}")
     print(f"2026 guidance total {g_total:.1f}")
 
-    fig, ax = plt.subplots(figsize=MAIN)
+    fig, ax = plt.subplots(figsize=FULL)
     x = np.arange(len(YEARS) + 1)
     bottom = np.zeros(len(x))
     for t, label, _, color in COMPANIES:

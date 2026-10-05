@@ -30,7 +30,7 @@ Usage:
 """
 import matplotlib.pyplot as plt
 
-from slide_style import MAIN, apply_style, save, RED, GRAY, INK, MUTED
+from slide_style import FULL, apply_style, save, RED, GRAY, INK, MUTED
 
 POINTS = [  # (decimal year, uplift, lo, hi, label, text offset (dx, dy))
     (2024.04, 1.0, None, None, "RAND & OpenAI 2024:\nno significant uplift", (-0.15, 0.8)),
@@ -43,7 +43,7 @@ POINTS = [  # (decimal year, uplift, lo, hi, label, text offset (dx, dy))
 def main():
     """Created by JXP and Claude. Build a2_bio_uplift.png."""
     apply_style()
-    fig, ax = plt.subplots(figsize=MAIN)
+    fig, ax = plt.subplots(figsize=FULL)
     xs = [p[0] for p in POINTS]
     ys = [p[1] for p in POINTS]
     ax.plot(xs, ys, color=RED, lw=1.5, alpha=0.5, zorder=1)

@@ -17,7 +17,7 @@ Usage:
 import numpy as np
 import matplotlib.pyplot as plt
 
-from slide_style import DATA, MAIN, apply_style, save, RED, BLUE, GRAY, INK
+from slide_style import FULL, DATA, apply_style, save, RED, BLUE, GRAY, INK
 
 
 def load_monthly():
@@ -53,7 +53,7 @@ def main():
     print(f"annual means {yrs[0]}-{yrs[-1]}; warmest {yrs[np.argmax(means)]} = {means.max():.2f} C; "
           f"partial {partial}")
 
-    fig, ax = plt.subplots(figsize=MAIN)
+    fig, ax = plt.subplots(figsize=FULL)
     ax.bar(yrs, means, width=0.9, color=np.where(means >= 0, RED, BLUE))
     if partial:
         ax.bar(partial[0], partial[1], width=0.9, color="none", edgecolor=RED, lw=1.2)

@@ -86,5 +86,21 @@
   "a9_ai_capex.png": {
     "slide": "A9",
     "source": "Data: company 10-K filings via SEC EDGAR (cash purchases of property & equipment; Microsoft fiscal years end June). 2026: guidance from July 2026 earnings calls (Platformonomics compilation)"
+  },
+  "s5_covid.png": {
+    "slide": "5",
+    "source": "Data: Johns Hopkins CSSE via Our World in Data (as in Blog 001, Figure 1)"
+  },
+  "a3_hacking.png": {
+    "slide": "A3",
+    "source": "Scientific American 17 Apr 2026 and Axios 7 Apr 2026 (Mythos; UK AISI); CNBC 22 Jul 2026, Varonis and NeuralTrust (Hugging Face)"
+  },
+  "a6_proposals.png": {
+    "slide": "A6",
+    "source": "Illustration"
+  },
+  "a8_skills.png": {
+    "slide": "A8",
+    "source": "Illustration"
   }
 }

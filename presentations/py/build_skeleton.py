@@ -16,13 +16,16 @@ Slide order, titles and speaker notes come from wmko_skeleton.SLIDES.
 """
 import argparse
 import copy
+import math
 import os
 import sys
 
+from PIL import ImageFont
 from pptx import Presentation
+from pptx.util import Inches
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from wmko_skeleton import SLIDES, TITLE  # noqa: E402
+from wmko_skeleton import SLIDES, TITLE, DIVIDER  # noqa: E402
 
 DEFAULT_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "2026_WMKO",
                            "WMKO_2026_Climate_Intelligence.pptx")
@@ -31,6 +34,13 @@ CONTENT_LAYOUT = "TITLE"          # what Kraw's content slides use
 TITLE_BOX_TEXT = "Deciphering our past"                          # Kraw slide 3 title
 SUBLINE_BOX_TEXT = "How did we get here?  What are our origins?"  # Kraw slide 3 sub-line
 SLIDE_NUMBER_IDX = 12
+TITLE_PT = 38                     # Kraw title size
+# Titles in a "group" share one size, the largest that keeps the group's longest
+# title on one line (B8b). Measured with Roboto Bold (the Kraw title font,
+# OFL-licensed variable font cached in presentations/data/fonts/).
+ROBOTO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "fonts", "Roboto.ttf")
+TITLE_TEXT_W_IN = 9.3             # 9.75" box minus 0.2" insets, minus a little slack
+DIVIDER_TOP_IN = 2.0              # divider title sits mid-slide
 
 A = "{http://schemas.openxmlformats.org/drawingml/2006/main}"
 
@@ -40,6 +50,36 @@ def find_shape(slide, text):
         if sh.has_text_frame and sh.text_frame.text.strip() == text:
             return sh
     raise ValueError(f"shape with text {text!r} not found on template slide")
+
+
+def title_width_in(text, pt):
+    """Created by JXP and Claude. Rendered width (inches) of `text` in Roboto
+    Bold at `pt` points."""
+    font = ImageFont.truetype(ROBOTO, 400)
+    font.set_variation_by_name("Bold")
+    return font.getlength(text) / 400 * pt / 72
+
+
+def group_title_sizes(slides):
+    """Created by JXP and Claude. Map group name -> title size (whole points):
+    the largest size at which every grouped title fits on one line."""
+    sizes = {}
+    for spec in slides:
+        g = spec.get("group")
+        if g and spec["title"]:
+            w38 = title_width_in(spec["title"], TITLE_PT)
+            pt = min(TITLE_PT, math.floor(TITLE_PT * TITLE_TEXT_W_IN / w38))
+            sizes[g] = min(sizes.get(g, TITLE_PT), pt)
+    # One size for all numbered groups, so titles do not drift between sections.
+    common = min(sizes.values(), default=TITLE_PT)
+    return {g: common for g in sizes}
+
+
+def set_size(sp_element, pt):
+    """Created by JXP and Claude. Set the font size of every run in a text box."""
+    for tag in ("rPr", "endParaRPr"):
+        for el in sp_element.iter(f"{A}{tag}"):
+            el.set("sz", str(int(pt * 100)))
 
 
 def set_text(sp_element, text):
@@ -61,13 +101,16 @@ def next_shape_id(slide):
     return max(ids + [1]) + 1
 
 
-def add_box(slide, template_el, text, name):
+def add_box(slide, template_el, text, name, pt=None):
     el = copy.deepcopy(template_el)
     cnv = el.find(".//{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr")
     cnv.set("id", str(next_shape_id(slide)))
     cnv.set("name", name)
     set_text(el, text)
+    if pt:
+        set_size(el, pt)
     slide.shapes._spTree.append(el)
+    return slide.shapes[-1]
 
 
 def drop_slides(prs, keep):
@@ -106,13 +149,17 @@ def build(template):
             set_text(ph._element, SLIDES[0]["subtitle"])
     title_slide.notes_slide.notes_text_frame.text = f"[{SLIDES[0]['section']}]\n{SLIDES[0]['notes']}"
 
+    sizes = group_title_sizes(SLIDES)
+    print("group title sizes (pt):", sizes)
     for spec in SLIDES[1:]:
         slide = prs.slides.add_slide(content_layout)
         for ph in list(slide.placeholders):
             if ph.placeholder_format.idx != SLIDE_NUMBER_IDX:
                 ph._element.getparent().remove(ph._element)
         if spec["title"]:
-            add_box(slide, title_el, spec["title"], "Title")
+            box = add_box(slide, title_el, spec["title"], "Title", sizes.get(spec.get("group")))
+            if spec["kind"] == DIVIDER:
+                box.top = Inches(DIVIDER_TOP_IN)
         if spec["subtitle"]:
             add_box(slide, subline_el, spec["subtitle"], "Sub-line")
         slide.notes_slide.notes_text_frame.text = f"[{spec['section']}]\n{spec['notes']}"
