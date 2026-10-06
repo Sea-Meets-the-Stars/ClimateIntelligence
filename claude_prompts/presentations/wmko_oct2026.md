@@ -499,3 +499,4 @@ Nothing else blocks the build. With answers to 35, 37, 38 (the three figure choi
 1. Write the Summary slide (slide 34) (Q34).
 1. Add humor sub-lines where wanted (Q9).
 1. Before any *public* posting of the deck: get WMKO's OK for the HIRES photo (keckobservatory.org asks for written consent), and swap or drop any fair-use image.
+1. Add the lines of code vs. time figure `loc_over_time.png`
