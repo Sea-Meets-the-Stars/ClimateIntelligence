@@ -492,11 +492,11 @@ Nothing else blocks the build. With answers to 35, 37, 38 (the three figure choi
 
 ## To Do
 
-1. Add the Eye of Sauron image to slide 33 ("10: The Eye of Sauron", A10) — a dashed, labeled box marks the spot (Q43).
-1. Update the title-slide author line (still the 2024 Kraw affiliations: "UC Santa Cruz, Kavli IPMU, Simons Pivot Fellow") (Q44).
-1. Paste slide 6 of AOGS_2026 ("My AI Team") into slide 2 (Q22/Q42).
-1. Write the Transition slide (slide 23, blank) (Q33).
-1. Write the Summary slide (slide 34) (Q34).
-1. Add humor sub-lines where wanted (Q9).
-1. Before any *public* posting of the deck: get WMKO's OK for the HIRES photo (keckobservatory.org asks for written consent), and swap or drop any fair-use image.
-1. Add the lines of code vs. time figure `loc_over_time.png`
+1. Add the Eye of Sauron image to slide 33 ("10: The Eye of Sauron", A10) — a dashed, labeled box marks the spot (Q43). -- DONE
+1. Update the title-slide author line (still the 2024 Kraw affiliations: "UC Santa Cruz, Kavli IPMU, Simons Pivot Fellow") (Q44). -- DONE
+1. Paste slide 6 of AOGS_2026 ("My AI Team") into slide 2 (Q22/Q42). -- DONE
+1. Write the Transition slide (slide 23, blank) (Q33). -- DONE
+1. Write the Summary slide (slide 34) (Q34). -- DONE
+1. Add humor sub-lines where wanted (Q9). -- DONE
+1. Before any *public* posting of the deck: get WMKO's OK for the HIRES photo (keckobservatory.org asks for written consent), and swap or drop any fair-use image. -- DONE
+1. Add the lines of code vs. time figure `loc_over_time.png` -- DONE

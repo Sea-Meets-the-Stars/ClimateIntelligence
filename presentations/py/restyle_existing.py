@@ -268,8 +268,13 @@ def a4_dc_electricity():
     ax.annotate("2024: 192 TWh\n= 4.7% of U.S. electricity", (2024, 192),
                 xytext=(2015.0, 330), fontsize=12, color=BLUE,
                 arrowprops=dict(arrowstyle="-", color=BLUE, lw=0.8))
-    ax.annotate("2030: 9.5–15%", (2030.3, hi), xytext=(2025.6, 800), fontsize=13,
-                color=BLUE, fontweight="bold",
+    # Labels say TWh *and* share explicitly: the chart is U.S. data centers only (2026-10-06).
+    ax.annotate(f"2030 range: {lo:.0f}–{hi:.0f} TWh\n= 9.5–15% of U.S. electricity", (2030.3, hi),
+                xytext=(2019.3, 790), fontsize=12, color=BLUE, fontweight="bold",
+                arrowprops=dict(arrowstyle="-", color=BLUE, lw=0.8))
+    ax.plot(2030, aif.REF_2030, "o", ms=8, color=BLUE, mfc="white", mew=2, zorder=4)
+    ax.annotate(f"2030 reference case:\n{aif.REF_2030:.0f} TWh = 11.8%", (2030, aif.REF_2030),
+                xytext=(2024.3, 600), fontsize=12, color=BLUE,
                 arrowprops=dict(arrowstyle="-", color=BLUE, lw=0.8))
     ax.plot([a[0] for a in aif.AI_ANCHORS], [a[1] for a in aif.AI_ANCHORS], "-s",
             color=RED, lw=2.2, ms=7, label="AI servers")
@@ -278,8 +283,8 @@ def a4_dc_electricity():
                 arrowprops=dict(arrowstyle="-", color=RED, lw=0.8))
     ax.set_xlim(2013.5, 2031.2)
     ax.set_ylim(0, 900)
-    ax.set_ylabel("Electricity (TWh per year)")
-    ax.legend(loc="upper left", frameon=False)
+    ax.set_ylabel("U.S. data-center electricity\n(TWh per year)")
+    ax.legend(loc="lower right", frameon=False)
     save(fig, "a4_dc_electricity.png",
          "Data: LBNL 2024 U.S. Data Center Energy Usage Report; LBNL 2025 Update (Reference Case and 2030 range)",
          "A4")
@@ -300,7 +305,8 @@ def a4_dc_water_inset():
         ax.text(v + 20, y, f"{v:g}", va="center", fontsize=14, fontweight="bold")
     ax.set_xlim(0, 1150)
     ax.set_xticks([0, 500, 1000])
-    ax.set_xlabel("Water used\n(billion liters/yr)", fontsize=13)
+    # Consumption = water lost to evaporation (LBNL 2024 pp. 55-57), not withdrawal (2026-10-06).
+    ax.set_xlabel("Water evaporated\n(billion liters/yr)", fontsize=13)
     ax.set_title("…and water", fontsize=14)
     ax.tick_params(axis="x", labelsize=12)
     ax.grid(axis="y", visible=False)
