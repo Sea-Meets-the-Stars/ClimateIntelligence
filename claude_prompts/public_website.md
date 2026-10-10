@@ -556,6 +556,58 @@ sphinxcontrib-youtube 1.5.0, pypandoc-binary 1.17. The site repo's own
 **No further questions.** Prompt #5 builds the site into the clone. You then
 review the local build, commit, and push.
 
+### Build — prompt #5 (2026-10-10, Fable 5.1)
+
+The site is scaffolded into `~/Projects/Climate-Intelligence.github.io` and
+builds locally with `sphinx-build -W` (log:
+`Logs/site_builds/2026-10-10_sphinx_build.log`). Nothing is committed; that is
+yours to do.
+
+**To publish**
+
+.. code-block:: bash
+
+   cd ~/Projects/Climate-Intelligence.github.io
+   git add -A
+   git commit -m "Scaffold the Climate Intelligence site"
+   git push -u origin main
+
+Then watch Actions → "Build and deploy site", and open
+https://climate-intelligence.github.io/ . Before pushing, you may want to
+edit `docs/posts/000/welcome/index.rst` (the launch note is written in your
+voice from the Q&A) and the short bio on `docs/about.rst`.
+
+**What was built**
+
+- Pages: landing (hero with the full tagline, banner, four cards, latest
+  posts), Blog (all posts with ablog's sidebar widgets), About, Guiding
+  principles (verbatim), How it's made, Our footprint (method, formula, and
+  the live Bokeh plot).
+- Post 000, "Welcome to Climate Intelligence", at `/posts/000/welcome/`.
+- Per-post footer "Built with Claude (Anthropic). See How it's made." plus a
+  CC BY-NC line and the giscus comment box (Announcements category); the
+  comment box follows the light/dark toggle.
+- Site footer: license, Atom feed, How it's made, Our footprint, GitHub.
+- Theme: pydata-sphinx-theme with the banner palette; curve mark as logo,
+  letters mark as favicon; dark mode on.
+- `scripts/build_footprint.py` fetches `Logs/log_summary.csv` from this
+  repo's `main` and regenerates the plot; it never fails the build. The
+  workflow runs it on every push and weekly (Mondays 06:00 UTC).
+- `requirements.txt` pinned to the versions in the `CI` env; `README.rst`
+  documents adding a post, the figure convention, and the pandoc command;
+  `PLANNING.rst` updated with all decisions (same copy in
+  `context/public_website_PLANNING.rst` here).
+
+**One design change from the plan.** ablog names its generated catalog page
+after `blog_path`, so `blog_path = "blog"` silently overwrote `blog.rst`.
+ablog's catalog, tags, categories and the feed now live under `/posts/`
+(feed: `/posts/atom.xml`), which cannot collide with real posts at
+`/posts/NNN/slug/`.
+
+**Known limits.** The giscus box only renders on the live site (not from a
+local file). "Recent posts" is empty on the welcome post because it is the
+only post. Headless screenshots of all pages were checked in dark mode.
+
 ## GitHub for X
 
 Steps for you to run, in order. Everything here is in the GitHub web UI or your

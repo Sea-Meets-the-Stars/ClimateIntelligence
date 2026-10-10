@@ -4,6 +4,11 @@
 
 *A blog on the science of the climate — and a lot more.*
 
+**Read the blog at [climate-intelligence.github.io](https://climate-intelligence.github.io/).**
+This repository is the development workspace (research, figure scripts, logs);
+the published site lives in
+[Climate-Intelligence/Climate-Intelligence.github.io](https://github.com/Climate-Intelligence/Climate-Intelligence.github.io).
+
 Climate Intelligence is a blog about the science of the climate, biodiversity,
 and related topics. It is an explicit collaboration between a human author and
 Claude (an AI by Anthropic), with the human providing direction, judgment, and
