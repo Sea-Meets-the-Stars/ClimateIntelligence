@@ -1,0 +1,69 @@
+# Created by JXP and Claude.
+#
+# Modern (PEP 621) packaging for the Climate Intelligence development repo.
+# Replaces setup.py. Install into the `CI` conda env (Python 3.13) with:
+#
+#     conda run -n CI python -m pip install -e ".[blog,dev,site]"
+#
+# The public website lives in a separate repo with its own requirements and
+# must not depend on this package (see context/public_website_PLANNING.rst).
+
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "climate_intelligence"
+version = "0.0.dev0"
+description = "A blog on the science of the climate, biodiversity, and more"
+readme = "README.md"
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
+authors = [{ name = "J. Xavier Prochaska", email = "jxp@ucsc.edu" }]
+requires-python = ">=3.13"
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "matplotlib",
+    "seaborn",
+    "xarray",
+    "h5netcdf",
+    "cftime",
+    "scikit-learn",
+    "tqdm",
+    # Web access for data retrieval
+    "requests",
+]
+
+[project.optional-dependencies]
+# Interactive plots for the blog (Logs/token_usage_and_co2_emissions.html)
+blog = ["bokeh"]
+# Tests and interactive work
+dev = ["pytest", "IPython"]
+# Building the public website locally (the site repo pins exact versions in
+# its own requirements.txt; these are the same packages, unpinned, so the
+# `CI` env can build it). pypandoc-binary bundles the pandoc executable used
+# to convert finished Google Docs (.docx) to rst.
+site = [
+    "sphinx",
+    "ablog",
+    "pydata-sphinx-theme",
+    "sphinx-design",
+    "sphinxcontrib-youtube",
+    "pypandoc-binary",
+]
+
+[project.urls]
+Homepage = "https://github.com/Sea-Meets-the-Stars/ClimateIntelligence"
+Website = "https://climate-intelligence.github.io/"
+
+[tool.setuptools.packages.find]
+include = ["climate_intelligence*"]
+
+[tool.setuptools.package-data]
+# Ship the curated CO2 datasets with the package.
+climate_intelligence = ["data/CO2/*.json", "data/raw/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["climate_intelligence/tests"]
