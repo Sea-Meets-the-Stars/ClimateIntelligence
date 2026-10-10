@@ -8,6 +8,14 @@ a single set of drawing helpers + a per-format layout config:
   * "banner"  -> docs/CI_graphic.png                (figsize 16x6, wide README banner)
   * "slides"  -> docs/CI_graphic_google_slides.png  (figsize 16x9, Google Slides 16:9)
 
+and two compact square marks for the public website's navbar logo / favicon
+(added 2026-10-10 for the site; same palette, no new design elements):
+
+  * "letters" -> docs/CI_mark_letters.png  ("C" + "I" on a rounded navy tile,
+                                            the "I" in the warm accent)
+  * "curve"   -> docs/CI_mark_curve.png    (the observed-warming trend curve
+                                            and dots alone on a light tile)
+
 Design (light theme, muted professional palette):
   Elements are the same across both formats -- only their positions/sizes/font
   scales differ (see LAYOUTS). Elements:
@@ -274,6 +282,63 @@ LAYOUTS = {
 }
 
 
+
+# ----------------------------------------------------------------------------
+# Compact square marks (navbar logo / favicon) for the public website.
+# Both reuse the banner palette and, for "curve", the same synthesized record.
+# ----------------------------------------------------------------------------
+MARK_PX = 1024  # output side in pixels; browsers downscale for the favicon
+
+
+def _mark_canvas():
+    """Square, axis-free canvas in data coordinates [-1, 1] on a transparent
+    figure background, so the rounded tile itself defines the mark's edge."""
+    fig = plt.figure(figsize=(4, 4))
+    fig.patch.set_alpha(0.0)
+    ax = fig.add_axes([0, 0, 1, 1])
+    ax.set_xlim(-1, 1)
+    ax.set_ylim(-1, 1)
+    ax.set_aspect("equal")
+    ax.axis("off")
+    return fig, ax
+
+
+def _tile(ax, facecolor, edgecolor="none"):
+    """Rounded square tile filling the canvas (the favicon 'app-icon' shape)."""
+    ax.add_patch(FancyBboxPatch((-0.92, -0.92), 1.84, 1.84,
+                                boxstyle="round,pad=0,rounding_size=0.34",
+                                facecolor=facecolor, edgecolor=edgecolor,
+                                lw=6, zorder=1, mutation_aspect=1))
+
+
+def build_mark_letters():
+    """'CI' wordmark: navy tile, 'C' in the page background colour and 'I' in
+    the warm accent. Letters are drawn as text so they stay crisp at 1024 px
+    and still read at favicon size."""
+    fig, ax = _mark_canvas()
+    _tile(ax, NAVY)
+    ax.text(-0.22, -0.02, "C", ha="center", va="center", fontsize=150,
+            fontweight="bold", color=BG, zorder=3)
+    ax.text(0.40, -0.02, "I", ha="center", va="center", fontsize=150,
+            fontweight="bold", color=ACCENT, zorder=3)
+    return fig
+
+
+def build_mark_curve():
+    """Trend-curve mark: light tile with a thin navy edge; the observed
+    anomalies as faint navy dots and the smooth trend as the accent curve,
+    exactly the series used by the banner chart (no forecast)."""
+    fig, ax = _mark_canvas()
+    _tile(ax, BG, edgecolor=NAVY)
+    # Map years 1850-2025 to x in [-0.68, 0.68] and anomaly to y in [-0.55, 0.62].
+    x = -0.68 + 1.36 * (_OBS_YEARS - 1850.0) / (2025.0 - 1850.0)
+    y = -0.55 + 1.17 * (_TREND + 0.6) / 2.1
+    yo = -0.55 + 1.17 * (_OBS + 0.6) / 2.1
+    ax.scatter(x, yo, s=55, color=NAVY, alpha=0.28, edgecolors="none", zorder=2)
+    ax.plot(x, y, color=ACCENT, lw=14, solid_capstyle="round", zorder=3)
+    return fig
+
+
 # ----------------------------------------------------------------------------
 # Compose a figure for a given layout, then render both formats.
 # ----------------------------------------------------------------------------
@@ -308,6 +373,16 @@ def main():
         fig.savefig(path, dpi=200)
         plt.close(fig)
         print(f"Saved [{fmt}]: {path}")
+
+    # Square marks for the website (navbar logo / favicon). Transparent
+    # outside the rounded tile; dpi chosen so the side is MARK_PX pixels.
+    for name, builder in (("letters", build_mark_letters),
+                          ("curve", build_mark_curve)):
+        fig = builder()
+        path = out_dir / f"CI_mark_{name}.png"
+        fig.savefig(path, dpi=MARK_PX / 4, transparent=True)
+        plt.close(fig)
+        print(f"Saved [mark:{name}]: {path}")
 
 
 if __name__ == "__main__":
