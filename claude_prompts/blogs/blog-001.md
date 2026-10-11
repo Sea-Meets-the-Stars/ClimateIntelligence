@@ -10,6 +10,10 @@ See your context file `context/claudes_context.md` for the current context.
 
 All of the figures (and related code) in this Repository.
 
+See the `public_website_PLANNING.rst` file for how it is built
+
+See the `public_website.md` file for how we built the website.
+
 ## Prompts
 
 ### Figures
@@ -46,6 +50,14 @@ For Figure 4, keep the existing one and relabel it and add the sentence noting t
 CO2 already in the air keeps doubling because emissions accumulate.
 Log your work.  Use Fable if you can.
 
+### Website
+
+1.  Read the Context files releated to the public website.
+The RST file for blog-001 is ready to be posted. 
+Please go forth and do so.  Use Opus 5.5.  Log your work.
+When you are done, give me the link to view the blog.
+
+2. That looks great!  I see one flaw: "An error occurred: giscus is not installed on this repository".  Tell me how to fix it.  Log your work.  Use Opus 5.5.
 
 ## Comments
 

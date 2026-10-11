@@ -1,10 +1,10 @@
 .. Created by JXP and Claude. Blog 001, converted from the Google Doc "Blogs/Blog 001"
    (final draft of 2026-10-11). Destination in the site repo:
-   docs/posts/001/humans-suck-at-exponentials/index.rst, with the five PNGs from
+   docs/posts/001/blog-001/index.rst, with the five PNGs from
    blogs/blog001/ copied into its media/ folder. Set the post date before pushing.
 
 .. post:: 2026-10-11
-   :category: Climate physics, Global population, Artificial intelligence, Biodiversity
+   :category: Climate physics, Biodiversity, Global population, Unhoused, Artificial intelligence
    :tags: exponentials
    :author: J. Xavier Prochaska
    :excerpt: 2
