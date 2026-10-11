@@ -1,0 +1,121 @@
+{
+  "title": "Fate of Emitted CO2: Atmosphere vs. Ocean vs. Land Sinks",
+  "description": "The global carbon budget partition: of the CO2 humans emit each year (fossil fuel + industry + land-use change combined, the Global Carbon Project's 'total emissions' scope for this specific accounting), what share stays in the atmosphere (raising the CO2 concentration) vs. is absorbed by the ocean carbon sink vs. is absorbed by the land/vegetation carbon sink, plus the small residual 'budget imbalance' term. This is a CARBON MASS partition, not a heat-uptake statistic -- do not confuse the ocean's ~26% carbon uptake here with the ocean's >90% share of excess HEAT uptake reported elsewhere (context/claudes_context.md section 3.7); those are two different physical quantities that happen to both involve the ocean.",
+  "unit": "MtCO2/yr",
+  "data": [
+    {
+      "category": "atmosphere",
+      "period": "2014-2023",
+      "year": 2023,
+      "value": 19053.0,
+      "unit": "MtCO2/yr",
+      "pct_of_total_emissions": 48.0,
+      "source": "Global Carbon Project - Global Carbon Budget 2024 (Friedlingstein et al. 2025, Earth System Science Data)",
+      "notes": "Atmospheric CO2 growth (GATM), reported in the source as 5.2 +/- 0.02 GtC/yr (2.5 ppm/yr), decade average 2014-2023. Converted here to MtCO2/yr using 1 GtC = 3.664 GtCO2 (44.01/12.011). This is the 'airborne fraction' for the decade: the share of total emissions that stayed in the atmosphere rather than being taken up by a sink."
+    },
+    {
+      "category": "ocean_sink",
+      "period": "2014-2023",
+      "year": 2023,
+      "value": 10626.0,
+      "unit": "MtCO2/yr",
+      "pct_of_total_emissions": 26.0,
+      "source": "Global Carbon Project - Global Carbon Budget 2024 (Friedlingstein et al. 2025, Earth System Science Data)",
+      "notes": "Ocean CO2 sink (SOCEAN), reported as 2.9 +/- 0.4 GtC/yr, decade average 2014-2023; converted to MtCO2/yr (x3.664). This is the ocean's CARBON (CO2 mass) uptake -- a physically distinct quantity from the ocean's HEAT uptake (>90% of excess heat per IPCC SROCC, context/claudes_context.md section 3.7). Do not conflate the two: the ocean absorbs a large majority of excess heat but only about a quarter of excess carbon."
+    },
+    {
+      "category": "land_sink",
+      "period": "2014-2023",
+      "year": 2023,
+      "value": 11725.0,
+      "unit": "MtCO2/yr",
+      "pct_of_total_emissions": 30.0,
+      "source": "Global Carbon Project - Global Carbon Budget 2024 (Friedlingstein et al. 2025, Earth System Science Data)",
+      "notes": "Land (terrestrial biosphere) CO2 sink (SLAND), reported as 3.2 +/- 0.9 GtC/yr, decade average 2014-2023; converted to MtCO2/yr (x3.664). This is a NET figure: the same source reports gross deforestation emissions of ~1.7 GtC/yr over 2014-2023, of which re-/afforestation and forest regrowth resequester about two-thirds (~1.2 GtC/yr); SLAND itself is the separately-modeled residual uptake by the rest of the terrestrial biosphere (rising CO2 fueling plant growth, nitrogen deposition, etc.), not simply 'deforestation minus regrowth'."
+    },
+    {
+      "category": "budget_imbalance",
+      "period": "2014-2023",
+      "year": 2023,
+      "value": -1504.0,
+      "unit": "MtCO2/yr",
+      "pct_of_total_emissions": -3.8,
+      "source": "Author-derived residual from Global Carbon Project - Global Carbon Budget 2024 (Friedlingstein et al. 2025, Earth System Science Data)",
+      "notes": "NOT a value published directly by the source for this decade. The source's own three headline percentages for 2014-2023 (atmosphere 48% + ocean 26% + land 30% = 104%) do not sum to 100%, because each share is independently rounded from a component with its own uncertainty. The source separately states that the budget imbalance (BIM) is 'near-zero' averaged over the full 1959-2023 record, with discrepancies of up to ~1 GtC/yr for individual years/semi-decades, but does not itself publish one single BIM percentage for the 2014-2023 decade. This entry is the author's own arithmetic residual: total emissions implied by averaging the three components' individual percentage bases (~39,900 MtCO2/yr) minus (atmosphere + ocean_sink + land_sink) as listed above. Included for transparency/completeness of the accounting, not as an independently sourced number -- treat with caution."
+    },
+    {
+      "category": "ocean_sink",
+      "period": "2010-2019",
+      "year": 2019,
+      "value": 23.0,
+      "unit": "% of total CO2 emissions (fossil+LUC)",
+      "source": "IPCC AR6 WGI Chapter 5 (Canadell et al. 2021), citing Friedlingstein et al. 2020 (Global Carbon Budget 2020)",
+      "notes": "Earlier decade for historical comparison with the 2014-2023 figures above. Only percentage shares (not absolute GtC/MtCO2 values) were located for this decade during research."
+    },
+    {
+      "category": "land_sink",
+      "period": "2010-2019",
+      "year": 2019,
+      "value": 31.0,
+      "unit": "% of total CO2 emissions (fossil+LUC)",
+      "source": "IPCC AR6 WGI Chapter 5 (Canadell et al. 2021), citing Friedlingstein et al. 2020 (Global Carbon Budget 2020)",
+      "notes": "Earlier decade for historical comparison with the 2014-2023 figures above."
+    },
+    {
+      "category": "atmosphere",
+      "period": "2010-2019",
+      "year": 2019,
+      "value": 46.0,
+      "unit": "% of total CO2 emissions (fossil+LUC)",
+      "source": "Author-derived residual from IPCC AR6 WGI Chapter 5 (Canadell et al. 2021)",
+      "notes": "Implied residual (100% - ocean 23% - land 31%), computed by the author; an explicit AR6 'airborne fraction' percentage for 2010-2019 was not directly located during research, so this value should be treated as approximate/derived, not a directly quoted figure."
+    },
+    {
+      "category": "atmosphere",
+      "period": "1959-2023 (long-term average)",
+      "year": 2023,
+      "value": 44.0,
+      "unit": "% (airborne fraction, long-term average)",
+      "source": "Bennett et al. 2024, Journal of Geophysical Research: Biogeosciences, 'Quantification of the Airborne Fraction of Atmospheric CO2 Reveals Stability in Global Carbon Sinks Over the Past Six Decades'",
+      "notes": "The headline finding of this line of research: the airborne fraction has fluctuated around a roughly constant ~44% for six decades (since 1959), even as absolute annual CO2 emissions grew several-fold -- i.e. the OCEAN AND LAND SINKS HAVE SCALED UP ROUGHLY IN PROPORTION to rising emissions, not stayed fixed in absolute terms. This is the classic, most-cited version of the 'stability' finding. Contrast with the higher 48% found for the more recent 2014-2023 decade alone above; see this file's top-level caveats for the open question of whether the airborne fraction is now trending upward."
+    }
+  ],
+  "provenance": [
+    {
+      "source_name": "Global Carbon Budget 2024 (Friedlingstein et al. 2025)",
+      "url": "https://essd.copernicus.org/articles/17/965/2025/",
+      "publisher": "Global Carbon Project / Earth System Science Data",
+      "publication_year": 2025,
+      "accessed_date": "2026-08-23"
+    },
+    {
+      "source_name": "Global Carbon Budget: FAQs 2024",
+      "url": "https://globalcarbonbudget.org/gcb-2024/faqs/",
+      "publisher": "Global Carbon Project",
+      "publication_year": 2024,
+      "accessed_date": "2026-08-23"
+    },
+    {
+      "source_name": "IPCC AR6 WGI Chapter 5: Global Carbon and other Biogeochemical Cycles and Feedbacks",
+      "url": "https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-5/",
+      "publisher": "IPCC",
+      "publication_year": 2021,
+      "accessed_date": "2026-08-23"
+    },
+    {
+      "source_name": "Bennett, A.C. et al. 2024, 'Quantification of the Airborne Fraction of Atmospheric CO2 Reveals Stability in Global Carbon Sinks Over the Past Six Decades'",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023JG007760",
+      "publisher": "Journal of Geophysical Research: Biogeosciences (AGU)",
+      "publication_year": 2024,
+      "accessed_date": "2026-08-23"
+    },
+    {
+      "source_name": "Airborne fraction (background/cross-check, incl. discussion of a possible recent upward trend)",
+      "url": "https://en.wikipedia.org/wiki/Airborne_fraction",
+      "publisher": "Wikipedia, citing Ballantyne et al. 2012, Raupach et al. 2014, Bennedsen et al. 2019 and others",
+      "publication_year": 2026,
+      "accessed_date": "2026-08-23"
+    }
+  ],
+  "caveats": "All percentages in this file are shares of TOTAL CO2 emissions as the Global Carbon Project defines them for this specific partition: fossil fuel + industry CO2 PLUS land-use-change (LUC) CO2 combined -- a broader scope than the fossil+industry-only totals used elsewhere in this report's country/fuel/sector breakdowns (e.g. co2_by_country.json, co2_by_fuel_type.json), so these percentages should not be applied directly to the fossil-only totals quoted in section 1 of co2_report.md. Units: the Global Carbon Project reports these quantities in GtC (gigatonnes of carbon, equivalently PgC); this file converts to MtCO2 using the standard molecular-weight ratio 1 GtC = 3.664 GtCO2 (44.01/12.011), and every converted value's notes field states the original GtC figure so the conversion is auditable. Do not mix the GtC-native percentages/values here with GtCO2 figures elsewhere in this report without checking units. CARBON vs. HEAT: the ocean_sink entries here (~23-26% of emitted CARBON) are a completely different physical quantity from the oft-cited statistic that the ocean has absorbed >90% of excess HEAT (IPCC SROCC 2019, context/claudes_context.md section 3.7) -- the ocean is simultaneously a modest carbon sink and an overwhelmingly dominant heat sink, because CO2 solubility/mixing and heat diffusion are governed by different physics; conflating the two numbers would be a significant, embarrassing error. STABILITY vs. TREND: the classic finding (Bennett et al. 2024 and earlier literature back to Canadell et al. 2007 / Ballantyne et al. 2012) is that the airborne fraction has been remarkably stable near 44% for six decades even as absolute emissions grew several-fold. However, the specific 2014-2023 decade average from Global Carbon Budget 2024 (48%) is measurably higher than that long-term average, and at least one 2026 preprint reanalyzing land-use emissions (Multi-source land-use emissions reveal rising airborne fraction, arXiv:2605.30242) argues the airborne fraction has been gradually rising, from roughly 41% in 1959 to roughly 48% by 2024 -- i.e. this may be a genuine, if still-debated, weakening of the combined ocean+land sinks' ability to keep pace with rising emissions, rather than noise. This report presents both framings (long-run stability AND a possible recent uptick) rather than picking one, consistent with this blog's editorial standard of flagging genuine open questions. The 2010-2019 atmosphere share (46%) and the budget_imbalance entries are AUTHOR-DERIVED residuals (100% minus the other reported shares), not values directly quoted from a source; each such entry's own notes field flags this explicitly. Interannual variability is large and climate-driven: Global Carbon Budget 2024 reports that El Nino conditions cut the 2023 land sink specifically to 8.4 GtCO2 (about 28% below its own decadal mean), so any single year can look quite different from the decade averages used as this file's primary numbers."
+}

@@ -1,0 +1,383 @@
+{
+  "title": "Global CO2 Emissions by Country",
+  "description": "Annual territorial CO2 emissions from fossil fuels and industry for the world total and the top 35 emitting countries in 2024, plus per-capita and cumulative-historical (since 1750) figures where available.",
+  "unit": "MtCO2",
+  "data": [
+    {
+      "category": "World",
+      "year": 2024,
+      "value": 38598.6,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "notes": "Fossil fuel and industry CO2 only; excludes land-use change and international aviation/shipping bunkers are included only in this world total, not in individual countries."
+    },
+    {
+      "category": "China",
+      "year": 2024,
+      "value": 12289.0,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 8.66,
+      "cumulative_MtCO2_since_1750": 285087.0,
+      "cumulative_share_of_global_pct": 15.42
+    },
+    {
+      "category": "United States",
+      "year": 2024,
+      "value": 4904.1,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 14.2,
+      "cumulative_MtCO2_since_1750": 434866.5,
+      "cumulative_share_of_global_pct": 23.52
+    },
+    {
+      "category": "India",
+      "year": 2024,
+      "value": 3193.5,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 2.2,
+      "cumulative_MtCO2_since_1750": 66072.5,
+      "cumulative_share_of_global_pct": 3.57
+    },
+    {
+      "category": "Russia",
+      "year": 2024,
+      "value": 1780.5,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 12.29,
+      "cumulative_MtCO2_since_1750": 122808.2,
+      "cumulative_share_of_global_pct": 6.64
+    },
+    {
+      "category": "Japan",
+      "year": 2024,
+      "value": 961.9,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 7.77,
+      "cumulative_MtCO2_since_1750": 69612.3,
+      "cumulative_share_of_global_pct": 3.76
+    },
+    {
+      "category": "Indonesia",
+      "year": 2024,
+      "value": 812.2,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 2.87,
+      "cumulative_MtCO2_since_1750": 17419.9,
+      "cumulative_share_of_global_pct": 0.94
+    },
+    {
+      "category": "Iran",
+      "year": 2024,
+      "value": 792.6,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 8.66,
+      "cumulative_MtCO2_since_1750": 21810.6,
+      "cumulative_share_of_global_pct": 1.18
+    },
+    {
+      "category": "Saudi Arabia",
+      "year": 2024,
+      "value": 692.1,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 20.38,
+      "cumulative_MtCO2_since_1750": 19020.3,
+      "cumulative_share_of_global_pct": 1.03
+    },
+    {
+      "category": "South Korea",
+      "year": 2024,
+      "value": 583.7,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 11.29,
+      "cumulative_MtCO2_since_1750": 20707.5,
+      "cumulative_share_of_global_pct": 1.12
+    },
+    {
+      "category": "Germany",
+      "year": 2024,
+      "value": 572.3,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 6.77,
+      "cumulative_MtCO2_since_1750": 95135.7,
+      "cumulative_share_of_global_pct": 5.14
+    },
+    {
+      "category": "Canada",
+      "year": 2024,
+      "value": 533.3,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 13.42,
+      "cumulative_MtCO2_since_1750": 35644.1,
+      "cumulative_share_of_global_pct": 1.93
+    },
+    {
+      "category": "Turkey",
+      "year": 2024,
+      "value": 513.0,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 5.87,
+      "cumulative_MtCO2_since_1750": 12887.6,
+      "cumulative_share_of_global_pct": 0.7
+    },
+    {
+      "category": "Brazil",
+      "year": 2024,
+      "value": 483.0,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 2.28,
+      "cumulative_MtCO2_since_1750": 18198.7,
+      "cumulative_share_of_global_pct": 0.98
+    },
+    {
+      "category": "Mexico",
+      "year": 2024,
+      "value": 461.0,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 3.52,
+      "cumulative_MtCO2_since_1750": 22015.9,
+      "cumulative_share_of_global_pct": 1.19
+    },
+    {
+      "category": "South Africa",
+      "year": 2024,
+      "value": 439.8,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 6.87,
+      "cumulative_MtCO2_since_1750": 22827.0,
+      "cumulative_share_of_global_pct": 1.23
+    },
+    {
+      "category": "Australia",
+      "year": 2024,
+      "value": 386.7,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 14.48,
+      "cumulative_MtCO2_since_1750": 20039.7,
+      "cumulative_share_of_global_pct": 1.08
+    },
+    {
+      "category": "Vietnam",
+      "year": 2024,
+      "value": 370.9,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 3.67,
+      "cumulative_MtCO2_since_1750": 5668.9,
+      "cumulative_share_of_global_pct": 0.31
+    },
+    {
+      "category": "United Kingdom",
+      "year": 2024,
+      "value": 312.9,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 4.53,
+      "cumulative_MtCO2_since_1750": 80079.4,
+      "cumulative_share_of_global_pct": 4.33
+    },
+    {
+      "category": "Italy",
+      "year": 2024,
+      "value": 301.9,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 5.09,
+      "cumulative_MtCO2_since_1750": 26005.9,
+      "cumulative_share_of_global_pct": 1.41
+    },
+    {
+      "category": "Malaysia",
+      "year": 2024,
+      "value": 290.2,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 8.16,
+      "cumulative_MtCO2_since_1750": 7042.4,
+      "cumulative_share_of_global_pct": 0.38
+    },
+    {
+      "category": "Kazakhstan",
+      "year": 2024,
+      "value": 287.0,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 13.94,
+      "cumulative_MtCO2_since_1750": 14937.4,
+      "cumulative_share_of_global_pct": 0.81
+    },
+    {
+      "category": "Poland",
+      "year": 2024,
+      "value": 272.9,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 7.08,
+      "cumulative_MtCO2_since_1750": 29043.9,
+      "cumulative_share_of_global_pct": 1.57
+    },
+    {
+      "category": "Thailand",
+      "year": 2024,
+      "value": 267.8,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 3.74,
+      "cumulative_MtCO2_since_1750": 8308.3,
+      "cumulative_share_of_global_pct": 0.45
+    },
+    {
+      "category": "France",
+      "year": 2024,
+      "value": 264.2,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 3.97,
+      "cumulative_MtCO2_since_1750": 40047.6,
+      "cumulative_share_of_global_pct": 2.17
+    },
+    {
+      "category": "Taiwan",
+      "year": 2024,
+      "value": 262.3,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 11.3,
+      "cumulative_MtCO2_since_1750": 10091.9,
+      "cumulative_share_of_global_pct": 0.55
+    },
+    {
+      "category": "Egypt",
+      "year": 2024,
+      "value": 258.4,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 2.22,
+      "cumulative_MtCO2_since_1750": 7471.5,
+      "cumulative_share_of_global_pct": 0.4
+    },
+    {
+      "category": "Iraq",
+      "year": 2024,
+      "value": 233.6,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 5.07,
+      "cumulative_MtCO2_since_1750": 5350.7,
+      "cumulative_share_of_global_pct": 0.29
+    },
+    {
+      "category": "United Arab Emirates",
+      "year": 2024,
+      "value": 222.0,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 20.13,
+      "cumulative_MtCO2_since_1750": 5824.2,
+      "cumulative_share_of_global_pct": 0.31
+    },
+    {
+      "category": "Spain",
+      "year": 2024,
+      "value": 220.3,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 4.6,
+      "cumulative_MtCO2_since_1750": 15700.2,
+      "cumulative_share_of_global_pct": 0.85
+    },
+    {
+      "category": "Algeria",
+      "year": 2024,
+      "value": 198.2,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 4.23,
+      "cumulative_MtCO2_since_1750": 5476.6,
+      "cumulative_share_of_global_pct": 0.3
+    },
+    {
+      "category": "Pakistan",
+      "year": 2024,
+      "value": 179.8,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 0.72,
+      "cumulative_MtCO2_since_1750": 5739.8,
+      "cumulative_share_of_global_pct": 0.31
+    },
+    {
+      "category": "Philippines",
+      "year": 2024,
+      "value": 174.9,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 1.51,
+      "cumulative_MtCO2_since_1750": 3983.6,
+      "cumulative_share_of_global_pct": 0.22
+    },
+    {
+      "category": "Argentina",
+      "year": 2024,
+      "value": 171.1,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 3.74,
+      "cumulative_MtCO2_since_1750": 9151.5,
+      "cumulative_share_of_global_pct": 0.49
+    },
+    {
+      "category": "Ukraine",
+      "year": 2024,
+      "value": 142.5,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 3.76,
+      "cumulative_MtCO2_since_1750": 31236.5,
+      "cumulative_share_of_global_pct": 1.69
+    },
+    {
+      "category": "Uzbekistan",
+      "year": 2024,
+      "value": 139.2,
+      "unit": "MtCO2",
+      "source": "Global Carbon Project - Global Carbon Budget 2025",
+      "per_capita_tCO2": 3.83,
+      "cumulative_MtCO2_since_1750": 6750.7,
+      "cumulative_share_of_global_pct": 0.37
+    }
+  ],
+  "provenance": [
+    {
+      "source_name": "Global Carbon Project - Global Carbon Budget 2025",
+      "url": "https://globalcarbonbudget.org/",
+      "publisher": "Global Carbon Project",
+      "publication_year": 2025,
+      "accessed_date": "2026-08-23",
+      "notes": "Retrieved via Our World in Data grapher CSV exports (annual-co2-emissions-per-country, co-emissions-per-capita, cumulative-co-emissions, share-of-cumulative-co2), which republish Global Carbon Budget national fossil CO2 + industry data."
+    },
+    {
+      "source_name": "Our World in Data - CO2 and Greenhouse Gas Emissions",
+      "url": "https://ourworldindata.org/co2-and-greenhouse-gas-emissions",
+      "publisher": "Our World in Data (Ritchie, Rosado, Roser)",
+      "publication_year": 2023,
+      "accessed_date": "2026-08-23"
+    }
+  ],
+  "caveats": "Figures are territorial (production-based) CO2 emissions from fossil fuel combustion, cement, and other industrial processes; they exclude land-use change/LULUCF emissions and are NOT adjusted for trade (consumption-based accounting would shift emissions from exporters like China toward importers like the US/EU). International aviation and shipping ('bunker fuels') are included only in the World total, not attributed to individual countries. The 2025 Global Carbon Budget's current-year figure for the most recent year is a projection at the time of publication and subject to later revision. Per-capita values use UN population estimates; cumulative figures are historical sums since 1750 and are sensitive to how far back the underlying series extends for each country. Country borders/entities follow OWID's current-day definitions, which can complicate long-run cumulative comparisons for countries that split or merged (e.g. USSR, Czechoslovakia)."
+}
