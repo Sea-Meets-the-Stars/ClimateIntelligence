@@ -1,16 +1,9 @@
-numpy
-scipy
-pandas
-matplotlib
-seaborn
-xarray
-h5netcdf
-cftime
-scikit-learn
-tqdm
-IPython
-pytest
-# Plotting for the blog
-bokeh
-# Web access for data retrieval
-requests
+# Created by JXP and Claude.
+# Dependencies are declared in pyproject.toml. This file installs the project
+# in editable mode with the optional extras used day to day:
+#   blog = bokeh (Logs/token_usage_and_co2_emissions.html)
+#   dev  = pytest, IPython
+#   site = Sphinx + ablog + theme + pandoc, to build the public website locally
+# Install into the CI env with:
+#     conda run -n CI python -m pip install -r requirements.txt
+-e .[blog,dev,site]
