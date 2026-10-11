@@ -28,9 +28,121 @@ Log your work.  Use Fable if you can.
 And, add "Figure XX" to each of the figures.
 Log your work.  Use Fable if you can.
 
+5. Regarding Figure 4 on CO2 emissions, Richard N. asks: 
+  "What do you mean by “emissions”? Is this direct human-caused emissions? Is this direct  emissions inferred from documented forest loss, carbon-burning for energy? What about indirect but human caused emissions - such as permafrost thaw, warming soils, crippling of the ocean absorption via acidification and the lowered solubility of warmer surface ocean water, etc? “Emissions” is about the most abused word there is in this business. What counts is retained atmospheric CO2e, and this blog post should show that graph, which remains strikingly powerfully exponential in the wrong direction."
+Please clarify for me.  Put your response in the "Comments/Figure 4" section.
+Log your work.  Use Fable if you can.
+
 ### Editing
 
 1. Please examine the `Blog 001` file on my shared Google Drive named `Climate Intelligence` and discuss whether it follows the Guiding Principles listed in `principles.md`.  Put questions or comments in the Q&A/Editing section.  Log your work.  Use Opus if you can.
+
+### RST time
+
+1. We are ready to transform the Google doc of the blog into an RST file that will 
+then be posted to the Climate Intelligence website (see details on the in the `public-website` branch).  You can find the final draft of the blog on my shared Google Drive named `ClimateIntelligence` under "Blogs/Blog 001".  Please transform it into an RST file
+named `Projects/ClimateIntelligence/blogs/blog001/blog001.rst`.  
+For Figure 4, keep the existing one and relabel it and add the sentence noting that the
+CO2 already in the air keeps doubling because emissions accumulate.
+Log your work.  Use Fable if you can.
+
+
+## Comments
+
+### Figure 4
+
+**Response to Richard N.'s question (2026-10-11).** Numbers below come from
+`blogs/blog001/calc_fig4_emissions_definitions.py` (new script; run with
+`conda run -n ocean14 python blogs/blog001/calc_fig4_emissions_definitions.py`),
+which also writes a two-panel comparison figure,
+`blogs/blog001/fig4_alt_emissions_definitions.png`, in case you want to show
+the "retained CO2" graph he asks for.
+
+**1. What Figure 4 plots.** Global Carbon Project *fossil fuel and industry*
+CO2: coal, oil, and gas combustion, cement, and flaring, from energy and
+production statistics (not inferred from forest loss). It is direct,
+human-caused, CO2 only. Richard is right that the figure and prose don't say
+so; "the CO2 emitted by humans since 1750" should become "fossil-fuel CO2
+emitted by humans" in both. In 2024 this is 38.6 GtCO2 of the 43.2 GtCO2 total
+once land-use change is added, and of 54.4 GtCO2-eq once all greenhouse gases
+are counted.
+
+**2. What it leaves out, and what each omission does to the "exponential".**
+
+| Definition of "emissions" | 1850–1970 | 1970–2024 | 2010–2024 |
+|---|---|---|---|
+| A. fossil + industry CO2 (Figure 4) | 21.6 yr | 39.6 yr | 86 yr |
+| B. A + land-use change CO2 | 43.9 yr | 51.3 yr | 248 yr |
+| C. all greenhouse gases, CO2-eq (incl. CH4, N2O, land use) | 46.1 yr | 57.9 yr | 162 yr |
+| D. cumulative CO2 since 1750 (fossil + land use) | 21.3 yr | 37.2 yr | 41 yr |
+| E. CO2 retained in the atmosphere (Mauna Loa minus 280 ppm) | n/a (data start 1959) | 32.8 yr | 35.5 yr |
+
+Doubling times from a log-linear least-squares fit over each window.
+
+- *Land-use change* (deforestation, mostly) was the **dominant** human CO2
+  source until about 1900: in 1850 it was 2.7 of 2.9 GtCO2. Including it makes
+  the historical curve a *weaker* exponential (44-yr doubling, not 22), because
+  you are adding a large, slowly-varying term to a small, fast-growing one.
+  It is also the most uncertain term in the budget (bookkeeping models, roughly
+  ±50%), which is one reason the clean fossil series is the conventional
+  "exponential" to show.
+- *All greenhouse gases in CO2-eq* behaves the same way (46-yr doubling
+  1850–1970) and is essentially flat since 2010.
+- *Permafrost thaw, warming soils, weakening ocean uptake* are **not emissions
+  in any inventory**, including the IPCC's. They are carbon-cycle *feedbacks*,
+  and the Global Carbon Budget accounts for them only implicitly, as changes
+  in how much of each year's emissions the land and ocean sinks fail to take
+  up. So the honest answer to "do you count them?" is: no one does, directly;
+  the only place they show up observationally is in definition E.
+
+**3. Richard's actual claim: retained atmospheric CO2 is "strikingly
+powerfully exponential in the wrong direction."** Half right, and the half
+that is right matters.
+
+- *Right:* the excess over pre-industrial has not broken. It has doubled every
+  ~32 years for the whole Mauna Loa record (36 ppm above 280 in 1959, 147 ppm
+  in 2025, about 1,150 GtCO2 still in the air), and the growth rate keeps
+  rising decade on decade (0.9 ppm/yr in the 1960s, 2.4 in the 2010s, 2.6 for
+  2020–2025). Annual emissions plateaued; the stock did not, because a stock
+  integrates its flow. That is a genuinely different and, for warming, the
+  more relevant curve than Figure 4, and it would support the essay's "we are
+  turning up the gas" beat better than the emissions plateau does.
+- *Not right:* it is not *more* powerfully exponential than what Figure 4
+  shows. Its doubling time (~32 yr) is longer than the 22-yr fossil doubling
+  of 1850–1970, and it is lengthening slightly (29 yr over 1959–1990, 35 yr
+  over 1990–2025), because the flow feeding it stopped growing exponentially.
+  It tracks cumulative emissions (row D) almost exactly, which is the point:
+  retained CO2 ≈ a roughly constant fraction of everything ever emitted.
+- *On "crippling of the ocean absorption":* the data do not yet show it. The
+  decadal airborne fraction (retained ÷ emitted, fossil + land use) has been
+  0.37, 0.43, 0.46, 0.39, 0.44, 0.45 for the 1960s through the 2010s, i.e. no
+  trend; the sinks have grown in absolute terms in step with emissions. The
+  2020–2025 partial decade comes out at 0.60, inflated by the 2023–24 El Niño
+  year when the land sink collapsed temporarily; whether that persists is the
+  live question, not a settled fact. Weakening sinks are a well-founded
+  *projection* (AR6: the fraction taken up falls under high-emission
+  scenarios), not something the 65-year record demonstrates.
+
+**4. What I'd suggest for the blog.** Three options, in my order of preference:
+
+1. Keep Figure 4 as the emissions figure (it carries the essay's "slow
+   exponential that we were slow to notice" argument, and the break after
+   1970 is itself a lesson), relabel it "fossil-fuel CO2," and add one
+   sentence: *the emissions exponential broke, but the CO2 already in the
+   air has not, doubling every ~32 years since measurements began, because
+   what we emit accumulates.* That concedes Richard's point and sharpens the
+   essay's.
+2. Replace Figure 4 with the right-hand panel of `fig4_alt_emissions_definitions.png`
+   (emitted-so-far vs. still-in-the-air), and change the prose's doubling
+   time from ~22 to ~32 years. Scientifically cleanest, but it loses the
+   visible break that "Yet see Figure 4" leans on.
+3. Show both (the alt figure is already drawn as a pair).
+
+One caveat for whichever you pick: CO2's *warming* effect goes as the
+logarithm of concentration, so an exponential excess in ppm produces a roughly
+linear rise in forcing. "Exponential in the wrong direction" is true of the
+stock, not of the forcing, and Principle 6 suggests not letting the reader
+infer the latter from the former.
 
 ## Q&A
 

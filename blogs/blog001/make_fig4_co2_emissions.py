@@ -1,7 +1,8 @@
 """Figure 4 for Blog 001 ("Humans Suck at Exponentials").
 
-Plots global annual fossil CO2 emissions (fossil fuels + industry) from
-1750 to the present on a log y-axis. Fits an exponential to the long
+Plots global annual fossil-fuel CO2 emissions (coal, oil, gas, cement and
+flaring; land-use change is NOT included) from 1750 to the present on a
+log y-axis. Relabelled 2026-10-11 so the figure says what it counts. Fits an exponential to the long
 industrial ramp-up (1850-1970), annotates the fitted doubling time, and
 extrapolates the fit past 1970 so the reader can see the exponential
 "break": annual emissions growth slowed sharply after ~1970 and has been
@@ -187,9 +188,9 @@ def make_figure(world, doubling_years, slope, intercept, out_png):
     ax.yaxis.set_minor_locator(plt.NullLocator())
     ax.yaxis.set_minor_formatter(plt.NullFormatter())
 
-    ax.set_ylabel("Global fossil CO$_2$ emissions per year (log scale)")
+    ax.set_ylabel("Global fossil-fuel CO$_2$ emissions per year (log scale)")
     ax.set_title(
-        "Fossil CO$_2$ emissions: an exponential that broke",
+        "Fossil-fuel CO$_2$ emissions: an exponential that broke",
         loc="left", pad=12, fontweight="bold")
 
     # Figure number for the blog post's sequence (bottom-right corner,
@@ -228,7 +229,8 @@ def make_figure(world, doubling_years, slope, intercept, out_png):
     # Footer citing the data source.
     fig.text(0.01, 0.012,
              "Data: Global Carbon Budget — fossil fuel and industry CO$_2$ "
-             f"emissions, 1750–{last_year}, via Our World in Data",
+             "(coal, oil, gas, cement, flaring; excludes land-use change), "
+             f"1750–{last_year}, via Our World in Data",
              fontsize=7.5, color="#6b7280")
 
     fig.tight_layout(rect=(0, 0.035, 1, 1))
