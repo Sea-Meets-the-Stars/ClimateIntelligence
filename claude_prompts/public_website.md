@@ -41,6 +41,13 @@ Use Fable if you can.  Log your work as per this Repo's logging conventions.
 5. Build the site
 Use Fable if you can.  Log your work as per this Repo's logging conventions.
 
+6. I wish to add a Contributors section to the website.  Please do so and 
+include:
+    - Andrew Bojko
+    - Richard Nolthenius
+Please generate that as a separate page in the website.  I may include
+a brief bio for each of them. eventually
+Use Fable if you can.  Log your work as per this Repo's logging conventions.
 
 ## Q&A
 ### Create — round 1 (2026-10-10, Fable 5.1)

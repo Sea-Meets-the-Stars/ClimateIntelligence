@@ -41,6 +41,15 @@ Log your work.  Use Fable if you can.
 
 1. Please examine the `Blog 001` file on my shared Google Drive named `Climate Intelligence` and discuss whether it follows the Guiding Principles listed in `principles.md`.  Put questions or comments in the Q&A/Editing section.  Log your work.  Use Opus if you can.
 
+2. I shared the `Blog 001` with my mother and she reacted "I don't know what an exponential is!"  Tis a bit ironic.  Anyways, we need to add one or two sentences to the blog to help her and others understand it.  Add a suggestion to the Comments/Exponential section.
+I will then ask you to add one or more sentences to the blog to help her and 
+others understand it.
+Use Opus 5.5 if you can.  Log your work as always
+
+3. Ok, please go with your Option A suggestion.  
+Make the edits here and on the website.
+Log your work.  Use Opus 5.5 if you can.
+
 ### RST time
 
 1. We are ready to transform the Google doc of the blog into an RST file that will 
@@ -60,6 +69,52 @@ When you are done, give me the link to view the blog.
 2. That looks great!  I see one flaw: "An error occurred: giscus is not installed on this repository".  Tell me how to fix it.  Log your work.  Use Opus 5.5.
 
 ## Comments
+
+### Exponential
+
+**Suggestion for a lay-reader definition (2026-10-12).** The post uses
+"exponential" six times and "doubling time" eight times before either is
+explained, and the only examples offered (compound interest, Moore's Law,
+NYSE) assume the reader already knows what they have in common. The fix is to
+define the word by its one essential property, a fixed doubling time, and to
+give one concrete picture of why that property is startling. The penny
+example below is the classic; the numbers are checked in
+`blogs/blog001/calc_penny_doubling.py`.
+
+**Option A (recommended): two sentences, inserted right after "Humans suck at
+exponentials. We just do."**
+
+> Something grows exponentially when it keeps doubling on a fixed clock, say
+> every day, or every 22 years; that interval is its *doubling time*, and it is
+> the one number to watch in every figure below. A penny that doubles every
+> day is \$1.28 after a week and more than five million dollars after a month,
+> and the last day alone adds as much as all the days before it combined.
+
+That gives your mother the definition, the key term, and the intuition (it
+starts out looking like nothing, then each doubling matches everything so far) in
+the author's voice, and it sets up the COVID example that follows. It also
+quietly fixes a Principle 6 point: "doubling time" is now defined before it is
+used in the second paragraph.
+
+**Option B: one sentence, same spot, if two feels like too much throat-clearing.**
+
+> An exponential is anything that doubles, and doubles again, on a fixed
+> clock; the time between doublings, its *doubling time*, is the one number to
+> watch in every figure below.
+
+**One more sentence worth adding either way, at the first figure.** The log
+axes are the thing a lay reader will not know how to read, and they carry the
+entire argument. After "COVID (Figure 1)." or in the Figure 1 caption:
+
+> On the charts in this post the vertical axis is logarithmic (each gridline is
+> ten times the one below), which turns an exponential into a straight line:
+> the steeper the line, the shorter the doubling time.
+
+**Two smaller flags, your call.** "Orders of magnitude sensitivity" in the
+first paragraph is jargon of the same kind ("a thousand-fold range" is the
+plain version), and "non-linear (see: brain neuron)" will lose the same reader;
+neither is load-bearing. I'd leave the title alone: the joke lands better once
+the reader knows what the word means, which Option A does within one sentence.
 
 ### Figure 4
 
